@@ -334,6 +334,14 @@
   "stars": 5,
   "license": "GPL-3.0"
  },
+ "Luminous-Works/mpc-vst-f4-phantom": {
+  "repo": "Luminous-Works/mpc-vst-f4-phantom",
+  "owner": "Luminous-Works",
+  "description": "F4 Phantom: an 8-voice subtractive synth for Akai MPC with stereo chorus and a rotary gate (Lumina Aerospace)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "macdigi/force-link-audio": {
   "repo": "macdigi/force-link-audio",
   "owner": "macdigi",
