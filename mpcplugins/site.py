@@ -159,6 +159,50 @@ def status_box(p):
             'Force. It may work fine; it may not. Back up first and try it on a project that doesn\'t matter.</p></div>')
 
 
+SAFETY_WORDS = {"network": "uses the internet", "runs programs": "starts other programs",
+                "loads code": "loads extra code while running", "system changes": "can change system settings"}
+
+
+def safety_box(p):
+    s = p.get("safety")
+    if p.get("blocked"):
+        pulled = p.get("pulled") or {}
+        return ('<div class="bg-red-700 text-white rounded-2xl p-5 mb-4 border-4 border-red-900"><p class="text-xl font-black uppercase '
+                'tracking-tighter mb-1">&#10007; Download removed by our safety check</p><p class="font-bold text-sm">Version %s failed: %s. '
+                'No working version is offered until the maker fixes it.</p></div>' % (e(pulled.get("version", "")), e("; ".join(pulled.get("problems", [])))))
+    if not s or not s.get("checked"):
+        return ('<div class="bg-white/60 border border-[#4b3621]/15 rounded-2xl p-4 mb-4 text-sm font-bold opacity-80">Safety check: pending. '
+                'Each new release is checked in the nightly build.</div>')
+    names = {"gen1": "Gen1 (32-bit ARM)", "gen2": "Gen2 (64-bit ARM)", "sdk": "Akai SDK"}
+    flags = [SAFETY_WORDS.get(r, r) for r in s.get("risky", [])]
+    inst = s.get("installer_flags", [])
+    clash = [c.get("id", "") for c in p.get("clashes_with", [])]
+    same = p.get("same_file_as", [])
+    warn = bool(flags or inst or clash or same or p.get("pulled"))
+    os_ = sorted(set(v for v in (s.get("os") or {}).values() if v))
+    items = ["&#10003; Download matches the checksum GitHub lists",
+             "&#10003; Built for: %s" % e(", ".join(names.get(k, k) for k in s.get("builds_checked", [])))]
+    if os_:
+        items.append("&#10003; Runs on: %s" % e(" / ".join(os_)))
+    items.append("&#9873; The plugin %s. That can be normal (a remote or file browser needs it), but know it before installing." % e(", ".join(flags))
+                 if flags else "&#10003; No internet, program-launching or system-changing functions found")
+    items.append("&#9873; Its installer %s." % e(", ".join(inst)) if inst else "&#10003; Nothing risky found in its installer")
+    if clash:
+        items.append("&#9888; May clash with these addins if installed together: %s" % e(", ".join(clash)))
+    if same:
+        items.append("&#9888; Uses the same library file name as: %s. Installing both may overwrite one." % e(", ".join(same)))
+    pulled = ""
+    if p.get("pulled"):
+        pulled = ('<p class="font-bold text-amber-800 mb-2">&#9888; Version %s was pulled (%s). The download below is the last version that passed.</p>'
+                  % (e(p["pulled"]["version"]), e("; ".join(p["pulled"].get("problems", [])))))
+    return ('<div class="%s rounded-2xl p-5 mb-4 text-sm leading-relaxed"><p class="font-black uppercase tracking-widest text-xs mb-3">%s</p>%s'
+            '<ul class="space-y-1 font-medium">%s</ul><p class="text-[11px] opacity-60 mt-3">An automatic look at the files, not a guarantee: it '
+            'can\'t see everything a program does. Always back up first.</p></div>'
+            % ("bg-amber-50 border-2 border-amber-500" if warn else "bg-white/70 border-2 border-green-700/40",
+               "&#9873; Safety check: review the notes below" if warn else "&#10003; Safety check passed", pulled,
+               "".join("<li>%s</li>" % i for i in items)))
+
+
 def build_rows(version):
     rows = []
     labels = {"sdk": "MPC OS 3.10.1 or later (Akai SDK)", "gen1": "Gen1: Live, Live II, One, X, Key, Force",
@@ -255,8 +299,10 @@ def plugin_page(p, cat, collections):
               % (e(shot), e(p["name"]))) if shot else "",
         desc=e(desc),
         about=('<p class="font-medium leading-relaxed opacity-70 mb-6">%s</p>' % e(p["about"])) if p.get("about") and p.get("about") != desc else "",
-        links=" ".join(links), builds=build_rows(latest) or '<p class="opacity-60">No download in this release.</p>',
-        status=status_box(p), disclaimer=DISCLAIMER,
+        links=" ".join(links),
+        builds=('<p class="opacity-60">Download removed by our safety check.</p>' if p.get("blocked")
+                else build_rows(latest) or '<p class="opacity-60">No download in this release.</p>'),
+        status=status_box(p) + safety_box(p), disclaimer=DISCLAIMER,
         beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
                    '&#9888; Beta v%s is out: unfinished, not tested</p><p class="font-bold text-sm">Betas can crash or break projects. The download '
                    'above is the finished version. Get the beta from the maker\'s GitHub only if you accept that risk.</p></div>'

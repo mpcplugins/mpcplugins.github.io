@@ -16,7 +16,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
-from . import discover, releases, repoinfo, seeds, site, tested
+from . import discover, releases, repoinfo, safety, seeds, site, tested
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OVERRIDES = os.path.join(HERE, "overrides.json")
@@ -160,6 +160,7 @@ BAR_TEXT = {
     "archived": "the repo is archived",
     "inactive": "no updates in over a year",
     "description": "add a short description to the repo",
+    "review-flags": "explain the flagged behavior (network, running programs, installer commands) in the README",
 }
 
 
@@ -242,6 +243,8 @@ def main(argv=None):
     ap.add_argument("--search", action="store_true",
                     help="also search GitHub for new plugins (they go to review.json, not the live list)")
     ap.add_argument("--no-site", action="store_true", help="write catalog.json only")
+    ap.add_argument("--inspect", action="store_true",
+                    help="safety-check release zips (downloads each new file once; used on GitHub's servers)")
     args = ap.parse_args(argv)
     log = lambda *a: print(*a, flush=True)
     started = time.time()
@@ -305,8 +308,15 @@ def main(argv=None):
             continue
         p.update(fixes.get(pid, {}))
         p["added"] = added.setdefault(pid, today)
-        p["bar_missing"] = quality(p, p["latest"], now)
         final.append(p)
+    final = safety.apply_yanks(final, set(overrides.get("yank", [])))
+    if args.inspect:
+        log("   safety checks (each new download checked once)")
+        final = safety.check_plugins(final, os.path.join(STATE_DIR, "inspect.json"), log=log)
+    for p in final:
+        p["bar_missing"] = quality(p, p["latest"], now)
+        if p.get("safety", {}).get("risky") or p.get("safety", {}).get("installer_flags"):
+            p["bar_missing"].append("review-flags")
     save_json(ADDED, added)
     trending(final, today)
 

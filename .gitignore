@@ -17,3 +17,5 @@ test_info.py
 test_small.py
 diag.py
 state/
+test_inspect.py
+test_safety.py

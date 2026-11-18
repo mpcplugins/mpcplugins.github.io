@@ -31,7 +31,7 @@ jobs:
       - name: Search GitHub and build the list
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -u -m mpcplugins.build --out site
+        run: python -u -m mpcplugins.build --out site --inspect
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
