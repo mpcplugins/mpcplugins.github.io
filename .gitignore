@@ -19,3 +19,4 @@ diag.py
 state/
 test_inspect.py
 test_safety.py
+site/install/

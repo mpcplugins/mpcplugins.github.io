@@ -97,6 +97,7 @@ FOOT = """
     <div class="flex flex-wrap justify-center gap-x-12 gap-y-2 text-xs font-bold uppercase tracking-widest opacity-60">
       <a href="/" class="hover:text-[#ea861a]">All plugins</a>
       <a href="{store}" class="hover:text-[#ea861a]">The Disk King</a>
+      <a href="/install/" class="hover:text-[#ea861a]">How to install</a>
       <a href="/feed.xml" class="hover:text-[#ea861a]">Updates feed</a>
     </div>
     <p class="mt-12 text-[10px] opacity-40 uppercase tracking-[0.2em] max-w-3xl mx-auto leading-relaxed">Plugins are made and shared by independent developers; downloads come from each developer's GitHub. Provided as is, with no warranty. The Disk King is not responsible or liable for any damage or loss from any plugin. Download and install at your own risk. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>. Not affiliated with Akai Professional or inMusic.</p>
@@ -240,7 +241,7 @@ def needs_box(p):
 
 def build_rows(version):
     rows = []
-    labels = {"sdk": "MPC OS 3.10.1 or later (Akai SDK)", "gen1": "Gen1: Live, Live II, One, X, Key, Force",
+    labels = {"sdk": "Works on both Gen1 and Gen2: MPC OS 3.10.1 or later (Akai SDK)", "gen1": "Gen1: Live, Live II, One, X, Key, Force",
               "gen2": "Gen2: Live III, One G2, Key G2, XL"}
     for kind in ("sdk", "gen1", "gen2"):
         b = version.get("builds", {}).get(kind)
@@ -316,7 +317,7 @@ def plugin_page(p, cat, collections):
   {status}
   {disclaimer}
   <div class="space-y-3 mb-4">{builds}</div>
-  <p class="text-xs opacity-60 mb-4">Downloads come straight from the maker's GitHub. Check the sha256 matches before installing.</p>
+  <p class="text-xs opacity-60 mb-4">Downloads come straight from the maker's GitHub. Check the sha256 matches before installing. New to plugins? <a href="/install/" class="underline font-bold">How to install plugins on MPC OS 3.10.1</a>.</p>
   {beta_note}
   <div class="mb-10"></div>
   {tested}
@@ -385,6 +386,41 @@ def collection_page(c, members):
                                      store=STORE)
 
 
+GUIDE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "guide", "install.html")
+
+
+def install_page():
+    """The install guide. Same body as thediskking.com/plugins/install/ (canonical there)."""
+    try:
+        with open(GUIDE, encoding="utf-8") as f:
+            body = f.read()
+    except OSError:
+        return None
+    body = (body.replace('href="/plugins/"', 'href="/"')
+                .replace('href="/policies.html', 'href="https://thediskking.com/policies.html'))
+    head = HEAD.format(title=e("How to Install Plugins on Akai MPC OS 3.10.1: Full Step-by-Step Guide | MPC Plugins by The Disk King"),
+                       desc=e("How to install and load free plugins on the Akai MPC and Force with MPC OS 3.10.1: turn on External "
+                              "Plugin Support, pick Gen1 or Gen2, copy to the VST2 Plugins folder, load it on a track."),
+                       url=e(BASE + "install/"), canon=e(CANON + "install/"), og_image="", card="summary", extra_head="")
+    main = """
+<main class="container mx-auto px-6 py-12 max-w-4xl">
+  <p class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"><a href="/" class="hover:text-[#ea861a]">MPC Plugins</a> / How to install</p>
+  <span class="feature-tag">MPC OS 3.10.1 &middot; Step by step</span>
+  <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none mt-5 mb-4">HOW TO INSTALL <span class="text-[#ea861a]">MPC PLUGINS</span></h1>
+  <p class="text-lg font-medium opacity-80 mb-10">The complete guide to installing and loading free plugins on your Akai MPC or Force with MPC OS 3.10.1: switch plugins on, pick the right download, copy it over, and play it on a track.</p>
+  %s
+  <div class="flex flex-wrap gap-3 mt-12">
+    <a href="/" class="inline-flex h-[52px] items-center bg-green-700 text-white hover:bg-green-800 px-6 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg">&#10003; Browse tested plugins</a>
+    <a href="https://thediskking.com/plugins/submit/" class="inline-flex h-[52px] items-center border-2 border-dashed border-[#ea861a] text-[#ea861a] bg-white/60 hover:bg-[#ea861a] hover:text-white px-6 rounded-xl font-black text-sm uppercase tracking-widest">+ Submit your plugin</a>
+  </div>
+  <p class="text-xs opacity-50 mt-8">Last checked against Akai's MPC 3.10.1 release notes on November 18, 2026. Menu names can change in later updates.</p>
+</main>
+""" % body
+    return head + main + FOOT.format(pitch_head="Load the plugins. <span class=\"text-[#ea861a]\">Load the sounds.</span>",
+                                     pitch_body="The Disk King's MPC Expansions give your MPC the drums and chops: boom bap, street and soul kits.",
+                                     store=STORE)
+
+
 def atom(title, self_url, entries, updated):
     out = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">',
            "<title>%s</title>" % e(title), '<link rel="self" href="%s"/>' % e(self_url), '<link href="%s"/>' % e(BASE),
@@ -419,6 +455,9 @@ def write(cat, out, log=print):
     for c in collections.values():
         _write(os.path.join(out, "c", c["id"], "index.html"),
                collection_page(c, [by_id[m] for m in c["members"] if m in by_id]))
+    guide = install_page()
+    if guide:
+        _write(os.path.join(out, "install", "index.html"), guide)
     recent = sorted(((p, v) for p in plugins for v in p.get("versions", [])),
                     key=lambda pv: pv[1].get("updated") or "", reverse=True)[:50]
     _write(os.path.join(out, "feed.xml"), atom("MPC Plugins by The Disk King: new releases", BASE + "feed.xml", recent, now))

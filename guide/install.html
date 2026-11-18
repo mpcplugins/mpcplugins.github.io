@@ -1,0 +1,238 @@
+<!-- Install guide body. Copyright (c) 2026 The Disk King. All rights reserved.
+     Shared by thediskking.com/plugins/install/ (plugins/install-guide.html) and mpcplugins.github.io/install/.
+     Links starting with /plugins/ are rewritten for github.io by site.py. -->
+<div class="guide space-y-12">
+
+<nav class="featured-card bg-white/60 rounded-[2rem] border border-[#4b3621]/10 p-6 md:p-8">
+  <p class="font-black uppercase tracking-widest text-xs mb-3 opacity-60">On this page</p>
+  <ol class="grid sm:grid-cols-2 gap-x-8 gap-y-2 font-bold text-sm list-decimal list-inside">
+    <li><a href="#need" class="hover:text-[#ea861a]">What you need</a></li>
+    <li><a href="#update" class="hover:text-[#ea861a]">Update to MPC OS 3.10.1</a></li>
+    <li><a href="#turn-on" class="hover:text-[#ea861a]">Turn on plugin support</a></li>
+    <li><a href="#download" class="hover:text-[#ea861a]">Pick the right download</a></li>
+    <li><a href="#folder" class="hover:text-[#ea861a]">Find the plugin folder</a></li>
+    <li><a href="#copy" class="hover:text-[#ea861a]">Copy it to your MPC</a></li>
+    <li><a href="#load" class="hover:text-[#ea861a]">Load it on a track</a></li>
+    <li><a href="#update-remove" class="hover:text-[#ea861a]">Update or remove a plugin</a></li>
+    <li><a href="#old-plugins" class="hover:text-[#ea861a]">Had plugins before 3.10.1?</a></li>
+    <li><a href="#trouble" class="hover:text-[#ea861a]">Troubleshooting</a></li>
+    <li><a href="#whats-new" class="hover:text-[#ea861a]">Everything else new in 3.10.1</a></li>
+    <li><a href="#safety" class="hover:text-[#ea861a]">Stay safe</a></li>
+  </ol>
+</nav>
+
+<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800 font-bold text-sm leading-relaxed">
+  <p class="text-lg font-black uppercase tracking-tighter mb-1">&#9888; Read this first</p>
+  Plugin support in MPC OS 3.10.1 is an <strong>experimental</strong> feature from Akai, and every plugin is made by an independent developer. A plugin can freeze or restart your MPC. Save your project and back up your drive before you install anything. Akai does not support third-party plugins, and The Disk King does not make, test or guarantee any of them and is not responsible in any way for any damage or loss. <a href="/policies.html#plugins" class="underline">Full disclaimer</a>.
+</div>
+
+<section id="need">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">1. What <span class="text-[#ea861a]">you need</span></h2>
+  <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
+    <li><strong>MPC OS 3.10.1 or later</strong> on a standalone MPC or Force.</li>
+    <li><strong>A USB stick or SD card</strong> is the easiest way to move plugins over, but not the only one.</li>
+    <li><strong>Know your MPC's generation.</strong> It decides which download you pick:</li>
+  </ul>
+  <div class="overflow-x-auto mt-4">
+    <table class="w-full text-sm bg-white/60 rounded-2xl overflow-hidden">
+      <thead class="bg-[#4b3621] text-white text-xs uppercase tracking-widest"><tr><th class="text-left p-3">Generation</th><th class="text-left p-3">Models</th><th class="text-left p-3">Download to pick</th></tr></thead>
+      <tbody class="font-medium">
+        <tr class="border-t border-[#4b3621]/10"><td class="p-3 font-black">Gen1</td><td class="p-3">MPC Live, Live II, One, One+, X, X SE, Key 61, Key 37, and the Force</td><td class="p-3">Gen1 (file ends in <code>mpc-armv7.zip</code>)</td></tr>
+        <tr class="border-t border-[#4b3621]/10"><td class="p-3 font-black">Gen2</td><td class="p-3">MPC Live III, One Gen 2, Key 37 Gen 2, XL</td><td class="p-3">Gen2 (file ends in <code>mpc-aarch64.zip</code>)</td></tr>
+        <tr class="border-t border-[#4b3621]/10"><td class="p-3 font-black">Both</td><td class="p-3">Any MPC on 3.10.1 or later</td><td class="p-3">"Works on both" (file ends in <code>mpc-sdk.zip</code>), if the plugin has one</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="mt-4 opacity-80 font-medium"><strong>Your computer plugins won't work here.</strong> Standalone MPCs only load plugins built for them with Akai's MPC Plugin SDK. Normal desktop VST3, AU or AAX files from your computer won't load, even if you copy them over. Everything on our list is built for the MPC itself.</p>
+</section>
+
+<section id="update">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">2. Update to <span class="text-[#ea861a]">MPC OS 3.10.1</span></h2>
+  <p class="opacity-90 font-medium mb-3">Check your version under <strong>Menu &rarr; Preferences &rarr; Info</strong>. To update, pick one way:</p>
+  <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
+    <li><strong>On the MPC:</strong> connect it to the internet, go to <strong>Preferences &rarr; Info</strong>, press <strong>UPDATE</strong>, then choose <strong>Online Update</strong>.</li>
+    <li><strong>From your computer:</strong> download the update with the <a href="https://www.akaipro.com/downloads-and-support/downloads/software-center/" target="_blank" rel="noopener" class="underline font-bold">inMusic Software Center</a>.</li>
+  </ul>
+  <p class="mt-3 opacity-80 font-medium text-sm">Heads up from Akai: projects saved in standalone mode on MPC OS 3.4 or later won't open in the old MPC 2.15 desktop software.</p>
+</section>
+
+<section id="turn-on">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">3. Turn on <span class="text-[#ea861a]">plugin support</span></h2>
+  <p class="opacity-90 font-medium mb-3">Plugins are switched off until you turn them on. You only do this once.</p>
+  <ol class="space-y-2 opacity-90 font-medium list-decimal pl-6">
+    <li>Open <strong>Menu &rarr; Preferences &rarr; Enhancements</strong>.</li>
+    <li>In the <strong>Enhancements (BETA)</strong> section, set <strong>Enable Enhancements</strong> to <strong>On</strong>.</li>
+    <li>Turn on <strong>External Plugin Support</strong> and accept the warning. Tap the <strong>info</strong> icon next to any feature to read what it does.</li>
+    <li><strong>Wait a few seconds</strong>, then restart the MPC. If you restart right away, the setting may not save.</li>
+  </ol>
+</section>
+
+<section id="download">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">4. Pick the <span class="text-[#ea861a]">right download</span></h2>
+  <ol class="space-y-2 opacity-90 font-medium list-decimal pl-6">
+    <li>Find a plugin on our <a href="/plugins/" class="underline font-bold">plugin list</a>. Start with <strong>&#10003; Tested &amp; Working</strong> ones: their makers tested the current version on real hardware.</li>
+    <li>Open its page. The <strong>Download</strong> box lists each file by generation: Gen1, Gen2, or "works on both".</li>
+    <li>Pick the one for your MPC (see the table above). If there's a "works on both" file, it's usually the easiest.</li>
+    <li>Read the <strong>Before you install</strong> box. Some plugins need your own files (like a ROM), only run on one model, or need another plugin in the same project.</li>
+  </ol>
+  <p class="mt-3 opacity-80 font-medium text-sm">The download comes straight from the maker's GitHub. Each version shows a SHA-256 checksum, so you can check your file wasn't changed: on Windows, run <code class="bg-[#4b3621]/10 px-1 rounded">certutil -hashfile file.zip SHA256</code>.</p>
+</section>
+
+<section id="folder">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">5. Find the <span class="text-[#ea861a]">plugin folder</span></h2>
+  <p class="opacity-90 font-medium mb-3">Unzip the download. You're looking for one folder named like <code class="bg-[#4b3621]/10 px-1 rounded font-bold">Maker - VST - Plugin Name</code>, for example <code class="bg-[#4b3621]/10 px-1 rounded font-bold">sd88me - VST - Acid</code>. That folder is the plugin. Where it is depends on the download:</p>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
+      <p class="font-black uppercase tracking-widest text-xs text-[#ea861a] mb-2">"Works on both" (mpc-sdk.zip)</p>
+      <p class="font-medium opacity-90">The zip <strong>is</strong> the plugin folder. Unzip it and that's what you copy.</p>
+      <pre class="bg-[#111] text-white/90 text-xs rounded-xl p-3 mt-3 overflow-x-auto">Drips-1.1.0-mpc-sdk.zip
+└─ Padbangers - VST - Drips/   &larr; copy this</pre>
+    </div>
+    <div class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
+      <p class="font-black uppercase tracking-widest text-xs text-[#ea861a] mb-2">Gen1 / Gen2 (mpc-armv7 / mpc-aarch64.zip)</p>
+      <p class="font-medium opacity-90">The plugin folder is inside a folder called <strong>portable</strong>. Copy only that folder, not the whole download.</p>
+      <pre class="bg-[#111] text-white/90 text-xs rounded-xl p-3 mt-3 overflow-x-auto">Acid-3.0.1-mpc-aarch64.zip
+└─ Acid-3.0.1/
+   ├─ install.sh, INSTALL.md ...
+   └─ portable/
+      └─ sd88me - VST - Acid/   &larr; copy this</pre>
+    </div>
+  </div>
+  <p class="mt-4 opacity-90 font-medium"><strong>Check for a file called <code class="bg-[#4b3621]/10 px-1 rounded">plugin.json</code> inside the plugin folder.</strong> MPC OS 3.10.1 needs it to list the plugin. Most new releases have one. Some older releases don't, and copying those by hand won't work. They need the maker's installer instead (see the INSTALL.md in the zip), or a newer release. <strong>Don't</strong> rename <code class="bg-[#4b3621]/10 px-1 rounded">mpc-plugin.json</code> to plugin.json: it's a different file, and the plugin still won't show.</p>
+</section>
+
+<section id="copy">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">6. Copy it <span class="text-[#ea861a]">to your MPC</span></h2>
+  <p class="opacity-90 font-medium mb-4">Every plugin goes in a folder called <strong><code class="bg-[#4b3621]/10 px-1 rounded">VST2 Plugins</code></strong> at the very top of a drive: the MPC's internal drive, an SD card or a USB drive. Type the name exactly, with the space and a capital P. If it isn't there yet, create it. Put each plugin folder <strong>directly</strong> inside it, not inside another folder.</p>
+  <pre class="bg-[#111] text-white/90 text-xs rounded-xl p-4 mb-6 overflow-x-auto">USB stick (or SD card, or internal drive)
+└─ VST2 Plugins/
+   ├─ sd88me - VST - Acid/
+   │  ├─ plugin.json
+   │  └─ ...
+   └─ Padbangers - VST - Drips/</pre>
+  <p class="font-black mb-3">Pick one way to get it there:</p>
+  <div class="space-y-4">
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10" open>
+      <summary class="font-black cursor-pointer">A. USB stick or SD card (easiest, every MPC)</summary>
+      <ol class="mt-3 space-y-2 opacity-90 font-medium list-decimal pl-6">
+        <li>On your computer, make a <code>VST2 Plugins</code> folder on the stick or card and copy the plugin folder into it.</li>
+        <li>Plug it into the MPC. The plugin shows up within a few seconds, with no restart needed.</li>
+        <li><strong>Leave it plugged in.</strong> The plugin runs from the stick. If you pull it out while a track uses the plugin, the plugin stops and its screen goes black until you plug it back in.</li>
+      </ol>
+    </details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
+      <summary class="font-black cursor-pointer">B. USB cable to the internal drive (Controller Mode)</summary>
+      <p class="mt-3 opacity-90 font-medium"><strong>MPC Live III and MPC XL:</strong> both internal drives show up on your computer, as <strong>MPC User</strong> and <strong>MPC Content</strong>. On Windows you first need Akai's MPC USB driver from akaipro.com.</p>
+      <ol class="mt-2 space-y-2 opacity-90 font-medium list-decimal pl-6">
+        <li>Connect the MPC to your computer with a USB cable.</li>
+        <li>Press <strong>Menu</strong>, then tap the computer icon at the top right to switch to <strong>Controller Mode</strong>.</li>
+        <li>Copy the plugin folder into <code>VST2 Plugins</code> on the <strong>MPC User</strong> drive. Create the folder if it isn't there.</li>
+        <li>Eject the drive on your computer, tap <strong>Standalone</strong> on the MPC and confirm. Restart the MPC if the plugin isn't listed yet, because the internal drive is only read at start-up.</li>
+      </ol>
+      <p class="mt-3 opacity-90 font-medium"><strong>Other MPCs and the Force:</strong> the internal drive doesn't show on a computer. Put an SD card or USB drive in the MPC, switch to Controller Mode (<strong>Computer Mode</strong> on the Force), and copy to that card or drive instead. Leave it in afterwards.</p>
+    </details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
+      <summary class="font-black cursor-pointer">C. Over Wi-Fi (advanced: Developer mode)</summary>
+      <p class="mt-3 bg-amber-300 text-[#4b3621] rounded-xl p-3 font-bold text-sm">Developer mode switches on the MPC's SSH server, letting anyone on your network log in to it. Only use it on a network you trust, and turn it off when you're done.</p>
+      <ol class="mt-3 space-y-2 opacity-90 font-medium list-decimal pl-6">
+        <li>Hold <strong>SHIFT + MENU</strong> to enter dev mode, then choose <strong>Developer</strong> from the mode menu. Note the MPC's IP address (<strong>Preferences &rarr; Wi-Fi</strong>, then hold SHIFT and press the INFO F-key).</li>
+        <li>In an SFTP app such as WinSCP or FileZilla, connect to that address as user <strong>root</strong>.</li>
+        <li>Copy the plugin folder into <code>VST2 Plugins</code> on the internal drive: <code>/nvme/VST2 Plugins/</code> on a Gen2 MPC, or <code>/sdcard/VST2 Plugins/</code> on a Gen1 MPC.</li>
+        <li>Restart the MPC, then turn Developer mode off.</li>
+      </ol>
+    </details>
+  </div>
+</section>
+
+<section id="load">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">7. Load it <span class="text-[#ea861a]">on a track</span></h2>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
+      <p class="font-black uppercase tracking-widest text-xs text-[#ea861a] mb-2">Instruments (synths, drum machines, samplers)</p>
+      <ol class="space-y-2 font-medium opacity-90 list-decimal pl-5">
+        <li>Add a new <strong>Plugin</strong> track.</li>
+        <li>In the plugin browser, open <strong>External VST Plugins</strong>. Plugins are grouped by maker.</li>
+        <li>Pick the plugin. Its own screen opens, and you play it from the pads or a keyboard like any MPC synth.</li>
+      </ol>
+    </div>
+    <div class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
+      <p class="font-black uppercase tracking-widest text-xs text-[#ea861a] mb-2">Effects (reverb, delay, tape, EQ)</p>
+      <ol class="space-y-2 font-medium opacity-90 list-decimal pl-5">
+        <li>Open the insert effects for a track, pad, program or the master.</li>
+        <li>Tap an empty insert slot and look for <strong>External VST Plugins</strong> in the effect browser.</li>
+        <li>Pick the effect and set it up on its screen or with the Q-Links.</li>
+      </ol>
+    </div>
+  </div>
+  <ul class="mt-4 space-y-2 opacity-90 font-medium list-disc pl-6">
+    <li><strong>MIDI and sequencer plugins</strong> can drive your other tracks through their own MIDI port. First turn the port on in <strong>Preferences &rarr; MIDI</strong>, then choose it as the other track's MIDI input.</li>
+    <li><strong>Addins</strong> change MPC OS itself rather than going on a track. They install differently, so follow the steps on that addin's own page.</li>
+    <li><strong>Save your project</strong> after you add a plugin. The project remembers the plugin and its settings.</li>
+  </ul>
+</section>
+
+<section id="update-remove">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">8. Update or <span class="text-[#ea861a]">remove</span> a plugin</h2>
+  <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
+    <li><strong>To update:</strong> download the new version and replace the old plugin folder in <code>VST2 Plugins</code> with the new one. If you added your own files to the old folder (ROMs, presets), copy them across first. Then restart the MPC.</li>
+    <li><strong>To remove:</strong> delete the plugin's folder from <code>VST2 Plugins</code> and restart. Projects that used it will open without that plugin.</li>
+    <li><strong>Get told about updates:</strong> every plugin page has its own updates feed. There's also one feed for every new release: <a href="https://mpcplugins.github.io/feed.xml" class="underline font-bold">all new releases</a>.</li>
+  </ul>
+</section>
+
+<section id="old-plugins">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">9. Had plugins <span class="text-[#ea861a]">before 3.10.1?</span></h2>
+  <p class="opacity-90 font-medium">Before 3.10.1, community plugins were installed a different way, into a <code>Synths</code> folder plus a list in the MPC's settings. On 3.10.1 the browser only lists plugins in <code>VST2 Plugins</code>, so your old ones seem to vanish. <strong>Nothing is deleted.</strong> The files are still there, and saved projects still open them. To get them back in the browser, copy each plugin folder (the <code>Maker - VST - Name</code> folder from <code>Synths</code>) into <code>VST2 Plugins</code> and restart, or install the plugin's newest release. Keep External Plugin Support turned on: turning it off doesn't bring the old list back.</p>
+</section>
+
+<section id="trouble">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">10. <span class="text-[#ea861a]">Troubleshooting</span></h2>
+  <div class="space-y-3">
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">The plugin doesn't show in the browser</summary>
+      <ul class="mt-3 space-y-1 opacity-90 font-medium list-disc pl-6">
+        <li>Is <strong>External Plugin Support</strong> on? Check Preferences &rarr; Enhancements.</li>
+        <li>Is the folder named exactly <code>VST2 Plugins</code>, at the top of the drive?</li>
+        <li>Is the plugin folder <strong>directly</strong> inside it, and named <code>Maker - VST - Name</code>? A common mistake is copying the whole download, so the folder ends up one level too deep.</li>
+        <li>Does the plugin folder have a <code>plugin.json</code>? If not, see step 5.</li>
+        <li>Did you copy to the internal drive? Then restart the MPC, because the internal drive is only read at start-up.</li>
+        <li>Did you pick the right generation? A Gen1 file won't load on a Gen2 MPC, and a Gen2 file won't load on a Gen1 MPC.</li>
+      </ul></details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">The setting won't stay on</summary>
+      <p class="mt-3 opacity-90 font-medium">Wait a few seconds after switching External Plugin Support on before you restart. The setting is saved a moment later.</p></details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">It loads but makes no sound, or plays default sounds</summary>
+      <p class="mt-3 opacity-90 font-medium">Some plugins need files you provide, like a ROM or sound banks. The plugin's page says so in its <strong>Before you install</strong> box. Put those files where the plugin's own instructions say.</p></details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">The plugin's screen went black</summary>
+      <p class="mt-3 opacity-90 font-medium">The USB stick or SD card it runs from was unplugged. Plug it back in. To stop it happening, keep plugins you use a lot on the internal drive.</p></details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">My MPC froze, crashed or keeps restarting</summary>
+      <p class="mt-3 opacity-90 font-medium">Restart it. If a project with the plugin crashes every time it opens, take the plugin's folder out of <code>VST2 Plugins</code> (unplug the stick, or use Controller Mode), then open the project again without it. Report what happened on the plugin's page with <strong>Report a problem</strong>. Include your MPC model, MPC OS version and the plugin version, so the maker can fix it.</p></details>
+    <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">It crackles or the MPC slows down</summary>
+      <p class="mt-3 opacity-90 font-medium">Some plugins use a lot of CPU. Use fewer copies of the plugin at once. Leave Akai's "unlimited tracks" and "remove instance limits" settings off, and if you changed the buffer size in the advanced audio settings, set it larger again.</p></details>
+  </div>
+</section>
+
+<section id="whats-new">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">11. Everything else <span class="text-[#ea861a]">new in 3.10.1</span></h2>
+  <p class="opacity-90 font-medium mb-3">Plugin support is one of several experimental "Enhancements" in MPC OS 3.10.1. You turn each one on or off separately, in the same Preferences &rarr; Enhancements screen:</p>
+  <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
+    <li><strong>MPC Plugin SDK:</strong> Akai's free kit for building your own instrument and effect plugins, even by describing them to an AI coding tool.</li>
+    <li><strong>Mouse pointer:</strong> plug in a USB mouse and use it on the screen.</li>
+    <li><strong>Screenshots:</strong> press <strong>Bank A, B, C and D together</strong> to save a PNG of the screen. Hold <strong>Shift + a Bank button</strong> to choose where screenshots are saved.</li>
+    <li><strong>Unlimited audio and plugin tracks</strong> and <strong>no instance limits on heavy plugins.</strong> These can use more CPU and memory than your MPC has. A project saved with extra tracks loses them if you open it with the setting off.</li>
+    <li><strong>Advanced audio settings:</strong> buffer size, latency adjust and sample rate. A smaller buffer means less delay, but too small causes crackles or freezes.</li>
+    <li><strong>Developer panel</strong> (hold SHIFT + MENU): an on-screen terminal, system logs, a resource monitor and plugin management. It also turns on SSH. Only use it if you know what you're doing.</li>
+    <li><strong>Remote screen:</strong> see, hear and control your MPC from a computer with Akai's MPC Remote Screen Viewer. Only use it on a network you trust.</li>
+  </ul>
+</section>
+
+<section id="safety">
+  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">12. Stay <span class="text-[#ea861a]">safe</span></h2>
+  <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
+    <li><strong>Pick &#10003; Tested &amp; Working plugins first.</strong> Their makers tested the current version on real hardware. Treat <span class="text-red-700 font-black">&#9888; Experimental / Untested</span> ones as risky.</li>
+    <li><strong>Read the Safety check</strong> on each plugin page. We download every release, check the file matches its checksum and is built for your MPC, and point out anything that needs a closer look, like a plugin that uses your network.</li>
+    <li><strong>Save and back up</strong> before you try a new plugin, and try it on a test project first.</li>
+    <li><strong>Turn off Developer mode and remote screen</strong> when you're not using them.</li>
+    <li><strong>Only download from the maker's own GitHub,</strong> which is where every download on our list comes from.</li>
+  </ul>
+</section>
+
+</div>
