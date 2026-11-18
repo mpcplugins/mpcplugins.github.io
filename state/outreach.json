@@ -1,6 +1,15 @@
 {
  "baseline": "2026-11-18",
  "contacted": {},
+ "key_check": {
+  "date": "2026-11-18",
+  "login": "mpcplugins",
+  "ok": true,
+  "result": "OK: key for mpcplugins, can post notes",
+  "scopes": [
+   "public_repo"
+  ]
+ },
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
