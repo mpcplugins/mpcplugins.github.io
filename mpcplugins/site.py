@@ -239,6 +239,31 @@ def needs_box(p):
             % "".join('<dt class="font-black">%s</dt><dd class="font-medium">%s</dd>' % (e(a), b) for a, b in rows))
 
 
+def copy_box(p):
+    """MPC OS 3.10.1 by-hand install: the exact folder to copy into 'VST2 Plugins'."""
+    copy = (p.get("safety") or {}).get("copy") or {}
+    if not copy or p.get("kind") == "addin" or p.get("blocked"):
+        return ""
+    names = {"sdk": "Works-on-both download", "gen1": "Gen1 download", "gen2": "Gen2 download"}
+    code = '<code class="bg-[#4b3621]/10 px-1 rounded font-bold break-all">%s</code>'
+    ok = {k: c for k, c in copy.items() if c.get("ok") and c.get("folder")}
+    if ok:
+        items = "".join(
+            "<li><strong>%s:</strong> unzip it and copy %s%s into %s on your drive.</li>"
+            % (names[k], code % e(ok[k]["folder"]),
+               (" (inside %s)" % (code % e(ok[k]["inside"] + "/"))) if ok[k].get("inside") else "", code % "VST2 Plugins")
+            for k in ("sdk", "gen1", "gen2") if k in ok)
+        return ('<div class="bg-green-50 border-2 border-green-700/40 rounded-2xl p-5 mb-4 text-sm">'
+                '<p class="font-black uppercase tracking-widest text-xs mb-3 text-green-800">&#10003; Easy install on MPC OS 3.10.1: copy one folder</p>'
+                '<ul class="space-y-2 font-medium">%s</ul><p class="mt-3 text-xs opacity-80">Turn on External Plugin Support first. '
+                '<a href="/install/" class="underline font-bold">Full step-by-step guide</a>.</p></div>' % items)
+    return ('<div class="bg-amber-100 border-2 border-amber-500 rounded-2xl p-5 mb-4 text-sm">'
+            '<p class="font-black uppercase tracking-widest text-xs mb-2">Can\'t be copied by hand on MPC OS 3.10.1</p>'
+            '<p class="font-medium">This release\'s plugin folder has no %s, which 3.10.1 needs to list it. Use the maker\'s installer '
+            '(see INSTALL.md in the zip), or ask the maker for a 3.10.1 release. <a href="/install/#folder" class="underline font-bold">Why?</a></p></div>'
+            % (code % "plugin.json"))
+
+
 def build_rows(version):
     rows = []
     labels = {"sdk": "Works on both Gen1 and Gen2: MPC OS 3.10.1 or later (Akai SDK)", "gen1": "Gen1: Live, Live II, One, X, Key, Force",
@@ -318,12 +343,16 @@ def plugin_page(p, cat, collections):
   {disclaimer}
   <div class="space-y-3 mb-4">{builds}</div>
   <p class="text-xs opacity-60 mb-4">Downloads come straight from the maker's GitHub. Check the sha256 matches before installing. New to plugins? <a href="/install/" class="underline font-bold">How to install plugins on MPC OS 3.10.1</a>.</p>
+  {copy}
   {beta_note}
   <div class="mb-10"></div>
   {tested}
   <h2 class="text-3xl font-black uppercase tracking-tighter mb-4">Version <span class="text-[#ea861a]">history</span></h2>
   <div class="space-y-3 mb-10">{history}</div>
   {bar}
+  <details class="mb-10 bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="cursor-pointer font-black uppercase tracking-widest text-xs">Made this plugin? Add our badge to your README</summary>
+    <p class="mt-3 text-sm opacity-80"><img src="/badge/{pid}.svg" alt="MPC Plugins badge" class="inline"> Paste this into your README. It updates itself when your plugin gets the Tested &amp; Working badge.</p>
+    <pre class="bg-[#111] text-white/90 text-xs rounded-xl p-3 mt-3 overflow-x-auto">{snippet}</pre></details>
 </main>
 """.format(
         kind_label=e(KIND_LABEL.get(p["kind"], "Plugin")),
@@ -338,7 +367,8 @@ def plugin_page(p, cat, collections):
         links=" ".join(links),
         builds=('<p class="opacity-60">Download removed by our safety check.</p>' if p.get("blocked")
                 else build_rows(latest) or '<p class="opacity-60">No download in this release.</p>'),
-        status=status_box(p) + needs_box(p) + safety_box(p), disclaimer=DISCLAIMER,
+        status=status_box(p) + needs_box(p) + safety_box(p), disclaimer=DISCLAIMER, copy=copy_box(p),
+        pid=e(p["id"]), snippet=e(badge_snippet(p)),
         beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
                    '&#9888; Beta v%s is out: unfinished, not tested</p><p class="font-bold text-sm">Betas can crash or break projects. The download '
                    'above is the finished version. Get the beta from the maker\'s GitHub only if you accept that risk.</p></div>'
@@ -384,6 +414,27 @@ def collection_page(c, members):
     return head + body + FOOT.format(pitch_head="Load the plugins. <span class=\"text-[#ea861a]\">Load the sounds.</span>",
                                      pitch_body="The Disk King's MPC Expansions give your MPC the drums and chops: boom bap, street and soul kits.",
                                      store=STORE)
+
+
+BADGE_LOOK = {"verified": ("tested &amp; working", "#15803d"), "listed": ("listed", "#ea861a"),
+              "experimental": ("beta", "#dc2626"), None: ("listed", "#ea861a")}
+
+
+def badge_svg(right, color, left="MPC Plugins"):
+    """A small README badge, drawn by hand (no outside service)."""
+    plain = right.replace("&amp;", "&")
+    lw, rw = 12 + 7 * len(left), 12 + 7 * len(plain)
+    w = lw + rw
+    return ('<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="20" role="img" aria-label="%s: %s">'
+            '<title>%s: %s</title><clipPath id="r"><rect width="%d" height="20" rx="4"/></clipPath><g clip-path="url(#r)">'
+            '<rect width="%d" height="20" fill="#4b3621"/><rect x="%d" width="%d" height="20" fill="%s"/></g>'
+            '<g fill="#fff" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" font-weight="bold" text-anchor="middle">'
+            '<text x="%d" y="14">%s</text><text x="%d" y="14">%s</text></g></svg>'
+            % (w, left, right, left, right, w, lw, lw, rw, color, lw // 2, left, lw + rw // 2, right))
+
+
+def badge_snippet(p):
+    return "[![MPC Plugins](%sbadge/%s.svg)](%s%s/)" % (BASE, p["id"], CANON, p["id"])
 
 
 GUIDE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "guide", "install.html")
@@ -455,6 +506,9 @@ def write(cat, out, log=print):
     for c in collections.values():
         _write(os.path.join(out, "c", c["id"], "index.html"),
                collection_page(c, [by_id[m] for m in c["members"] if m in by_id]))
+    for p in plugins:
+        _write(os.path.join(out, "badge", p["id"] + ".svg"), badge_svg(*BADGE_LOOK.get(p.get("tier"), BADGE_LOOK[None])))
+    _write(os.path.join(out, "badge.svg"), badge_svg("listed", "#ea861a"))
     guide = install_page()
     if guide:
         _write(os.path.join(out, "install", "index.html"), guide)

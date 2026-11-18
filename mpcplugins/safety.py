@@ -94,6 +94,9 @@ def _summary(results):
         "os": os_by,
         "glibc": {k: r.get("glibc") for k, r in results.items() if r.get("glibc")},
         "builds_checked": sorted(results),
+        # 3.10.1 by-hand install: which folder to copy into "VST2 Plugins", and whether that works
+        "copy": {k: {"folder": r.get("folder"), "inside": r.get("folder_in") or "", "ok": bool(r.get("hand_copy"))}
+                 for k, r in results.items() if "hand_copy" in r},
     }
 
 

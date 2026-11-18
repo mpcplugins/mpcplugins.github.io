@@ -18,7 +18,7 @@ import zipfile
 from .net import fetch
 
 MAX_ZIP = 300 * 1024 * 1024          # skip anything bigger than 300 MB
-VERSION = 2                           # bump when the checks change, so cached results are redone once
+VERSION = 3                          # bump when the checks change, so cached results are redone once
 
 EM_ARM, EM_AARCH64 = 40, 183
 SHT_DYNAMIC, SHT_DYNSYM, SHT_VERNEED = 6, 11, 0x6FFFFFFE
@@ -190,6 +190,31 @@ def read_manifest(z, names):
     return {}
 
 
+FOLDER_RE = re.compile(r"^.+ - VST - .+$")
+
+
+def plugin_folder(names):
+    """Find the 'Maker - VST - Name' folder MPC OS 3.10.1 lists from 'VST2 Plugins'.
+    hand_copy is True when that folder has its own plugin.json, so copying it by hand works."""
+    best = None
+    for n in names:
+        parts = n.split("/")
+        for i, part in enumerate(parts[:-1]):
+            if FOLDER_RE.match(part):
+                path = "/".join(parts[:i + 1])
+                has_json = len(parts) == i + 2 and parts[-1] == "plugin.json"
+                if best is None or (has_json and not best[1]) or (has_json == best[1] and len(path) < len(best[0])):
+                    best = (path, has_json)
+                break
+    if not best:
+        return {"folder": None, "folder_in": None, "hand_copy": False}
+    path, has_json = best
+    if not has_json:      # the folder may have been seen first through another file
+        has_json = (path + "/plugin.json") in names
+    inside = path.rsplit("/", 1)[0] if "/" in path else ""
+    return {"folder": path.rsplit("/", 1)[-1], "folder_in": inside, "hand_copy": has_json}
+
+
 def check_zip(url, sha256, kind):
     """Download one release file and check it. Returns a result dict (never raises)."""
     res = {"v": VERSION, "sha256": sha256, "kind": kind, "problems": [], "warnings": []}
@@ -250,6 +275,7 @@ def check_zip(url, sha256, kind):
     res["has_skin"] = any("skin" in n or n.endswith("tui.json") for n in low)
     res["has_meta"] = any(n.endswith(("plugin-meta.xml", "plugin.json", "mpc-plugin.json", "version.xml")) for n in low)
     res["has_installer"] = any(n.endswith("install.sh") for n in low)
+    res.update(plugin_folder(names))
     res["libraries"] = [{"file": l["file"], "cpu": "arm64" if l["machine"] == EM_AARCH64 else ("arm32" if l["machine"] == EM_ARM else str(l["machine"])),
                          "glibc": l.get("glibc"), "links": l.get("needed", [])[:20]} for l in libs][:12]
     res["exports"] = sorted({x for l in plugin_libs for x in l.get("exports", [])})[:400]
