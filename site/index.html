@@ -58,6 +58,7 @@
                 <option value="recommended">Recommended</option>
                 <option value="trending">Trending this week</option>
                 <option value="downloads">Most downloaded</option>
+                <option value="stars">Most loved (GitHub stars)</option>
                 <option value="updated">Newest updates</option>
                 <option value="added">Newest on the list</option>
                 <option value="name">Name</option>
@@ -235,6 +236,7 @@
             if (s === 'name') return a.name.localeCompare(b.name);
             if (s === 'maker') return String(a.maker).localeCompare(String(b.maker)) || a.name.localeCompare(b.name);
             if (s === 'downloads') return (b.downloads || 0) - (a.downloads || 0);
+            if (s === 'stars') return (b.stars || 0) - (a.stars || 0) || (b.downloads || 0) - (a.downloads || 0);
             if (s === 'trending') return (b.trending || 0) - (a.trending || 0) || (b.downloads || 0) - (a.downloads || 0);
             if (s === 'added') return String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name);
             if (s === 'updated') return String(b.updated || '').localeCompare(String(a.updated || ''));
