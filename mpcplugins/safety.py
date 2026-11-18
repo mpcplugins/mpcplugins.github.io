@@ -10,6 +10,7 @@
 """
 import json
 import os
+import re
 import threading
 from concurrent.futures import ThreadPoolExecutor
 
@@ -59,6 +60,8 @@ def _check_version(version, cache, budget):
         sha = b.get("sha256")
         with _lock:
             hit = cache.get(sha) if sha else None
+        if hit is not None and hit.get("v") != inspect.VERSION and not hit.get("problems"):
+            hit = None                      # checked with older rules: check again once
         if hit is None:
             with _lock:
                 if budget[0] <= 0:
@@ -78,7 +81,9 @@ def _summary(results):
     problems = sorted({x for r in results.values() for x in r.get("problems", [])})
     warnings = sorted({x for r in results.values() for x in r.get("warnings", [])})
     os_by = {k: r.get("os") for k, r in results.items() if r.get("os")}
+    manifest = next((r["manifest"] for r in results.values() if r.get("manifest")), {})
     return {
+        "manifest": manifest,
         "checked": bool(results),
         "ok": bool(results) and not problems,
         "problems": problems,
@@ -132,6 +137,50 @@ def check_plugins(plugins, cache_path, log=print, workers=4, max_downloads=1500)
                 p["tier"], p["working"], p["points"] = "listed", False, 0.0
         if p.get("blocked"):
             p["tier"], p["working"], p["points"] = "experimental", False, -1.0
+
+    # Phase 2: what each plugin needs, from its own info file inside the zip
+    ids = {p["id"] for p in plugins}
+    def to_id(dep):
+        base = re.split(r"[<>=!~ ]", str(dep).strip(), 1)[0].lower()
+        return base if base in ids else None
+    for p in plugins:
+        m = (p.get("safety") or {}).get("manifest") or {}
+        if m.get("requires"):
+            p["needs"] = str(m["requires"])[:200]
+        if m.get("user_files"):
+            p["user_files"] = m["user_files"]
+        if m.get("depends"):
+            p["depends"] = [{"text": d, "id": to_id(d)} for d in m["depends"]]
+        if m.get("conflicts"):
+            p["conflicts"] = [{"text": d, "id": to_id(d)} for d in m["conflicts"]]
+        if m.get("devices"):
+            p["devices"] = [str(d).lower() for d in m["devices"]]
+        if m.get("min_os"):
+            p["min_os"] = str(m["min_os"])
+    by_repo = {}
+    for p in plugins:
+        by_repo.setdefault(p["repo"], []).append(p)
+    for p in plugins:
+        # "needs X in the same project": link X when it is another plugin from the same repo
+        if p.get("needs") and not p.get("depends"):
+            low = p["needs"].lower()
+            for other in by_repo.get(p["repo"], []):
+                if other is p:
+                    continue
+                words = [w for w in re.split(r"[^a-z0-9]+", other["name"].lower()) if len(w) > 3]
+                if words and any(re.search(r"\b%s\b" % re.escape(w), low) for w in words[-1:]):
+                    p["depends"] = [{"text": other["name"], "id": other["id"]}]
+                    break
+        # addins made only for the MPC Sample (its screen and pads): they do nothing on other MPCs
+        if not p.get("devices") and p["kind"] == "addin":
+            text = " ".join([p["name"], p["repo"], p.get("description") or "", p.get("about") or ""])
+            if re.search(r"\bMPC[\s-]?Sample\b", text, re.I) and re.search(r"\b(only|for the)\b", text, re.I):
+                p["devices"] = ["mpc-sample"]
+    for p in plugins:                       # dependents: "needed by"
+        for d in p.get("depends", []):
+            if d["id"]:
+                other = next(x for x in plugins if x["id"] == d["id"])
+                other.setdefault("needed_by", []).append(p["id"])
 
     # addins that clash, and shared library file names
     addins = [p for p in plugins if p["kind"] == "addin"]

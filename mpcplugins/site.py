@@ -159,7 +159,9 @@ def status_box(p):
             'Force. It may work fine; it may not. Back up first and try it on a project that doesn\'t matter.</p></div>')
 
 
-SAFETY_WORDS = {"network": "uses the internet", "runs programs": "starts other programs",
+SAFETY_WORDS = {"web server": "runs a small web page on your Wi-Fi (often its phone or browser screen)",
+                "internet": "connects to the internet", "network": "uses the network",
+                "runs programs": "starts other programs", "stops programs": "can stop other programs (often to restart MPC)",
                 "loads code": "loads extra code while running", "system changes": "can change system settings"}
 
 
@@ -184,8 +186,11 @@ def safety_box(p):
              "&#10003; Built for: %s" % e(", ".join(names.get(k, k) for k in s.get("builds_checked", [])))]
     if os_:
         items.append("&#10003; Runs on: %s" % e(" / ".join(os_)))
-    items.append("&#9873; The plugin %s. That can be normal (a remote or file browser needs it), but know it before installing." % e(", ".join(flags))
-                 if flags else "&#10003; No internet, program-launching or system-changing functions found")
+    if flags:
+        items += ["&#9873; The plugin %s." % e(f) for f in flags]
+        items.append('<span class="text-xs opacity-70">These can be completely normal for what the plugin does, but know them before installing.</span>')
+    else:
+        items.append("&#10003; No internet, web server, program-launching or system-changing functions found")
     items.append("&#9873; Its installer %s." % e(", ".join(inst)) if inst else "&#10003; Nothing risky found in its installer")
     if clash:
         items.append("&#9888; May clash with these addins if installed together: %s" % e(", ".join(clash)))
@@ -201,6 +206,33 @@ def safety_box(p):
             % ("bg-amber-50 border-2 border-amber-500" if warn else "bg-white/70 border-2 border-green-700/40",
                "&#9873; Safety check: review the notes below" if warn else "&#10003; Safety check passed", pulled,
                "".join("<li>%s</li>" % i for i in items)))
+
+
+def needs_box(p):
+    rows = []
+    if "mpc-sample" in (p.get("devices") or []):
+        rows.append(("Only for", "MPC Sample. It does nothing on other MPCs."))
+    if p.get("min_os"):
+        rows.append(("MPC OS", e(p["min_os"]) + " or later"))
+    if p.get("needs"):
+        rows.append(("Needs", e(p["needs"])))
+    if p.get("user_files"):
+        rows.append(("Your own files", e(", ".join(p["user_files"])) + " (not included: you supply them)"))
+
+    def links(items):
+        return ", ".join('<a href="/p/%s/" class="underline font-bold">%s</a>' % (e(d["id"]), e(d["text"])) if d.get("id") else e(d["text"])
+                         for d in items)
+    if p.get("depends"):
+        rows.append(("Install with", links(p["depends"])))
+    if p.get("conflicts"):
+        rows.append(("Don't install with", links(p["conflicts"])))
+    if p.get("needed_by"):
+        rows.append(("Used by", links([{"id": i, "text": i} for i in p["needed_by"]])))
+    if not rows:
+        return ""
+    return ('<div class="bg-white/70 border-2 border-[#ea861a]/50 rounded-2xl p-5 mb-4 text-sm"><p class="font-black uppercase tracking-widest '
+            'text-xs mb-3">Before you install</p><dl class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-2">%s</dl></div>'
+            % "".join('<dt class="font-black">%s</dt><dd class="font-medium">%s</dd>' % (e(a), b) for a, b in rows))
 
 
 def build_rows(version):
@@ -302,7 +334,7 @@ def plugin_page(p, cat, collections):
         links=" ".join(links),
         builds=('<p class="opacity-60">Download removed by our safety check.</p>' if p.get("blocked")
                 else build_rows(latest) or '<p class="opacity-60">No download in this release.</p>'),
-        status=status_box(p) + safety_box(p), disclaimer=DISCLAIMER,
+        status=status_box(p) + needs_box(p) + safety_box(p), disclaimer=DISCLAIMER,
         beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
                    '&#9888; Beta v%s is out: unfinished, not tested</p><p class="font-bold text-sm">Betas can crash or break projects. The download '
                    'above is the finished version. Get the beta from the maker\'s GitHub only if you accept that risk.</p></div>'

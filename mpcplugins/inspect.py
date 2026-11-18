@@ -18,19 +18,21 @@ import zipfile
 from .net import fetch
 
 MAX_ZIP = 300 * 1024 * 1024          # skip anything bigger than 300 MB
+VERSION = 2                           # bump when the checks change, so cached results are redone once
 
 EM_ARM, EM_AARCH64 = 40, 183
 SHT_DYNAMIC, SHT_DYNSYM, SHT_VERNEED = 6, 11, 0x6FFFFFFE
 DT_NEEDED = 1
 
 RISKY = {
-    "network": {"socket", "connect", "bind", "listen", "accept", "accept4", "getaddrinfo", "gethostbyname", "sendto",
-                "recvfrom", "curl_easy_init", "curl_easy_perform", "SSL_connect", "inet_pton"},
+    "web server": {"bind", "listen", "accept", "accept4"},                       # serves a page on your Wi-Fi (phone/browser screens)
+    "internet": {"connect", "getaddrinfo", "gethostbyname", "curl_easy_init", "curl_easy_perform", "SSL_connect"},
     "runs programs": {"system", "popen", "execv", "execve", "execvp", "execl", "execlp", "execle", "fork", "vfork",
                       "posix_spawn", "posix_spawnp", "daemon"},
+    "stops programs": {"kill"},                                                  # usually to restart MPC after installing
     "loads code": {"dlopen", "dlmopen"},
     "system changes": {"mount", "umount", "umount2", "reboot", "setuid", "setgid", "seteuid", "chroot", "ptrace",
-                       "init_module", "delete_module", "sethostname", "settimeofday", "swapon", "kill"},
+                       "init_module", "delete_module", "sethostname", "settimeofday", "swapon"},
 }
 INSTALLER_RISK = [
     ("deletes outside its folder", re.compile(r"\brm\s+-[a-z]*r[a-z]*f?\s+(/|/\*|/usr|/etc|/bin|/lib|/data\b|\$HOME|~)(\s|$)")),
@@ -129,8 +131,8 @@ def read_elf(data):
                     break
                 p += vn_next
     risky = sorted(cat for cat, names in RISKY.items() if imports & names)
-    if risky == ["loads code"]:
-        risky = []                    # dlopen alone is normal for C++ toolchains; it only counts next to other flags
+    if "loads code" in risky and not set(risky) & {"internet", "runs programs", "system changes"}:
+        risky.remove("loads code")    # dlopen is normal for C++ toolchains; it only counts next to serious flags
     return {
         "machine": machine,
         "bits": 64 if is64 else 32,
@@ -155,9 +157,42 @@ def os_support(kind, glibc):
     return "MPC OS 3.x only" if g > (2, 32) else "MPC OS 2.x and 3.x"
 
 
+MANIFEST_FILES = ("mpc-plugin.json", "plugin.json")
+MANIFEST_KEYS = ("id", "uid", "name", "version", "kind", "requires", "depends", "conflicts", "devices", "min_os",
+                 "user_files", "param_compat", "license", "source_repo")
+
+
+def read_manifest(z, names):
+    """The plugin's own info file inside the zip, if any: what it needs, depends on, or is limited to."""
+    import json
+    for want in MANIFEST_FILES:
+        for n in sorted(names, key=len):
+            if n.lower().rsplit("/", 1)[-1] == want:
+                try:
+                    data = json.loads(z.read(n).decode("utf-8", "replace"))
+                except ValueError:
+                    continue
+                if isinstance(data, dict):
+                    out = {k: data[k] for k in MANIFEST_KEYS if k in data and data[k] not in (None, "", [], {})}
+                    for k in ("requires", "name", "id", "uid", "min_os", "kind"):
+                        if k in out and not isinstance(out[k], (str, int, float)):
+                            out[k] = str(out[k])[:200]
+                    for k in ("depends", "conflicts", "devices"):
+                        if k in out:
+                            v = out[k]
+                            out[k] = [str(x)[:80] for x in (v if isinstance(v, list) else [v])][:10]
+                    if "user_files" in out:
+                        uf = out["user_files"] if isinstance(out["user_files"], list) else [out["user_files"]]
+                        out["user_files"] = [(u.get("label") or u.get("name") or str(u))[:120] if isinstance(u, dict) else str(u)[:120]
+                                             for u in uf][:10]
+                    out["file"] = want
+                    return out
+    return {}
+
+
 def check_zip(url, sha256, kind):
     """Download one release file and check it. Returns a result dict (never raises)."""
-    res = {"sha256": sha256, "kind": kind, "problems": [], "warnings": []}
+    res = {"v": VERSION, "sha256": sha256, "kind": kind, "problems": [], "warnings": []}
     status, body, _ = fetch(url, timeout=180, tries=3)
     if status != 200 or not body:
         res["problems"].append("download failed (HTTP %s)" % status)
@@ -211,6 +246,7 @@ def check_zip(url, sha256, kind):
     res["risky"] = sorted({c for l in plugin_libs for c in l.get("risky", [])})
     res["risky_calls"] = sorted({c for l in plugin_libs for c in l.get("risky_calls", [])})
     res["installer_flags"] = sorted(inst_flags)
+    res["manifest"] = read_manifest(z, names)
     res["has_skin"] = any("skin" in n or n.endswith("tui.json") for n in low)
     res["has_meta"] = any(n.endswith(("plugin-meta.xml", "plugin.json", "mpc-plugin.json", "version.xml")) for n in low)
     res["has_installer"] = any(n.endswith("install.sh") for n in low)
