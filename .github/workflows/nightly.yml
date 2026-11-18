@@ -1,5 +1,6 @@
 # Rebuilds the MPC Plugins list every night on GitHub's servers and publishes the site.
-# Uses only GitHub's built-in per-run pass (GITHUB_TOKEN). No personal keys.
+# Uses GitHub's built-in per-run pass (GITHUB_TOKEN). The optional MPC_OUTREACH_TOKEN secret (set by Jason only)
+# lets it post at most one note a day to a maker whose plugin newly became Tested & Working; without it, nothing is sent.
 name: Nightly plugin list
 on:
   schedule:
@@ -31,7 +32,8 @@ jobs:
       - name: Search GitHub and build the list
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -u -m mpcplugins.build --out site --inspect
+          MPC_OUTREACH_TOKEN: ${{ secrets.MPC_OUTREACH_TOKEN }}
+        run: python -u -m mpcplugins.build --out site --inspect --outreach
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

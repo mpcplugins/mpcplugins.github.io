@@ -16,7 +16,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
-from . import discover, releases, repoinfo, safety, seeds, site, tested
+from . import discover, outreach, releases, repoinfo, safety, seeds, site, tested
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OVERRIDES = os.path.join(HERE, "overrides.json")
@@ -243,6 +243,9 @@ def main(argv=None):
     ap.add_argument("--search", action="store_true",
                     help="also search GitHub for new plugins (they go to review.json, not the live list)")
     ap.add_argument("--no-site", action="store_true", help="write catalog.json only")
+    ap.add_argument("--outreach", action="store_true",
+                    help="send at most one note a day to a maker not contacted yet (needs MPC_OUTREACH_TOKEN)")
+    ap.add_argument("--outreach-preview", action="store_true", help="write the next notes to state/outreach_preview.md, send nothing")
     ap.add_argument("--inspect", action="store_true",
                     help="safety-check release zips (downloads each new file once; used on GitHub's servers)")
     args = ap.parse_args(argv)
@@ -346,6 +349,12 @@ def main(argv=None):
         "plugins": final,
     }
     save_json(os.path.join(args.out, "catalog.json"), catalog, indent=None)
+
+    if args.outreach_preview:
+        n = outreach.preview(final, os.path.join(STATE_DIR, "outreach.json"), overrides, os.path.join(STATE_DIR, "outreach_preview.md"))
+        log("   outreach preview: %d makers left, see state/outreach_preview.md" % n)
+    if args.outreach:
+        outreach.run(final, os.path.join(STATE_DIR, "outreach.json"), overrides, log=log, today=today)
 
     if not args.no_site:
         log("4/4 Writing plugin pages, feeds and sitemap")
