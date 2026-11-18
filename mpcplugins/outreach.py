@@ -39,6 +39,26 @@ def _call(method, path, token, body=None):
         return 0, {"message": str(err)}
 
 
+def key_check(token, today):
+    """Ask GitHub who the key belongs to and what it may do. Returns a small report (no key in it)."""
+    req = urllib.request.Request(API + "/user", headers={"Accept": "application/vnd.github+json", "Authorization": "Bearer " + token,
+                                                         "User-Agent": "mpcplugins-tracker"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            login = (json.loads(r.read() or b"{}") or {}).get("login")
+            scopes = [s.strip() for s in (r.headers.get("X-OAuth-Scopes") or "").split(",") if s.strip()]
+    except urllib.error.HTTPError as err:
+        return {"date": today, "ok": False, "result": "GitHub did not accept the key (HTTP %s)" % err.code}
+    except OSError as err:
+        return {"date": today, "ok": False, "result": "could not reach GitHub (%s)" % err}
+    if not login:
+        return {"date": today, "ok": False, "result": "GitHub did not say whose key this is"}
+    can_post = "public_repo" in scopes or "repo" in scopes
+    return {"date": today, "ok": can_post, "login": login, "scopes": scopes,
+            "result": ("OK: key for %s, can post notes" % login) if can_post else
+                      ("key for %s works, but is missing the public_repo box" % login)}
+
+
 def _load(path):
     try:
         with open(path, encoding="utf-8") as f:
@@ -153,8 +173,14 @@ def run(plugins, state_path, overrides, log=print, today=None):
     track_tested(plugins, state, today)            # always keep the record, even before the key is set up
     token = os.environ.get("MPC_OUTREACH_TOKEN", "").strip()
     if not token:
+        state["key_check"] = {"date": today, "result": "no key set"}
         _save(state_path, state)
         log("   outreach: off (no MPC_OUTREACH_TOKEN secret); %d makers waiting" % len(queue(plugins, state, overrides.get("no_contact", []))))
+        return
+    state["key_check"] = key_check(token, today)       # never stores the key, only whether GitHub accepts it
+    log("   outreach key: %s" % state["key_check"]["result"])
+    if not state["key_check"].get("ok"):
+        _save(state_path, state)
         return
     if state.get("paused"):
         _save(state_path, state)
@@ -164,11 +190,7 @@ def run(plugins, state_path, overrides, log=print, today=None):
         _save(state_path, state)
         log("   outreach: already sent today's note")
         return
-    status, me = _call("GET", "/user", token)
-    if status != 200 or not me or not me.get("login"):
-        log("   outreach: key not accepted (HTTP %s); nothing sent" % status)
-        return
-    login = me["login"]
+    login = state["key_check"]["login"]
     q = [e for e in queue(plugins, state, overrides.get("no_contact", [])) if e["owner"].lower() != login.lower()]
     log("   outreach: %d makers left" % len(q))
     for e in q[:10]:                               # look at up to 10 makers to find one we can post to; send ONE
