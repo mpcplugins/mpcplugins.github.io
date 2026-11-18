@@ -9,12 +9,16 @@ import re
 
 from .net import fetch
 
+import threading
+
 _cache = {}
+_lock = threading.Lock()
 
 
 def records(repo):
-    if repo in _cache:
-        return _cache[repo]
+    with _lock:
+        if repo in _cache:
+            return _cache[repo]
     status, body, _ = fetch("https://raw.githubusercontent.com/%s/HEAD/tested.json" % repo)
     out = []
     if status == 200:
@@ -24,7 +28,8 @@ def records(repo):
                 out = [r for r in data if isinstance(r, dict) and r.get("version")]
         except ValueError:
             pass
-    _cache[repo] = out
+    with _lock:
+        _cache[repo] = out
     return out
 
 

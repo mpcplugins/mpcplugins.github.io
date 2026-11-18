@@ -13,6 +13,7 @@ import os
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
 from . import discover, releases, repoinfo, seeds, site, tested
@@ -23,6 +24,7 @@ STATE_DIR = os.path.join(HERE, "state")
 STATE = os.path.join(STATE_DIR, "known_repos.json")
 ADDED = os.path.join(STATE_DIR, "added.json")
 HISTORY = os.path.join(STATE_DIR, "downloads.json")
+WORKERS = 6            # repos checked at once; low enough to stay polite to GitHub
 
 EFFECT_WORDS = ("reverb", "delay", "echo", " eq", "equaliz", "compress", "limiter", "saturat", "distort", "overdrive",
                 "fuzz", "chorus", "flanger", "phaser", "tape", "vinyl", "lofi", "lo-fi", "bitcrush", "crusher", "filter",
@@ -258,14 +260,19 @@ def main(argv=None):
     plugins, checked = [], set()
 
     def run(batch, into):
-        for repo in sorted(batch, key=str.lower):
-            if repo in checked:
-                continue
-            checked.add(repo)
+        """Check repos 6 at a time (each check is mostly waiting on the network)."""
+        todo = [r for r in sorted(batch, key=str.lower) if r not in checked]
+        checked.update(todo)
+
+        def one(repo):
             try:
-                into.extend(check_repo(batch[repo], log))
+                return check_repo(batch[repo], log)
             except Exception as err:                    # one bad repo never stops the build
                 log("  ! %s: %s" % (repo, err))
+                return []
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool_:
+            for entries in pool_.map(one, todo):        # map keeps the order, so output is stable
+                into.extend(entries)
     run(pool, plugins)
 
     review = []
