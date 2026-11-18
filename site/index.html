@@ -45,49 +45,40 @@
         <p id="updated" class="text-[10px] uppercase tracking-widest opacity-40 mt-6"></p>
     </section>
 
-    <section class="container mx-auto px-6 py-8">
-        <div class="flex flex-col md:flex-row gap-4 md:items-center mb-8">
-            <input id="q" type="search" placeholder="Search plugins, makers, sounds..." class="flex-1 bg-white/60 border border-[#4b3621]/15 rounded-xl px-5 h-[52px] font-bold focus:outline-none focus:border-[#ea861a]">
-            <div id="tabs" class="flex flex-wrap gap-2">
-                <button data-k="all" class="tab-on h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15">All</button>
-                <button data-k="instrument" class="h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">Instruments</button>
-                <button data-k="effect" class="h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">Effects</button>
-                <button data-k="addin" class="h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">Addins</button>
+    <section class="container mx-auto px-6 pb-8">
+        <div class="flex flex-wrap justify-center gap-3 mb-6">
+            <a href="https://thediskking.com/plugins/submit/" class="h-[48px] inline-flex items-center px-6 rounded-xl font-black text-xs uppercase tracking-widest bg-[#ea861a] text-white hover:bg-[#d97706] shadow-lg">+ Submit your plugin</a>
+            <a href="https://github.com/mpcplugins" class="h-[48px] inline-flex items-center px-6 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/20 bg-white/60 hover:text-[#ea861a]">Our GitHub</a>
+        </div>
+        <div class="sticky top-[72px] z-40 bg-[#f5f5dc]/95 backdrop-blur-md py-4 -mx-6 px-6 border-b border-[#4b3621]/10">
+            <div class="flex flex-wrap justify-center gap-2 mb-3" role="tablist" id="views">
+                <button type="button" data-view="downloads" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Most Downloaded</button>
+                <button type="button" data-view="rated" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Top Rated</button>
+                <button type="button" data-view="newest" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Newest</button>
+                <button type="button" data-view="untested" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border-2 border-red-600 text-red-700 bg-white/60 hover:bg-red-600 hover:text-white">&#9888; Experimental / Untested</button>
             </div>
-            <select id="sort" class="h-[52px] px-4 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">
-                <option value="recommended">Recommended</option>
-                <option value="trending">Trending this week</option>
-                <option value="downloads">Most downloaded</option>
-                <option value="stars">Most loved (GitHub stars)</option>
-                <option value="updated">Newest updates</option>
-                <option value="added">Newest on the list</option>
-                <option value="name">Name</option>
-                <option value="maker">Maker</option>
-            </select>
+            <div class="flex flex-col sm:flex-row gap-2 max-w-4xl mx-auto">
+                <select id="f-type" aria-label="Type" class="h-[44px] px-3 rounded-xl font-black text-[11px] uppercase tracking-widest border border-[#4b3621]/15 bg-white/70">
+                    <option value="">All types</option>
+                    <option value="instrument">Instruments</option>
+                    <option value="effect">Effects</option>
+                    <option value="addin">Addins</option>
+                </select>
+                <select id="f-sound" aria-label="Sound" class="h-[44px] px-3 rounded-xl font-black text-[11px] uppercase tracking-widest border border-[#4b3621]/15 bg-white/70">
+                    <option value="">All sounds</option>
+                </select>
+                <input id="q" type="search" placeholder="Search plugins, makers, sounds..." aria-label="Search plugins" class="flex-1 bg-white/70 border border-[#4b3621]/15 rounded-xl px-4 h-[44px] font-bold focus:outline-none focus:border-[#ea861a]">
+                <a href="https://thediskking.com/plugins/submit/" class="h-[44px] inline-flex items-center justify-center px-4 rounded-xl font-black text-[11px] uppercase tracking-widest border-2 border-dashed border-[#ea861a] text-[#ea861a] bg-white/60 hover:bg-[#ea861a] hover:text-white whitespace-nowrap">+ Submit your plugin</a>
+            </div>
         </div>
-        <div class="flex flex-wrap gap-3 mb-8 text-xs font-black uppercase tracking-widest">
-            <select id="f-device" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40">
-                <option value="">Any MPC</option>
-                <option value="gen1">Gen1 (Live, Live II, One, X, Key, Force)</option>
-                <option value="gen2">Gen2 (Live III, One G2, Key G2, XL)</option>
-            </select>
-            <select id="f-tier" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40">
-                <option value="">Any status</option>
-                <option value="verified">Verified working</option>
-                <option value="gen1">Verified on Gen1</option>
-                <option value="gen2">Verified on Gen2</option>
-                <option value="sample">Verified on MPC Sample</option>
-                <option value="listed">Not yet verified</option>
-                <option value="experimental">Beta only</option>
-            </select>
-            <select id="f-style" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40"><option value="">Any style</option></select>
-            <select id="f-maker" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40"><option value="">Any maker</option></select>
-            <label class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40 flex items-center gap-2 cursor-pointer"><input id="f-beta" type="checkbox"> Show beta-only</label>
-            <button id="f-clear" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 hover:text-[#ea861a]">Clear</button>
+        <div id="untested-warning" class="hidden bg-red-600 text-white rounded-2xl p-5 mt-6 border-4 border-red-800">
+            <p class="text-xl md:text-2xl font-black uppercase tracking-tighter mb-1">&#9888; Experimental / untested: use at your own risk</p>
+            <p class="font-bold text-sm leading-relaxed">No hardware test recorded by the maker for the current version, and some are unfinished betas. They may crash your MPC or damage projects. Back up first and never install them on a device you depend on. The Disk King does not make, test or guarantee any plugin. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>.</p>
         </div>
-        <p id="shown" class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"></p>
-        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
-        <p id="empty" class="hidden text-center font-bold opacity-60 py-16">No plugins match that search.</p>
+        <p id="tested-note" class="text-xs font-bold mt-6 opacity-70"><span class="bg-green-700 text-white rounded-lg px-2 py-1 text-[10px] font-black uppercase tracking-widest">&#10003; Tested &amp; working</span> <span class="ml-1">Only plugins their makers tested on real hardware.</span></p>
+        <p id="shown" class="text-xs font-bold uppercase tracking-widest opacity-50 mt-3 mb-4"></p>
+        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" style="min-height:70vh;align-content:start"></div>
+        <p id="empty" class="hidden text-center font-bold opacity-60 py-10">No plugins match. Try another filter.</p>
     </section>
 
     <section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
@@ -182,90 +173,81 @@
         return c;
     }
 
-    var state = { q: '', sort: 'recommended', device: '', tier: '', style: '', maker: '', beta: false };
-    function readHash() {
-        var h = new URLSearchParams(location.hash.slice(1));
-        kind = h.get('tab') || 'all';
-        Object.keys(state).forEach(function (k) { if (h.has(k)) state[k] = k === 'beta' ? h.get(k) === '1' : h.get(k); });
+    // Same controls as thediskking.com/plugins/: three tested-only views plus the red untested view.
+    var VIEWS = ['downloads', 'rated', 'newest', 'untested'];
+    var STYLE_LABEL = { 'drum-machine': 'Drum Machine', sampler: 'Sampler', sequencer: 'Sequencer', synth: 'Synth',
+        reverb: 'Reverb', delay: 'Delay', tape: 'Tape & Lo-Fi', saturation: 'Saturation & Distortion',
+        dynamics: 'Compressor & Dynamics', eq: 'EQ & Filter', modulation: 'Chorus & Modulation', utility: 'Utility', other: 'Other' };
+    function styleLabel(s) { return STYLE_LABEL[s] || String(s).replace(/-/g, ' ').replace(/\b\w/g, function (m) { return m.toUpperCase(); }); }
+    var state = { view: 'downloads', type: '', sound: '', q: '' };
+    var views = document.querySelectorAll('.mp-view');
+    var RED_ON = ['bg-red-600', 'text-white', 'border-red-800'], RED_OFF = ['border-red-600', 'text-red-700', 'bg-white/60', 'hover:bg-red-600', 'hover:text-white'];
+
+    function readUrl() {
+        var h = new URLSearchParams(location.search);
+        if (VIEWS.indexOf(h.get('view')) >= 0) state.view = h.get('view');
+        state.type = h.get('type') || ''; state.sound = h.get('sound') || ''; state.q = h.get('q') || '';
     }
-    function writeHash() {
-        var h = new URLSearchParams();
-        if (kind !== 'all') h.set('tab', kind);
-        Object.keys(state).forEach(function (k) {
-            var v = state[k];
-            if (k === 'sort' && v === 'recommended') return;
-            if (v === true) h.set(k, '1'); else if (v) h.set(k, v);
+    function writeUrl() {
+        var u = new URLSearchParams();
+        if (state.view !== 'downloads') u.set('view', state.view);
+        if (state.type) u.set('type', state.type);
+        if (state.sound) u.set('sound', state.sound);
+        if (state.q) u.set('q', state.q);
+        history.replaceState(null, '', location.pathname + (u.toString() ? '?' + u.toString() : ''));
+    }
+    function paintViews() {
+        Array.prototype.forEach.call(views, function (b) {
+            var on = b.getAttribute('data-view') === state.view, red = b.getAttribute('data-view') === 'untested';
+            b.setAttribute('aria-selected', on ? 'true' : 'false');
+            if (red) { RED_ON.forEach(function (c) { b.classList.toggle(c, on); }); RED_OFF.forEach(function (c) { b.classList.toggle(c, !on); }); }
+            else { b.classList.toggle('tab-on', on); b.classList.toggle('bg-white/60', !on); }
         });
-        history.replaceState(null, '', h.toString() ? '#' + h.toString() : location.pathname);
+        document.getElementById('untested-warning').classList.toggle('hidden', state.view !== 'untested');
+        document.getElementById('tested-note').classList.toggle('hidden', state.view === 'untested');
     }
     function syncInputs() {
+        document.getElementById('f-type').value = state.type;
+        document.getElementById('f-sound').value = state.sound;
         document.getElementById('q').value = state.q;
-        document.getElementById('sort').value = state.sort;
-        document.getElementById('f-device').value = state.device;
-        document.getElementById('f-tier').value = state.tier;
-        document.getElementById('f-style').value = state.style;
-        document.getElementById('f-maker').value = state.maker;
-        document.getElementById('f-beta').checked = state.beta;
-        Array.prototype.forEach.call(document.getElementById('tabs').children, function (b) {
-            var on = b.getAttribute('data-k') === kind;
-            b.classList.toggle('tab-on', on);
-            b.classList.toggle('bg-white/40', !on);
-        });
+        paintViews();
     }
 
     function render() {
-        var q = state.q.toLowerCase().trim();
+        var q = state.q.toLowerCase().trim(), untested = state.view === 'untested';
         var list = all.filter(function (p) {
-            if (kind !== 'all' && p.kind !== kind) return false;
-            if (p.tier === 'experimental' && !state.beta && state.tier !== 'experimental') return false;
-            var b = (p.latest && p.latest.builds) || {};
-            if (state.device === 'gen1' && !(b.gen1 || b.sdk)) return false;
-            if (state.device === 'gen2' && !(b.gen2 || b.sdk)) return false;
-            var on = p.verified_on || [];
-            if (state.tier === 'verified' && p.tier !== 'verified') return false;
-            if (['gen1', 'gen2', 'sample'].indexOf(state.tier) >= 0 && on.indexOf(state.tier) < 0) return false;
-            if ((state.tier === 'listed' || state.tier === 'experimental') && p.tier !== state.tier) return false;
-            if (state.style && p.style !== state.style) return false;
-            if (state.maker && p.maker !== state.maker) return false;
+            var tested = p.tier === 'verified';
+            if (untested ? tested : !tested) return false;
+            if (state.type && p.kind !== state.type) return false;
+            if (state.sound && p.style !== state.sound) return false;
             if (!q) return true;
             return [p.name, p.maker, p.description, p.about, (p.tags || []).join(' '), (p.topics || []).join(' ')]
                 .join(' ').toLowerCase().indexOf(q) >= 0;
         });
-        var s = state.sort;
-        list.sort(function (a, b) {
-            if (s === 'name') return a.name.localeCompare(b.name);
-            if (s === 'maker') return String(a.maker).localeCompare(String(b.maker)) || a.name.localeCompare(b.name);
-            if (s === 'downloads') return (b.downloads || 0) - (a.downloads || 0);
-            if (s === 'stars') return (b.stars || 0) - (a.stars || 0) || (b.downloads || 0) - (a.downloads || 0);
-            if (s === 'trending') return (b.trending || 0) - (a.trending || 0) || (b.downloads || 0) - (a.downloads || 0);
-            if (s === 'added') return String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name);
-            if (s === 'updated') return String(b.updated || '').localeCompare(String(a.updated || ''));
-            return (b.points || 0) - (a.points || 0) || (b.downloads || 0) - (a.downloads || 0) || a.name.localeCompare(b.name);
-        });
+        var dl = function (a, b) { return (b.downloads || 0) - (a.downloads || 0); };
+        var sorters = {
+            downloads: dl,
+            rated: function (a, b) { return (b.stars || 0) - (a.stars || 0) || dl(a, b); },
+            newest: function (a, b) { return String((b.latest || {}).updated || b.updated || '').localeCompare(String((a.latest || {}).updated || a.updated || '')); },
+            untested: dl
+        };
+        list.sort(sorters[state.view]);
+        var keepY = window.scrollY;
         grid.replaceChildren.apply(grid, list.map(card));
-        document.getElementById('shown').textContent = 'Showing ' + list.length + ' of ' + all.length;
+        window.scrollTo(0, keepY);
+        document.getElementById('shown').textContent = list.length + ' plugins';
         document.getElementById('empty').classList.toggle('hidden', list.length > 0);
-        writeHash();
+        writeUrl();
     }
 
-    function bind(id, key, ev) {
-        document.getElementById(id).addEventListener(ev || 'change', function () {
-            state[key] = this.type === 'checkbox' ? this.checked : this.value;
-            render();
-        });
-    }
-    bind('q', 'q', 'input'); bind('sort', 'sort'); bind('f-device', 'device'); bind('f-tier', 'tier');
-    bind('f-style', 'style'); bind('f-maker', 'maker'); bind('f-beta', 'beta');
-    document.getElementById('f-clear').addEventListener('click', function () {
-        state = { q: '', sort: 'recommended', device: '', tier: '', style: '', maker: '', beta: false };
-        kind = 'all'; syncInputs(); render();
+    Array.prototype.forEach.call(views, function (b) {
+        b.addEventListener('click', function () { state.view = b.getAttribute('data-view'); paintViews(); render(); });
     });
-    document.getElementById('tabs').addEventListener('click', function (e) {
-        var btn = e.target.closest('button');
-        if (!btn) return;
-        kind = btn.getAttribute('data-k');
-        syncInputs();
-        render();
+    document.getElementById('f-type').addEventListener('change', function () { state.type = this.value; render(); });
+    document.getElementById('f-sound').addEventListener('change', function () { state.sound = this.value; render(); });
+    var timer;
+    document.getElementById('q').addEventListener('input', function () {
+        var v = this.value; clearTimeout(timer); timer = setTimeout(function () { state.q = v; render(); }, 120);
     });
 
     function fillSelect(id, values) {
@@ -283,9 +265,11 @@
         if (cat.generated) document.getElementById('updated').textContent =
             'List updated ' + new Date(cat.generated).toLocaleString() + '  ·  ' + (cat.working || 0) + ' verified working';
         var uniq = function (f) { return all.map(f).filter(function (v, i, a) { return v && a.indexOf(v) === i; }).sort(); };
-        fillSelect('f-style', uniq(function (p) { return p.style; }));
-        fillSelect('f-maker', uniq(function (p) { return p.maker; }));
-        readHash(); syncInputs();
+        var snd = document.getElementById('f-sound');
+        uniq(function (p) { return p.tier === 'verified' && p.style !== 'other' ? p.style : null; }).forEach(function (v) {
+            var o = el('option', null, styleLabel(v)); o.value = v; snd.appendChild(o);
+        });
+        readUrl(); syncInputs();
         render();
     }).catch(function () {
         document.getElementById('shown').textContent = 'The plugin list could not load. Try again in a minute.';
