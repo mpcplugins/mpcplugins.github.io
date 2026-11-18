@@ -1,0 +1,1935 @@
+{
+ "Tinythingz/The-8bit-Schmitter": {
+  "repo": "Tinythingz/The-8bit-Schmitter",
+  "owner": "Tinythingz",
+  "description": "Complex drone synth - based on COSM Chips: 2x NAND gates, 1x 4093 Ocillator, 1x twin-555 timer, 2x 4017 shiftregisters",
+  "topics": [],
+  "stars": 3,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-TR-MPC": {
+  "repo": "sd88me/mpc-vst-TR-MPC",
+  "owner": "sd88me",
+  "description": "Four circuit modelled classic Roland drum machines, and a modular kit that combines them, as native VST2 plugins for Akai MPC OS standalone devices",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-acid": {
+  "repo": "sd88me/mpc-vst-acid",
+  "owner": "sd88me",
+  "description": "A generative 303-style acid bassline sequencer for the Akai MPC OS",
+  "topics": [],
+  "stars": 3,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-acid303": {
+  "repo": "sd88me/mpc-vst-acid303",
+  "owner": "sd88me",
+  "description": "An accurate, circuit-modelled, hardware matched 303 voice for the Akai MPC and Force standalone, as a native VST2 plugin.",
+  "topics": [],
+  "stars": 1,
+  "license": "AGPL-3.0"
+ },
+ "molgino/noxed-mpc-plugins": {
+  "repo": "molgino/noxed-mpc-plugins",
+  "owner": "molgino",
+  "description": "Some plugins for Akai MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "mmiroshnikov/mpc-airwindows": {
+  "repo": "mmiroshnikov/mpc-airwindows",
+  "owner": "mmiroshnikov",
+  "description": "Airwindows effects as native MPC OS / Force plugins with cosmic touch skins",
+  "topics": [],
+  "stars": 3,
+  "license": "MIT"
+ },
+ "sunskiefer/ALPHA": {
+  "repo": "sunskiefer/ALPHA",
+  "owner": "sunskiefer",
+  "description": "OWN build and code Manipulator by Polyverse & Vocal Synth Izotope had a baby. ",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-airwindows": {
+  "repo": "sd88me/mpc-vst-airwindows",
+  "owner": "sd88me",
+  "description": "Chris Johnson's Airwindows effects as Collections for Akai MPC OS standalone devices (MPC Live, One, X, Key and Force). ",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-boris": {
+  "repo": "sd88me/mpc-vst-boris",
+  "owner": "sd88me",
+  "description": "A real-time granular insert effect for Akai MPC OS",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "quirkey/mpc-plugins": {
+  "repo": "quirkey/mpc-plugins",
+  "owner": "quirkey",
+  "description": "MPC OS standalone plugins (VST2 on the MPC's ARM CPU): Breaks, SamplerFilter, Roads",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "Shrekage2024/cadenza-force": {
+  "repo": "Shrekage2024/cadenza-force",
+  "owner": "Shrekage2024",
+  "description": "Cadenza: a chord-driven generative MIDI sequencer, a native VST2 plugin for the Akai Force",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "jacob-sabella/mpc-vst-chordsmith": {
+  "repo": "jacob-sabella/mpc-vst-chordsmith",
+  "owner": "jacob-sabella",
+  "description": "Chord tool for Akai MPC OS standalone devices: a native VST2 plugin with its own screen skin",
+  "topics": [],
+  "stars": 3,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-clementineXT": {
+  "repo": "sd88me/mpc-vst-clementineXT",
+  "owner": "sd88me",
+  "description": "MPC OS Wavetable Synth plugin modelled on the Waldorf Microwave II/XT: stepped 8-bit wavetables and loads original .syx sound banks.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "timomacquis/piClideaN16-MPC": {
+  "repo": "timomacquis/piClideaN16-MPC",
+  "owner": "timomacquis",
+  "description": "Sixteen-lane Euclidean MIDI sequencer for Akai Force: per-step expression, ratchets, GATE/HOLD and native touch UI.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "MagicStino/Clif-Tape": {
+  "repo": "MagicStino/Clif-Tape",
+  "owner": "MagicStino",
+  "description": "Stereo tape colour, EQ curves, saturation, wow/flutter and worn-media textures. Ready-built VST3 for Windows, Mac and Linux, plus Force / MPC. Four-page interface, 15 presets and Silence Gate.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "Bombest-Audio/op1-fx": {
+  "repo": "Bombest-Audio/op1-fx",
+  "owner": "Bombest-Audio",
+  "description": "Twenty plugins inspired by the OP-1: seven effects (Cwo, Delay, Grid, Nitro, Phone, Punch, Spring) and thirteen instruments (Cluster, DBox, DNA, DSynth, Digital, DrWave, DrumSampler, Fm, Phase, Pulse, Sampler, String, Voltage). Each one has a single portable C core, so the MPC build and the desktop build sound the same.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-cratedigger": {
+  "repo": "sd88me/mpc-vst-cratedigger",
+  "owner": "sd88me",
+  "description": "Crate Digger is a plugin instrument for Akai MPC standalone devices that digs for records and plays them into an MPC track. Pick a genre, style, decade, region and country, and it finds random releases on Discogs, then streams so you can audition and resample them. ",
+  "topics": [],
+  "stars": 15,
+  "license": "NOASSERTION"
+ },
+ "vulnerablecodes/music-production": {
+  "repo": "vulnerablecodes/music-production",
+  "owner": "vulnerablecodes",
+  "description": "Open plugins for MPC machines",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/CSXXL": {
+  "repo": "sunskiefer/CSXXL",
+  "owner": "sunskiefer",
+  "description": "CSXXL is a two-layer, polyphonic synthesizer for the Akai Force and MPC OS, in the spirit of the Yamaha CS-80. It is a completely new build, not a port. The voices and tones are written from Deckard’s Dream voice notes, and the circuits are self-built schematics, emulated in code. Ships with presets, room for up to 1500 presets. Free, not for sale.",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "tonyalonsotech/CTRL-MixBus": {
+  "repo": "tonyalonsotech/CTRL-MixBus",
+  "owner": "tonyalonsotech",
+  "description": "Professional stereo mixing and processing effect for Akai MPC",
+  "topics": [],
+  "stars": 0,
+  "license": "AGPL-3.0"
+ },
+ "sd88me/mpc-vst-daemon": {
+  "repo": "sd88me/mpc-vst-daemon",
+  "owner": "sd88me",
+  "description": "AI generative assistant for the Akai MPC and Force. Say or type what you hear in your head, and Daemon writes it, plays it and puts it in your project: chord progressions, basslines, melodies and beats, then the tracks, sounds, effects and presets around them.",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-dx7": {
+  "repo": "sd88me/mpc-vst-dx7",
+  "owner": "sd88me",
+  "description": "Dexed (DX7) native VST2 plugin port for Akai MPC OS / Force",
+  "topics": [],
+  "stars": 6,
+  "license": "GPL-3.0"
+ },
+ "sunskiefer/dinxxl": {
+  "repo": "sunskiefer/dinxxl",
+  "owner": "sunskiefer",
+  "description": "DINXXL is BlastBeats. for MPC OS.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "macdigi/djfx-looper": {
+  "repo": "macdigi/djfx-looper",
+  "owner": "macdigi",
+  "description": "Portable DJFX Looper DSP and an original native MPC/Force interface; shared app UI and QuotaScope remain private.",
+  "topics": [],
+  "stars": 1,
+  "license": "Apache-2.0"
+ },
+ "padbangers/drips": {
+  "repo": "padbangers/drips",
+  "owner": "padbangers",
+  "description": "Drips: a granular texture synthesizer for Akai MPC standalone devices (insert effect), built on Émilie Gillet's open-source Beads DSP",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/DrLogueXXL": {
+  "repo": "sunskiefer/DrLogueXXL",
+  "owner": "sunskiefer",
+  "description": "After Drumlogue.. for MPC OS..",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sunskiefer/DroneXXL": {
+  "repo": "sunskiefer/DroneXXL",
+  "owner": "sunskiefer",
+  "description": "Drone and experimental synth for the Akai Force / MPC (VST2), a 15-module rack modelled on the Solar 42 and based on AmbientModules.",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-incipience": {
+  "repo": "saustin2010/mpc-vst-incipience",
+  "owner": "saustin2010",
+  "description": "Eleven instruments laid out like the Jomox AlphaBase Mk II analog drum machine, with its controls and 0-127 ranges; plays the AlphaBase's own sample set and your own WAV files. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-mrdrums": {
+  "repo": "saustin2010/mpc-vst-mrdrums",
+  "owner": "saustin2010",
+  "description": "A 16-pad drum sampler: kits of samples on pads 36-51. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-percolator": {
+  "repo": "saustin2010/mpc-vst-percolator",
+  "owner": "saustin2010",
+  "description": "Four-voice percussion synth laid out like the Erica Synths Pērkons HD-01, with envelope displays; it plays the Pērkons' free kit packs. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "no3z/mpc-dubsiren": {
+  "repo": "no3z/mpc-dubsiren",
+  "owner": "no3z",
+  "description": "Native ARM VST2 dub siren for Akai Force/MPC OS. The engine ports BARZINE Siren Deck's siren and echo into C++, connected to sd88me's MPC wrapper, parameter system, native touchscreen skin, Q-Links and portable installer. Attribution and preserved notices are in NOTICE.md and VENDORED.md.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "nachtaktiv303/mpc-vst-dub-station": {
+  "repo": "nachtaktiv303/mpc-vst-dub-station",
+  "owner": "nachtaktiv303",
+  "description": "Dub Station — your one-stop effect plugin for dub techno. Native VST2 for standalone Akai MPC/Force (MPC OS 3.x). Not a clone, its own DSP.",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "gmorb/mpc-vst-dragonfly-early-reflections": {
+  "repo": "gmorb/mpc-vst-dragonfly-early-reflections",
+  "owner": "gmorb",
+  "description": "Dragonfly Early Reflections reverb for MPC OS Gen1 - Port of Dragonfly Reverb Early Reflections",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "burgerbarn/edrum-kit-mpc": {
+  "repo": "burgerbarn/edrum-kit-mpc",
+  "owner": "burgerbarn",
+  "description": "V-Drums straight into a standalone Akai MPC: plugin that plays the MPC's own kits from a Roland TD-27 (digital hi-hat, snare, ride)",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "Devko/EffectWerk": {
+  "repo": "Devko/EffectWerk",
+  "owner": "Devko",
+  "description": "Effect rack VST for MPC OS on the Akai Force: drive, filter, EQ, compressor/OTT, chorus, phaser/flanger, delay and reverb in any order, macros, LFOs, mod matrix, touchscreen pages",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-addin-sample-scalemode": {
+  "repo": "jacob-sabella/mpc-addin-sample-scalemode",
+  "owner": "jacob-sabella",
+  "description": "MPC Sample addin: hold 16 Levels to play the 16 slots in a scale, set on a SCALE page",
+  "topics": [],
+  "stars": 3,
+  "license": "MIT"
+ },
+ "drj-io/SlowOps.MPC.EQ.Artist": {
+  "repo": "drj-io/SlowOps.MPC.EQ.Artist",
+  "owner": "drj-io",
+  "description": "An 8-band EQ for the Akai MPC standalone (MPC OS 3.10.1+, insert effect) that you edit two ways, over a live spectrum of the track:",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "lichthaus/mpc-vst-esque80": {
+  "repo": "lichthaus/mpc-vst-esque80",
+  "owner": "lichthaus",
+  "description": "ESQUE80: an 8-voice cross-wave synthesizer plugin for Akai MPC standalone hardware",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-euclid": {
+  "repo": "sd88me/mpc-vst-euclid",
+  "owner": "sd88me",
+  "description": "Euclid is an 8-lane Euclidean MIDI sequencer for Akai MPC OS standalone devices",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "sunskiefer/Evil-Tuner-XXL": {
+  "repo": "sunskiefer/Evil-Tuner-XXL",
+  "owner": "sunskiefer",
+  "description": "World Radio on the MPC / FORCE.. tune in, mangle wit top notch effects or simply record in to the mpc.. no cable, no hustle. Also comes with a wireless audio from your Mobile Phone (Android via ROC or Iphone via Airdrop)..",
+  "topics": [],
+  "stars": 5,
+  "license": "GPL-3.0"
+ },
+ "macdigi/force-link-audio": {
+  "repo": "macdigi/force-link-audio",
+  "owner": "macdigi",
+  "description": "Stream the Akai Force's audio over the network as an Ableton Link Audio channel, with the Force fully standalone and its pads lit. A MockbaMod addon.",
+  "topics": [],
+  "stars": 5,
+  "license": "GPL-2.0"
+ },
+ "3dthc/fretty-mpc": {
+  "repo": "3dthc/fretty-mpc",
+  "owner": "3dthc",
+  "description": "Fretty is a multi-layered instrument for standalone Akai MPC devices, built for expressive guitar-style performances. It combines playable layers, articulations, and performance controls to create natural-sounding fret-based parts.",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "leonardoMirabal/frodhes": {
+  "repo": "leonardoMirabal/frodhes",
+  "owner": "leonardoMirabal",
+  "description": "Physically modelled electric piano, vibraphone and marimba for the M-VAVE FM-1, SMK-37 and MKE-P37 keyboards, plus Ableton Move, and a CLAP/VST3/AU plugin for macOS, Windows and Linux. No samples. Effects, arpeggiator, sequencer, scales, presets and a web emulator.",
+  "topics": [
+   "ableton-move",
+   "audio",
+   "audio-plugin",
+   "audio-processing",
+   "audio-unit",
+   "dsp",
+   "electric-piano",
+   "marimba",
+   "music",
+   "piano",
+   "vibraphone",
+   "vst-plugin"
+  ],
+  "stars": 15,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-meta-mod": {
+  "repo": "saustin2010/mpc-vst-meta-mod",
+  "owner": "saustin2010",
+  "description": "Meta Mod: a meta-modulator (ring mod, fold, vocoder...) as an audio effect, with 12 presets, from Émilie Gillet's open-source Warps. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-resonator-fx": {
+  "repo": "saustin2010/mpc-vst-resonator-fx",
+  "owner": "saustin2010",
+  "description": "Resonator FX: Resonator as an audio effect, the track's sound excites the resonator, with 12 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-verglas": {
+  "repo": "saustin2010/mpc-vst-verglas",
+  "owner": "saustin2010",
+  "description": "Verglas: a granular texture processor as an audio effect, with 12 presets, from Émilie Gillet's open-source Clouds. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/GAIAXXL": {
+  "repo": "sunskiefer/GAIAXXL",
+  "owner": "sunskiefer",
+  "description": "Virtual-analog synth for Akai Force / MPC OS, modelled on the discontinued Roland GAIA SH-01. Every voice was played one by one on the original and rebuilt in new code from open-source SDKs. Not affiliated with Roland.GAIA and Roland are trademarks of Roland Corporation. This project is an independent recreation and is not a Rolands product ",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "padbangers/glass-spheres": {
+  "repo": "padbangers/glass-spheres",
+  "owner": "padbangers",
+  "description": "Glass Spheres: a random sampler after Mutable Instruments Marbles for Akai MPC standalone, MIDI or MPC X CV out",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "zay2001-beatsbylonza/GPP-Link": {
+  "repo": "zay2001-beatsbylonza/GPP-Link",
+  "owner": "zay2001-beatsbylonza",
+  "description": "Send files between your MPCs and the Beats folder on your Mac (or Windows PC, in testing), over Wi-Fi.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "lightlikemusic/grainbloom": {
+  "repo": "lightlikemusic/grainbloom",
+  "owner": "lightlikemusic",
+  "description": "A granular micro-loop and texture effect for Akai MPC standalone hardware, by Lightlike.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "eldontyrellcorp/mpc-plugin-grainology": {
+  "repo": "eldontyrellcorp/mpc-plugin-grainology",
+  "owner": "eldontyrellcorp",
+  "description": "The repository contains the code for my freely available MPC plugin Grainology",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "gmorb/mpc-vst-dragonfly-hall": {
+  "repo": "gmorb/mpc-vst-dragonfly-hall",
+  "owner": "gmorb",
+  "description": "Dragonfly Hall reverb for MPC OS Gen1 - Port of Dragonfly Reverb Hall",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "Lewinator56/mpc-vst-helm": {
+  "repo": "Lewinator56/mpc-vst-helm",
+  "owner": "Lewinator56",
+  "description": "A port of the helm virtual synthesizer by Matt Tytel for the akai MPC",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "Eurikon/mpc-vst-plugins": {
+  "repo": "Eurikon/mpc-vst-plugins",
+  "owner": "Eurikon",
+  "description": "Twisted Cable instruments and effects for MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": null
+ },
+ "sunskiefer/InterzoneXXL": {
+  "repo": "sunskiefer/InterzoneXXL",
+  "owner": "sunskiefer",
+  "description": "InterzoneXXL 0.1.0, milestone 1 (the voice), is built and tested offline but hasn’t been on the Force yet. It is a separate project from PlateauXXL, with the same build, limiter, Panic and Q-Link handling. Everything shows on the device as InterzoneXXL by ANDREALPHEUS.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "Yan-1977/jamiro-mpc": {
+  "repo": "Yan-1977/jamiro-mpc",
+  "owner": "Yan-1977",
+  "description": "Jamiro: Novation X-Station-style polysynth (KS engine) for Akai MPC standalone. Loads your X-Station .syx banks.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "303inmyheart/OpenMPC-JC303": {
+  "repo": "303inmyheart/OpenMPC-JC303",
+  "owner": "303inmyheart",
+  "description": "JC303 MPC — 303-style synth for Gen2 MPCs with native Q-Links, sequencer, drive models and presets. Community port by 303inmyheart.",
+  "topics": [
+   "aarch64",
+   "acid",
+   "ai-generated",
+   "akai-mpc",
+   "mpc-live-iii",
+   "synthesizer",
+   "tb-303",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-je8086": {
+  "repo": "sd88me/mpc-vst-je8086",
+  "owner": "sd88me",
+  "description": "A Roland JP-8000 emulation that runs as a plugin instrument on Akai MPC Gen2 standalone devices. It runs the JP-8000's original firmware on gearmulator's emulation of the synth's chips.",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-jn106": {
+  "repo": "sd88me/mpc-vst-jn106",
+  "owner": "sd88me",
+  "description": "A faithful, circuit-modelled and hardware-profiled six-voice Juno emulation for Akai MPC OS standalone devices. The DSP is Ultramaster KR-106 by Karl LaRocca:",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "eldontyrellcorp/mpc-plugin-ju08": {
+  "repo": "eldontyrellcorp/mpc-plugin-ju08",
+  "owner": "eldontyrellcorp",
+  "description": "The repository contains the code for my freely available MPC ju-08 plugin",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-jv880": {
+  "repo": "sd88me/mpc-vst-jv880",
+  "owner": "sd88me",
+  "description": "JV-880 Emulator VST Plugin for MPC OS",
+  "topics": [],
+  "stars": 19,
+  "license": "NOASSERTION"
+ },
+ "jacob-sabella/mpc-vst-keyscope": {
+  "repo": "jacob-sabella/mpc-vst-keyscope",
+  "owner": "jacob-sabella",
+  "description": "Key and chord detection for MPC OS standalone devices: a native VST2 insert effect that names the key, chord, bass note and tuning from audio or MIDI.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/BUSTEDXXL": {
+  "repo": "sunskiefer/BUSTEDXXL",
+  "owner": "sunskiefer",
+  "description": "Love letter to Bastl instruments stuff!!! Open source modules used, the others are imagined from my tinnitus alucination and some computer science to approach it to what those real modules work and sound.. patched as a groovebox..",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "gmorb/mpc-vst-liminal-amp": {
+  "repo": "gmorb/mpc-vst-liminal-amp",
+  "owner": "gmorb",
+  "description": "A NAM A2 head and IR cab for MPC (Akai Force / MPC OS)",
+  "topics": [
+   "akai-force",
+   "mpc",
+   "nam",
+   "neural-amp-modeler",
+   "tone3000",
+   "vst"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "gmorb/mpc-vst-liminal-hz": {
+  "repo": "gmorb/mpc-vst-liminal-hz",
+  "owner": "gmorb",
+  "description": "Liminal Hz for MPC OS - Convolution reverb plugin",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "sunskiefer/Loop-SaboteurXXL": {
+  "repo": "sunskiefer/Loop-SaboteurXXL",
+  "owner": "sunskiefer",
+  "description": "A ported effect for the MPC os. Destructive audio effect plugin (AU/VST3) for spicing up loops, pads, and drum patterns. 8 scene sequencer driving stutter, ratchet, reverse, filter, bit-crush, stretch, and stereo-field manipulation. Options for ratchet, probability, and per-step parameter locking. Other features including modulation",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "drj-io/SlowOps.MPC.Looper": {
+  "repo": "drj-io/SlowOps.MPC.Looper",
+  "owner": "drj-io",
+  "description": "Looper for MPC",
+  "topics": [],
+  "stars": 4,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-luckydip": {
+  "repo": "sd88me/mpc-vst-luckydip",
+  "owner": "sd88me",
+  "description": "Your sample library is bigger than you remember. Lucky Dip reaches in, pulls out sixteen sounds, drops them on the pads and lets you play them straight away. Don't like one? Reroll it. Love one? Lock it and dip again. When the kit feels right, export it as a normal MPC drum program.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "sunskiefer/LUFest": {
+  "repo": "sunskiefer/LUFest",
+  "owner": "sunskiefer",
+  "description": "LFUs METER. for akai mpc os. Goes on the master channel effects.. does its thing.",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "drj-io/SlowOps.MPC.LufsVu": {
+  "repo": "drj-io/SlowOps.MPC.LufsVu",
+  "owner": "drj-io",
+  "description": "Analog VU meters, EBU R 128 loudness and a true-peak limiter: an insert effect for Akai MPC standalone (MPC OS 3.10.1+). Version 1.0.1. Called \"VU Meter\" before 1.0.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sunskiefer/LXR02XXL": {
+  "repo": "sunskiefer/LXR02XXL",
+  "owner": "sunskiefer",
+  "description": "The Sonic Potions + Erica Synths LXR-02 drum machine, modded, as a plugin instrument for the Akai Force / MPC: the whole panel on one page, LXR02Open’s voices, randomizers and the Hrtl DLC presets.",
+  "topics": [],
+  "stars": 9,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/LXRXXL-BAZZLINE": {
+  "repo": "sunskiefer/LXRXXL-BAZZLINE",
+  "owner": "sunskiefer",
+  "description": "LXRXXL BAZZLINE IS A BASSLINE 8 VOICE SYNTH",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/LXRXXL-ZYNTH": {
+  "repo": "sunskiefer/LXRXXL-ZYNTH",
+  "owner": "sunskiefer",
+  "description": "LXRXXL Synth MOD. ",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "fullbann/mpc-vst-m-one": {
+  "repo": "fullbann/mpc-vst-m-one",
+  "owner": "fullbann",
+  "description": "A Korg M1-style ROM workstation for MPC OS standalone devices (Akai Force, MPC One/Live/X/Key on Gen1; MPC XL, Live III on Gen2): 100 programs, 100 combinations, the M1's 33 effects, quick-edit knobs, a Library of SysEx banks.",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-machinedrum": {
+  "repo": "sd88me/mpc-vst-machinedrum",
+  "owner": "sd88me",
+  "description": "Machinedrum SPS-1 UW sound engine as a native VST2 instrument for Akai MPC OS standalone devices",
+  "topics": [],
+  "stars": 24,
+  "license": "AGPL-3.0"
+ },
+ "MagicStino/Magic-Tape-Echo": {
+  "repo": "MagicStino/Magic-Tape-Echo",
+  "owner": "MagicStino",
+  "description": "Magic Tape Echo — CPU-conscious native tape echo for Akai Force / MPC, based on Dusk Audio Tape Echo 2.",
+  "topics": [],
+  "stars": 0,
+  "license": null
+ },
+ "sunskiefer/MANTRA": {
+  "repo": "sunskiefer/MANTRA",
+  "owner": "sunskiefer",
+  "description": "AUDIO MANGLER MULTIFX",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "mmiroshnikov/mpc-maschine-group": {
+  "repo": "mmiroshnikov/mpc-maschine-group",
+  "owner": "mmiroshnikov",
+  "description": "Maschine 2 drum groups (.mxgrp) as a native MPC OS VST2 instrument",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-maze": {
+  "repo": "sd88me/mpc-vst-maze",
+  "owner": "sd88me",
+  "description": "💬 Questions or feedback? Join the Open MPC Discord.",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "mcardonaserrano/meowsynth-mpc": {
+  "repo": "mcardonaserrano/meowsynth-mpc",
+  "owner": "mcardonaserrano",
+  "description": "knobster's MeowSynth rebuilt as a native Akai MPC OS plugin (mpc-vst-plugins), with the original's look and the meowing cat",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "sunskiefer/Meta4MPCXXL": {
+  "repo": "sunskiefer/Meta4MPCXXL",
+  "owner": "sunskiefer",
+  "description": "Meta 4ms brings vcv rack to standalone and eurorack XXL will bring it to the force..",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-model72": {
+  "repo": "sd88me/mpc-vst-model72",
+  "owner": "sd88me",
+  "description": "Idle Foundry's CA-72, a circuit-modelled homage to the 1970s Minimoog Model D synthesizer ported as a MPC VST Plugin host for standalone devices.",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-monomodule": {
+  "repo": "sd88me/mpc-vst-monomodule",
+  "owner": "sd88me",
+  "description": "Monomodule (Monomachine DSP56300 emulation) as an Akai Force/MPC OS VST2 plugin, via mpc-vst-plugins",
+  "topics": [],
+  "stars": 21,
+  "license": "AGPL-3.0"
+ },
+ "sunskiefer/MORI": {
+  "repo": "sunskiefer/MORI",
+  "owner": "sunskiefer",
+  "description": "This is a love letter to (MEMENTO | Enjoy-Lab) but it is my own circuitry emulation, programed by logical coding from their firmware (not a clone not a port). Tested on akai force. ",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-morpho-PE": {
+  "repo": "sd88me/mpc-vst-morpho-PE",
+  "owner": "sd88me",
+  "description": "A four-voice hybrid evolving synthesizer for Akai MPC OS 3.x standalone devices. It plays the way the DSI Poly Evolver's voice does including its factory sounds and presets.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "jacob-sabella/mpc-addin-commander": {
+  "repo": "jacob-sabella/mpc-addin-commander",
+  "owner": "jacob-sabella",
+  "description": "An MPC OS addin and desktop app: the plugins MPC loads, drawn with their own skins and edited live from a computer, plus transport, timeline, MIDI and the project's tracks",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "mitchoster/mpc-vst-djfx2": {
+  "repo": "mitchoster/mpc-vst-djfx2",
+  "owner": "mitchoster",
+  "description": "One-slot DJ insert effect for Akai MPC and Force standalone devices - isolator, DJ filter, beat repeat, delay, reverb, flanger, grain delay, limiter and a macro layer",
+  "topics": [
+   "akai",
+   "audio-effect",
+   "dj",
+   "force",
+   "mpc",
+   "multi-fx",
+   "performance",
+   "vst2"
+  ],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-addin-filebrowser": {
+  "repo": "jacob-sabella/mpc-addin-filebrowser",
+  "owner": "jacob-sabella",
+  "description": "FileBrowser Quantum beside MPC on MPC OS standalone devices (Gen1 and Gen2): an addin, built from upstream releases in CI",
+  "topics": [
+   "akai-mpc",
+   "file-manager",
+   "file-transfer",
+   "filebrowser",
+   "mpc",
+   "mpc-addin",
+   "samples"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-addin-gateway": {
+  "repo": "jacob-sabella/mpc-addin-gateway",
+  "owner": "jacob-sabella",
+  "description": "One HTTPS address with one password for the web pages MPC addins run (Caddy reverse proxy addin for MPC OS standalone devices)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "3dthc/MPC-MIDI-Converter": {
+  "repo": "3dthc/MPC-MIDI-Converter",
+  "owner": "3dthc",
+  "description": "Free MIDI to MPC pattern converter that runs on the MPC: browse your drives, convert one .mid file or a whole pack to .mpcpattern, with track splitting, GM drum mapping and quantize.",
+  "topics": [
+   "akai-mpc",
+   "midi",
+   "midi-converter",
+   "mpc",
+   "mpcpattern",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "mitchoster/mpc-vst-multihead-echo": {
+  "repo": "mitchoster/mpc-vst-multihead-echo",
+  "owner": "mitchoster",
+  "description": "Three-head tape echo for Akai MPC and Force standalone: 12 head modes, three preamp characters, tape wear, tempo sync, spring reverb and a companion screen in the browser",
+  "topics": [
+   "akai",
+   "audio-effect",
+   "companion-app",
+   "delay",
+   "force",
+   "gpl",
+   "mpc",
+   "tape-echo",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "poloq-instruments/mpc-vst-plaits": {
+  "repo": "poloq-instruments/mpc-vst-plaits",
+  "owner": "poloq-instruments",
+  "description": "Mutable Instruments Plaits for MPC OS: all 24 models, polyphonic, mod matrix, touchscreen skin.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "jacob-sabella/mpc-addin-remote": {
+  "repo": "jacob-sabella/mpc-addin-remote",
+  "owner": "jacob-sabella",
+  "description": "The screen and touchscreen of an Akai MPC standalone in a web browser, plus an MCP server: an LD_PRELOAD addin",
+  "topics": [],
+  "stars": 4,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-addin-sample-draw-handler": {
+  "repo": "jacob-sabella/mpc-addin-sample-draw-handler",
+  "owner": "jacob-sabella",
+  "description": "MPC Sample addin: shares the Sample's screen with the plugins and addins that draw on it",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-addin-sample-rack": {
+  "repo": "jacob-sabella/mpc-addin-sample-rack",
+  "owner": "jacob-sabella",
+  "description": "MPC Sample addin: add, remove and turn off the plugins in a project's inserts (the RACK page)",
+  "topics": [],
+  "stars": 3,
+  "license": "MIT"
+ },
+ "sd88me/mpc-addin-skipback": {
+  "repo": "sd88me/mpc-addin-skipback",
+  "owner": "sd88me",
+  "description": "An addin for Akai MPC OS standalone devices (MPC Live, One, X, Key and Force, Gen1 or Gen2). It runs inside MPC, with no extra program to start, and uses the controller's own buttons and LEDs. Tested on a Force and a Gen2 Live III; see Status.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "mitchoster/mpc-vst-tape-echo": {
+  "repo": "mitchoster/mpc-vst-tape-echo",
+  "owner": "mitchoster",
+  "description": "Three-head tape echo with a spring tank for Akai MPC and Force standalone: 12 head/reverb modes, tape saturation, wow and flutter, tempo sync",
+  "topics": [
+   "akai",
+   "audio-effect",
+   "delay",
+   "force",
+   "gpl",
+   "mpc",
+   "tape-echo",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "jacob-sabella/mpc-addin-usb-audio": {
+  "repo": "jacob-sabella/mpc-addin-usb-audio",
+  "owner": "jacob-sabella",
+  "description": "Makes an Akai MPC standalone a class-compliant USB audio interface on its USB device port: an LD_PRELOAD addin",
+  "topics": [],
+  "stars": 15,
+  "license": "MIT"
+ },
+ "sunskiefer/MS20XXL": {
+  "repo": "sunskiefer/MS20XXL",
+  "owner": "sunskiefer",
+  "description": "MS20XXL — Korg MS-20-style semi-modular mono synth for Akai Force / MPC OS (VST2) by L’Cronx. Two VCOs, MS-20 HPF/LPF, ESP, touch patch bay drawn on the block diagram, and an SQ-10-style analog step sequencer.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-ms2kr": {
+  "repo": "sd88me/mpc-vst-ms2kr",
+  "owner": "sd88me",
+  "description": "The MS2000R analog-modeling synthesizer Emulator running as a VST2 plugin for Akai MPC Gen2 standalone devices. It is not a re-creation of the sound: it runs the synthesizer's own firmware. ",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "nachtaktiv303/mpc-vst-mutable-vibe": {
+  "repo": "nachtaktiv303/mpc-vst-mutable-vibe",
+  "owner": "nachtaktiv303",
+  "description": "Mutable Instruments Rings + Plaits as a native Akai MPC OS VST2 instrument",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "jacob-sabella/mpc-vst-nam": {
+  "repo": "jacob-sabella/mpc-vst-nam",
+  "owner": "jacob-sabella",
+  "description": "Neural Amp Modeler as a native VST2 insert effect for Akai MPC OS standalones: cab IR, tone, gate, pitch, delay, reverb and an on-device TONE3000 downloader.",
+  "topics": [
+   "akai-mpc",
+   "amp-sim",
+   "guitar",
+   "mpc",
+   "nam",
+   "neural-amp-modeler",
+   "tone3000",
+   "vst",
+   "vst2"
+  ],
+  "stars": 7,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-nodalred2x": {
+  "repo": "sd88me/mpc-vst-nodalred2x",
+  "owner": "sd88me",
+  "description": "A Clavia Nord Lead 2x emulation that runs as a plugin instrument on Akai MPC Gen2 standalone devices (MPC Live III and other aarch64 MPCs), with a full touchscreen editor and Q-Link control.",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "3dthc/mpc-addin-nova-audio": {
+  "repo": "3dthc/mpc-addin-nova-audio",
+  "owner": "3dthc",
+  "description": "MPC addin: lets a plugin play the MPC's audio inputs as its own sound",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "3dthc/nova-editor": {
+  "repo": "3dthc/nova-editor",
+  "owner": "3dthc",
+  "description": "An editor and librarian for the Novation MiniNova, as a native plugin for Akai MPC OS standalone devices, with its own MPC screen skin. It also works as a SysEx librarian for any other synth: receive, list, export and send patch dumps back.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "3dthc/OB-XD-MPC": {
+  "repo": "3dthc/OB-XD-MPC",
+  "owner": "3dthc",
+  "description": "Unofficial OB-Xd synth for Akai MPC (standalone, ARM VST2). Touch-friendly panel, bank/patch browser, tempo-synced LFO.",
+  "topics": [],
+  "stars": 5,
+  "license": "GPL-3.0"
+ },
+ "3dthc/Odin2-MPC": {
+  "repo": "3dthc/Odin2-MPC",
+  "owner": "3dthc",
+  "description": "Odin 2 synthesizer ported to the Akai MPC Live II as a native VST2 plugin: Odin’s own engine, 261 factory patches, touchscreen pages in Odin’s look, automatic voice management and a CPU meter. Unofficial port, GPL-3.0.",
+  "topics": [],
+  "stars": 4,
+  "license": "NOASSERTION"
+ },
+ "B0ss-M/MrHighMan": {
+  "repo": "B0ss-M/MrHighMan",
+  "owner": "B0ss-M",
+  "description": "multi-format player for the mpc",
+  "topics": [],
+  "stars": 7,
+  "license": null
+ },
+ "open-mpc/plugin-manager": {
+  "repo": "open-mpc/plugin-manager",
+  "owner": "open-mpc",
+  "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-osirus": {
+  "repo": "sd88me/mpc-vst-osirus",
+  "owner": "sd88me",
+  "description": "Access Virus A/B/C emulation (gearmulator) as a native VST2 instrument for Akai MPC Gen2 (aarch64) devices",
+  "topics": [
+   "akai-mpc",
+   "gearmulator",
+   "virus",
+   "vst2"
+  ],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "dnkkit/OsTirusMPC": {
+  "repo": "dnkkit/OsTirusMPC",
+  "owner": "dnkkit",
+  "description": "Virus TI Snow emulation for MPC standalone by Pryonix",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-OTT": {
+  "repo": "sd88me/mpc-vst-OTT",
+  "owner": "sd88me",
+  "description": "Vital's OTT multiband compressor as an insert effect for MPC and Force.",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "padbangers/overcast": {
+  "repo": "padbangers/overcast",
+  "owner": "padbangers",
+  "description": "Overcast: Mutable Instruments Clouds (Parasites) as a native MPC OS insert effect, with a modulation page",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "3dthc/OxZygen": {
+  "repo": "3dthc/OxZygen",
+  "owner": "3dthc",
+  "description": "  OXZYGEN: a dark, cinematic instrument for Akai MPC standalone. Choirs, sung doos, winds, brass, strings, bells, Juno-style synths and textures; 96 presets. Gen1 + Gen2.",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "frere12/padstep-16-mpc": {
+  "repo": "frere12/padstep-16-mpc",
+  "owner": "frere12",
+  "description": "A step sequencer VST 2 plugin for Akai MPC One G2",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/PhyXXL": {
+  "repo": "sunskiefer/PhyXXL",
+  "owner": "sunskiefer",
+  "description": "PhyXXL is a multi filter effect for the MPC OS.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "timomacquis/piAMB-MPC": {
+  "repo": "timomacquis/piAMB-MPC",
+  "owner": "timomacquis",
+  "description": "πAMB — generative ambient garden for Akai Force / MPC: port of AMB-1 by Charles Vestal (github.com/charlesvestal/fm1-amb)",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
+ },
+ "timomacquis/piMorpH-MPC": {
+  "repo": "timomacquis/piMorpH-MPC",
+  "owner": "timomacquis",
+  "description": "Polyphonic XY wavetable synthesizer for Akai Force Gen1, with paths, orbit, dual LFOs and a CC0 Adventure Kid factory bank.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "timomacquis/piRemote-Force": {
+  "repo": "timomacquis/piRemote-Force",
+  "owner": "timomacquis",
+  "description": "πRemote — compact Windows transport and physical-button navigation companion for the official Akai Remote Screen, on Force Gen1.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "timomacquis/piToniC-MPC": {
+  "repo": "timomacquis/piToniC-MPC",
+  "owner": "timomacquis",
+  "description": "A Microtonic-inspired drum machine with eight independent percussion voices for MPC OS, with native sequencing, contextual Q-Links, reverb and delay.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "gmorb/mpc-vst-dragonfly-plate": {
+  "repo": "gmorb/mpc-vst-dragonfly-plate",
+  "owner": "gmorb",
+  "description": "Dragonfly Plate reverb for MPC OS Gen1 - Port of Dragonfly Reverb Plate",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "sunskiefer/PlateauXXL": {
+  "repo": "sunskiefer/PlateauXXL",
+  "owner": "sunskiefer",
+  "description": "Plateau 0.3.0 brings Valley's plate reverb to MPC, tested on Akai Force with the latest OS and Mockba Mod. Features Bogaudio LFO, Mutable Tides and Marbles, an in-house step sequencer, interconnected modulation routing, filtering, saturation, RMXXXL-style limiting, presets, panic reset and full Q-Link control.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "Devko/PolyWerk": {
+  "repo": "Devko/PolyWerk",
+  "owner": "Devko",
+  "description": "PolyWerk is a VST2 instrument for MPC OS's built-in plugin host, with its own touchscreen pages and Q-Link sets. Its feature set tips its hat to a certain buzzing desktop wavetable synth 🐝, squeezed into the CPU budget of a standalone groovebox. The name, DSP, wavetables and presets are all PolyWerk's own.",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potential1200": {
+  "repo": "PotentialBreakfast/mpc-vst-potential1200",
+  "owner": "PotentialBreakfast",
+  "description": "12-bit SP-1200-style drum sampler plugin for standalone MPCs (MPC OS 3.x)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialbleed": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialbleed",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialBleed: ghost-note bleed and residue around every hit, for MPC",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialbreaks": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialbreaks",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialBreaks - drum-break slicer plugin for Akai MPC standalone (MPC One, Live, X)",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialcrates": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialcrates",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialCrates: a fork of Crate Digger for MPC, with ROLL dice and one-tap crates",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "PotentialBreakfast/mpc-vst-potentialgrit": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialgrit",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialGrit: seven lo-fi effects in one box for MPC",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialheat": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialheat",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialHeat: a soft clipper and bus saturator plugin for Akai MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialkits": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialkits",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialKits: a random drum-kit builder for Akai MPC, a PotentialSuite fork of sd88me's Lucky Dip",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialnoise": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialnoise",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialNoise: a calibrated pink noise mixing reference plugin for Akai MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialpatina": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialpatina",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialPatina - retro-colour insert effect plugin for Akai MPC standalone (MPC One, Live, X)",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialpunch": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialpunch",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialPunch: a transient shaper plugin for Akai MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialwarp": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialwarp",
+  "owner": "PotentialBreakfast",
+  "description": "Free and open source (MIT), made by PotentialBreaks. It runs inside the MPC like its own effects, with its own touchscreen page, Q-Link control and project recall, and no computer needed while you play.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "PotentialBreakfast/mpc-vst-potentialwax": {
+  "repo": "PotentialBreakfast/mpc-vst-potentialwax",
+  "owner": "PotentialBreakfast",
+  "description": "PotentialWax: a Serato Sample-style melodic sampler plugin for Akai MPC standalone",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "sunskiefer/PrLogueXXL": {
+  "repo": "sunskiefer/PrLogueXXL",
+  "owner": "sunskiefer",
+  "description": "After Prologue for MPC OS",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-profit8": {
+  "repo": "sd88me/mpc-vst-profit8",
+  "owner": "sd88me",
+  "description": "An eight-voice, two-layer analog-style synthesizer for Akai MPC OS standalone. It plays the way the Prophet '08 does including factory sounds and presets.",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-profit5": {
+  "repo": "sd88me/mpc-vst-profit5",
+  "owner": "sd88me",
+  "description": "A five-voice analog polysynth circuit modelled on an early SSM-chip Prophet-5 for Akai MPC OS standalone devices (Force, MPC Live / One / X / Key), built as a native VST2 instrument with its own screen skin and Q-Link pages.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/PS3100XXL": {
+  "repo": "sunskiefer/PS3100XXL",
+  "owner": "sunskiefer",
+  "description": "KORG PS3100 circuitry with L'Cronx a la Carte voices.. with an awsome new system patch bay!!!",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "MagicStino/pulytek": {
+  "repo": "MagicStino/pulytek",
+  "owner": "MagicStino",
+  "description": "PulyTek: blue Pultec-style Wave Digital Filter EQ for Akai Force / MPC OpenPlugin, with tube warmth, VU meters and native controls.",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "sunskiefer/reMixXXL": {
+  "repo": "sunskiefer/reMixXXL",
+  "owner": "sunskiefer",
+  "description": "Port for MPC os of the dj software Mixxx. ",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "asearan/Retrolooper-One-MPC-Force": {
+  "repo": "asearan/Retrolooper-One-MPC-Force",
+  "owner": "asearan",
+  "description": "One track version of the Retrolooper for AKAI MPC/FORCE",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-reverbicon224": {
+  "repo": "sd88me/mpc-vst-reverbicon224",
+  "owner": "sd88me",
+  "description": "A Lexicon 224 (original, firmware v4.4) style reverb as a native effect plugin for Akai MPC OS standalone devices",
+  "topics": [],
+  "stars": 1,
+  "license": "AGPL-3.0"
+ },
+ "sunskiefer/RMXXXL": {
+  "repo": "sunskiefer/RMXXXL",
+  "owner": "sunskiefer",
+  "description": "RMX-1000-style remix effect for MPC OS on the Akai Force: isolator, DJ filter, scene FX, echo, Clouds, reverbs, sample pads, limiter.",
+  "topics": [
+   "akai",
+   "akai-force",
+   "akai-mpc",
+   "audio-effect",
+   "force",
+   "mpc",
+   "remix",
+   "rmx1000"
+  ],
+  "stars": 5,
+  "license": "GPL-3.0"
+ },
+ "gmorb/mpc-vst-dragonfly-room": {
+  "repo": "gmorb/mpc-vst-dragonfly-room",
+  "owner": "gmorb",
+  "description": "Dragonfly Room reverb for MPC OS Gen1 - Port of Dragonfly Reverb Room",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "drj-io/SlowOps.Scratchivision": {
+  "repo": "drj-io/SlowOps.Scratchivision",
+  "owner": "drj-io",
+  "description": "Scratchivision is an MPC plugin (MPC OS 3.10.1+, built for the MPC XL) that turns a turntable with Serato-style control vinyl into a scratch controller for a sample. It is an insert effect: timecode audio goes into the track, the scratched sample comes out.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-drum-map": {
+  "repo": "saustin2010/mpc-vst-drum-map",
+  "owner": "saustin2010",
+  "description": "Drum Map: a topographic drum sequencer that plays a drum track from MPC's clock, from Émilie Gillet's open-source Grids. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-dual-slope": {
+  "repo": "saustin2010/mpc-vst-dual-slope",
+  "owner": "saustin2010",
+  "description": "Dual Slope: two rise-and-fall generators (envelopes, LFOs, slew) that modulate other tracks, based on Befaco's Rampage VCV Rack module. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-eucalypso": {
+  "repo": "saustin2010/mpc-vst-eucalypso",
+  "owner": "saustin2010",
+  "description": "Four-lane Euclidean sequencer: turns held notes into interlocking rhythms for other tracks. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-groovebank": {
+  "repo": "saustin2010/mpc-vst-groovebank",
+  "owner": "saustin2010",
+  "description": "Retriggers the chord you hold in a rhythm from a library of genre grooves. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-midiplayer": {
+  "repo": "saustin2010/mpc-vst-midiplayer",
+  "owner": "saustin2010",
+  "description": "Plays Standard MIDI Files in time with MPC's transport. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-pixelwalkers": {
+  "repo": "saustin2010/mpc-vst-pixelwalkers",
+  "owner": "saustin2010",
+  "description": "Generative: the notes you play become walkers that bounce and retrigger when they land. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-stevequencer": {
+  "repo": "saustin2010/mpc-vst-stevequencer",
+  "owner": "saustin2010",
+  "description": "16 steps on a 4x4 grid, up to four pages (64 steps), edited from the Q-Links. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-stevequencer16": {
+  "repo": "saustin2010/mpc-vst-stevequencer16",
+  "owner": "saustin2010",
+  "description": "16 steps on a 4x4 grid and eight modulation lanes that can move any parameter of the instrument, on any page. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-superarp": {
+  "repo": "saustin2010/mpc-vst-superarp",
+  "owner": "saustin2010",
+  "description": "A pattern and rhythm arpeggiator with 40 patterns, 40 rhythms and random modifiers. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "SamplingHigh/mpc-vst-setbfree": {
+  "repo": "SamplingHigh/mpc-vst-setbfree",
+  "owner": "SamplingHigh",
+  "description": "setBfree tonewheel organ port for Akai MPC OS and Force",
+  "topics": [
+   "akai-mpc",
+   "force",
+   "gplv2",
+   "organ",
+   "setbfree",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "GPL-2.0"
+ },
+ "gmorb/mpc-vst-sfizz": {
+  "repo": "gmorb/mpc-vst-sfizz",
+  "owner": "gmorb",
+  "description": "sfizz 1.2.3 SFZ sampler for MPC OS standalone hardware (Gen1 armv7 + Gen2 aarch64), with a one-page screen modelled on sfizz's editor",
+  "topics": [
+   "aarch64",
+   "akai-mpc",
+   "arm",
+   "mpc",
+   "mpc-os",
+   "sampler",
+   "sfizz",
+   "sfz",
+   "vst"
+  ],
+  "stars": 0,
+  "license": "BSD-2-Clause"
+ },
+ "3dthc/Shapey-MPC": {
+  "repo": "3dthc/Shapey-MPC",
+  "owner": "3dthc",
+  "description": "Two touch-first parametric EQs for Akai MPC OS standalone devices, as native VST2 audio effects built with mpc-vst-plugins. They run on the same engine and come as two separate plugins with their own releases. Install either one or both; they show up in the plugin list under their own names.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "3dthc/Sonix": {
+  "repo": "3dthc/Sonix",
+  "owner": "3dthc",
+  "description": "Sonix is a ROMpler instrument for standalone Akai MPC devices, featuring a diverse collection of sounds including pianos, keys, pads, strings, brass, choirs, basses, leads, and synths. Built with redistributable sound libraries, it brings a versatile range of melodic sounds to your MPC.",
+  "topics": [],
+  "stars": 3,
+  "license": "MIT"
+ },
+ "elizmita/davis-spectral-sidechain": {
+  "repo": "elizmita/davis-spectral-sidechain",
+  "owner": "elizmita",
+  "description": "One-band sidechain dynamic EQ for Akai MPC standalone (VST2, MPC OS 3.x). Put SEND on any source (kick, snare, vocal...) and RECEIVE on any track (bass, pads, samples...): it makes room only at the chosen frequency and only while the source plays. SC peak finder, live curve, output spectrum, 32-bit float audio.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sunskiefer/SQ8LMPC": {
+  "repo": "sunskiefer/SQ8LMPC",
+  "owner": "sunskiefer",
+  "description": "Port of SQ8L 0.91b (Ensoniq SQ-80 emulation by Siegfried Kullmann) to Akai Force / MPC OS, ARMv7 VST2. Based on sq8l-revival. Unofficial, free, non-commercial.",
+  "topics": [],
+  "stars": 2,
+  "license": "NOASSERTION"
+ },
+ "djokenzi/steprunner-8": {
+  "repo": "djokenzi/steprunner-8",
+  "owner": "djokenzi",
+  "description": "8-track, 64-step sequencer plugin for Akai MPC standalone",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-vst-stompbox": {
+  "repo": "jacob-sabella/mpc-vst-stompbox",
+  "owner": "jacob-sabella",
+  "description": "A whole guitar rig (guitarix and GxPlugins, 219 models, 40 factory presets) as one VST insert effect for Akai MPC OS standalone devices, with a native screen skin",
+  "topics": [
+   "akai-mpc",
+   "amp-sim",
+   "effects-pedal",
+   "guitar",
+   "guitar-effects",
+   "guitarix",
+   "impulse-response",
+   "mpc",
+   "vst",
+   "vst2"
+  ],
+  "stars": 3,
+  "license": "GPL-3.0"
+ },
+ "stampman3000-jpg/mpc-stream": {
+  "repo": "stampman3000-jpg/mpc-stream",
+  "owner": "stampman3000-jpg",
+  "description": "Stream is a multichannel USB audio effect send. It needs BlackHole 64ch and a Mac helper app.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "lightlikemusic/studio424": {
+  "repo": "lightlikemusic/studio424",
+  "owner": "lightlikemusic",
+  "description": "STUDIO424: an early-90s cassette four-track mixer channel in a pedal. Trim into a saturating preamp, two-band shelving EQ, channel fader and a driveable mix bus with master fader.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sd88me/mpc-vst-sturm": {
+  "repo": "sd88me/mpc-vst-sturm",
+  "owner": "sd88me",
+  "description": "A six-voice analog-style drum and synth voice inspired by DSI Tempest for Akai MPC OS standalone devices. Uses the factory ROM for sounds and presets. ",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "Devko/SubWerk": {
+  "repo": "Devko/SubWerk",
+  "owner": "Devko",
+  "description": "Analog-style monosynth VST for MPC OS on the Akai Force: morphing oscillators, a nonlinear transistor ladder, feedback, Multidrive, Duo, 57 presets, touchscreen pages",
+  "topics": [
+   "akai-force",
+   "ladder-filter",
+   "monosynth",
+   "mpc",
+   "synthesizer",
+   "vst2"
+  ],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "sunskiefer/SurgeXXL": {
+  "repo": "sunskiefer/SurgeXXL",
+  "owner": "sunskiefer",
+  "description": "Surge ported to MPC os full open source. Slight change to the code to be able to run on the mpc system. All the effects. Load surge patches and wavetables including your ones. Full wave table synth on MPC os.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-open303": {
+  "repo": "saustin2010/mpc-vst-open303",
+  "owner": "saustin2010",
+  "description": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-aphex": {
+  "repo": "saustin2010/mpc-vst-aphex",
+  "owner": "saustin2010",
+  "description": "Korg MS-10/MS-20 style mono synth with a patch bay, an ESP section and both MS filters. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-macro-osc": {
+  "repo": "saustin2010/mpc-vst-macro-osc",
+  "owner": "saustin2010",
+  "description": "Macro Osc: a macro oscillator with 47 synthesis models, from Émilie Gillet's open-source Braids. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-chordism": {
+  "repo": "saustin2010/mpc-vst-chordism",
+  "owner": "saustin2010",
+  "description": "One key in, a four-voice chord out: morphing oscillators, FM, filter, lo-fi, delay, reverb and an arpeggiator. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-denis": {
+  "repo": "saustin2010/mpc-vst-denis",
+  "owner": "saustin2010",
+  "description": "West Coast / Serge-inspired mono synth: complex oscillators, a wavefolder and a modulation matrix. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-modal-voice": {
+  "repo": "saustin2010/mpc-vst-modal-voice",
+  "owner": "saustin2010",
+  "description": "Modal Voice: a modal synthesis voice you bow, blow and strike, with 12 presets, from Émilie Gillet's open-source Elements. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-fizzik": {
+  "repo": "saustin2010/mpc-vst-fizzik",
+  "owner": "saustin2010",
+  "description": "Physical modelling: an exciter and two coupled resonators (string, beam, plate, membrane). A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-hank": {
+  "repo": "saustin2010/mpc-vst-hank",
+  "owner": "saustin2010",
+  "description": "Two-operator FM on one page: ratio, brightness, bite, an envelope pair, noise and a tone sweep. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-hera": {
+  "repo": "saustin2010/mpc-vst-hera",
+  "owner": "saustin2010",
+  "description": "Roland Juno-60 polysynth: jpcima's Hera engine with its 56 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-monksynth": {
+  "repo": "saustin2010/mpc-vst-monksynth",
+  "owner": "saustin2010",
+  "description": "A formant (FOF) singing voice with 12 characters and a choir. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-monovoice": {
+  "repo": "saustin2010/mpc-vst-monovoice",
+  "owner": "saustin2010",
+  "description": "Elektron Monomachine-style digital voice: SuperWave, SID, DigiPRO, FM and more machines; 12 factory patches. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-raffosynth": {
+  "repo": "saustin2010/mpc-vst-raffosynth",
+  "owner": "saustin2010",
+  "description": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-mrhyde": {
+  "repo": "saustin2010/mpc-vst-mrhyde",
+  "owner": "saustin2010",
+  "description": "A MicroFreak-inspired voice: Plaits models with a low-pass gate, filter and a 6x6 mod matrix, with 19 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-noisemaker": {
+  "repo": "saustin2010/mpc-vst-noisemaker",
+  "owner": "saustin2010",
+  "description": "TAL-NoiseMaker: a classic virtual-analog polysynth with 256 factory presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "GPL-2.0"
+ },
+ "saustin2010/mpc-vst-nusaw": {
+  "repo": "saustin2010/mpc-vst-nusaw",
+  "owner": "saustin2010",
+  "description": "A detuned multi-saw (supersaw) polysynth with 27 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "saustin2010/mpc-vst-obxd": {
+  "repo": "saustin2010/mpc-vst-obxd",
+  "owner": "saustin2010",
+  "description": "Oberheim OB-X: reales' OB-Xd with its 128 factory presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-resonator": {
+  "repo": "saustin2010/mpc-vst-resonator",
+  "owner": "saustin2010",
+  "description": "Resonator: a resonator strummed by the notes you play, with 14 presets, from Émilie Gillet's open-source Rings. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-tablor": {
+  "repo": "saustin2010/mpc-vst-tablor",
+  "owner": "saustin2010",
+  "description": "A two-oscillator wavetable synth that ships with its wavetables and 9 factory presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-wurl": {
+  "repo": "saustin2010/mpc-vst-wurl",
+  "owner": "saustin2010",
+  "description": "A physically modelled Wurlitzer 200A electric piano. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "dreamstaticsounds/sysex-bandit": {
+  "repo": "dreamstaticsounds/sysex-bandit",
+  "owner": "dreamstaticsounds",
+  "description": "Sysex Bandit is an MPC/Force plugin that can speak sysex with your hardware.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "fullbann/tidal-verb": {
+  "repo": "fullbann/tidal-verb",
+  "owner": "fullbann",
+  "description": "vst2 reverb",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "MagicStino/TinyFreaky": {
+  "repo": "MagicStino/TinyFreaky",
+  "owner": "MagicStino",
+  "description": "TinyFreaky by MagicStino — eight-voice synthesizer for Akai Force and MPC via OpenPlugin, Windows/macOS/Linux VST3 and macOS Audio Unit. See OpenPlugin for supported MPC versions.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "stampman3000-jpg/mpc-tributary": {
+  "repo": "stampman3000-jpg/mpc-tributary",
+  "owner": "stampman3000-jpg",
+  "description": "Tributary plays one Elektron Overbridge output per Akai MPC plugin track over USB.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "3dthc/Tropix": {
+  "repo": "3dthc/Tropix",
+  "owner": "3dthc",
+  "description": "Tropix: island and Afro sounds ROMpler for Akai MPC standalone (ARM VST2)",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "jacob-sabella/mpc-vst-tuner": {
+  "repo": "jacob-sabella/mpc-vst-tuner",
+  "owner": "jacob-sabella",
+  "description": "A chromatic tuner insert for the Akai MPC that draws its needle straight onto the MPC's screen",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "3dthc/Tuney-MPC": {
+  "repo": "3dthc/Tuney-MPC",
+  "owner": "3dthc",
+  "description": "Real-time vocal pitch correction for Akai MPC OS standalone devices, as a native VST2 audio effect built with mpc-vst-plugins.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "fullbann/undertow": {
+  "repo": "fullbann/undertow",
+  "owner": "fullbann",
+  "description": "vst2 delay",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "sunskiefer/VADER": {
+  "repo": "sunskiefer/VADER",
+  "owner": "sunskiefer",
+  "description": "Orbit-based vector synth for Akai Force / MPC OS (VST2) — load SVG, 3D or image shapes to drive the sound.",
+  "topics": [],
+  "stars": 4,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-vavra": {
+  "repo": "sd88me/mpc-vst-vavra",
+  "owner": "sd88me",
+  "description": "A Waldorf microQ emulation that runs as a plugin instrument on Akai MPC Gen2 standalone devices ",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "anthonytheinventor/vhs-vibes": {
+  "repo": "anthonytheinventor/vhs-vibes",
+  "owner": "anthonytheinventor",
+  "description": "VHS Vibes: a VHS tape degradation effect plugin for Akai MPC standalone hardware (MPC Plugin SDK)",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
+ "nachtaktiv303/mpc-vst-vibe-fx": {
+  "repo": "nachtaktiv303/mpc-vst-vibe-fx",
+  "owner": "nachtaktiv303",
+  "description": "Vibe FX — a native Akai MPC OS insert effect: drive, chorus, reverb and tape delay in one slot (VST2, MPC skin).",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "CLVRK3/warpline-mpc": {
+  "repo": "CLVRK3/warpline-mpc",
+  "owner": "CLVRK3",
+  "description": "The Vital spectral-warping wavetable synth engine, running as a plugin on MPC standalone, built with the MPC Plugin SDK. It runs Vital's real engine, not a copy of it: the same oscillators, warps, filters, envelopes, LFOs, modulation matrix and effects. It plays .vital patches. Vital's GUI is not included because the MPC has no plugin windows. Inst",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-welle": {
+  "repo": "sd88me/mpc-vst-welle",
+  "owner": "sd88me",
+  "description": "A Waldorf Wave emulation that runs as a plugin instrument on Akai MPC Gen2 standalone devices built on the emulation by mo0kid: a model of the Wave's voice circuits driven by the instrument's own OS 1.700, running on emulated 68000s.",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
+ "sunskiefer/Wreck": {
+  "repo": "sunskiefer/Wreck",
+  "owner": "sunskiefer",
+  "description": "Wreck: a sound design instrument for Akai Force / MPC OS (VST2, ARMv7). It records its own chain of sources and effects into a 20-second loop and plays it back with MIDI voices, feeding its sound back into itself. Made for exploring sounds for hours.",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "sd88me/mpc-vst-xenia": {
+  "repo": "sd88me/mpc-vst-xenia",
+  "owner": "sd88me",
+  "description": "Usual Suspect Xenia emulation of the Waldorf Microwave XT wavetable synthesizer as a native VST2 instrument for Akai MPC Gen2 standalone devices",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "sunskiefer/XXL-Strips": {
+  "repo": "sunskiefer/XXL-Strips",
+  "owner": "sunskiefer",
+  "description": "The L'Cronx XXL set for Akai Force / MPC OS (ARMv7, VST2). Free. GPL-3.0-or-later.",
+  "topics": [],
+  "stars": 1,
+  "license": "GPL-3.0"
+ }
+}
