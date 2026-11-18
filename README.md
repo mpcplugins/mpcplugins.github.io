@@ -1,4 +1,4 @@
-# MPC Plugins
+# MPC Plugins by The Disk King
 
 **The complete, auto-updating list of plugins for Akai MPC and Force.** By [The Disk King](https://thediskking.com/).
 

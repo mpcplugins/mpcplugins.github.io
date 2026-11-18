@@ -53,7 +53,7 @@ HEAD = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="MPC Plugins">
+<meta property="og:site_name" content="MPC Plugins by The Disk King">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -74,7 +74,7 @@ body {{ font-family: 'Inter', sans-serif; }}
 <body class="bg-[#f5f5dc] text-[#4b3621] min-h-screen selection:bg-[#ea861a] selection:text-white">
 <header class="bg-[#f5f5dc]/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#4b3621]/5">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
-    <a href="/" class="text-3xl font-black tracking-tighter text-[#4b3621]">MPC <span class="text-[#ea861a]">PLUGINS</span></a>
+    <a href="/" class="leading-none text-[#4b3621]"><span class="block text-3xl font-black tracking-tighter">MPC <span class="text-[#ea861a]">PLUGINS</span></span><span class="block text-[10px] font-black uppercase tracking-[0.3em] opacity-60 mt-1">by The Disk King</span></a>
     <a href="/" class="text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a]">&larr; All plugins</a>
   </div>
 </header>
@@ -90,7 +90,7 @@ FOOT = """
 </section>
 <footer class="bg-[#4b3621] text-white py-20">
   <div class="container mx-auto px-6 text-center">
-    <h4 class="text-4xl font-black tracking-tighter mb-4">MPC PLUGINS</h4>
+    <h4 class="text-4xl font-black tracking-tighter mb-4">MPC PLUGINS <span class="block text-sm tracking-[0.3em] opacity-60 mt-2">BY THE DISK KING</span></h4>
     <div class="flex flex-wrap justify-center gap-x-12 gap-y-2 text-xs font-bold uppercase tracking-widest opacity-60">
       <a href="/" class="hover:text-[#ea861a]">All plugins</a>
       <a href="{store}" class="hover:text-[#ea861a]">The Disk King</a>
@@ -128,7 +128,7 @@ def badges(p):
 DISCLAIMER = """
 <div class="bg-white/70 border-2 border-[#4b3621]/30 rounded-2xl p-5 mb-4 text-sm leading-relaxed">
   <p class="font-black uppercase tracking-widest text-xs mb-2">Disclaimer: use entirely at your own risk</p>
-  <p class="opacity-80 mb-2">This plugin is made, owned and shared by an independent developer, <strong>not</strong> by The Disk King or MPC Plugins, and not by Akai Professional or inMusic. We only list it; the download comes directly from the developer's GitHub. We did not make, test, review or check it for safety and make no promise that it works, is safe, or is free of bugs or harmful code.</p>
+  <p class="opacity-80 mb-2">This plugin is made, owned and shared by an independent developer, <strong>not</strong> by The Disk King (MPC Plugins by The Disk King), and not by Akai Professional or inMusic. We only list it; the download comes directly from the developer's GitHub. We did not make, test, review or check it for safety and make no promise that it works, is safe, or is free of bugs or harmful code.</p>
   <p class="opacity-80 mb-2">Plugins install into your MPC's system and can crash it, corrupt or lose projects and samples, or require reinstalling MPC OS. <strong>Save your work and back up your MPC before installing anything.</strong></p>
   <p class="opacity-80">Everything is provided "as is", with no warranty of any kind. To the fullest extent the law allows, The Disk King is not responsible or liable for any damage, data loss, device failure, lost income or any other harm from downloading, installing or using any plugin listed here. <strong>By downloading or installing, you accept all risk and full responsibility.</strong> <a href="https://thediskking.com/policies.html#plugins" class="underline font-bold">Full disclaimer</a>.</p>
 </div>
@@ -181,7 +181,7 @@ def build_rows(version):
 def plugin_page(p, cat, collections):
     url = BASE + "p/%s/" % p["id"]
     desc = p.get("description") or p.get("about") or "%s for Akai MPC and Force." % p["name"]
-    title = "%s by %s: %s for Akai MPC & Force | MPC Plugins" % (p["name"], p["maker"], KIND_LABEL.get(p["kind"], "Plugin"))
+    title = "%s by %s: Free %s for Akai MPC & Force | MPC Plugins by The Disk King" % (p["name"], p["maker"], KIND_LABEL.get(p["kind"], "Plugin"))
     shot = https(p.get("screenshot"))
     latest = p["latest"]
     repo_url = "https://github.com/%s" % p["repo"]
@@ -279,7 +279,7 @@ def collection_page(c, members):
     summary = "%s by %s: %d MPC plugins (%s)." % (c["title"], c["maker"], len(members),
                                                  ", ".join("%d %ss" % (n, k) for k, n in sorted(kinds.items())))
     shot = next((https(m.get("screenshot")) for m in members if https(m.get("screenshot"))), None)
-    head = HEAD.format(title=e("%s by %s | MPC Plugins" % (c["title"], c["maker"])), desc=e(summary), url=e(url),
+    head = HEAD.format(title=e("%s by %s | MPC Plugins by The Disk King" % (c["title"], c["maker"])), desc=e(summary), url=e(url),
                        canon=e(CANON + "collection/" + c["id"] + "/"),
                        og_image='<meta property="og:image" content="%s">' % e(shot) if shot else "",
                        card="summary_large_image" if shot else "summary", extra_head="")
@@ -307,7 +307,7 @@ def collection_page(c, members):
 def atom(title, self_url, entries, updated):
     out = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">',
            "<title>%s</title>" % e(title), '<link rel="self" href="%s"/>' % e(self_url), '<link href="%s"/>' % e(BASE),
-           "<id>%s</id>" % e(self_url), "<updated>%s</updated>" % e(updated), "<author><name>MPC Plugins</name></author>"]
+           "<id>%s</id>" % e(self_url), "<updated>%s</updated>" % e(updated), "<author><name>MPC Plugins by The Disk King</name></author>"]
     for p, v in entries:
         link = BASE + "p/%s/" % p["id"]
         out.append("<entry><title>%s</title><id>%s</id><updated>%s</updated><link href=\"%s\"/>"
@@ -333,14 +333,14 @@ def write(cat, out, log=print):
     for p in plugins:
         _write(os.path.join(out, "p", p["id"], "index.html"), plugin_page(p, cat, collections))
         _write(os.path.join(out, "feed", p["id"] + ".xml"),
-               atom("%s updates | MPC Plugins" % p["name"], BASE + "feed/%s.xml" % p["id"],
+               atom("%s updates | MPC Plugins by The Disk King" % p["name"], BASE + "feed/%s.xml" % p["id"],
                     [(p, v) for v in p.get("versions", [])[:30]], now))
     for c in collections.values():
         _write(os.path.join(out, "c", c["id"], "index.html"),
                collection_page(c, [by_id[m] for m in c["members"] if m in by_id]))
     recent = sorted(((p, v) for p in plugins for v in p.get("versions", [])),
                     key=lambda pv: pv[1].get("updated") or "", reverse=True)[:50]
-    _write(os.path.join(out, "feed.xml"), atom("MPC Plugins: new releases", BASE + "feed.xml", recent, now))
+    _write(os.path.join(out, "feed.xml"), atom("MPC Plugins by The Disk King: new releases", BASE + "feed.xml", recent, now))
     urls = [BASE]      # plugin pages are canonical on thediskking.com, whose own sitemap lists them
     _write(os.path.join(out, "sitemap.xml"),
            '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
