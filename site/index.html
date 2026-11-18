@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPC Plugins: Every Plugin for Akai MPC &amp; Force, Updated Daily</title>
+    <meta name="description" content="The complete, auto-updating list of plugins for Akai MPC and Force: instruments, effects and addins for the MPC Live, One, X, Key, Live III and Force. Updated every night. By The Disk King.">
+    <meta name="keywords" content="MPC plugins, Akai MPC plugins, MPC 3 plugins, MPC VST plugins, free MPC plugins, Akai Force plugins, MPC Live plugins, MPC One plugins, MPC Live III plugins, MPC plugin list">
+    <link rel="canonical" href="https://thediskking.com/plugins/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thediskking.com/plugins/">
+    <meta property="og:title" content="MPC Plugins: Every Plugin for Akai MPC &amp; Force">
+    <meta property="og:description" content="The complete plugin list for Akai MPC and Force, updated every night. By The Disk King.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .feature-tag { background: #ea861a; color: white; padding: 3px 8px; border-radius: 99px; font-size: 9px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+        .tag-dark { background: #4b3621; }
+        .tag-blue { background: #3b82f6; }
+        .tab-on { background: #4b3621; color: #fff; }
+        .clamp { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+    </style>
+</head>
+<body class="bg-[#f5f5dc] text-[#4b3621] min-h-screen selection:bg-[#ea861a] selection:text-white">
+
+    <header class="bg-[#f5f5dc]/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#4b3621]/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
+            <a href="/" class="text-3xl font-black tracking-tighter text-[#4b3621]">MPC <span class="text-[#ea861a]">PLUGINS</span></a>
+            <a href="https://thediskking.com/" class="text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a] transition-colors text-right">By The Disk King &rarr;</a>
+        </div>
+    </header>
+
+    <section class="container mx-auto px-6 pt-16 pb-8 text-center">
+        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tight leading-none">EVERY <span class="text-[#ea861a]">MPC</span> PLUGIN</h1>
+        <p class="text-xs md:text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] max-w-3xl mx-auto leading-relaxed">Instruments, effects &amp; addins for the Akai MPC and Force. Updated every night.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-12">
+            <div><p id="n-all" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Plugins</p></div>
+            <div><p id="n-instrument" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Instruments</p></div>
+            <div><p id="n-effect" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Effects</p></div>
+            <div><p id="n-makers" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Makers</p></div>
+        </div>
+        <p id="updated" class="text-[10px] uppercase tracking-widest opacity-40 mt-6"></p>
+    </section>
+
+    <section class="container mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row gap-4 md:items-center mb-8">
+            <input id="q" type="search" placeholder="Search plugins, makers, sounds..." class="flex-1 bg-white/60 border border-[#4b3621]/15 rounded-xl px-5 h-[52px] font-bold focus:outline-none focus:border-[#ea861a]">
+            <div id="tabs" class="flex flex-wrap gap-2">
+                <button data-k="all" class="tab-on h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15">All</button>
+                <button data-k="instrument" class="h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">Instruments</button>
+                <button data-k="effect" class="h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">Effects</button>
+                <button data-k="addin" class="h-[52px] px-5 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">Addins</button>
+            </div>
+            <select id="sort" class="h-[52px] px-4 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/15 bg-white/40">
+                <option value="recommended">Recommended</option>
+                <option value="trending">Trending this week</option>
+                <option value="downloads">Most downloaded</option>
+                <option value="updated">Newest updates</option>
+                <option value="added">Newest on the list</option>
+                <option value="name">Name</option>
+                <option value="maker">Maker</option>
+            </select>
+        </div>
+        <div class="flex flex-wrap gap-3 mb-8 text-xs font-black uppercase tracking-widest">
+            <select id="f-device" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40">
+                <option value="">Any MPC</option>
+                <option value="gen1">Gen1 (Live, Live II, One, X, Key, Force)</option>
+                <option value="gen2">Gen2 (Live III, One G2, Key G2, XL)</option>
+            </select>
+            <select id="f-tier" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40">
+                <option value="">Any status</option>
+                <option value="verified">Verified working</option>
+                <option value="gen1">Verified on Gen1</option>
+                <option value="gen2">Verified on Gen2</option>
+                <option value="sample">Verified on MPC Sample</option>
+                <option value="listed">Not yet verified</option>
+                <option value="experimental">Beta only</option>
+            </select>
+            <select id="f-style" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40"><option value="">Any style</option></select>
+            <select id="f-maker" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40"><option value="">Any maker</option></select>
+            <label class="h-10 px-3 rounded-lg border border-[#4b3621]/15 bg-white/40 flex items-center gap-2 cursor-pointer"><input id="f-beta" type="checkbox"> Show beta-only</label>
+            <button id="f-clear" class="h-10 px-3 rounded-lg border border-[#4b3621]/15 hover:text-[#ea861a]">Clear</button>
+        </div>
+        <p id="shown" class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"></p>
+        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+        <p id="empty" class="hidden text-center font-bold opacity-60 py-16">No plugins match that search.</p>
+    </section>
+
+    <section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
+        <div class="bg-white/60 border border-[#ea861a]/40 rounded-[3rem] p-8 md:p-12 shadow-2xl text-center max-w-4xl mx-auto" style="box-shadow:0 0 50px rgba(234,134,26,.25)">
+            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">Load the plugins. <span class="text-[#ea861a]">Load the sounds.</span></h2>
+            <p class="opacity-70 font-medium text-lg mb-8 max-w-2xl mx-auto">Plugins give your MPC new instruments. The Disk King's MPC Expansions give it the drums and chops: boom bap, street and soul kits in standard .XPN format.</p>
+            <a href="https://thediskking.com/" class="inline-flex h-[52px] items-center bg-[#ea861a] text-white hover:bg-[#d97706] px-8 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg">Shop MPC Expansions</a>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
+        <div class="max-w-4xl space-y-4 opacity-80 font-medium leading-relaxed">
+            <h2 class="text-3xl font-black uppercase tracking-tighter">Makers: <span class="text-[#ea861a]">get listed</span></h2>
+            <p>Nothing to sign up for. Publish a GitHub release with your MPC builds named like <code class="bg-[#4b3621]/10 px-1 rounded font-bold">YourPlugin-1.0.0-mpc-armv7.zip</code> (Gen1), <code class="bg-[#4b3621]/10 px-1 rounded font-bold">YourPlugin-1.0.0-mpc-aarch64.zip</code> (Gen2) or <code class="bg-[#4b3621]/10 px-1 rounded font-bold">YourPlugin-1.0.0-mpc-sdk.zip</code>, and it shows up here within a day. To fix a listing, email <a href="mailto:thediskking@gmail.com" class="text-[#ea861a] underline font-bold">thediskking@gmail.com</a>.</p>
+            <div class="bg-red-600 text-white rounded-2xl p-5 font-bold text-sm leading-relaxed">&#9888; Every plugin here is made by an independent developer and downloaded from their GitHub, at your own risk. The Disk King does not make, test or guarantee any of them and is not responsible for any damage or data loss. Beta / unfinished plugins can crash your MPC. Always back up first. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>.</div>
+        </div>
+    </section>
+
+    <footer class="bg-[#4b3621] text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h4 class="text-4xl font-black tracking-tighter mb-4">MPC PLUGINS</h4>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-2 text-xs font-bold uppercase tracking-widest opacity-60">
+                <a href="https://thediskking.com/" class="hover:text-[#ea861a]">The Disk King</a>
+                <a href="https://www.facebook.com/thediskkings" class="hover:text-[#ea861a]">Facebook</a>
+                <a href="https://www.youtube.com/@thediskking" class="hover:text-[#ea861a]">YouTube</a>
+                <a href="catalog.json" class="hover:text-[#ea861a]">catalog.json</a>
+            </div>
+            <p class="mt-12 text-[10px] opacity-40 uppercase tracking-[0.2em] max-w-3xl mx-auto leading-relaxed">Plugins are made and shared by independent developers; downloads come from each developer's GitHub. Provided as is, with no warranty. The Disk King is not responsible or liable for any damage or loss from any plugin. Download and install at your own risk. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>. Not affiliated with Akai Professional or inMusic. MPC and Force are their trademarks. Plugin names belong to their makers.</p>
+            <p class="mt-6 text-[10px] opacity-20 uppercase tracking-[0.2em]">&copy; 2026 The Disk King. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script>
+(function () {
+    // Every field below comes from other people's GitHub pages: always insert it as text, never as HTML.
+    var all = [], kind = 'all';
+    var grid = document.getElementById('grid');
+
+    function el(tag, cls, text) {
+        var e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text != null) e.textContent = text;
+        return e;
+    }
+    function safeUrl(u) {
+        return (typeof u === 'string' && /^https:\/\/github\.com\//.test(u)) ? u : null;
+    }
+    function niceName(n) { return String(n || '').replace(/[-_]+/g, ' ').trim(); }
+
+    function safeImg(u) {
+        return (typeof u === 'string' && /^https:\/\/[^\s"'<>]+$/.test(u)) ? u : null;
+    }
+    function idOk(id) { return /^[a-z0-9-]+$/.test(String(id || '')); }
+    function fmt(n) { return Number(n || 0).toLocaleString(); }
+
+    function card(p) {
+        var c = el('a', 'bg-[#111] rounded-2xl border border-white/10 flex flex-col shadow-lg p-4 hover:border-[#ea861a] transition-colors');
+        if (idOk(p.id)) c.href = 'p/' + p.id + '/';
+        var st = p.tier === 'verified' ? ['✓ Tested & working', 'bg-green-700 text-white']
+            : p.tier === 'experimental' ? ['⚠ Beta / unfinished', 'bg-red-600 text-white']
+            : ['Not yet tested', 'bg-amber-400 text-[#4b3621]'];
+        c.appendChild(el('div', 'rounded-lg px-3 py-1 mb-3 text-[10px] font-black uppercase tracking-widest text-center ' + st[1], st[0]));
+        var tags = el('div', 'flex flex-wrap gap-2 mb-3');
+        tags.appendChild(el('span', 'feature-tag', p.kind || 'plugin'));
+        (p.verified_on || []).forEach(function (g) {
+            tags.appendChild(el('span', 'feature-tag', g === 'sample' ? 'MPC Sample' : g.replace('gen', 'Gen')));
+            tags.lastChild.style.background = '#15803d';
+        });
+        c.appendChild(tags);
+        c.appendChild(el('h3', 'text-lg font-black text-white leading-tight italic mb-1', p.name));
+        c.appendChild(el('p', 'text-white/50 text-[10px] font-bold uppercase tracking-widest mb-3',
+            'by ' + (p.maker || '') + (p.latest ? '  ·  v' + p.latest.version : '') +
+            (p.downloads ? '  ·  ' + fmt(p.downloads) + ' downloads' : '')));
+        var shot = safeImg(p.screenshot);
+        if (shot) {
+            var box = el('div', 'mb-3 rounded-xl overflow-hidden bg-black border border-white/10');
+            box.style.aspectRatio = '2 / 1';
+            var img = el('img', 'w-full h-full object-cover');
+            img.src = shot; img.loading = 'lazy'; img.alt = p.name + ' plugin screen';
+            img.onerror = function () { box.remove(); };
+            box.appendChild(img);
+            c.appendChild(box);
+        }
+        var d = p.description || p.about || '';
+        if (d) c.appendChild(el('p', 'text-white/60 text-xs mb-4 leading-relaxed clamp', d));
+        var b = (p.latest && p.latest.builds) || {};
+        var pills = el('div', 'mt-auto flex gap-2 text-[9px] font-black uppercase tracking-widest');
+        [['Gen1', b.gen1 || b.sdk], ['Gen2', b.gen2 || b.sdk], ['OS 3.10.1+', b.sdk]].forEach(function (x) {
+            pills.appendChild(el('span', 'px-2 py-1 rounded ' + (x[1] ? 'bg-white/20 text-white' : 'bg-white/5 text-white/25'), x[0]));
+        });
+        c.appendChild(pills);
+        return c;
+    }
+
+    var state = { q: '', sort: 'recommended', device: '', tier: '', style: '', maker: '', beta: false };
+    function readHash() {
+        var h = new URLSearchParams(location.hash.slice(1));
+        kind = h.get('tab') || 'all';
+        Object.keys(state).forEach(function (k) { if (h.has(k)) state[k] = k === 'beta' ? h.get(k) === '1' : h.get(k); });
+    }
+    function writeHash() {
+        var h = new URLSearchParams();
+        if (kind !== 'all') h.set('tab', kind);
+        Object.keys(state).forEach(function (k) {
+            var v = state[k];
+            if (k === 'sort' && v === 'recommended') return;
+            if (v === true) h.set(k, '1'); else if (v) h.set(k, v);
+        });
+        history.replaceState(null, '', h.toString() ? '#' + h.toString() : location.pathname);
+    }
+    function syncInputs() {
+        document.getElementById('q').value = state.q;
+        document.getElementById('sort').value = state.sort;
+        document.getElementById('f-device').value = state.device;
+        document.getElementById('f-tier').value = state.tier;
+        document.getElementById('f-style').value = state.style;
+        document.getElementById('f-maker').value = state.maker;
+        document.getElementById('f-beta').checked = state.beta;
+        Array.prototype.forEach.call(document.getElementById('tabs').children, function (b) {
+            var on = b.getAttribute('data-k') === kind;
+            b.classList.toggle('tab-on', on);
+            b.classList.toggle('bg-white/40', !on);
+        });
+    }
+
+    function render() {
+        var q = state.q.toLowerCase().trim();
+        var list = all.filter(function (p) {
+            if (kind !== 'all' && p.kind !== kind) return false;
+            if (p.tier === 'experimental' && !state.beta && state.tier !== 'experimental') return false;
+            var b = (p.latest && p.latest.builds) || {};
+            if (state.device === 'gen1' && !(b.gen1 || b.sdk)) return false;
+            if (state.device === 'gen2' && !(b.gen2 || b.sdk)) return false;
+            var on = p.verified_on || [];
+            if (state.tier === 'verified' && p.tier !== 'verified') return false;
+            if (['gen1', 'gen2', 'sample'].indexOf(state.tier) >= 0 && on.indexOf(state.tier) < 0) return false;
+            if ((state.tier === 'listed' || state.tier === 'experimental') && p.tier !== state.tier) return false;
+            if (state.style && p.style !== state.style) return false;
+            if (state.maker && p.maker !== state.maker) return false;
+            if (!q) return true;
+            return [p.name, p.maker, p.description, p.about, (p.tags || []).join(' '), (p.topics || []).join(' ')]
+                .join(' ').toLowerCase().indexOf(q) >= 0;
+        });
+        var s = state.sort;
+        list.sort(function (a, b) {
+            if (s === 'name') return a.name.localeCompare(b.name);
+            if (s === 'maker') return String(a.maker).localeCompare(String(b.maker)) || a.name.localeCompare(b.name);
+            if (s === 'downloads') return (b.downloads || 0) - (a.downloads || 0);
+            if (s === 'trending') return (b.trending || 0) - (a.trending || 0) || (b.downloads || 0) - (a.downloads || 0);
+            if (s === 'added') return String(b.added || '').localeCompare(String(a.added || '')) || a.name.localeCompare(b.name);
+            if (s === 'updated') return String(b.updated || '').localeCompare(String(a.updated || ''));
+            return (b.points || 0) - (a.points || 0) || (b.downloads || 0) - (a.downloads || 0) || a.name.localeCompare(b.name);
+        });
+        grid.replaceChildren.apply(grid, list.map(card));
+        document.getElementById('shown').textContent = 'Showing ' + list.length + ' of ' + all.length;
+        document.getElementById('empty').classList.toggle('hidden', list.length > 0);
+        writeHash();
+    }
+
+    function bind(id, key, ev) {
+        document.getElementById(id).addEventListener(ev || 'change', function () {
+            state[key] = this.type === 'checkbox' ? this.checked : this.value;
+            render();
+        });
+    }
+    bind('q', 'q', 'input'); bind('sort', 'sort'); bind('f-device', 'device'); bind('f-tier', 'tier');
+    bind('f-style', 'style'); bind('f-maker', 'maker'); bind('f-beta', 'beta');
+    document.getElementById('f-clear').addEventListener('click', function () {
+        state = { q: '', sort: 'recommended', device: '', tier: '', style: '', maker: '', beta: false };
+        kind = 'all'; syncInputs(); render();
+    });
+    document.getElementById('tabs').addEventListener('click', function (e) {
+        var btn = e.target.closest('button');
+        if (!btn) return;
+        kind = btn.getAttribute('data-k');
+        syncInputs();
+        render();
+    });
+
+    function fillSelect(id, values) {
+        var s = document.getElementById(id);
+        values.forEach(function (v) { var o = el('option', null, v); o.value = v; s.appendChild(o); });
+    }
+
+    fetch('catalog.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (cat) {
+        all = (Array.isArray(cat.plugins) ? cat.plugins : []).filter(function (p) { return p && typeof p.name === 'string'; });
+        var k = cat.kinds || {};
+        document.getElementById('n-all').textContent = all.length;
+        document.getElementById('n-instrument').textContent = k.instrument || 0;
+        document.getElementById('n-effect').textContent = k.effect || 0;
+        document.getElementById('n-makers').textContent = cat.makers || 0;
+        if (cat.generated) document.getElementById('updated').textContent =
+            'List updated ' + new Date(cat.generated).toLocaleString() + '  ·  ' + (cat.working || 0) + ' verified working';
+        var uniq = function (f) { return all.map(f).filter(function (v, i, a) { return v && a.indexOf(v) === i; }).sort(); };
+        fillSelect('f-style', uniq(function (p) { return p.style; }));
+        fillSelect('f-maker', uniq(function (p) { return p.maker; }));
+        readHash(); syncInputs();
+        render();
+    }).catch(function () {
+        document.getElementById('shown').textContent = 'The plugin list could not load. Try again in a minute.';
+    });
+})();
+</script>
+</body>
+</html>

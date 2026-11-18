@@ -1,0 +1,349 @@
+"""Writes the static parts of the site from catalog.json:
+
+  p/<id>/index.html     a full page per plugin (Google reads it: real text, no script needed)
+  c/<id>/index.html     a page per collection
+  feed.xml, feed/<id>.xml   Atom feeds (all releases, and one per plugin)
+  sitemap.xml, robots.txt
+
+Every value comes from other people's repos, so everything is escaped, and links must be https.
+"""
+import html
+import json
+import os
+import re
+from datetime import datetime, timezone
+
+BASE = "https://mpcplugins.github.io/"
+STORE = "https://thediskking.com/"
+# Google should rank the thediskking.com copy of each page (same content, Jason's store), so canonicals point there.
+CANON = "https://thediskking.com/plugins/"
+e = html.escape
+
+KIND_LABEL = {"instrument": "Instrument", "effect": "Effect", "addin": "Addin"}
+DRUM_STYLES = ("drum-machine", "sampler", "sequencer", "tape", "saturation")
+
+
+def https(url):
+    return url if isinstance(url, str) and url.startswith("https://") and not re.search(r"[\s\"'<>]", url) else None
+
+
+def size_text(n):
+    if not n:
+        return ""
+    return "%.1f MB" % (n / 1048576.0) if n >= 1048576 else "%d KB" % max(1, n // 1024)
+
+
+def date_text(iso):
+    try:
+        return datetime.strptime(iso[:10], "%Y-%m-%d").strftime("%b %d, %Y")
+    except (TypeError, ValueError):
+        return ""
+
+
+def json_ld(data):
+    return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+
+HEAD = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{canon}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MPC Plugins">
+<meta property="og:url" content="{canon}">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+{og_image}
+<meta name="twitter:card" content="{card}">
+{extra_head}
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+body {{ font-family: 'Inter', sans-serif; }}
+.feature-tag {{ background: #ea861a; color: white; padding: 4px 10px; border-radius: 99px; font-size: 10px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; }}
+.tag-dark {{ background: #4b3621; }} .tag-blue {{ background: #3b82f6; }} .tag-green {{ background: #15803d; }} .tag-gray {{ background: #9ca3af; }}
+.notes {{ white-space: pre-wrap; word-break: break-word; }}
+</style>
+</head>
+<body class="bg-[#f5f5dc] text-[#4b3621] min-h-screen selection:bg-[#ea861a] selection:text-white">
+<header class="bg-[#f5f5dc]/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#4b3621]/5">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
+    <a href="/" class="text-3xl font-black tracking-tighter text-[#4b3621]">MPC <span class="text-[#ea861a]">PLUGINS</span></a>
+    <a href="/" class="text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a]">&larr; All plugins</a>
+  </div>
+</header>
+"""
+
+FOOT = """
+<section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
+  <div class="bg-white/60 border border-[#ea861a]/40 rounded-[3rem] p-8 md:p-12 shadow-2xl text-center max-w-4xl mx-auto" style="box-shadow:0 0 50px rgba(234,134,26,.25)">
+    <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">{pitch_head}</h2>
+    <p class="opacity-70 font-medium text-lg mb-8 max-w-2xl mx-auto">{pitch_body}</p>
+    <a href="{store}" class="inline-flex h-[52px] items-center bg-[#ea861a] text-white hover:bg-[#d97706] px-8 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg">Shop MPC Expansions</a>
+  </div>
+</section>
+<footer class="bg-[#4b3621] text-white py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h4 class="text-4xl font-black tracking-tighter mb-4">MPC PLUGINS</h4>
+    <div class="flex flex-wrap justify-center gap-x-12 gap-y-2 text-xs font-bold uppercase tracking-widest opacity-60">
+      <a href="/" class="hover:text-[#ea861a]">All plugins</a>
+      <a href="{store}" class="hover:text-[#ea861a]">The Disk King</a>
+      <a href="/feed.xml" class="hover:text-[#ea861a]">Updates feed</a>
+    </div>
+    <p class="mt-12 text-[10px] opacity-40 uppercase tracking-[0.2em] max-w-3xl mx-auto leading-relaxed">Plugins are made and shared by independent developers; downloads come from each developer's GitHub. Provided as is, with no warranty. The Disk King is not responsible or liable for any damage or loss from any plugin. Download and install at your own risk. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>. Not affiliated with Akai Professional or inMusic.</p>
+    <p class="mt-6 text-[10px] opacity-20 uppercase tracking-[0.2em]">&copy; 2026 The Disk King. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
+"""
+
+
+def pitch(p):
+    if p.get("style") in DRUM_STYLES or any(t in (p.get("tags") or []) for t in ("drums", "breaks", "boom-bap", "808", "909", "lo-fi")):
+        return ("Need drums for %s?" % e(p["name"]),
+                "The Disk King makes boom bap, street and soul drum kits and chops for the MPC, ready to load in standard .XPN format.")
+    return ("Load the plugins. <span class=\"text-[#ea861a]\">Load the sounds.</span>",
+            "Plugins give your MPC new instruments. The Disk King's MPC Expansions give it the drums and chops: boom bap, street and soul kits.")
+
+
+def badges(p):
+    out = ['<span class="feature-tag">%s</span>' % e(KIND_LABEL.get(p["kind"], p["kind"]))]
+    for g, label in (("gen1", "Verified Gen1"), ("gen2", "Verified Gen2"), ("sample", "Verified MPC Sample")):
+        if g in p.get("verified_on", []):
+            out.append('<span class="feature-tag tag-green">%s</span>' % label)
+    if p["tier"] == "experimental":
+        out.append('<span class="feature-tag tag-blue">Beta only</span>')
+    if p.get("archived"):
+        out.append('<span class="feature-tag tag-gray">Archived</span>')
+    return " ".join(out)
+
+
+DISCLAIMER = """
+<div class="bg-white/70 border-2 border-[#4b3621]/30 rounded-2xl p-5 mb-4 text-sm leading-relaxed">
+  <p class="font-black uppercase tracking-widest text-xs mb-2">Disclaimer: use entirely at your own risk</p>
+  <p class="opacity-80 mb-2">This plugin is made, owned and shared by an independent developer, <strong>not</strong> by The Disk King or MPC Plugins, and not by Akai Professional or inMusic. We only list it; the download comes directly from the developer's GitHub. We did not make, test, review or check it for safety and make no promise that it works, is safe, or is free of bugs or harmful code.</p>
+  <p class="opacity-80 mb-2">Plugins install into your MPC's system and can crash it, corrupt or lose projects and samples, or require reinstalling MPC OS. <strong>Save your work and back up your MPC before installing anything.</strong></p>
+  <p class="opacity-80">Everything is provided "as is", with no warranty of any kind. To the fullest extent the law allows, The Disk King is not responsible or liable for any damage, data loss, device failure, lost income or any other harm from downloading, installing or using any plugin listed here. <strong>By downloading or installing, you accept all risk and full responsibility.</strong> <a href="https://thediskking.com/policies.html#plugins" class="underline font-bold">Full disclaimer</a>.</p>
+</div>
+"""
+
+
+def status_box(p):
+    if p["tier"] == "experimental":
+        return ('<div class="bg-red-600 text-white rounded-2xl p-6 mb-4 shadow-xl border-4 border-red-800">'
+                '<p class="text-2xl md:text-3xl font-black uppercase tracking-tighter mb-2">&#9888; Beta / unfinished: not tested</p>'
+                '<p class="font-bold leading-relaxed">This plugin has no finished release yet. Expect bugs, crashes and missing features. '
+                'Only install it if you know how to restore your MPC, and never on a device you need for a show or an important project. '
+                'Use entirely at your own risk.</p></div>')
+    if p["tier"] == "verified":
+        seen = []
+        for g in ("gen1", "gen2", "sample"):
+            for t in (p.get("tested") or {}).get(g, []):
+                os_ = str(t.get("os") or "")
+                line = (t.get("device") or "") + ("" if not os_ or os_ == "not recorded" else ", MPC OS " + re.sub(r"(?i)^MPC OS\s*", "", os_))
+                if line not in seen:
+                    seen.append(line)
+        return ('<div class="bg-green-700 text-white rounded-2xl p-5 mb-4"><p class="text-xl font-black uppercase tracking-tighter mb-1">&#10003; Tested &amp; working</p>'
+                '<p class="font-medium opacity-90">The maker reports testing this exact version on real hardware: %s. This is the maker\'s own report, '
+                'not a guarantee. Still back up first.</p></div>' % e("; ".join(seen) or "a real MPC"))
+    return ('<div class="bg-amber-400 text-[#4b3621] rounded-2xl p-5 mb-4 border-2 border-amber-600">'
+            '<p class="text-xl font-black uppercase tracking-tighter mb-1">&#9888; Not yet tested on hardware</p>'
+            '<p class="font-bold leading-relaxed">This is a finished release, but the maker hasn\'t recorded a test of this version on a real MPC or '
+            'Force. It may work fine; it may not. Back up first and try it on a project that doesn\'t matter.</p></div>')
+
+
+def build_rows(version):
+    rows = []
+    labels = {"sdk": "MPC OS 3.10.1 or later (Akai SDK)", "gen1": "Gen1: Live, Live II, One, X, Key, Force",
+              "gen2": "Gen2: Live III, One G2, Key G2, XL"}
+    for kind in ("sdk", "gen1", "gen2"):
+        b = version.get("builds", {}).get(kind)
+        if not b or not https(b.get("url")):
+            continue
+        sha = b.get("sha256") or ""
+        rows.append(
+            '<div class="bg-white/60 rounded-2xl p-4 border border-[#4b3621]/10 flex flex-col md:flex-row md:items-center gap-3">'
+            '<div class="flex-1"><p class="font-black">%s</p><p class="text-xs opacity-60 break-all">%s %s</p>%s</div>'
+            '<a href="%s" rel="nofollow noopener" class="bg-[#ea861a] hover:bg-[#d97706] text-white px-5 py-3 rounded-xl font-black text-xs uppercase tracking-widest text-center">Download</a></div>'
+            % (e(labels[kind]), e(b.get("name", "")), e(size_text(b.get("size"))),
+               '<p class="text-[10px] opacity-50 break-all mt-1">sha256: %s</p>' % e(sha) if sha else "",
+               e(b["url"])))
+    return "\n".join(rows)
+
+
+def plugin_page(p, cat, collections):
+    url = BASE + "p/%s/" % p["id"]
+    desc = p.get("description") or p.get("about") or "%s for Akai MPC and Force." % p["name"]
+    title = "%s by %s: %s for Akai MPC & Force | MPC Plugins" % (p["name"], p["maker"], KIND_LABEL.get(p["kind"], "Plugin"))
+    shot = https(p.get("screenshot"))
+    latest = p["latest"]
+    repo_url = "https://github.com/%s" % p["repo"]
+    head = HEAD.format(
+        title=e(title), desc=e(desc[:300]), url=e(url), canon=e(CANON + p["id"] + "/"),
+        og_image='<meta property="og:image" content="%s">' % e(shot) if shot else "",
+        card="summary_large_image" if shot else "summary",
+        extra_head='<link rel="alternate" type="application/atom+xml" title="%s updates" href="/feed/%s.xml">\n'
+                   '<script type="application/ld+json">%s</script>' % (e(p["name"]), e(p["id"]), json_ld({
+                       "@context": "https://schema.org", "@type": "SoftwareApplication", "name": p["name"],
+                       "applicationCategory": "MultimediaApplication", "operatingSystem": "Akai MPC OS, Akai Force",
+                       "softwareVersion": latest["version"], "description": desc[:300], "url": url,
+                       "author": {"@type": "Person", "name": p["maker"]},
+                       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+                       **({"image": shot} if shot else {}),
+                       **({"downloadUrl": repo_url + "/releases"}),
+                   })))
+    tested_lines = []
+    for g in ("gen1", "gen2", "sample"):
+        for t in (p.get("tested") or {}).get(g, []):
+            tested_lines.append("<li>%s, MPC OS %s%s</li>" % (e(t.get("device", "")), e(t.get("os", "")),
+                                                               " (%s)" % e(date_text(t.get("date"))) if t.get("date") else ""))
+    links = ['<a href="%s" rel="noopener" class="underline font-bold hover:text-[#ea861a]">Source on GitHub</a>' % e(repo_url)]
+    if https(p.get("youtube")):
+        links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Video</a>' % e(p["youtube"]))
+    if https(p.get("tip")):
+        links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Tip the maker</a>' % e(p["tip"]))
+    if https(p.get("homepage")):
+        links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Homepage</a>' % e(p["homepage"]))
+    links.append('<a href="/feed/%s.xml" class="underline font-bold hover:text-[#ea861a]">Follow updates</a>' % e(p["id"]))
+    coll = collections.get(p.get("collection") or "")
+    hist = []
+    for v in p.get("versions", [])[:10]:
+        notes = (v.get("notes") or "").strip()
+        hist.append('<details class="bg-white/40 rounded-2xl p-4 border border-[#4b3621]/10"><summary class="cursor-pointer font-black">'
+                    'v%s%s <span class="opacity-50 font-bold text-xs ml-2">%s%s</span></summary>%s</details>'
+                    % (e(v["version"]), ' <span class="feature-tag tag-blue">beta</span>' if v.get("prerelease") else "",
+                       e(date_text(v.get("updated"))), (" &middot; %s downloads" % format(v["downloads"], ",")) if v.get("downloads") else "",
+                       '<p class="notes text-sm opacity-80 mt-3">%s</p>' % e(notes[:3000]) if notes else ""))
+    bar = [cat["bar"].get(b, b) for b in p.get("bar_missing", [])]
+    ph, pb = pitch(p)
+    body = """
+<main class="container mx-auto px-6 py-12 max-w-5xl">
+  <p class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"><a href="/" class="hover:text-[#ea861a]">MPC Plugins</a> / {kind_label}s{coll_crumb}</p>
+  <div class="flex flex-wrap gap-2 mb-4">{badges}</div>
+  <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none italic mb-3">{name}</h1>
+  <p class="text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] mb-8">by {maker} &middot; v{version} &middot; {date}{dl}</p>
+  {shot}
+  <p class="text-lg font-medium leading-relaxed opacity-80 mb-4">{desc}</p>
+  {about}
+  <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm mb-10">{links}</div>
+  <h2 class="text-3xl font-black uppercase tracking-tighter mb-4">Download <span class="text-[#ea861a]">v{version}</span></h2>
+  {status}
+  {disclaimer}
+  <div class="space-y-3 mb-4">{builds}</div>
+  <p class="text-xs opacity-60 mb-4">Downloads come straight from the maker's GitHub. Check the sha256 matches before installing.</p>
+  {beta_note}
+  <div class="mb-10"></div>
+  {tested}
+  <h2 class="text-3xl font-black uppercase tracking-tighter mb-4">Version <span class="text-[#ea861a]">history</span></h2>
+  <div class="space-y-3 mb-10">{history}</div>
+  {bar}
+</main>
+""".format(
+        kind_label=e(KIND_LABEL.get(p["kind"], "Plugin")),
+        coll_crumb=(' / <a href="/c/%s/" class="hover:text-[#ea861a]">%s</a>' % (e(coll["id"]), e(coll["title"]))) if coll else "",
+        badges=badges(p), name=e(p["name"]), maker=e(p["maker"]), version=e(latest["version"]),
+        date=e(date_text(latest.get("updated"))),
+        dl=(" &middot; %s downloads" % format(p["downloads"], ",")) if p.get("downloads") else "",
+        shot=('<div class="rounded-[2rem] overflow-hidden bg-black mb-8 border border-[#ea861a]/30 shadow-2xl"><img src="%s" alt="%s plugin screen on an Akai MPC" class="w-full max-h-[520px] object-contain" loading="lazy"></div>'
+              % (e(shot), e(p["name"]))) if shot else "",
+        desc=e(desc),
+        about=('<p class="font-medium leading-relaxed opacity-70 mb-6">%s</p>' % e(p["about"])) if p.get("about") and p.get("about") != desc else "",
+        links=" ".join(links), builds=build_rows(latest) or '<p class="opacity-60">No download in this release.</p>',
+        status=status_box(p), disclaimer=DISCLAIMER,
+        beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
+                   '&#9888; Beta v%s is out: unfinished, not tested</p><p class="font-bold text-sm">Betas can crash or break projects. The download '
+                   'above is the finished version. Get the beta from the maker\'s GitHub only if you accept that risk.</p></div>'
+                   % e(p["beta"]["version"])) if p.get("beta") else "",
+        tested=('<h2 class="text-3xl font-black uppercase tracking-tighter mb-4">Tested <span class="text-[#ea861a]">working</span> on</h2>'
+                '<ul class="list-disc pl-6 mb-10 font-medium opacity-80">%s</ul>' % "".join(tested_lines)) if tested_lines else
+               '<p class="mb-10 font-medium opacity-70">No hardware test recorded by the maker for this version yet.</p>',
+        history="\n".join(hist),
+        bar=('<details class="mb-10"><summary class="cursor-pointer font-black uppercase tracking-widest text-xs opacity-60">To improve this listing</summary>'
+             '<ul class="list-disc pl-6 mt-3 text-sm opacity-70">%s</ul></details>' % "".join("<li>%s</li>" % e(b) for b in bar)) if bar else "",
+    )
+    return head + body + FOOT.format(pitch_head=ph, pitch_body=pb, store=STORE)
+
+
+def collection_page(c, members):
+    url = BASE + "c/%s/" % c["id"]
+    kinds = {}
+    for m in members:
+        kinds[m["kind"]] = kinds.get(m["kind"], 0) + 1
+    summary = "%s by %s: %d MPC plugins (%s)." % (c["title"], c["maker"], len(members),
+                                                 ", ".join("%d %ss" % (n, k) for k, n in sorted(kinds.items())))
+    shot = next((https(m.get("screenshot")) for m in members if https(m.get("screenshot"))), None)
+    head = HEAD.format(title=e("%s by %s | MPC Plugins" % (c["title"], c["maker"])), desc=e(summary), url=e(url),
+                       canon=e(CANON + "collection/" + c["id"] + "/"),
+                       og_image='<meta property="og:image" content="%s">' % e(shot) if shot else "",
+                       card="summary_large_image" if shot else "summary", extra_head="")
+    cards = []
+    for m in sorted(members, key=lambda x: x["name"].lower()):
+        cards.append('<a href="/p/%s/" class="bg-[#111] rounded-2xl border border-white/10 p-4 hover:border-[#ea861a] block">'
+                     '<span class="feature-tag">%s</span><h3 class="text-lg font-black text-white italic mt-3">%s</h3>'
+                     '<p class="text-white/60 text-xs mt-2">%s</p></a>'
+                     % (e(m["id"]), e(KIND_LABEL.get(m["kind"], m["kind"])), e(m["name"]), e((m.get("description") or "")[:140])))
+    body = """
+<main class="container mx-auto px-6 py-12 max-w-6xl">
+  <p class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"><a href="/" class="hover:text-[#ea861a]">MPC Plugins</a> / Collections</p>
+  <span class="feature-tag tag-dark">Collection</span>
+  <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none italic mt-4 mb-3">{title}</h1>
+  <p class="text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] mb-8">by {maker} &middot; {n} plugins</p>
+  <p class="text-lg font-medium opacity-80 mb-10">{summary}</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">{cards}</div>
+</main>
+""".format(title=e(c["title"]), maker=e(c["maker"]), n=len(members), summary=e(summary), cards="\n".join(cards))
+    return head + body + FOOT.format(pitch_head="Load the plugins. <span class=\"text-[#ea861a]\">Load the sounds.</span>",
+                                     pitch_body="The Disk King's MPC Expansions give your MPC the drums and chops: boom bap, street and soul kits.",
+                                     store=STORE)
+
+
+def atom(title, self_url, entries, updated):
+    out = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">',
+           "<title>%s</title>" % e(title), '<link rel="self" href="%s"/>' % e(self_url), '<link href="%s"/>' % e(BASE),
+           "<id>%s</id>" % e(self_url), "<updated>%s</updated>" % e(updated), "<author><name>MPC Plugins</name></author>"]
+    for p, v in entries:
+        link = BASE + "p/%s/" % p["id"]
+        out.append("<entry><title>%s</title><id>%s</id><updated>%s</updated><link href=\"%s\"/>"
+                   "<author><name>%s</name></author><summary>%s</summary></entry>"
+                   % (e("%s %s%s" % (p["name"], v["version"], " (beta)" if v.get("prerelease") else "")),
+                      e("tag:mpcplugins.github.io,2026:%s@%s" % (p["id"], v["version"])), e(v.get("updated") or updated),
+                      e(link), e(p["maker"]), e(((v.get("notes") or "").strip() or p.get("description") or "")[:600])))
+    out.append("</feed>")
+    return "\n".join(out)
+
+
+def _write(path, text):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
+def write(cat, out, log=print):
+    plugins = cat["plugins"]
+    collections = {c["id"]: c for c in cat.get("collections", [])}
+    by_id = {p["id"]: p for p in plugins}
+    now = cat.get("generated") or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    for p in plugins:
+        _write(os.path.join(out, "p", p["id"], "index.html"), plugin_page(p, cat, collections))
+        _write(os.path.join(out, "feed", p["id"] + ".xml"),
+               atom("%s updates | MPC Plugins" % p["name"], BASE + "feed/%s.xml" % p["id"],
+                    [(p, v) for v in p.get("versions", [])[:30]], now))
+    for c in collections.values():
+        _write(os.path.join(out, "c", c["id"], "index.html"),
+               collection_page(c, [by_id[m] for m in c["members"] if m in by_id]))
+    recent = sorted(((p, v) for p in plugins for v in p.get("versions", [])),
+                    key=lambda pv: pv[1].get("updated") or "", reverse=True)[:50]
+    _write(os.path.join(out, "feed.xml"), atom("MPC Plugins: new releases", BASE + "feed.xml", recent, now))
+    urls = [BASE]      # plugin pages are canonical on thediskking.com, whose own sitemap lists them
+    _write(os.path.join(out, "sitemap.xml"),
+           '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + "\n".join("  <url><loc>%s</loc><lastmod>%s</lastmod></url>" % (e(u), now[:10]) for u in urls) + "\n</urlset>\n")
+    _write(os.path.join(out, "robots.txt"), "User-agent: *\nAllow: /\n\nSitemap: %ssitemap.xml\n" % BASE)
+    log("   %d plugin pages, %d collection pages, %d feeds, sitemap" % (len(plugins), len(collections), len(plugins) + 1))

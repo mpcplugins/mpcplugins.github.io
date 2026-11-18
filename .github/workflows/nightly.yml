@@ -1,0 +1,48 @@
+# Rebuilds the MPC Plugins list every night on GitHub's servers and publishes the site.
+# Uses only GitHub's built-in per-run pass (GITHUB_TOKEN). No personal keys.
+name: Nightly plugin list
+on:
+  schedule:
+    - cron: '30 4 * * *'      # 4:30 AM UTC every day
+  workflow_dispatch:           # "Run workflow" button
+  push:
+    branches: [main]
+permissions:
+  contents: write              # save the list of known plugin repos back to this repo
+  pages: write
+  id-token: write
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Search GitHub and build the list
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -u -m mpcplugins.build --out site
+      - name: Save state (known repos, date added, download history, seeds)
+        run: |
+          git add -f state seeds.json
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Update known plugin repos"
+          git push -q
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
