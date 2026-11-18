@@ -988,7 +988,7 @@
   "owner": "open-mpc",
   "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "sd88me/mpc-vst-osirus": {
