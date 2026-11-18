@@ -75,7 +75,10 @@ body {{ font-family: 'Inter', sans-serif; }}
 <header class="bg-[#f5f5dc]/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#4b3621]/5">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
     <a href="/" class="leading-none text-[#4b3621]"><span class="block text-3xl font-black tracking-tighter">MPC <span class="text-[#ea861a]">PLUGINS</span></span><span class="block text-[10px] font-black uppercase tracking-[0.3em] opacity-60 mt-1">by The Disk King</span></a>
-    <a href="/" class="text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a]">&larr; All plugins</a>
+    <div class="flex items-center gap-4 md:gap-8">
+      <a href="/" class="text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a]">&larr; All plugins</a>
+      <a href="https://thediskking.com/" class="hidden sm:block leading-tight font-bold uppercase tracking-widest hover:text-[#ea861a] text-right"><span class="block text-xs md:text-sm">By The Disk King &rarr;</span><span class="block text-[10px] md:text-xs font-black text-[#ea861a]">Expansions</span></a>
+    </div>
   </div>
 </header>
 """
