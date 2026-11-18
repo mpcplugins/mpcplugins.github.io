@@ -23,20 +23,30 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      # The nightly records (date added, download history, known repos, seeds) live on their own "state" branch,
+      # so the robot never commits to main and pushes from Jason's PC never collide with it.
+      - name: Load saved state
+        run: |
+          if git fetch -q origin state; then git checkout FETCH_HEAD -- state seeds.json && echo "state loaded"; else echo "no saved state yet"; fi
       - name: Search GitHub and build the list
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -u -m mpcplugins.build --out site
-      - name: Save state (known repos, date added, download history, seeds)
-        run: |
-          git add -f state seeds.json
-          if git diff --cached --quiet; then echo "no change"; exit 0; fi
-          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-            commit -q -m "Update known plugin repos"
-          git push -q
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+      - name: Save state to the state branch
+        run: |
+          set -e
+          mkdir -p /tmp/st && cp -r state seeds.json /tmp/st/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git fetch -q origin state; then git checkout -q -f -B state FETCH_HEAD; else git checkout -q -f --orphan state; git rm -rqf . || true; fi
+          rm -rf state seeds.json && cp -r /tmp/st/state /tmp/st/seeds.json .
+          git add -f state seeds.json
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -q -m "Nightly state"
+          git push -q origin state
   deploy:
     needs: build
     runs-on: ubuntu-latest
