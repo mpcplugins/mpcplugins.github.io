@@ -64,14 +64,20 @@ def same_plugin(record_id, plugin_name):
     return bool(ta and tb) and ta[-1] == tb[-1] and len(ta[-1]) > 2
 
 
-def verified_for(repo, plugin_name, version, plugins_in_repo):
-    """{'gen1': [..], 'gen2': [..]} test records for this plugin's version (empty lists if none)."""
+def verified_for(repo, plugin_name, version, plugins_in_repo, version_owners=1):
+    """{'gen1': [..], 'gen2': [..]} test records for this plugin's version (empty lists if none).
+    version_owners: how many plugins in the repo have this exact version as their newest. A record without an id
+    only counts when that is 1, so it can't be credited to the wrong plugin."""
     result = {"gen1": [], "gen2": [], "sample": []}
     for r in records(repo):
         if str(r.get("version")).lstrip("v") != str(version).lstrip("v"):
             continue
-        if plugins_in_repo > 1 and not same_plugin(r.get("id"), plugin_name):
-            continue    # several plugins share the repo: the record must name this one
+        if plugins_in_repo > 1:
+            rid = r.get("id")
+            if rid and not same_plugin(rid, plugin_name):
+                continue    # the record names a different plugin
+            if not rid and version_owners != 1:
+                continue    # no id and the version is shared: can't tell which plugin was tested
         gen = device_gen(r.get("device", ""))
         result[gen].append({"device": r.get("device", ""), "os": r.get("firmware", ""), "date": r.get("date", "")})
     return result

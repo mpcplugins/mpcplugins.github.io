@@ -65,9 +65,33 @@ def release_assets(repo, tag):
     return assets
 
 
-def is_prerelease(tag, title):
-    words = (tag + " " + title).lower()
-    return any(w in words for w in PRERELEASE_WORDS)
+def is_prerelease(tag, title=""):
+    """Beta words in the version TAG only. Titles hold plugin names (a synth called ALPHA is not an alpha),
+    so GitHub's own Pre-release mark covers the rest."""
+    low = tag.lower()
+    ver = version_of(tag).lower()
+    return any(w in ver for w in PRERELEASE_WORDS) or bool(re.search(r"(?:^|[-_.])(alpha|beta|rc\d*|pre|preview|nightly)(?:[-_.\d]|$)", low))
+
+
+def merge_renames(products):
+    """A plugin renamed between releases ('Euclidier' -> 'Euclid', 'Early-Refl' -> 'Early-Reflections') shows up as
+    two names whose releases never overlap in time. Fold the old name into the new one, keeping all versions."""
+    def key(n):
+        return re.sub(r"[^a-z0-9]", "", n.lower())
+    names = sorted(products, key=lambda n: max(v["updated"] for v in products[n]), reverse=True)   # newest first
+    merged = dict(products)
+    for new in names:
+        if new not in merged:
+            continue
+        first_new = min(v["updated"] for v in merged[new])
+        for old in names:
+            if old == new or old not in merged:
+                continue
+            a, b = key(old), key(new)
+            similar = len(a) >= 4 and len(b) >= 4 and (a.startswith(b[:4]) or b.startswith(a[:4]))
+            if similar and max(v["updated"] for v in merged[old]) <= first_new:
+                merged[new] = sorted(merged[new] + merged.pop(old), key=lambda v: v["updated"], reverse=True)
+    return merged
 
 
 def build_of(name):
@@ -154,12 +178,12 @@ def _api_releases(repo, max_releases):
                 "tag": tag,
                 "title": rel.get("name") or tag,
                 "updated": rel.get("published_at") or rel.get("created_at") or "",
-                "prerelease": bool(rel.get("prerelease")) or is_prerelease(tag, rel.get("name") or ""),
+                "prerelease": bool(rel.get("prerelease")) or is_prerelease(tag),
                 "notes": (rel.get("body") or "")[:4000],
                 "downloads": sum(b.get("downloads", 0) for b in builds.values()),
                 "builds": builds,
             })
-    return products
+    return merge_renames(products)
 
 
 def mpc_releases(repo, max_releases=10, pause=0.4):
@@ -181,7 +205,7 @@ def mpc_releases(repo, max_releases=10, pause=0.4):
             builds.setdefault(kind, asset)
         if not per_product:
             continue
-        pre = is_prerelease(rel["tag"], rel["title"]) or marked_prerelease(repo, rel["tag"])
+        pre = is_prerelease(rel["tag"]) or marked_prerelease(repo, rel["tag"])
         for product, builds in per_product.items():
             products.setdefault(product, []).append({
                 "version": version_of(rel["tag"]),
@@ -191,4 +215,4 @@ def mpc_releases(repo, max_releases=10, pause=0.4):
                 "prerelease": pre,
                 "builds": builds,
             })
-    return products
+    return merge_renames(products)

@@ -172,10 +172,15 @@ def check_repo(info, log):
     facts = dict(info)
     facts.update({k: v for k, v in repoinfo.gather(repo).items() if v not in (None, "", [], {})})
     entries = []
+    newest = {}
+    for product, versions in products.items():
+        stable = [v for v in versions if not v["prerelease"]]
+        newest[product] = (stable[0] if stable else versions[0])["version"]
     for product, versions in products.items():
         stable = [v for v in versions if not v["prerelease"]]
         latest = stable[0] if stable else versions[0]
-        works = tested.verified_for(repo, product, latest["version"], len(products)) if stable \
+        owners = sum(1 for v in newest.values() if v == latest["version"])
+        works = tested.verified_for(repo, product, latest["version"], len(products), owners) if stable \
             else {"gen1": [], "gen2": [], "sample": []}
         description = facts.get("description") or facts.get("readme_summary") or ""
         words = words_of(product, repo, description, " ".join(facts.get("topics", [])))
