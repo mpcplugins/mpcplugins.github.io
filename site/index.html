@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPC Plugins by The Disk King: Every Free Plugin for Akai MPC &amp; Force, Updated Daily</title>
-    <meta name="description" content="The complete, auto-updating list of plugins for Akai MPC and Force: instruments, effects and addins for the MPC Live, One, X, Key, Live III and Force. Updated every night. By The Disk King.">
+    <title>MPC Plugins Manager: Every Free Plugin for Akai MPC &amp; Force, Updated Daily</title>
+    <meta name="description" content="The complete, auto-updating list of plugins for Akai MPC and Force: instruments, effects and addins for the MPC Live, One, X, Key, Live III and Force. Updated every night.">
     <meta name="keywords" content="MPC plugins, Akai MPC plugins, MPC 3 plugins, MPC VST plugins, free MPC plugins, Akai Force plugins, MPC Live plugins, MPC One plugins, MPC Live III plugins, MPC plugin list">
     <link rel="canonical" href="https://thediskking.com/plugins/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thediskking.com/plugins/">
-    <meta property="og:title" content="MPC Plugins by The Disk King: Every Free Plugin for Akai MPC &amp; Force">
-    <meta property="og:description" content="The complete plugin list for Akai MPC and Force, updated every night. By The Disk King.">
+    <meta property="og:title" content="MPC Plugins Manager: Every Free Plugin for Akai MPC &amp; Force">
+    <meta property="og:description" content="The complete plugin list for Akai MPC and Force, updated every night.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,44 +21,45 @@
         .tag-dark { background: #4b3621; }
         .tag-blue { background: #3b82f6; }
         .tab-on { background: #4b3621; color: #fff; }
+        html { -webkit-text-size-adjust: 100%; } body { overflow-x: hidden; overflow-wrap: anywhere; } #views { scrollbar-width: none; } #views::-webkit-scrollbar { display: none; } @media (max-width: 640px) { .clamp { -webkit-line-clamp: 3; } }
         .clamp { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="bg-[#f5f5dc] text-[#4b3621] min-h-screen selection:bg-[#ea861a] selection:text-white">
 
     <header class="bg-[#f5f5dc]/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#4b3621]/5">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
-            <a href="/" class="leading-none text-[#4b3621]"><span class="block text-xl sm:text-2xl md:text-3xl font-black tracking-tighter">MPC <span class="text-[#ea861a]">PLUGINS</span> MANAGER</span><span class="block text-[10px] font-black uppercase tracking-[0.3em] opacity-60 mt-1">by The Disk King</span></a>
-            <a href="https://thediskking.com/" class="leading-tight font-bold uppercase tracking-widest hover:text-[#ea861a] transition-colors text-right"><span class="block text-xs md:text-sm">By The Disk King</span><span class="block text-[10px] md:text-xs font-black text-[#ea861a]">Expansions</span></a>
+        <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center gap-4">
+            <a href="/" class="leading-none text-[#4b3621] text-lg sm:text-2xl md:text-3xl font-black tracking-tighter whitespace-nowrap">MPC <span class="text-[#ea861a]">PLUGINS</span> MANAGER</a>
+            <a href="install/" class="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a] whitespace-nowrap">How to install</a>
         </div>
     </header>
 
-    <section class="container mx-auto px-6 pt-16 pb-8 text-center">
-        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tight leading-none">EVERY <span class="text-[#ea861a]">MPC</span> PLUGIN</h1>
+    <section class="container mx-auto px-4 md:px-6 pt-8 md:pt-16 pb-6 md:pb-8 text-center">
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-4 tracking-tight leading-none">EVERY <span class="text-[#ea861a]">MPC</span> PLUGIN</h1>
         <p class="text-xs md:text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] max-w-3xl mx-auto leading-relaxed">Instruments, effects &amp; addins for the Akai MPC and Force. Updated every night.</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-12">
-            <div><p id="n-all" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Plugins</p></div>
-            <div><p id="n-instrument" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Instruments</p></div>
-            <div><p id="n-effect" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Effects</p></div>
-            <div><p id="n-makers" class="text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Makers</p></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-3xl mx-auto mt-6 md:mt-12">
+            <div><p id="n-all" class="text-3xl md:text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Plugins</p></div>
+            <div><p id="n-instrument" class="text-3xl md:text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Instruments</p></div>
+            <div><p id="n-effect" class="text-3xl md:text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Effects</p></div>
+            <div><p id="n-makers" class="text-3xl md:text-5xl font-black text-[#ea861a] italic">&ndash;</p><p class="text-xs font-bold uppercase tracking-widest opacity-60 mt-1">Creators</p></div>
         </div>
         <p id="updated" class="text-[10px] uppercase tracking-widest opacity-40 mt-6"></p>
     </section>
 
-    <section class="container mx-auto px-6 pb-8">
-        <div class="flex flex-wrap justify-center gap-3 mb-6">
-            <a href="https://thediskking.com/plugins/submit/" class="h-[48px] inline-flex items-center px-6 rounded-xl font-black text-xs uppercase tracking-widest bg-[#ea861a] text-white hover:bg-[#d97706] shadow-lg">+ Submit your plugin</a>
-            <a href="https://github.com/mpcplugins" class="h-[48px] inline-flex items-center px-6 rounded-xl font-black text-xs uppercase tracking-widest border border-[#4b3621]/20 bg-white/60 hover:text-[#ea861a]">Our GitHub</a>
-            <a href="install/" class="h-[48px] inline-flex items-center px-6 rounded-xl font-black text-xs uppercase tracking-widest bg-[#4b3621] text-white hover:bg-[#ea861a]">How to install</a>
+    <section class="container mx-auto px-4 md:px-6 pb-8">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-6">
+            <a href="https://thediskking.com/plugins/submit/" class="h-[44px] md:h-[48px] inline-flex items-center px-4 md:px-6 rounded-xl font-black text-[10px] md:text-xs uppercase tracking-widest bg-[#ea861a] text-white hover:bg-[#d97706] shadow-lg">+ Submit your plugin</a>
+            <a href="https://github.com/mpcplugins" class="h-[44px] md:h-[48px] inline-flex items-center px-4 md:px-6 rounded-xl font-black text-[10px] md:text-xs uppercase tracking-widest border border-[#4b3621]/20 bg-white/60 hover:text-[#ea861a]">Our GitHub</a>
+            <a href="install/" class="h-[44px] md:h-[48px] inline-flex items-center px-4 md:px-6 rounded-xl font-black text-[10px] md:text-xs uppercase tracking-widest bg-[#4b3621] text-white hover:bg-[#ea861a]">How to install</a>
         </div>
-        <div class="sticky top-[72px] z-40 bg-[#f5f5dc]/95 backdrop-blur-md py-4 -mx-6 px-6 border-b border-[#4b3621]/10">
-            <div class="flex flex-wrap justify-center gap-2 mb-3" role="tablist" id="views">
-                <button type="button" data-view="downloads" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Most Downloaded</button>
-                <button type="button" data-view="rated" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Top Rated</button>
-                <button type="button" data-view="newest" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Newest</button>
-                <button type="button" data-view="untested" role="tab" class="mp-view h-[48px] px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border-2 border-red-600 text-red-700 bg-white/60 hover:bg-red-600 hover:text-white">&#9888; Experimental / Untested</button>
+        <div class="md:sticky md:top-[72px] z-40 bg-[#f5f5dc]/95 backdrop-blur-md py-3 md:py-4 -mx-4 px-4 md:-mx-6 md:px-6 border-b border-[#4b3621]/10">
+            <div class="flex flex-nowrap overflow-x-auto md:flex-wrap md:justify-center gap-2 mb-3 -mx-4 px-4 md:mx-0 md:px-0" role="tablist" id="views">
+                <button type="button" data-view="downloads" role="tab" class="mp-view shrink-0 h-[40px] md:h-[48px] px-4 md:px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Most Downloaded</button>
+                <button type="button" data-view="rated" role="tab" class="mp-view shrink-0 h-[40px] md:h-[48px] px-4 md:px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Top Rated</button>
+                <button type="button" data-view="newest" role="tab" class="mp-view shrink-0 h-[40px] md:h-[48px] px-4 md:px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border border-[#4b3621]/15 bg-white/60 hover:text-[#ea861a]">Newest</button>
+                <button type="button" data-view="untested" role="tab" class="mp-view shrink-0 h-[40px] md:h-[48px] px-4 md:px-5 rounded-xl font-black text-xs uppercase tracking-widest transition-colors border-2 border-red-600 text-red-700 bg-white/60 hover:bg-red-600 hover:text-white">&#9888; Experimental / Untested</button>
             </div>
-            <div class="flex flex-col sm:flex-row gap-2 max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 sm:flex sm:flex-row gap-2 max-w-4xl mx-auto">
                 <select id="f-type" aria-label="Type" class="h-[44px] px-3 rounded-xl font-black text-[11px] uppercase tracking-widest border border-[#4b3621]/15 bg-white/70">
                     <option value="">All types</option>
                     <option value="instrument">Instruments</option>
@@ -68,47 +69,47 @@
                 <select id="f-sound" aria-label="Sound" class="h-[44px] px-3 rounded-xl font-black text-[11px] uppercase tracking-widest border border-[#4b3621]/15 bg-white/70">
                     <option value="">All sounds</option>
                 </select>
-                <input id="q" type="search" placeholder="Search plugins, makers, sounds..." aria-label="Search plugins" class="flex-1 bg-white/70 border border-[#4b3621]/15 rounded-xl px-4 h-[44px] font-bold focus:outline-none focus:border-[#ea861a]">
-                <a href="https://thediskking.com/plugins/submit/" class="h-[44px] inline-flex items-center justify-center px-4 rounded-xl font-black text-[11px] uppercase tracking-widest border-2 border-dashed border-[#ea861a] text-[#ea861a] bg-white/60 hover:bg-[#ea861a] hover:text-white whitespace-nowrap">+ Submit your plugin</a>
+                <input id="q" type="search" placeholder="Search plugins, creators, sounds..." aria-label="Search plugins" class="col-span-2 order-first sm:order-none flex-1 bg-white/70 border border-[#4b3621]/15 rounded-xl px-4 h-[44px] font-bold focus:outline-none focus:border-[#ea861a]">
+                <a href="https://thediskking.com/plugins/submit/" class="hidden sm:inline-flex h-[44px] items-center justify-center px-4 rounded-xl font-black text-[11px] uppercase tracking-widest border-2 border-dashed border-[#ea861a] text-[#ea861a] bg-white/60 hover:bg-[#ea861a] hover:text-white whitespace-nowrap">+ Submit your plugin</a>
             </div>
         </div>
         <div id="untested-warning" class="hidden bg-red-600 text-white rounded-2xl p-5 mt-6 border-4 border-red-800">
             <p class="text-xl md:text-2xl font-black uppercase tracking-tighter mb-1">&#9888; Experimental / untested: use at your own risk</p>
-            <p class="font-bold text-sm leading-relaxed">No hardware test recorded by the maker for the current version, and some are unfinished betas. They may crash your MPC or damage projects. Back up first and never install them on a device you depend on. The Disk King does not make, test or guarantee any plugin. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>.</p>
+            <p class="font-bold text-sm leading-relaxed">No hardware test recorded by the creator for the current version, and some are unfinished betas. They may crash your MPC or damage projects. Back up first and never install them on a device you depend on. The Disk King does not make, test or guarantee any plugin. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>.</p>
         </div>
-        <p id="tested-note" class="text-xs font-bold mt-6 opacity-70"><span class="bg-green-700 text-white rounded-lg px-2 py-1 text-[10px] font-black uppercase tracking-widest">&#10003; Tested &amp; working</span> <span class="ml-1">Only plugins their makers tested on real hardware.</span></p>
+        <p id="tested-note" class="text-xs font-bold mt-6 opacity-70"><span class="bg-green-700 text-white rounded-lg px-2 py-1 text-[10px] font-black uppercase tracking-widest">&#10003; Tested &amp; working</span> <span class="ml-1">Only plugins their creators tested on real hardware.</span></p>
         <p id="shown" class="text-xs font-bold uppercase tracking-widest opacity-50 mt-3 mb-4"></p>
-        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" style="min-height:70vh;align-content:start"></div>
+        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5" style="min-height:70vh;align-content:start"></div>
         <p id="empty" class="hidden text-center font-bold opacity-60 py-10">No plugins match. Try another filter.</p>
     </section>
 
-    <section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
-        <div class="bg-white/60 border border-[#ea861a]/40 rounded-[3rem] p-8 md:p-12 shadow-2xl text-center max-w-4xl mx-auto" style="box-shadow:0 0 50px rgba(234,134,26,.25)">
-            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">Load the plugins. <span class="text-[#ea861a]">Load the sounds.</span></h2>
-            <p class="opacity-70 font-medium text-lg mb-8 max-w-2xl mx-auto">Plugins give your MPC new instruments. The Disk King's MPC Expansions give it the drums and chops: boom bap, street and soul kits in standard .XPN format.</p>
+    <section class="container mx-auto px-4 md:px-6 py-10 md:py-16 border-t border-[#4b3621]/5">
+        <div class="bg-white/60 border border-[#ea861a]/40 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 shadow-2xl text-center max-w-4xl mx-auto" style="box-shadow:0 0 50px rgba(234,134,26,.25)">
+            <h2 class="text-2xl md:text-5xl font-black uppercase tracking-tighter mb-4">Load the plugins. <span class="text-[#ea861a]">Load the sounds.</span></h2>
+            <p class="opacity-70 font-medium text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">Plugins give your MPC new instruments. The Disk King's MPC Expansions give it the drums and chops: boom bap, street and soul kits in standard .XPN format.</p>
             <a href="https://thediskking.com/" class="inline-flex h-[52px] items-center bg-[#ea861a] text-white hover:bg-[#d97706] px-8 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg">Shop MPC Expansions</a>
         </div>
     </section>
 
-    <section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
+    <section class="container mx-auto px-4 md:px-6 py-10 md:py-16 border-t border-[#4b3621]/5">
         <div class="max-w-4xl space-y-4 opacity-80 font-medium leading-relaxed">
-            <h2 class="text-3xl font-black uppercase tracking-tighter">Makers: <span class="text-[#ea861a]">get listed</span></h2>
+            <h2 class="text-3xl font-black uppercase tracking-tighter">Creators: <span class="text-[#ea861a]">get listed</span></h2>
             <p>Nothing to sign up for. Publish a GitHub release with your MPC builds named like <code class="bg-[#4b3621]/10 px-1 rounded font-bold">YourPlugin-1.0.0-mpc-armv7.zip</code> (Gen1), <code class="bg-[#4b3621]/10 px-1 rounded font-bold">YourPlugin-1.0.0-mpc-aarch64.zip</code> (Gen2) or <code class="bg-[#4b3621]/10 px-1 rounded font-bold">YourPlugin-1.0.0-mpc-sdk.zip</code>, and it shows up here within a day. To fix a listing, email <a href="mailto:thediskking@gmail.com" class="text-[#ea861a] underline font-bold">thediskking@gmail.com</a>.</p>
             <div class="bg-red-600 text-white rounded-2xl p-5 font-bold text-sm leading-relaxed">&#9888; Every plugin here is made by an independent developer and downloaded from their GitHub, at your own risk. The Disk King does not make, test or guarantee any of them and is not responsible for any damage or data loss. Beta / unfinished plugins can crash your MPC. Always back up first. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>.</div>
         </div>
     </section>
 
-    <footer class="bg-[#4b3621] text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h4 class="text-4xl font-black tracking-tighter mb-4">MPC PLUGINS <span class="block text-sm tracking-[0.3em] opacity-60 mt-2">BY THE DISK KING</span></h4>
-            <div class="flex flex-wrap justify-center gap-x-12 gap-y-2 text-xs font-bold uppercase tracking-widest opacity-60">
+    <footer class="bg-[#4b3621] text-white py-12 md:py-20">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h4 class="text-2xl md:text-4xl font-black tracking-tighter mb-4">MPC PLUGINS MANAGER</h4>
+            <div class="flex flex-wrap justify-center gap-x-6 md:gap-x-12 gap-y-3 text-xs font-bold uppercase tracking-widest opacity-60">
                 <a href="https://thediskking.com/" class="hover:text-[#ea861a]">The Disk King</a>
                 <a href="https://www.facebook.com/thediskkings" class="hover:text-[#ea861a]">Facebook</a>
                 <a href="https://www.youtube.com/@thediskking" class="hover:text-[#ea861a]">YouTube</a>
                 <a href="install/" class="hover:text-[#ea861a]">How to install</a>
                 <a href="catalog.json" class="hover:text-[#ea861a]">catalog.json</a>
             </div>
-            <p class="mt-12 text-[10px] opacity-40 uppercase tracking-[0.2em] max-w-3xl mx-auto leading-relaxed">Plugins are made and shared by independent developers; downloads come from each developer's GitHub. Provided as is, with no warranty. The Disk King is not responsible or liable for any damage or loss from any plugin. Download and install at your own risk. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>. Not affiliated with Akai Professional or inMusic. MPC and Force are their trademarks. Plugin names belong to their makers.</p>
+            <p class="mt-12 text-[10px] opacity-40 uppercase tracking-[0.2em] max-w-3xl mx-auto leading-relaxed">Plugins are made and shared by independent developers; downloads come from each developer's GitHub. Provided as is, with no warranty. The Disk King is not responsible or liable for any damage or loss from any plugin. Download and install at your own risk. <a href="https://thediskking.com/policies.html#plugins" class="underline">Full disclaimer</a>. Not affiliated with Akai Professional or inMusic. MPC and Force are their trademarks. Plugin names belong to their creators.</p>
             <p class="mt-6 text-[10px] opacity-20 uppercase tracking-[0.2em]">&copy; 2026 The Disk King. All rights reserved.</p>
         </div>
     </footer>
@@ -137,9 +138,9 @@
     function fmt(n) { return Number(n || 0).toLocaleString(); }
 
     function card(p) {
-        var c = el('a', 'bg-[#111] rounded-2xl border border-white/10 flex flex-col shadow-lg p-4 hover:border-[#ea861a] transition-colors');
+        var c = el('a', 'bg-[#111] rounded-2xl border border-white/10 flex flex-col shadow-lg p-3 md:p-4 hover:border-[#ea861a] transition-colors');
         if (idOk(p.id)) c.href = 'p/' + p.id + '/';
-        if (p.featured) c.appendChild(el('div', 'rounded-lg px-3 py-1 mb-2 text-[10px] font-black uppercase tracking-widest text-center bg-[#ea861a] text-white', '★ Featured · from The Disk King'));
+        if (p.featured) c.appendChild(el('div', 'rounded-lg px-3 py-1 mb-2 text-[10px] font-black uppercase tracking-widest text-center bg-[#ea861a] text-white', '★ Featured'));
         var st = p.tier === 'verified' ? ['✓ Tested & working', 'bg-green-700 text-white']
             : p.tier === 'experimental' ? ['⚠ Beta / unfinished', 'bg-red-600 text-white']
             : ['Not yet tested', 'bg-amber-400 text-[#4b3621]'];

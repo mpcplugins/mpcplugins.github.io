@@ -141,7 +141,7 @@ Tested & Working plugins are shown first everywhere on the list. Each page has y
 Optional: a README badge that updates itself: `[![MPC Plugins](%s%s.svg)](%s%s/)`
 
 Thanks for making it, and feel free to close this issue.
-MPC Plugins by The Disk King (https://github.com/mpcplugins/mpcplugins.github.io)""" % (
+MPC Plugins Manager (https://mpcplugins.github.io)""" % (
         "s" if len(ps) > 1 else "", "" if len(ps) > 1 else "s", "\n".join(rows), BADGE, pid, SITE, pid)
     return title, body
 

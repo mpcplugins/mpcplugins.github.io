@@ -53,7 +53,7 @@ HEAD = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canon}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="MPC Plugins by The Disk King">
+<meta property="og:site_name" content="MPC Plugins Manager">
 <meta property="og:url" content="{canon}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -68,33 +68,33 @@ HEAD = """<!DOCTYPE html>
 body {{ font-family: 'Inter', sans-serif; }}
 .feature-tag {{ background: #ea861a; color: white; padding: 4px 10px; border-radius: 99px; font-size: 10px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; }}
 .tag-dark {{ background: #4b3621; }} .tag-blue {{ background: #3b82f6; }} .tag-green {{ background: #15803d; }} .tag-gray {{ background: #9ca3af; }}
+html {{ -webkit-text-size-adjust: 100%; }} body {{ overflow-x: hidden; overflow-wrap: anywhere; }} #views {{ scrollbar-width: none; }} #views::-webkit-scrollbar {{ display: none; }} @media (max-width: 640px) {{ .clamp {{ -webkit-line-clamp: 3; }} }}
 .notes {{ white-space: pre-wrap; word-break: break-word; }}
 </style>
 </head>
 <body class="bg-[#f5f5dc] text-[#4b3621] min-h-screen selection:bg-[#ea861a] selection:text-white">
 <header class="bg-[#f5f5dc]/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#4b3621]/5">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
-    <a href="/" class="leading-none text-[#4b3621]"><span class="block text-xl sm:text-2xl md:text-3xl font-black tracking-tighter">MPC <span class="text-[#ea861a]">PLUGINS</span> MANAGER</span><span class="block text-[10px] font-black uppercase tracking-[0.3em] opacity-60 mt-1">by The Disk King</span></a>
+  <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center gap-4">
+    <a href="/" class="leading-none text-[#4b3621] text-lg sm:text-2xl md:text-3xl font-black tracking-tighter whitespace-nowrap">MPC <span class="text-[#ea861a]">PLUGINS</span> MANAGER</a>
     <div class="flex items-center gap-4 md:gap-8">
-      <a href="/" class="text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a]">&larr; All plugins</a>
-      <a href="https://thediskking.com/" class="hidden sm:block leading-tight font-bold uppercase tracking-widest hover:text-[#ea861a] text-right"><span class="block text-xs md:text-sm">By The Disk King</span><span class="block text-[10px] md:text-xs font-black text-[#ea861a]">Expansions</span></a>
+      <a href="/" class="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-widest hover:text-[#ea861a] whitespace-nowrap">&larr; All plugins</a>
     </div>
   </div>
 </header>
 """
 
 FOOT = """
-<section class="container mx-auto px-6 py-16 border-t border-[#4b3621]/5">
-  <div class="bg-white/60 border border-[#ea861a]/40 rounded-[3rem] p-8 md:p-12 shadow-2xl text-center max-w-4xl mx-auto" style="box-shadow:0 0 50px rgba(234,134,26,.25)">
-    <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">{pitch_head}</h2>
-    <p class="opacity-70 font-medium text-lg mb-8 max-w-2xl mx-auto">{pitch_body}</p>
+<section class="container mx-auto px-4 md:px-6 py-10 md:py-16 border-t border-[#4b3621]/5">
+  <div class="bg-white/60 border border-[#ea861a]/40 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 shadow-2xl text-center max-w-4xl mx-auto" style="box-shadow:0 0 50px rgba(234,134,26,.25)">
+    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">{pitch_head}</h2>
+    <p class="opacity-70 font-medium text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">{pitch_body}</p>
     <a href="{store}" class="inline-flex h-[52px] items-center bg-[#ea861a] text-white hover:bg-[#d97706] px-8 rounded-xl font-black text-sm uppercase tracking-widest shadow-lg">Shop MPC Expansions</a>
   </div>
 </section>
-<footer class="bg-[#4b3621] text-white py-20">
-  <div class="container mx-auto px-6 text-center">
-    <h4 class="text-4xl font-black tracking-tighter mb-4">MPC PLUGINS <span class="block text-sm tracking-[0.3em] opacity-60 mt-2">BY THE DISK KING</span></h4>
-    <div class="flex flex-wrap justify-center gap-x-12 gap-y-2 text-xs font-bold uppercase tracking-widest opacity-60">
+<footer class="bg-[#4b3621] text-white py-12 md:py-20">
+  <div class="container mx-auto px-4 md:px-6 text-center">
+    <h4 class="text-2xl md:text-4xl font-black tracking-tighter mb-4">MPC PLUGINS MANAGER</h4>
+    <div class="flex flex-wrap justify-center gap-x-6 md:gap-x-12 gap-y-3 text-xs font-bold uppercase tracking-widest opacity-60">
       <a href="/" class="hover:text-[#ea861a]">All plugins</a>
       <a href="{store}" class="hover:text-[#ea861a]">The Disk King</a>
       <a href="/install/" class="hover:text-[#ea861a]">How to install</a>
@@ -132,7 +132,7 @@ def badges(p):
 DISCLAIMER = """
 <div class="bg-white/70 border-2 border-[#4b3621]/30 rounded-2xl p-5 mb-4 text-sm leading-relaxed">
   <p class="font-black uppercase tracking-widest text-xs mb-2">Disclaimer: use entirely at your own risk</p>
-  <p class="opacity-80 mb-2">This plugin is made, owned and shared by an independent developer, <strong>not</strong> by The Disk King (MPC Plugins by The Disk King), and not by Akai Professional or inMusic. We only list it; the download comes directly from the developer's GitHub. We did not make, test, review or check it for safety and make no promise that it works, is safe, or is free of bugs or harmful code.</p>
+  <p class="opacity-80 mb-2">This plugin is made, owned and shared by an independent developer, <strong>not</strong> by The Disk King, and not by Akai Professional or inMusic. We only list it; the download comes directly from the developer's GitHub. We did not make, test, review or check it for safety and make no promise that it works, is safe, or is free of bugs or harmful code.</p>
   <p class="opacity-80 mb-2">Plugins install into your MPC's system and can crash it, corrupt or lose projects and samples, or require reinstalling MPC OS. <strong>Save your work and back up your MPC before installing anything.</strong></p>
   <p class="opacity-80">Everything is provided "as is", with no warranty of any kind. To the fullest extent the law allows, The Disk King is not responsible or liable for any damage, data loss, device failure, lost income or any other harm from downloading, installing or using any plugin listed here. <strong>By downloading or installing, you accept all risk and full responsibility.</strong> <a href="https://thediskking.com/policies.html#plugins" class="underline font-bold">Full disclaimer</a>.</p>
 </div>
@@ -155,11 +155,11 @@ def status_box(p):
                 if line not in seen:
                     seen.append(line)
         return ('<div class="bg-green-700 text-white rounded-2xl p-5 mb-4"><p class="text-xl font-black uppercase tracking-tighter mb-1">&#10003; Tested &amp; working</p>'
-                '<p class="font-medium opacity-90">The maker reports testing this exact version on real hardware: %s. This is the maker\'s own report, '
+                '<p class="font-medium opacity-90">The creator reports testing this exact version on real hardware: %s. This is the creator\'s own report, '
                 'not a guarantee. Still back up first.</p></div>' % e("; ".join(seen) or "a real MPC"))
     return ('<div class="bg-amber-400 text-[#4b3621] rounded-2xl p-5 mb-4 border-2 border-amber-600">'
             '<p class="text-xl font-black uppercase tracking-tighter mb-1">&#9888; Not yet tested on hardware</p>'
-            '<p class="font-bold leading-relaxed">This is a finished release, but the maker hasn\'t recorded a test of this version on a real MPC or '
+            '<p class="font-bold leading-relaxed">This is a finished release, but the creator hasn\'t recorded a test of this version on a real MPC or '
             'Force. It may work fine; it may not. Back up first and try it on a project that doesn\'t matter.</p></div>')
 
 
@@ -175,7 +175,7 @@ def safety_box(p):
         pulled = p.get("pulled") or {}
         return ('<div class="bg-red-700 text-white rounded-2xl p-5 mb-4 border-4 border-red-900"><p class="text-xl font-black uppercase '
                 'tracking-tighter mb-1">&#10007; Download removed by our safety check</p><p class="font-bold text-sm">Version %s failed: %s. '
-                'No working version is offered until the maker fixes it.</p></div>' % (e(pulled.get("version", "")), e("; ".join(pulled.get("problems", [])))))
+                'No working version is offered until the creator fixes it.</p></div>' % (e(pulled.get("version", "")), e("; ".join(pulled.get("problems", [])))))
     if not s or not s.get("checked"):
         return ('<div class="bg-white/60 border border-[#4b3621]/15 rounded-2xl p-4 mb-4 text-sm font-bold opacity-80">Safety check: pending. '
                 'Each new release is checked in the nightly build.</div>')
@@ -263,8 +263,8 @@ def copy_box(p):
                 '<a href="/install/" class="underline font-bold">Full step-by-step guide</a>.</p></div>' % items)
     return ('<div class="bg-amber-100 border-2 border-amber-500 rounded-2xl p-5 mb-4 text-sm">'
             '<p class="font-black uppercase tracking-widest text-xs mb-2">Can\'t be copied by hand on MPC OS 3.10.1</p>'
-            '<p class="font-medium">This release\'s plugin folder has no %s, which 3.10.1 needs to list it. Use the maker\'s installer '
-            '(see INSTALL.md in the zip), or ask the maker for a 3.10.1 release. <a href="/install/#folder" class="underline font-bold">Why?</a></p></div>'
+            '<p class="font-medium">This release\'s plugin folder has no %s, which 3.10.1 needs to list it. Use the creator\'s installer '
+            '(see INSTALL.md in the zip), or ask the creator for a 3.10.1 release. <a href="/install/#folder" class="underline font-bold">Why?</a></p></div>'
             % (code % "plugin.json"))
 
 
@@ -290,7 +290,7 @@ def build_rows(version):
 def plugin_page(p, cat, collections):
     url = BASE + "p/%s/" % p["id"]
     desc = p.get("description") or p.get("about") or "%s for Akai MPC and Force." % p["name"]
-    title = "%s by %s: Free %s for Akai MPC & Force | MPC Plugins by The Disk King" % (p["name"], p["maker"], KIND_LABEL.get(p["kind"], "Plugin"))
+    title = "%s by %s: Free %s for Akai MPC & Force | MPC Plugins Manager" % (p["name"], p["maker"], KIND_LABEL.get(p["kind"], "Plugin"))
     shot = https(p.get("screenshot"))
     latest = p["latest"]
     repo_url = "https://github.com/%s" % p["repo"]
@@ -317,7 +317,7 @@ def plugin_page(p, cat, collections):
     if https(p.get("youtube")):
         links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Video</a>' % e(p["youtube"]))
     if https(p.get("tip")):
-        links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Tip the maker</a>' % e(p["tip"]))
+        links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Tip the creator</a>' % e(p["tip"]))
     if https(p.get("homepage")):
         links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Homepage</a>' % e(p["homepage"]))
     links.append('<a href="/feed/%s.xml" class="underline font-bold hover:text-[#ea861a]">Follow updates</a>' % e(p["id"]))
@@ -333,10 +333,10 @@ def plugin_page(p, cat, collections):
     bar = [cat["bar"].get(b, b) for b in p.get("bar_missing", [])]
     ph, pb = pitch(p)
     body = """
-<main class="container mx-auto px-6 py-12 max-w-5xl">
+<main class="container mx-auto px-4 md:px-6 py-12 max-w-5xl">
   <p class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"><a href="/" class="hover:text-[#ea861a]">MPC Plugins</a> / {kind_label}s{coll_crumb}</p>
   <div class="flex flex-wrap gap-2 mb-4">{badges}</div>
-  <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none italic mb-3">{name}</h1>
+  <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-none italic mb-3">{name}</h1>
   <p class="text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] mb-8">by {maker} &middot; v{version} &middot; {date}{dl}</p>
   {formerly}
   {stats}
@@ -348,7 +348,7 @@ def plugin_page(p, cat, collections):
   {status}
   {disclaimer}
   <div class="space-y-3 mb-4">{builds}</div>
-  <p class="text-xs opacity-60 mb-4">Downloads come straight from the maker's GitHub. Check the sha256 matches before installing. New to plugins? <a href="/install/" class="underline font-bold">How to install plugins on MPC OS 3.10.1</a>.</p>
+  <p class="text-xs opacity-60 mb-4">Downloads come straight from the creator's GitHub. Check the sha256 matches before installing. New to plugins? <a href="/install/" class="underline font-bold">How to install plugins on MPC OS 3.10.1</a>.</p>
   {copy}
   {beta_note}
   <div class="mb-10"></div>
@@ -384,11 +384,11 @@ def plugin_page(p, cat, collections):
                   % e(", ".join(p["renamed_from"]))) if p.get("renamed_from") else "",
         beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
                    '&#9888; Beta v%s is out: unfinished, not tested</p><p class="font-bold text-sm">Betas can crash or break projects. The download '
-                   'above is the finished version. Get the beta from the maker\'s GitHub only if you accept that risk.</p></div>'
+                   'above is the finished version. Get the beta from the creator\'s GitHub only if you accept that risk.</p></div>'
                    % e(p["beta"]["version"])) if p.get("beta") else "",
         tested=('<h2 class="text-3xl font-black uppercase tracking-tighter mb-4">Tested <span class="text-[#ea861a]">working</span> on</h2>'
                 '<ul class="list-disc pl-6 mb-10 font-medium opacity-80">%s</ul>' % "".join(tested_lines)) if tested_lines else
-               '<p class="mb-10 font-medium opacity-70">No hardware test recorded by the maker for this version yet.</p>',
+               '<p class="mb-10 font-medium opacity-70">No hardware test recorded by the creator for this version yet.</p>',
         history="\n".join(hist),
         bar=('<details class="mb-10"><summary class="cursor-pointer font-black uppercase tracking-widest text-xs opacity-60">To improve this listing</summary>'
              '<ul class="list-disc pl-6 mt-3 text-sm opacity-70">%s</ul></details>' % "".join("<li>%s</li>" % e(b) for b in bar)) if bar else "",
@@ -404,7 +404,7 @@ def collection_page(c, members):
     summary = "%s by %s: %d MPC plugins (%s)." % (c["title"], c["maker"], len(members),
                                                  ", ".join("%d %ss" % (n, k) for k, n in sorted(kinds.items())))
     shot = next((https(m.get("screenshot")) for m in members if https(m.get("screenshot"))), None)
-    head = HEAD.format(title=e("%s by %s | MPC Plugins by The Disk King" % (c["title"], c["maker"])), desc=e(summary), url=e(url),
+    head = HEAD.format(title=e("%s by %s | MPC Plugins Manager" % (c["title"], c["maker"])), desc=e(summary), url=e(url),
                        canon=e(CANON + "collection/" + c["id"] + "/"),
                        og_image='<meta property="og:image" content="%s">' % e(shot) if shot else "",
                        card="summary_large_image" if shot else "summary", extra_head="")
@@ -415,10 +415,10 @@ def collection_page(c, members):
                      '<p class="text-white/60 text-xs mt-2">%s</p></a>'
                      % (e(m["id"]), e(KIND_LABEL.get(m["kind"], m["kind"])), e(m["name"]), e((m.get("description") or "")[:140])))
     body = """
-<main class="container mx-auto px-6 py-12 max-w-6xl">
+<main class="container mx-auto px-4 md:px-6 py-12 max-w-6xl">
   <p class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"><a href="/" class="hover:text-[#ea861a]">MPC Plugins</a> / Collections</p>
   <span class="feature-tag tag-dark">Collection</span>
-  <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none italic mt-4 mb-3">{title}</h1>
+  <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-none italic mt-4 mb-3">{title}</h1>
   <p class="text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] mb-8">by {maker} &middot; {n} plugins</p>
   <p class="text-lg font-medium opacity-80 mb-10">{summary}</p>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">{cards}</div>
@@ -462,15 +462,15 @@ def install_page():
         return None
     body = (body.replace('href="/plugins/"', 'href="/"')
                 .replace('href="/policies.html', 'href="https://thediskking.com/policies.html'))
-    head = HEAD.format(title=e("How to Install Plugins on Akai MPC OS 3.10.1: Full Step-by-Step Guide | MPC Plugins by The Disk King"),
+    head = HEAD.format(title=e("How to Install Plugins on Akai MPC OS 3.10.1: Full Step-by-Step Guide | MPC Plugins Manager"),
                        desc=e("How to install and load free plugins on the Akai MPC and Force with MPC OS 3.10.1: turn on External "
                               "Plugin Support, pick Gen1 or Gen2, copy to the VST2 Plugins folder, load it on a track."),
                        url=e(BASE + "install/"), canon=e(CANON + "install/"), og_image="", card="summary", extra_head="")
     main = """
-<main class="container mx-auto px-6 py-12 max-w-4xl">
+<main class="container mx-auto px-4 md:px-6 py-12 max-w-4xl">
   <p class="text-xs font-bold uppercase tracking-widest opacity-50 mb-4"><a href="/" class="hover:text-[#ea861a]">MPC Plugins</a> / How to install</p>
   <span class="feature-tag">MPC OS 3.10.1 &middot; Step by step</span>
-  <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none mt-5 mb-4">HOW TO INSTALL <span class="text-[#ea861a]">MPC PLUGINS</span></h1>
+  <h1 class="text-4xl md:text-7xl font-black tracking-tighter leading-none mt-5 mb-4">HOW TO INSTALL <span class="text-[#ea861a]">MPC PLUGINS</span></h1>
   <p class="text-lg font-medium opacity-80 mb-10">The complete guide to installing and loading free plugins on your Akai MPC or Force with MPC OS 3.10.1: switch plugins on, pick the right download, copy it over, and play it on a track.</p>
   %s
   <div class="flex flex-wrap gap-3 mt-12">
@@ -488,7 +488,7 @@ def install_page():
 def atom(title, self_url, entries, updated):
     out = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">',
            "<title>%s</title>" % e(title), '<link rel="self" href="%s"/>' % e(self_url), '<link href="%s"/>' % e(BASE),
-           "<id>%s</id>" % e(self_url), "<updated>%s</updated>" % e(updated), "<author><name>MPC Plugins by The Disk King</name></author>"]
+           "<id>%s</id>" % e(self_url), "<updated>%s</updated>" % e(updated), "<author><name>MPC Plugins Manager</name></author>"]
     for p, v in entries:
         link = BASE + "p/%s/" % p["id"]
         out.append("<entry><title>%s</title><id>%s</id><updated>%s</updated><link href=\"%s\"/>"
@@ -557,7 +557,7 @@ def write(cat, out, log=print):
     for p in plugins:
         _write(os.path.join(out, "p", p["id"], "index.html"), plugin_page(p, cat, collections))
         _write(os.path.join(out, "feed", p["id"] + ".xml"),
-               atom("%s updates | MPC Plugins by The Disk King" % p["name"], BASE + "feed/%s.xml" % p["id"],
+               atom("%s updates | MPC Plugins Manager" % p["name"], BASE + "feed/%s.xml" % p["id"],
                     [(p, v) for v in p.get("versions", [])[:30]], now))
     for p in plugins:              # a renamed plugin's old page address sends people to its page
         for old in p.get("old_ids", []):
@@ -580,7 +580,7 @@ def write(cat, out, log=print):
     recent = sorted(((p, v) for p in plugins for v in p.get("versions", [])),
                     key=lambda pv: pv[1].get("updated") or "", reverse=True)[:50]
     _write(os.path.join(out, "catalog.tsv"), catalog_tsv(cat))
-    _write(os.path.join(out, "feed.xml"), atom("MPC Plugins by The Disk King: new releases", BASE + "feed.xml", recent, now))
+    _write(os.path.join(out, "feed.xml"), atom("MPC Plugins Manager: new releases", BASE + "feed.xml", recent, now))
     urls = [BASE]      # plugin pages are canonical on thediskking.com, whose own sitemap lists them
     _write(os.path.join(out, "sitemap.xml"),
            '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

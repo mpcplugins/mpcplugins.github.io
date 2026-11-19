@@ -3,7 +3,7 @@
      Links starting with /plugins/ are rewritten for github.io by site.py. -->
 <div class="guide space-y-12">
 
-<nav class="featured-card bg-white/60 rounded-[2rem] border border-[#4b3621]/10 p-6 md:p-8">
+<nav class="featured-card bg-white/60 rounded-[2rem] border border-[#4b3621]/10 p-4 md:p-8">
   <p class="font-black uppercase tracking-widest text-xs mb-3 opacity-60">On this page</p>
   <ol class="grid sm:grid-cols-2 gap-x-8 gap-y-2 font-bold text-sm list-decimal list-inside">
     <li><a href="#need" class="hover:text-[#ea861a]">What you need</a></li>
@@ -27,7 +27,7 @@
 </div>
 
 <section id="need">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">1. What <span class="text-[#ea861a]">you need</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">1. What <span class="text-[#ea861a]">you need</span></h2>
   <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
     <li><strong>MPC OS 3.10.1 or later</strong> on a standalone MPC or Force.</li>
     <li><strong>A USB stick or SD card</strong> is the easiest way to move plugins over, but not the only one.</li>
@@ -47,7 +47,7 @@
 </section>
 
 <section id="update">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">2. Update to <span class="text-[#ea861a]">MPC OS 3.10.1</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">2. Update to <span class="text-[#ea861a]">MPC OS 3.10.1</span></h2>
   <p class="opacity-90 font-medium mb-3">Check your version under <strong>Menu &rarr; Preferences &rarr; Info</strong>. To update, pick one way:</p>
   <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
     <li><strong>On the MPC:</strong> connect it to the internet, go to <strong>Preferences &rarr; Info</strong>, press <strong>UPDATE</strong>, then choose <strong>Online Update</strong>.</li>
@@ -57,7 +57,7 @@
 </section>
 
 <section id="turn-on">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">3. Turn on <span class="text-[#ea861a]">plugin support</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">3. Turn on <span class="text-[#ea861a]">plugin support</span></h2>
   <p class="opacity-90 font-medium mb-3">Plugins are switched off until you turn them on. You only do this once.</p>
   <ol class="space-y-2 opacity-90 font-medium list-decimal pl-6">
     <li>Open <strong>Menu &rarr; Preferences &rarr; Enhancements</strong>.</li>
@@ -68,18 +68,18 @@
 </section>
 
 <section id="download">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">4. Pick the <span class="text-[#ea861a]">right download</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">4. Pick the <span class="text-[#ea861a]">right download</span></h2>
   <ol class="space-y-2 opacity-90 font-medium list-decimal pl-6">
-    <li>Find a plugin on our <a href="/plugins/" class="underline font-bold">plugin list</a>. Start with <strong>&#10003; Tested &amp; Working</strong> ones: their makers tested the current version on real hardware.</li>
+    <li>Find a plugin on our <a href="/plugins/" class="underline font-bold">plugin list</a>. Start with <strong>&#10003; Tested &amp; Working</strong> ones: their creators tested the current version on real hardware.</li>
     <li>Open its page. The <strong>Download</strong> box lists each file by generation: Gen1, Gen2, or "works on both".</li>
     <li>Pick the one for your MPC (see the table above). If there's a "works on both" file, it's usually the easiest.</li>
     <li>Read the <strong>Before you install</strong> box. Some plugins need your own files (like a ROM), only run on one model, or need another plugin in the same project.</li>
   </ol>
-  <p class="mt-3 opacity-80 font-medium text-sm">The download comes straight from the maker's GitHub. Each version shows a SHA-256 checksum, so you can check your file wasn't changed: on Windows, run <code class="bg-[#4b3621]/10 px-1 rounded">certutil -hashfile file.zip SHA256</code>.</p>
+  <p class="mt-3 opacity-80 font-medium text-sm">The download comes straight from the creator's GitHub. Each version shows a SHA-256 checksum, so you can check your file wasn't changed: on Windows, run <code class="bg-[#4b3621]/10 px-1 rounded">certutil -hashfile file.zip SHA256</code>.</p>
 </section>
 
 <section id="folder">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">5. Find the <span class="text-[#ea861a]">plugin folder</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">5. Find the <span class="text-[#ea861a]">plugin folder</span></h2>
   <p class="opacity-90 font-medium mb-3">Unzip the download. You're looking for one folder named like <code class="bg-[#4b3621]/10 px-1 rounded font-bold">Maker - VST - Plugin Name</code>, for example <code class="bg-[#4b3621]/10 px-1 rounded font-bold">sd88me - VST - Acid</code>. That folder is the plugin. Where it is depends on the download:</p>
   <div class="grid md:grid-cols-2 gap-4">
     <div class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
@@ -98,11 +98,11 @@
       └─ sd88me - VST - Acid/   &larr; copy this</pre>
     </div>
   </div>
-  <p class="mt-4 opacity-90 font-medium"><strong>Check for a file called <code class="bg-[#4b3621]/10 px-1 rounded">plugin.json</code> inside the plugin folder.</strong> MPC OS 3.10.1 needs it to list the plugin. Most new releases have one. Some older releases don't, and copying those by hand won't work. They need the maker's installer instead (see the INSTALL.md in the zip), or a newer release. <strong>Don't</strong> rename <code class="bg-[#4b3621]/10 px-1 rounded">mpc-plugin.json</code> to plugin.json: it's a different file, and the plugin still won't show.</p>
+  <p class="mt-4 opacity-90 font-medium"><strong>Check for a file called <code class="bg-[#4b3621]/10 px-1 rounded">plugin.json</code> inside the plugin folder.</strong> MPC OS 3.10.1 needs it to list the plugin. Most new releases have one. Some older releases don't, and copying those by hand won't work. They need the creator's installer instead (see the INSTALL.md in the zip), or a newer release. <strong>Don't</strong> rename <code class="bg-[#4b3621]/10 px-1 rounded">mpc-plugin.json</code> to plugin.json: it's a different file, and the plugin still won't show.</p>
 </section>
 
 <section id="copy">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">6. Copy it <span class="text-[#ea861a]">to your MPC</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">6. Copy it <span class="text-[#ea861a]">to your MPC</span></h2>
   <p class="opacity-90 font-medium mb-4">Every plugin goes in a folder called <strong><code class="bg-[#4b3621]/10 px-1 rounded">VST2 Plugins</code></strong> at the very top of a drive: the MPC's internal drive, an SD card or a USB drive. Type the name exactly, with the space and a capital P. If it isn't there yet, create it. Put each plugin folder <strong>directly</strong> inside it, not inside another folder.</p>
   <pre class="bg-[#111] text-white/90 text-xs rounded-xl p-4 mb-6 overflow-x-auto">USB stick (or SD card, or internal drive)
 └─ VST2 Plugins/
@@ -145,13 +145,13 @@
 </section>
 
 <section id="load">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">7. Load it <span class="text-[#ea861a]">on a track</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">7. Load it <span class="text-[#ea861a]">on a track</span></h2>
   <div class="grid md:grid-cols-2 gap-4">
     <div class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10">
       <p class="font-black uppercase tracking-widest text-xs text-[#ea861a] mb-2">Instruments (synths, drum machines, samplers)</p>
       <ol class="space-y-2 font-medium opacity-90 list-decimal pl-5">
         <li>Add a new <strong>Plugin</strong> track.</li>
-        <li>In the plugin browser, open <strong>External VST Plugins</strong>. Plugins are grouped by maker.</li>
+        <li>In the plugin browser, open <strong>External VST Plugins</strong>. Plugins are grouped by creator.</li>
         <li>Pick the plugin. Its own screen opens, and you play it from the pads or a keyboard like any MPC synth.</li>
       </ol>
     </div>
@@ -172,7 +172,7 @@
 </section>
 
 <section id="update-remove">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">8. Update or <span class="text-[#ea861a]">remove</span> a plugin</h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">8. Update or <span class="text-[#ea861a]">remove</span> a plugin</h2>
   <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
     <li><strong>To update:</strong> download the new version and replace the old plugin folder in <code>VST2 Plugins</code> with the new one. If you added your own files to the old folder (ROMs, presets), copy them across first. Then restart the MPC.</li>
     <li><strong>To remove:</strong> delete the plugin's folder from <code>VST2 Plugins</code> and restart. Projects that used it will open without that plugin.</li>
@@ -181,12 +181,12 @@
 </section>
 
 <section id="old-plugins">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">9. Had plugins <span class="text-[#ea861a]">before 3.10.1?</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">9. Had plugins <span class="text-[#ea861a]">before 3.10.1?</span></h2>
   <p class="opacity-90 font-medium">Before 3.10.1, community plugins were installed a different way, into a <code>Synths</code> folder plus a list in the MPC's settings. On 3.10.1 the browser only lists plugins in <code>VST2 Plugins</code>, so your old ones seem to vanish. <strong>Nothing is deleted.</strong> The files are still there, and saved projects still open them. To get them back in the browser, copy each plugin folder (the <code>Maker - VST - Name</code> folder from <code>Synths</code>) into <code>VST2 Plugins</code> and restart, or install the plugin's newest release. Keep External Plugin Support turned on: turning it off doesn't bring the old list back.</p>
 </section>
 
 <section id="trouble">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">10. <span class="text-[#ea861a]">Troubleshooting</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">10. <span class="text-[#ea861a]">Troubleshooting</span></h2>
   <div class="space-y-3">
     <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">The plugin doesn't show in the browser</summary>
       <ul class="mt-3 space-y-1 opacity-90 font-medium list-disc pl-6">
@@ -204,14 +204,14 @@
     <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">The plugin's screen went black</summary>
       <p class="mt-3 opacity-90 font-medium">The USB stick or SD card it runs from was unplugged. Plug it back in. To stop it happening, keep plugins you use a lot on the internal drive.</p></details>
     <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">My MPC froze, crashed or keeps restarting</summary>
-      <p class="mt-3 opacity-90 font-medium">Restart it. If a project with the plugin crashes every time it opens, take the plugin's folder out of <code>VST2 Plugins</code> (unplug the stick, or use Controller Mode), then open the project again without it. Report what happened on the plugin's page with <strong>Report a problem</strong>. Include your MPC model, MPC OS version and the plugin version, so the maker can fix it.</p></details>
+      <p class="mt-3 opacity-90 font-medium">Restart it. If a project with the plugin crashes every time it opens, take the plugin's folder out of <code>VST2 Plugins</code> (unplug the stick, or use Controller Mode), then open the project again without it. Report what happened on the plugin's page with <strong>Report a problem</strong>. Include your MPC model, MPC OS version and the plugin version, so the creator can fix it.</p></details>
     <details class="bg-white/60 rounded-2xl p-5 border border-[#4b3621]/10"><summary class="font-black cursor-pointer">It crackles or the MPC slows down</summary>
       <p class="mt-3 opacity-90 font-medium">Some plugins use a lot of CPU. Use fewer copies of the plugin at once. Leave Akai's "unlimited tracks" and "remove instance limits" settings off, and if you changed the buffer size in the advanced audio settings, set it larger again.</p></details>
   </div>
 </section>
 
 <section id="whats-new">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">11. Everything else <span class="text-[#ea861a]">new in 3.10.1</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">11. Everything else <span class="text-[#ea861a]">new in 3.10.1</span></h2>
   <p class="opacity-90 font-medium mb-3">Plugin support is one of several experimental "Enhancements" in MPC OS 3.10.1. You turn each one on or off separately, in the same Preferences &rarr; Enhancements screen:</p>
   <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
     <li><strong>MPC Plugin SDK:</strong> Akai's free kit for building your own instrument and effect plugins, even by describing them to an AI coding tool.</li>
@@ -225,13 +225,13 @@
 </section>
 
 <section id="safety">
-  <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">12. Stay <span class="text-[#ea861a]">safe</span></h2>
+  <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-4">12. Stay <span class="text-[#ea861a]">safe</span></h2>
   <ul class="space-y-2 opacity-90 font-medium list-disc pl-6">
-    <li><strong>Pick &#10003; Tested &amp; Working plugins first.</strong> Their makers tested the current version on real hardware. Treat <span class="text-red-700 font-black">&#9888; Experimental / Untested</span> ones as risky.</li>
+    <li><strong>Pick &#10003; Tested &amp; Working plugins first.</strong> Their creators tested the current version on real hardware. Treat <span class="text-red-700 font-black">&#9888; Experimental / Untested</span> ones as risky.</li>
     <li><strong>Read the Safety check</strong> on each plugin page. We download every release, check the file matches its checksum and is built for your MPC, and point out anything that needs a closer look, like a plugin that uses your network.</li>
     <li><strong>Save and back up</strong> before you try a new plugin, and try it on a test project first.</li>
     <li><strong>Turn off Developer mode and remote screen</strong> when you're not using them.</li>
-    <li><strong>Only download from the maker's own GitHub,</strong> which is where every download on our list comes from.</li>
+    <li><strong>Only download from the creator's own GitHub,</strong> which is where every download on our list comes from.</li>
   </ul>
 </section>
 
