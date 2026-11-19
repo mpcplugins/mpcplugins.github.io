@@ -246,6 +246,28 @@ def trending(final, today):
         p["trending"] = max(0, p["downloads"] - base.get(p["id"], p["downloads"]))
 
 
+RATINGS_URL = "https://thediskking.com/plugins/api/ratings.json"
+
+
+def add_ratings(final, log):
+    """User star ratings and removal reasons, kept by thediskking.com (averages and counts only, no voters)."""
+    from .net import fetch_json
+    status, data, _ = fetch_json(RATINGS_URL)
+    if status != 200 or not isinstance(data, dict):
+        log("   ratings: not available (HTTP %s)" % status)
+        return
+    got = data.get("plugins") or {}
+    n = 0
+    for p in final:
+        r = got.get(p["id"]) or {}
+        if r.get("count"):
+            p["rating"] = {"avg": round(float(r.get("avg") or 0), 2), "count": int(r["count"]), "dist": r.get("dist") or []}
+            n += 1
+        if r.get("removals") and any(r["removals"].values()):
+            p["removals"] = {k: int(v) for k, v in r["removals"].items() if v}
+    log("   ratings: %d plugins rated" % n)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Build the MPC Plugins catalog")
     ap.add_argument("--out", default=os.path.join(HERE, "dist"))
@@ -421,6 +443,7 @@ def main(argv=None):
             p["bar_missing"].append("review-flags")
     save_json(ADDED, added)
     trending(final, today)
+    add_ratings(final, log)
 
     collections = {}
     for p in final:
