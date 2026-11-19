@@ -501,7 +501,7 @@ def _write(path, text):
 
 
 TSV_COLUMNS = ["id", "name", "maker", "kind", "tier", "version", "tested_on", "downloads", "user_files", "summary",
-               "style", "screenshot", "updated", "featured"]
+               "style", "screenshot", "updated", "featured", "notes", "history", "needs"]
 for _k in ("sdk", "gen1", "gen2"):
     TSV_COLUMNS += [_k + "_url", _k + "_sha256", _k + "_size", _k + "_folder", _k + "_inside", _k + "_copy_ok"]
 
@@ -509,8 +509,19 @@ for _k in ("sdk", "gen1", "gen2"):
 def catalog_tsv(cat):
     """The plugin list for MPC Plugins Manager on the MPC: one plain line per plugin, Tested & Working first.
     A tab-separated file is quick to read with very little code on the device. Line 1 says the format version."""
-    def clean(v):
-        return " ".join(str(v if v is not None else "").split())[:300]
+    def clean(v, limit=300):
+        return " ".join(str(v if v is not None else "").split())[:limit]
+
+    def notes(p):            # the newest stable version's release notes, without Markdown symbols
+        v = next((v for v in p.get("versions") or [] if not v.get("prerelease")), None)
+        text = (v or {}).get("notes") or ""
+        for ch in "#*`>_":
+            text = text.replace(ch, "")
+        return clean(text, 600)
+
+    def history(p):          # up to 6 versions: version|date|downloads;...
+        return ";".join("%s|%s|%d" % (v["version"], (v.get("updated") or "")[:10], v.get("downloads") or 0)
+                        for v in (p.get("versions") or [])[:6])
     rows = ["#mpcplugins-tsv\t1\t%s" % cat.get("generated", ""), "\t".join(TSV_COLUMNS)]
     order = sorted(cat["plugins"], key=lambda p: (p.get("featured") or 999, p.get("tier") != "verified", -(p.get("downloads") or 0), p["name"].lower()))
     for p in order:
@@ -522,12 +533,12 @@ def catalog_tsv(cat):
                  (p.get("latest") or {}).get("version", ""), ",".join(p.get("verified_on") or []), p.get("downloads") or 0,
                  ";".join(p.get("user_files") or []), p.get("description") or p.get("about") or "",
                  p.get("style") or "", https(p.get("screenshot")) or "", ((p.get("latest") or {}).get("updated") or "")[:10],
-                 p.get("featured") or 0]
+                 p.get("featured") or 0, notes(p), history(p), p.get("needs") or ""]
         for k in ("sdk", "gen1", "gen2"):
             x, c = b.get(k) or {}, copy.get(k) or {}
             cells += [x.get("url", ""), x.get("sha256") or "", x.get("size") or "", c.get("folder") or "",
                       c.get("inside") or "", 1 if c.get("ok") else 0]
-        rows.append("\t".join(clean(v) for v in cells))
+        rows.append("\t".join(clean(v, 600) for v in cells))
     return "\n".join(rows) + "\n"
 
 
