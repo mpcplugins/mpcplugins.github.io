@@ -33,10 +33,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MPC_OUTREACH_TOKEN: ${{ secrets.MPC_OUTREACH_TOKEN }}
-        run: python -u -m mpcplugins.build --out site --inspect --outreach
+        run: python -u -m mpcplugins.build --out site --inspect --outreach ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && '--search' || '' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+      # --search (nightly and the Run workflow button only): finds plugin repos nobody listed yet. A find goes live
+      # only if its files pass every safety check; the rest wait in state/review.json.
       - name: Save state to the state branch
         run: |
           set -e

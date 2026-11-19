@@ -76,6 +76,37 @@ def candidates(extra_queries=(), log=print):
     return pool
 
 
+STRONG = {"mpc-vst in:name", "mpc-addin in:name", "mpc-plugin in:name", "mpc vst in:name,description",
+          "mpc vst2 in:name,description,readme", "akai mpc plugin in:name,description,readme",
+          "akai force plugin in:name,description,readme", "mpc-armv7 in:readme", "mpc-aarch64 in:readme",
+          "MPC Plugin SDK in:readme", "pluginList-arm in:readme", "VST2 Plugins MPC in:readme",
+          "topic:akai-mpc", "topic:akai-force", "topic:mpc-plugin", "topic:mpc-vst"}
+
+
+def ranked_candidates(known_owners, log=print):
+    """Every search hit, best first: makers we already list, then the strong searches, then the wide ones;
+    newest activity first inside each group. Forks and archived repos are left out."""
+    rank = {}
+    found = {}
+    for q in QUERIES:
+        hits = search_repos(q)
+        log("  search %-48s %4d hits" % (q, len(hits)))
+        for r, info in hits.items():
+            found.setdefault(r, info)
+            rank[r] = min(rank.get(r, 9), 1 if q in STRONG else 2)
+    for r, info in owner_sweep(known_owners, log=log).items():
+        found.setdefault(r, info)
+        rank[r] = 0
+    keep = [r for r, i in found.items() if not i.get("fork") and not i.get("archived")]
+    keep.sort(key=lambda r: (rank[r], -(_ts(found[r].get("pushed")))))
+    return [(r, found[r]) for r in keep]
+
+
+def _ts(iso):
+    """'2026-11-18T10:00:00Z' -> a sortable number (0 if missing)."""
+    return int("".join(ch for ch in (iso or "")[:19] if ch.isdigit()) or 0)
+
+
 def owner_sweep(owners, log=print):
     """Every repo of the given makers (catches plugins with unusual names)."""
     pool = {}

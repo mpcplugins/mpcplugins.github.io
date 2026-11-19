@@ -24,6 +24,9 @@ STATE_DIR = os.path.join(HERE, "state")
 STATE = os.path.join(STATE_DIR, "known_repos.json")
 ADDED = os.path.join(STATE_DIR, "added.json")
 HISTORY = os.path.join(STATE_DIR, "downloads.json")
+SEEN = os.path.join(STATE_DIR, "search_seen.json")       # every search hit we checked, and when it last changed
+FOUND = os.path.join(STATE_DIR, "found_repos.json")      # plugin repos our own search found
+SEARCH_BUDGET = 150                                       # new repos checked per night
 WORKERS = 6            # repos checked at once; low enough to stay polite to GitHub
 
 EFFECT_WORDS = ("reverb", "delay", "echo", " eq", "equaliz", "compress", "limiter", "saturat", "distort", "overdrive",
@@ -259,8 +262,12 @@ def main(argv=None):
 
     log("1/4 Loading the known-good list")
     overrides = load_json(OVERRIDES, {})
-    pool = {r: blank(r) for r in seeds.refresh(log=log)}
+    seeded = list(seeds.refresh(log=log))
+    pool = {r: blank(r) for r in seeded}
     for repo in overrides.get("add_repos", []):
+        pool.setdefault(repo, blank(repo))
+    found_repos = load_json(FOUND, {})
+    for repo in found_repos:
         pool.setdefault(repo, blank(repo))
     for repo, info in load_json(STATE, {}).items():
         if repo in pool:
@@ -268,7 +275,7 @@ def main(argv=None):
     log("   %d repos to check" % len(pool))
 
     log("2/4 Checking releases, repo pages and tested-on records")
-    plugins, checked = [], set()
+    plugins, checked, failed = [], set(), set()
 
     def run(batch, into):
         """Check repos 6 at a time (each check is mostly waiting on the network)."""
@@ -280,28 +287,56 @@ def main(argv=None):
                 return check_repo(batch[repo], log)
             except Exception as err:                    # one bad repo never stops the build
                 log("  ! %s: %s" % (repo, err))
+                failed.add(repo)
                 return []
         with ThreadPoolExecutor(max_workers=WORKERS) as pool_:
             for entries in pool_.map(one, todo):        # map keeps the order, so output is stable
                 into.extend(entries)
     run(pool, plugins)
+    vouched = set(seeded) | set(overrides.get("add_repos", []))
+    for e in plugins:
+        if e["repo"] in found_repos and e["repo"] not in vouched:
+            e["found_by_search"] = True
 
     review = []
     if args.search:
+        # Each repo is checked once and remembered; it is only checked again when it changes. At most
+        # SEARCH_BUDGET new checks a night, so the run stays far under GitHub's hourly limit.
         log("   searching GitHub for plugins not on the list yet")
-        finds = discover.candidates(log=log)
-        finds.update(discover.owner_sweep({p["maker"] for p in plugins}, log=log))
-        run({r: i for r, i in finds.items() if r not in pool}, review)
-        save_json(os.path.join(STATE_DIR, "review.json"), {"note": "Found by search, NOT live. Add a repo to "
-                  "overrides.json add_repos to publish it.", "plugins": review})
-        log("   %d new plugins waiting for review" % len(review))
+        seen = load_json(SEEN, {})
+        ranked = discover.ranked_candidates({p["repo"].split("/")[0] for p in plugins}, log=log)
+        todo = {}
+        for repo, info in ranked:
+            if repo in pool or repo in found_repos:
+                continue
+            if seen.get(repo, {}).get("pushed") == info.get("pushed"):
+                continue
+            todo[repo] = dict(info, repo=repo, owner=info.get("owner") or repo.split("/")[0],
+                              description=info.get("description") or "", topics=info.get("topics") or [])
+            if len(todo) >= SEARCH_BUDGET:
+                break
+        new_entries = []
+        run(todo, new_entries)
+        hits = {e["repo"] for e in new_entries}
+        for repo, info in todo.items():
+            if repo not in failed:              # a check that broke is tried again another night
+                seen[repo] = {"pushed": info.get("pushed"), "plugin": repo in hits, "checked": today}
+        for e in new_entries:
+            found_repos.setdefault(e["repo"], {"found": today})
+            e["found_by_search"] = True
+        plugins.extend(new_entries)
+        save_json(SEEN, seen)
+        left = sum(1 for r, i in ranked if r not in pool and r not in found_repos and seen.get(r, {}).get("pushed") != i.get("pushed"))
+        log("   search: checked %d new repos, %d had MPC plugins, %d still to check on later nights"
+            % (len(todo), len(hits), left))
 
     log("3/4 Trust, quality, collections")
     hide = set(overrides.get("hide", []))
     fixes = overrides.get("plugins", {})
     added = load_json(ADDED, {})
     taken, final = set(), []
-    for p in sorted(plugins, key=lambda e: (e["name"].lower(), e["repo"].lower())):
+    # plugins found by our search come last, so they can never take an existing plugin's page address
+    for p in sorted(plugins, key=lambda e: (bool(e.get("found_by_search")), e["name"].lower(), e["repo"].lower())):
         pid = slug(p["file_name"])
         if pid in taken:
             pid = slug(p["maker"] + "-" + p["file_name"])
@@ -316,6 +351,47 @@ def main(argv=None):
     if args.inspect:
         log("   safety checks (each new download checked once)")
         final = safety.check_plugins(final, os.path.join(STATE_DIR, "inspect.json"), log=log)
+    # A plugin only our own search found goes live only when its files passed every check;
+    # anything doubtful waits in state/review.json for a person.
+    live = []
+    for p in final:
+        if not p.get("found_by_search"):
+            live.append(p)
+            continue
+        s = p.get("safety") or {}
+        why = []
+        if not args.inspect or not s.get("checked"):
+            why.append("files not checked yet")
+        elif not s.get("ok"):
+            why.append("failed the file check: " + "; ".join(s.get("problems", [])))
+        if s.get("risky"):
+            why.append("risky functions: " + ", ".join(s["risky"]))
+        if s.get("installer_flags"):
+            why.append("installer does: " + ", ".join(s["installer_flags"]))
+        if p.get("same_uid_as"):
+            why.append("same plugin ID as " + ", ".join(p["same_uid_as"]) + " (maybe a copy)")
+        if p.get("blocked") or p.get("pulled"):
+            why.append("download pulled by the safety check")
+        if why:
+            review.append({"repo": p["repo"], "name": p["name"], "version": p["latest"]["version"], "why": why})
+        else:
+            live.append(p)
+    published = sum(1 for p in live if p.get("found_by_search"))
+    kept = {p["id"] for p in live}
+    for p in live:                    # no warnings that point at a plugin that is not on the list
+        for k in ("same_uid_as", "same_file_as"):
+            if p.get(k):
+                p[k] = [i for i in p[k] if i in kept]
+                if not p[k]:
+                    del p[k]
+        if p.get("clashes_with"):
+            p["clashes_with"] = [c for c in p["clashes_with"] if c.get("id") in kept]
+    final = live
+    save_json(os.path.join(STATE_DIR, "review.json"), {"note": "Found by our search but NOT live, with the reason. "
+              "To publish one anyway, add its repo to overrides.json add_repos.", "plugins": review})
+    save_json(FOUND, found_repos)
+    if found_repos:
+        log("   own search: %d plugins live, %d waiting for review" % (published, len(review)))
     for old, new in overrides.get("aliases", {}).items():     # old page addresses that now belong to another plugin
         for p in final:
             if p["id"] == new and old not in p.get("old_ids", []):
