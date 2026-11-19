@@ -100,7 +100,8 @@
     "xxl-pro",
     "xxl-strip",
     "xxl-strip-bus",
-    "xxl-strip-master"
+    "xxl-strip-master",
+    "remixxxl"
    ],
    "since": "2026-11-19"
   }
@@ -182,6 +183,7 @@
   "profit-08": "baseline",
   "profit-5": "baseline",
   "ps3100xxl": "baseline",
+  "remixxxl": "2026-11-19",
   "rmxxxl": "baseline",
   "room": "baseline",
   "scratchivision": "baseline",
