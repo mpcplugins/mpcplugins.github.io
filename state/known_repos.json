@@ -1092,14 +1092,6 @@
   "stars": 1,
   "license": "GPL-3.0"
  },
- "open-mpc/plugin-manager": {
-  "repo": "open-mpc/plugin-manager",
-  "owner": "open-mpc",
-  "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
-  "topics": [],
-  "stars": 2,
-  "license": "MIT"
- },
  "Devko/PolyWerk": {
   "repo": "Devko/PolyWerk",
   "owner": "Devko",
@@ -1889,7 +1881,7 @@
   "owner": "anthonytheinventor",
   "description": "VHS Vibes: a VHS tape degradation effect plugin for Akai MPC standalone hardware (MPC Plugin SDK)",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "nachtaktiv303/mpc-vst-vibe-fx": {
