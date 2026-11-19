@@ -181,11 +181,14 @@ def check_repo(info, log):
     newest = {}
     for product, versions in products.items():
         stable = [v for v in versions if not v["prerelease"]]
-        newest[product] = (stable[0] if stable else versions[0])["version"]
+        top = stable[0] if stable else versions[0]
+        newest[product] = (top["version"], top["tag"])
     for product, versions in products.items():
         stable = [v for v in versions if not v["prerelease"]]
         latest = stable[0] if stable else versions[0]
-        owners = sum(1 for v in newest.values() if v == latest["version"])
+        # How many separate releases have this version as their newest. One release that ships several plugins
+        # (one tag, one zip) counts once, so the maker's test of that release covers all of them.
+        owners = len({tag for ver, tag in newest.values() if ver == latest["version"]})
         works = tested.verified_for(repo, product, latest["version"], len(products), owners) if stable \
             else {"gen1": [], "gen2": [], "sample": []}
         description = facts.get("description") or facts.get("readme_summary") or ""

@@ -66,7 +66,7 @@ def same_plugin(record_id, plugin_name):
 
 def verified_for(repo, plugin_name, version, plugins_in_repo, version_owners=1):
     """{'gen1': [..], 'gen2': [..]} test records for this plugin's version (empty lists if none).
-    version_owners: how many plugins in the repo have this exact version as their newest. A record without an id
+    version_owners: how many separate releases in the repo have this exact version as their newest. A record without an id
     only counts when that is 1, so it can't be credited to the wrong plugin."""
     result = {"gen1": [], "gen2": [], "sample": []}
     for r in records(repo):
