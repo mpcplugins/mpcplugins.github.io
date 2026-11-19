@@ -1,6 +1,6 @@
 {
     "add_repos":  [
-
+                      "mpcplugins/mpc-plugins-manager"
                   ],
     "hide":  [
                  "open-mpc/plugin-manager"
