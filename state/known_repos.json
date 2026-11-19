@@ -822,7 +822,7 @@
  },
  "mpcplugins/mpc-plugins-manager": {
   "repo": "mpcplugins/mpc-plugins-manager",
-  "owner": "mpcplugins",
+  "owner": "The Disk King",
   "description": "MPC Plugins Manager by The Disk King: install, update and remove free plugins right on your Akai MPC.",
   "topics": [],
   "stars": 0,
