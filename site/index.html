@@ -223,7 +223,7 @@
             if (state.type && p.kind !== state.type) return false;
             if (state.sound && p.style !== state.sound) return false;
             if (!q) return true;
-            return [p.name, p.maker, p.description, p.about, (p.tags || []).join(' '), (p.topics || []).join(' ')]
+            return [p.name, p.maker, p.description, p.about, (p.tags || []).join(' '), (p.topics || []).join(' '), (p.renamed_from || []).join(' ')]
                 .join(' ').toLowerCase().indexOf(q) >= 0;
         });
         var dl = function (a, b) { return (b.downloads || 0) - (a.downloads || 0); };

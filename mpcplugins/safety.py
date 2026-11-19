@@ -100,6 +100,39 @@ def _summary(results):
     }
 
 
+def _uid(p):
+    u = str(((p.get("safety") or {}).get("manifest") or {}).get("uid") or "").strip().lower()
+    u = u[2:] if u.startswith("0x") else u
+    return "" if u in ("", "0", "00000000") else u
+
+
+def merge_uid_renames(plugins, log=print):
+    """A plugin renamed between releases ('Braids' -> 'Macro Osc') keeps its plugin ID. Same repo + same ID + never
+    in the same release = one plugin under two names: keep the newest name, with the old name's versions and downloads."""
+    groups = {}
+    for p in plugins:
+        if _uid(p):
+            groups.setdefault((p["repo"], _uid(p)), []).append(p)
+    gone = set()
+    for (repo, u), ps in groups.items():
+        if len(ps) < 2:
+            continue
+        ps.sort(key=lambda p: max((v.get("updated") or "") for v in p.get("versions") or [{}]), reverse=True)
+        keep = ps[0]
+        for old in ps[1:]:
+            if {v.get("tag") for v in keep["versions"]} & {v.get("tag") for v in old["versions"]}:
+                continue                          # released together: two plugins, not a rename
+            keep["versions"] = sorted(keep["versions"] + old["versions"], key=lambda v: v.get("updated") or "", reverse=True)
+            keep["downloads"] = (keep.get("downloads") or 0) + (old.get("downloads") or 0)
+            keep.setdefault("renamed_from", []).append(old["name"])
+            keep.setdefault("old_ids", []).extend([old["id"]] + old.get("old_ids", []))
+            if old.get("added") and (not keep.get("added") or old["added"] < keep["added"]):
+                keep["added"] = old["added"]
+            gone.add(old["id"])
+            log("   %s is the old name of %s (same plugin ID): merged" % (old["id"], keep["id"]))
+    return [p for p in plugins if p["id"] not in gone]
+
+
 def check_plugins(plugins, cache_path, log=print, workers=4, max_downloads=1500):
     """Run safety checks; pulls bad versions. Returns the updated plugin list."""
     cache = load(cache_path)
@@ -211,6 +244,22 @@ def check_plugins(plugins, cache_path, log=print, workers=4, max_downloads=1500)
             for p in plugins:
                 if p["id"] in ids_:
                     p.setdefault("same_file_as", []).extend(sorted(ids_ - {p["id"]}))
+
+    plugins = merge_uid_renames(plugins, log)
+
+    # the same VST plugin ID in two different plugins: MPC can load one in place of the other
+    uids = {}
+    for p in plugins:
+        if _uid(p):
+            uids.setdefault(_uid(p), set()).add(p["id"])
+    for u, ids_ in uids.items():
+        if len(ids_) > 1:
+            for p in plugins:
+                if p["id"] in ids_:
+                    p["same_uid_as"] = sorted(ids_ - {p["id"]})
+    clashes = sum(1 for ids_ in uids.values() if len(ids_) > 1)
+    if clashes:
+        log("   %d plugin IDs used by more than one plugin" % clashes)
 
     save(cache_path, cache)
     checked = sum(1 for p in plugins if p["safety"]["checked"])

@@ -316,6 +316,10 @@ def main(argv=None):
     if args.inspect:
         log("   safety checks (each new download checked once)")
         final = safety.check_plugins(final, os.path.join(STATE_DIR, "inspect.json"), log=log)
+    for old, new in overrides.get("aliases", {}).items():     # old page addresses that now belong to another plugin
+        for p in final:
+            if p["id"] == new and old not in p.get("old_ids", []):
+                p.setdefault("old_ids", []).append(old)
     for p in final:
         p["bar_missing"] = quality(p, p["latest"], now)
         if p.get("safety", {}).get("risky") or p.get("safety", {}).get("installer_flags"):

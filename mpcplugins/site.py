@@ -184,7 +184,8 @@ def safety_box(p):
     inst = s.get("installer_flags", [])
     clash = [c.get("id", "") for c in p.get("clashes_with", [])]
     same = p.get("same_file_as", [])
-    warn = bool(flags or inst or clash or same or p.get("pulled"))
+    uid = p.get("same_uid_as", [])
+    warn = bool(flags or inst or clash or same or uid or p.get("pulled"))
     os_ = sorted(set(v for v in (s.get("os") or {}).values() if v))
     items = ["&#10003; Download matches the checksum GitHub lists",
              "&#10003; Built for: %s" % e(", ".join(names.get(k, k) for k in s.get("builds_checked", [])))]
@@ -200,6 +201,9 @@ def safety_box(p):
         items.append("&#9888; May clash with these addins if installed together: %s" % e(", ".join(clash)))
     if same:
         items.append("&#9888; Uses the same library file name as: %s. Installing both may overwrite one." % e(", ".join(same)))
+    if uid:
+        items.append("&#9888; Uses the same plugin ID as: %s. If you install both, MPC may load one in place of the other, "
+                     "and projects can open the wrong plugin." % ", ".join('<a href="/p/%s/" class="underline">%s</a>' % (e(o), e(o)) for o in uid))
     pulled = ""
     if p.get("pulled"):
         pulled = ('<p class="font-bold text-amber-800 mb-2">&#9888; Version %s was pulled (%s). The download below is the last version that passed.</p>'
@@ -334,6 +338,7 @@ def plugin_page(p, cat, collections):
   <div class="flex flex-wrap gap-2 mb-4">{badges}</div>
   <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none italic mb-3">{name}</h1>
   <p class="text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] mb-8">by {maker} &middot; v{version} &middot; {date}{dl}</p>
+  {formerly}
   {shot}
   <p class="text-lg font-medium leading-relaxed opacity-80 mb-4">{desc}</p>
   {about}
@@ -369,6 +374,8 @@ def plugin_page(p, cat, collections):
                 else build_rows(latest) or '<p class="opacity-60">No download in this release.</p>'),
         status=status_box(p) + needs_box(p) + safety_box(p), disclaimer=DISCLAIMER, copy=copy_box(p),
         pid=e(p["id"]), snippet=e(badge_snippet(p)),
+        formerly=('<p class="text-sm font-bold opacity-70 -mt-6 mb-8">Formerly called %s. Same plugin, new name.</p>'
+                  % e(", ".join(p["renamed_from"]))) if p.get("renamed_from") else "",
         beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
                    '&#9888; Beta v%s is out: unfinished, not tested</p><p class="font-bold text-sm">Betas can crash or break projects. The download '
                    'above is the finished version. Get the beta from the maker\'s GitHub only if you accept that risk.</p></div>'
@@ -503,6 +510,15 @@ def write(cat, out, log=print):
         _write(os.path.join(out, "feed", p["id"] + ".xml"),
                atom("%s updates | MPC Plugins by The Disk King" % p["name"], BASE + "feed/%s.xml" % p["id"],
                     [(p, v) for v in p.get("versions", [])[:30]], now))
+    for p in plugins:              # a renamed plugin's old page address sends people to its page
+        for old in p.get("old_ids", []):
+            if old not in by_id:
+                target = "/p/%s/" % p["id"]
+                _write(os.path.join(out, "p", old, "index.html"),
+                       '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>%s</title>'
+                       '<link rel="canonical" href="%s%s/"><meta http-equiv="refresh" content="0; url=%s"></head>'
+                       '<body><p>%s has a new name: <a href="%s">%s</a>.</p></body></html>'
+                       % (e(p["name"]), CANON, e(p["id"]), target, e(old), target, e(p["name"])))
     for c in collections.values():
         _write(os.path.join(out, "c", c["id"], "index.html"),
                collection_page(c, [by_id[m] for m in c["members"] if m in by_id]))

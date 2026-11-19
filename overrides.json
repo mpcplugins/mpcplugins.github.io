@@ -3,5 +3,13 @@
  "hide": [],
  "yank": [],
  "no_contact": [],
+ "aliases": {
+  "acidline": "noxed-acidline",
+  "mpc-overwitch": "noxed-mpc-overwitch",
+  "mpc-overwitch-send": "noxed-mpc-overwitch-send",
+  "mpc-usb-bridge": "noxed-mpc-usb-bridge",
+  "prism-wave": "noxed-prism-wave",
+  "openmpc-plugin-manager": "plugin-manager-g2"
+ },
  "plugins": {}
 }
