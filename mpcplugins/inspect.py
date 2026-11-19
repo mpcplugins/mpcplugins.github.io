@@ -18,7 +18,7 @@ import zipfile
 from .net import fetch
 
 MAX_ZIP = 300 * 1024 * 1024          # skip anything bigger than 300 MB
-VERSION = 3                          # bump when the checks change, so cached results are redone once
+VERSION = 4                          # bump when the checks change, so cached results are redone once
 
 EM_ARM, EM_AARCH64 = 40, 183
 SHT_DYNAMIC, SHT_DYNSYM, SHT_VERNEED = 6, 11, 0x6FFFFFFE
@@ -159,7 +159,7 @@ def os_support(kind, glibc):
 
 MANIFEST_FILES = ("mpc-plugin.json", "plugin.json")
 MANIFEST_KEYS = ("id", "uid", "name", "version", "kind", "requires", "depends", "conflicts", "devices", "min_os",
-                 "user_files", "param_compat", "license", "source_repo")
+                 "user_files", "param_compat", "license", "source_repo", "about")
 
 
 def read_manifest(z, names):
@@ -174,7 +174,7 @@ def read_manifest(z, names):
                     continue
                 if isinstance(data, dict):
                     out = {k: data[k] for k in MANIFEST_KEYS if k in data and data[k] not in (None, "", [], {})}
-                    for k in ("requires", "name", "id", "uid", "min_os", "kind"):
+                    for k in ("requires", "name", "id", "uid", "min_os", "kind", "about"):
                         if k in out and not isinstance(out[k], (str, int, float)):
                             out[k] = str(out[k])[:200]
                     for k in ("depends", "conflicts", "devices"):

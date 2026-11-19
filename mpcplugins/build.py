@@ -176,6 +176,8 @@ def check_repo(info, log):
     facts = dict(info)
     facts.update({k: v for k, v in repoinfo.gather(repo).items() if v not in (None, "", [], {})})
     entries = []
+    shared_pics = len(products) > 1
+    files = repoinfo.repo_images(repo) if shared_pics else []
     newest = {}
     for product, versions in products.items():
         stable = [v for v in versions if not v["prerelease"]]
@@ -199,7 +201,11 @@ def check_repo(info, log):
             "tags": guess_tags(words, facts.get("topics", [])),
             "description": description[:350],
             "about": facts.get("readme_summary", "")[:350],
-            "screenshot": facts.get("screenshot"),
+            # several plugins in one project: each gets the picture named after it; the project's first
+            # picture is only a stand-in, marked shared so lists can show a name tile instead
+            "screenshot": (repoinfo.picture_for(product, facts.get("readme_images", []), files) if shared_pics else None)
+                          or facts.get("screenshot"),
+            "screenshot_shared": shared_pics and not repoinfo.picture_for(product, facts.get("readme_images", []), files),
             "youtube": facts.get("youtube"),
             "tip": facts.get("tip"),
             "homepage": facts.get("homepage") if str(facts.get("homepage", "")).startswith("https://") else None,
@@ -392,6 +398,14 @@ def main(argv=None):
     save_json(FOUND, found_repos)
     if found_repos:
         log("   own search: %d plugins live, %d waiting for review" % (published, len(review)))
+    # several plugins in one project share its description; use each plugin's own "about" from its mpc-plugin.json
+    per_repo = {}
+    for p in final:
+        per_repo[p["repo"]] = per_repo.get(p["repo"], 0) + 1
+    for p in final:
+        own = str(((p.get("safety") or {}).get("manifest") or {}).get("about") or "").strip()
+        if per_repo[p["repo"]] > 1 and len(own) > 20:
+            p["description"] = own[:350]
     for old, new in overrides.get("aliases", {}).items():     # old page addresses that now belong to another plugin
         for p in final:
             if p["id"] == new and old not in p.get("old_ids", []):

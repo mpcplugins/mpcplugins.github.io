@@ -31,6 +31,81 @@ def _clean_url(u):
     return u.strip().split("#")[0]
 
 
+ALT_MD = re.compile(r"!\[([^\]]*)\]")
+ALT_HTML = re.compile(r"\balt\s*=\s*[\"']([^\"']*)[\"']", re.I)
+
+
+def images_from(repo, readme_name, text):
+    """Every real picture in the README, in order: [(alt text, https URL)]."""
+    out = []
+    base = "https://raw.githubusercontent.com/%s/HEAD/%s" % (repo, readme_name or "README.md")
+    for m in sorted(list(IMG_MD.finditer(text)) + list(IMG_HTML.finditer(text)), key=lambda m: m.start()):
+        url = _picture_url(base, m.group(1))
+        if url:
+            snippet = text[m.start():m.end()]
+            alt = (ALT_MD.match(snippet) or ALT_HTML.search(snippet))
+            out.append((alt.group(1) if alt else "", url))
+    return out
+
+
+def repo_images(repo):
+    """Picture files in the repo itself (needs GITHUB_TOKEN; one request). [(path, raw URL)]"""
+    if not os.environ.get("GITHUB_TOKEN"):
+        return []
+    status, d, _ = fetch_json("https://api.github.com/repos/%s/git/trees/HEAD?recursive=1" % repo)
+    if status != 200 or not d:
+        return []
+    return [(x["path"], "https://raw.githubusercontent.com/%s/HEAD/%s" % (repo, x["path"]))
+            for x in d.get("tree", []) if x.get("type") == "blob" and x["path"].lower().endswith((".png", ".jpg", ".jpeg", ".webp"))
+            and not any(h in x["path"].lower() for h in ("icon", "logo", "badge", "knob", "button", "/skins/", "plugin skins"))][:4000]
+
+
+def _key(s):
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def picture_for(product, readme_images, files):
+    """The picture that names this plugin: README picture whose alt text or file name says it, else a repo file
+    named after it. None if nothing names it (the caller then uses the project's first picture, shared)."""
+    keys = [_key(product)]
+    words = [w for w in re.split(r"[^A-Za-z0-9]+", product) if w]
+    if len(words) > 1 and len(_key("".join(words[1:]))) >= 5:
+        keys.append(_key("".join(words[1:])))         # "noxed-acidline": its pictures are named "acidline..."
+    for k in keys:
+        if len(k) < 3:
+            continue
+        for alt, url in readme_images:
+            stem = _key(url.rsplit("/", 1)[-1].rsplit(".", 1)[0])
+            if k == _key(alt) or (len(stem) >= 3 and (stem == k or stem.endswith(k) or (k.endswith(stem) and len(stem) >= 5))):
+                return url
+        best = None
+        for path, url in files:
+            stem = _key(path.rsplit("/", 1)[-1].rsplit(".", 1)[0])
+            if stem == k or (stem.startswith(k) and len(stem) - len(k) <= 12) or ("/" in path and _key(path.split("/")[-2]) == k):
+                if best is None or len(path) < len(best[0]):
+                    best = (path, url)
+        if best:
+            return best[1]
+    return None
+
+
+def _picture_url(base, raw):
+    url = _clean_url(raw)
+    low = url.lower()
+    if any(h in low for h in BADGE_HINTS) or low.endswith(".svg") or ".svg?" in low:
+        return None
+    if url.startswith("//"):
+        url = "https:" + url
+    if not url.startswith("http"):
+        url = urljoin(base, url.lstrip("./") if url.startswith("./") else url)
+    url = re.sub(r"^https://github\.com/([^/]+/[^/]+)/blob/", r"https://raw.githubusercontent.com/\1/", url)
+    low = url.lower()
+    if url.startswith("https://") and (any(low.split("?")[0].endswith(e) for e in IMG_EXT)
+                                     or "user-images.githubusercontent.com" in url or "/assets/" in url):
+        return url
+    return None
+
+
 def screenshot_from(repo, readme_name, text):
     """First real picture in the README (not a badge), as an https URL."""
     base = "https://raw.githubusercontent.com/%s/HEAD/%s" % (repo, readme_name or "README.md")
@@ -93,6 +168,7 @@ def gather(repo):
     tip = TIP.search(text)
     info.update({
         "screenshot": screenshot_from(repo, name, text) if text else None,
+        "readme_images": images_from(repo, name, text) if text else [],
         "readme_summary": summary_from(text) if text else "",
         "youtube": yt.group(0) if yt else None,
         "tip": tip.group(0).rstrip(".,)") if tip else None,
