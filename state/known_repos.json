@@ -95,14 +95,6 @@
   "stars": 1,
   "license": "GPL-3.0"
  },
- "timomacquis/piClideaN16-MPC": {
-  "repo": "timomacquis/piClideaN16-MPC",
-  "owner": "timomacquis",
-  "description": "Sixteen-lane Euclidean MIDI sequencer for Akai Force: per-step expression, ratchets, GATE/HOLD and native touch UI.",
-  "topics": [],
-  "stars": 1,
-  "license": "MIT"
- },
  "MagicStino/Clif-Tape": {
   "repo": "MagicStino/Clif-Tape",
   "owner": "MagicStino",
@@ -1052,6 +1044,14 @@
   "stars": 0,
   "license": "MPL-2.0"
  },
+ "timomacquis/piClideaN16-MPC": {
+  "repo": "timomacquis/piClideaN16-MPC",
+  "owner": "timomacquis",
+  "description": "Sixteen-lane Euclidean MIDI sequencer for Akai Force: per-step expression, ratchets, GATE/HOLD and native touch UI.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
  "timomacquis/piMorpH-MPC": {
   "repo": "timomacquis/piMorpH-MPC",
   "owner": "timomacquis",
@@ -1557,19 +1557,6 @@
   "stars": 1,
   "license": "GPL-3.0"
  },
- "saustin2010/mpc-vst-open303": {
-  "repo": "saustin2010/mpc-vst-open303",
-  "owner": "saustin2010",
-  "description": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
-  "topics": [
-   "akai-mpc",
-   "mpc",
-   "mpc-vst-plugins",
-   "vst2"
-  ],
-  "stars": 0,
-  "license": "GPL-3.0"
- },
  "saustin2010/mpc-vst-aphex": {
   "repo": "saustin2010/mpc-vst-aphex",
   "owner": "saustin2010",
@@ -1582,19 +1569,6 @@
   ],
   "stars": 0,
   "license": "MIT"
- },
- "saustin2010/mpc-vst-macro-osc": {
-  "repo": "saustin2010/mpc-vst-macro-osc",
-  "owner": "saustin2010",
-  "description": "Macro Osc: a macro oscillator with 47 synthesis models, from Émilie Gillet's open-source Braids. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
-  "topics": [
-   "akai-mpc",
-   "mpc",
-   "mpc-vst-plugins",
-   "vst2"
-  ],
-  "stars": 0,
-  "license": "NOASSERTION"
  },
  "saustin2010/mpc-vst-chordism": {
   "repo": "saustin2010/mpc-vst-chordism",
@@ -1621,19 +1595,6 @@
   ],
   "stars": 0,
   "license": "MIT"
- },
- "saustin2010/mpc-vst-modal-voice": {
-  "repo": "saustin2010/mpc-vst-modal-voice",
-  "owner": "saustin2010",
-  "description": "Modal Voice: a modal synthesis voice you bow, blow and strike, with 12 presets, from Émilie Gillet's open-source Elements. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
-  "topics": [
-   "akai-mpc",
-   "mpc",
-   "mpc-vst-plugins",
-   "vst2"
-  ],
-  "stars": 0,
-  "license": "NOASSERTION"
  },
  "saustin2010/mpc-vst-fizzik": {
   "repo": "saustin2010/mpc-vst-fizzik",
@@ -1674,6 +1635,32 @@
   "stars": 0,
   "license": "GPL-3.0"
  },
+ "saustin2010/mpc-vst-macro-osc": {
+  "repo": "saustin2010/mpc-vst-macro-osc",
+  "owner": "saustin2010",
+  "description": "Macro Osc: a macro oscillator with 47 synthesis models, from Émilie Gillet's open-source Braids. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "saustin2010/mpc-vst-modal-voice": {
+  "repo": "saustin2010/mpc-vst-modal-voice",
+  "owner": "saustin2010",
+  "description": "Modal Voice: a modal synthesis voice you bow, blow and strike, with 12 presets, from Émilie Gillet's open-source Elements. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
  "saustin2010/mpc-vst-monksynth": {
   "repo": "saustin2010/mpc-vst-monksynth",
   "owner": "saustin2010",
@@ -1691,19 +1678,6 @@
   "repo": "saustin2010/mpc-vst-monovoice",
   "owner": "saustin2010",
   "description": "Elektron Monomachine-style digital voice: SuperWave, SID, DigiPRO, FM and more machines; 12 factory patches. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
-  "topics": [
-   "akai-mpc",
-   "mpc",
-   "mpc-vst-plugins",
-   "vst2"
-  ],
-  "stars": 0,
-  "license": "MIT"
- },
- "saustin2010/mpc-vst-raffosynth": {
-  "repo": "saustin2010/mpc-vst-raffosynth",
-  "owner": "saustin2010",
-  "description": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
   "topics": [
    "akai-mpc",
    "mpc",
@@ -1764,6 +1738,32 @@
   ],
   "stars": 0,
   "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-open303": {
+  "repo": "saustin2010/mpc-vst-open303",
+  "owner": "saustin2010",
+  "description": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
+ "saustin2010/mpc-vst-raffosynth": {
+  "repo": "saustin2010/mpc-vst-raffosynth",
+  "owner": "saustin2010",
+  "description": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter. A native VST2 plugin with its own touchscreen skin for MPC OS standalone devices.",
+  "topics": [
+   "akai-mpc",
+   "mpc",
+   "mpc-vst-plugins",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
  },
  "saustin2010/mpc-vst-resonator": {
   "repo": "saustin2010/mpc-vst-resonator",
