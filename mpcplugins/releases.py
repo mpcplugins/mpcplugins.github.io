@@ -141,7 +141,13 @@ def drop_bundles(products, repo):
     if len(products) < 2:
         return products
     rk = _key(repo.split("/")[-1])
-    return {n: v for n, v in products.items() if _key(n) != rk}
+
+    def bundle(name):
+        if _key(name) != rk:
+            return False
+        names = [b["name"].lower() for v in products[name] for b in v["builds"].values()]
+        return not any(m in n for n in names for m in STANDARD_NAMES)    # a real plugin build is never a bundle
+    return {n: v for n, v in products.items() if not bundle(n)}
 
 
 def merge_packagings(products):
@@ -226,9 +232,13 @@ PRODUCT_RE = re.compile(r"^(.*?)[-_ .]v?\d+(?:[._]\d+)+")
 ASSET_VERSION_RE = re.compile(r"^.*?[-_ .]v?(\d+(?:[._]\d+)+)")
 
 
-def asset_version(builds, tag):
-    """A plugin's version: from its download names when they all say the same one ('noxed-acidline-0.3.0-mpc-armv7.zip'
-    in release 'v0.2.3' is version 0.3.0), otherwise from the release tag."""
+def asset_version(builds, tag, shared=True):
+    """A plugin's version. In a release that holds several plugins, each has its own version in its download names
+    ('noxed-acidline-0.3.0-mpc-armv7.zip' in release 'v0.2.3' is 0.3.0). A release of one plugin goes by its tag
+    (tag v1.1.0 with a file still named 1.0.0 is version 1.1.0), unless the tag has no version at all."""
+    tag_has = bool(VERSION_RE.search(tag))
+    if not shared and tag_has:
+        return version_of(tag)
     found = set()
     for b in builds.values():
         stem = b["name"][:-4] if b["name"].lower().endswith(".zip") else b["name"]
@@ -286,7 +296,7 @@ def _api_releases(repo, max_releases):
         tag = rel.get("tag_name", "")
         for product, builds in per_product.items():
             products.setdefault(product, []).append({
-                "version": asset_version(builds, tag),
+                "version": asset_version(builds, tag, len(per_product) > 1),
                 "tag": tag,
                 "title": rel.get("name") or tag,
                 "updated": rel.get("published_at") or rel.get("created_at") or "",
@@ -320,7 +330,7 @@ def mpc_releases(repo, max_releases=10, pause=0.4):
         pre = is_prerelease(rel["tag"]) or marked_prerelease(repo, rel["tag"])
         for product, builds in per_product.items():
             products.setdefault(product, []).append({
-                "version": asset_version(builds, rel["tag"]),
+                "version": asset_version(builds, rel["tag"], len(per_product) > 1),
                 "tag": rel["tag"],
                 "title": rel["title"],
                 "updated": rel["updated"],
