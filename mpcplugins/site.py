@@ -81,6 +81,11 @@ html {{ -webkit-text-size-adjust: 100%; }} body {{ overflow-x: hidden; overflow-
     </div>
   </div>
 </header>
+<div class="bg-[#4b3621] text-[#f5f5dc] border-b-4 border-[#ea861a]">
+  <div class="container mx-auto px-4 md:px-6 py-3 text-xs md:text-sm leading-snug">
+    <p><strong class="text-[#ea861a] uppercase tracking-wider">&#9888; We don't make these plugins.</strong> Every plugin here is made by an independent creator, and <strong>all downloads and installs are at your own risk</strong>. Before installing, check out the creator (their GitHub page, history and other plugins), prefer <strong>Tested &amp; working</strong> plugins, and <strong>back up your MPC first</strong>. <a href="https://thediskking.com/policies.html#plugins" class="underline font-bold hover:text-[#ea861a]">Full disclaimer</a></p>
+  </div>
+</div>
 """
 
 FOOT = """
