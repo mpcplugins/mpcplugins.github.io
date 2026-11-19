@@ -820,6 +820,14 @@
   "stars": 0,
   "license": "NOASSERTION"
  },
+ "mpcplugins/mpc-plugins-manager": {
+  "repo": "mpcplugins/mpc-plugins-manager",
+  "owner": "mpcplugins",
+  "description": "MPC Plugins Manager by The Disk King: install, update and remove free plugins right on your Akai MPC.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
  "jacob-sabella/mpc-addin-remote": {
   "repo": "jacob-sabella/mpc-addin-remote",
   "owner": "jacob-sabella",

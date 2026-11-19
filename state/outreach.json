@@ -57,6 +57,7 @@
   "mitchoster": "baseline",
   "mmiroshnikov": "baseline",
   "molgino": "baseline",
+  "mpcplugins": "2026-11-19",
   "nachtaktiv303": "baseline",
   "no3z": "baseline",
   "open-mpc": "baseline",
@@ -92,6 +93,12 @@
     "noxed-mpc-overwitch-send",
     "noxed-mpc-usb-bridge",
     "noxed-prism-wave"
+   ],
+   "since": "2026-11-19"
+  },
+  "mpcplugins": {
+   "plugins": [
+    "mpc-plugins-manager"
    ],
    "since": "2026-11-19"
   },
@@ -157,6 +164,7 @@
   "mpc-midi-converter": "baseline",
   "mpc-multihead-echo": "baseline",
   "mpc-plaits": "baseline",
+  "mpc-plugins-manager": "2026-11-19",
   "mpc-remote-addin": "baseline",
   "mpc-sample-draw-handler-addin": "baseline",
   "mpc-usb-audio-addin": "baseline",
