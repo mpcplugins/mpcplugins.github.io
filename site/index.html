@@ -144,6 +144,8 @@
             : ['Not yet tested', 'bg-amber-400 text-[#4b3621]'];
         c.appendChild(el('div', 'rounded-lg px-3 py-1 mb-3 text-[10px] font-black uppercase tracking-widest text-center ' + st[1], st[0]));
         var tags = el('div', 'flex flex-wrap gap-2 mb-3');
+        // NEW for a plugin's first 14 days on the list (everything was added the day the list started, 2026-11-18)
+        if (p.added > '2026-11-18' && Date.now() - Date.parse(p.added) < 14 * 864e5) { tags.appendChild(el('span', 'feature-tag', 'NEW')); tags.lastChild.style.background = '#dc2626'; }
         tags.appendChild(el('span', 'feature-tag', p.kind || 'plugin'));
         (p.verified_on || []).forEach(function (g) {
             tags.appendChild(el('span', 'feature-tag', g === 'sample' ? 'MPC Sample' : g.replace('gen', 'Gen')));
