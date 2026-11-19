@@ -1,8 +1,17 @@
 {
  "baseline": "2026-11-18",
- "contacted": {},
+ "contacted": {
+  "Devko": {
+   "date": "2026-11-19",
+   "plugins": [
+    "effectforce"
+   ],
+   "repo": "Devko/EffectWerk",
+   "url": "https://github.com/Devko/EffectWerk/issues/2"
+  }
+ },
  "key_check": {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -10,6 +19,7 @@
    "public_repo"
   ]
  },
+ "last_sent": "2026-11-19",
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
@@ -62,7 +72,39 @@
   "vulnerablecodes": "baseline",
   "zay2001-beatsbylonza": "baseline"
  },
- "pending": {},
+ "pending": {
+  "Devko": {
+   "plugins": [
+    "effectforce"
+   ],
+   "since": "2026-11-19"
+  },
+  "molgino": {
+   "plugins": [
+    "noxed-acidline",
+    "noxed-mpc-overwitch",
+    "noxed-mpc-overwitch-send",
+    "noxed-mpc-usb-bridge",
+    "noxed-prism-wave"
+   ],
+   "since": "2026-11-19"
+  },
+  "open-mpc": {
+   "plugins": [
+    "plugin-manager-g2"
+   ],
+   "since": "2026-11-19"
+  },
+  "sunskiefer": {
+   "plugins": [
+    "xxl-pro",
+    "xxl-strip",
+    "xxl-strip-bus",
+    "xxl-strip-master"
+   ],
+   "since": "2026-11-19"
+  }
+ },
  "skip": {},
  "tested_seen": {
   "8bit-schmitter-studio": "baseline",
@@ -78,6 +120,7 @@
   "drips": "baseline",
   "dub-force-siren": "baseline",
   "early-reflections": "baseline",
+  "effectforce": "2026-11-19",
   "eq-artist": "baseline",
   "esque80": "baseline",
   "euclid": "baseline",
@@ -113,11 +156,17 @@
   "ms2kr": "baseline",
   "nam": "baseline",
   "nodalred2x": "baseline",
+  "noxed-acidline": "2026-11-19",
+  "noxed-mpc-overwitch": "2026-11-19",
+  "noxed-mpc-overwitch-send": "2026-11-19",
+  "noxed-mpc-usb-bridge": "2026-11-19",
+  "noxed-prism-wave": "2026-11-19",
   "osirus": "baseline",
   "ostirusmpc": "baseline",
   "overcast": "baseline",
   "padstep-16": "baseline",
   "plate": "baseline",
+  "plugin-manager-g2": "2026-11-19",
   "potential1200": "baseline",
   "potentialbleed": "baseline",
   "potentialbreaks": "baseline",
@@ -155,6 +204,10 @@
   "warpline": "baseline",
   "welle": "baseline",
   "wreck": "baseline",
-  "xenia": "baseline"
+  "xenia": "baseline",
+  "xxl-pro": "2026-11-19",
+  "xxl-strip": "2026-11-19",
+  "xxl-strip-bus": "2026-11-19",
+  "xxl-strip-master": "2026-11-19"
  }
 }

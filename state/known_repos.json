@@ -31,14 +31,6 @@
   "stars": 1,
   "license": "AGPL-3.0"
  },
- "molgino/noxed-mpc-plugins": {
-  "repo": "molgino/noxed-mpc-plugins",
-  "owner": "molgino",
-  "description": "Some plugins for Akai MPC standalone",
-  "topics": [],
-  "stars": 1,
-  "license": "NOASSERTION"
- },
  "mmiroshnikov/mpc-airwindows": {
   "repo": "mmiroshnikov/mpc-airwindows",
   "owner": "mmiroshnikov",
@@ -959,6 +951,14 @@
   "stars": 0,
   "license": "MIT"
  },
+ "molgino/noxed-mpc-plugins": {
+  "repo": "molgino/noxed-mpc-plugins",
+  "owner": "molgino",
+  "description": "Some plugins for Akai MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
  "3dthc/OB-XD-MPC": {
   "repo": "3dthc/OB-XD-MPC",
   "owner": "3dthc",
@@ -982,14 +982,6 @@
   "topics": [],
   "stars": 7,
   "license": null
- },
- "open-mpc/plugin-manager": {
-  "repo": "open-mpc/plugin-manager",
-  "owner": "open-mpc",
-  "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
-  "topics": [],
-  "stars": 2,
-  "license": "MIT"
  },
  "sd88me/mpc-vst-osirus": {
   "repo": "sd88me/mpc-vst-osirus",
@@ -1099,6 +1091,14 @@
   "topics": [],
   "stars": 1,
   "license": "GPL-3.0"
+ },
+ "open-mpc/plugin-manager": {
+  "repo": "open-mpc/plugin-manager",
+  "owner": "open-mpc",
+  "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
  },
  "Devko/PolyWerk": {
   "repo": "Devko/PolyWerk",
