@@ -28,6 +28,7 @@
   "CLVRK3": "baseline",
   "Devko": "baseline",
   "Eurikon": "baseline",
+  "Forge-Audio": "2026-11-19",
   "Lewinator56": "baseline",
   "Luminous-Works": "baseline",
   "MagicStino": "baseline",
@@ -49,6 +50,7 @@
   "fullbann": "baseline",
   "gmorb": "baseline",
   "jacob-sabella": "baseline",
+  "keebz": "2026-11-19",
   "leonardoMirabal": "baseline",
   "lichthaus": "baseline",
   "lightlikemusic": "baseline",
@@ -80,9 +82,28 @@
    ],
    "since": "2026-11-19"
   },
+  "Forge-Audio": {
+   "plugins": [
+    "mpc-radio"
+   ],
+   "since": "2026-11-19"
+  },
   "PotentialBreakfast": {
    "plugins": [
-    "potentialcrates"
+    "potentialcrates",
+    "potentialbreakfast-potentialbreaks"
+   ],
+   "since": "2026-11-19"
+  },
+  "keebz": {
+   "plugins": [
+    "z950"
+   ],
+   "since": "2026-11-19"
+  },
+  "lightlikemusic": {
+   "plugins": [
+    "lx-800"
    ],
    "since": "2026-11-19"
   },
@@ -104,7 +125,8 @@
   },
   "open-mpc": {
    "plugins": [
-    "plugin-manager-g2"
+    "plugin-manager-g2",
+    "open-mpc-pimorph"
    ],
    "since": "2026-11-19"
   },
@@ -152,6 +174,7 @@
   "lucky-dip": "baseline",
   "lufest": "baseline",
   "lufs-vu": "baseline",
+  "lx-800": "2026-11-19",
   "lxrxxl-bazzline": "baseline",
   "lxrxxl-zynth": "baseline",
   "meowsynth": "baseline",
@@ -165,6 +188,7 @@
   "mpc-multihead-echo": "baseline",
   "mpc-plaits": "baseline",
   "mpc-plugins-manager": "2026-11-19",
+  "mpc-radio": "2026-11-19",
   "mpc-remote-addin": "baseline",
   "mpc-sample-draw-handler-addin": "baseline",
   "mpc-usb-audio-addin": "baseline",
@@ -176,6 +200,7 @@
   "noxed-mpc-overwitch-send": "2026-11-19",
   "noxed-mpc-usb-bridge": "2026-11-19",
   "noxed-prism-wave": "2026-11-19",
+  "open-mpc-pimorph": "2026-11-19",
   "osirus": "baseline",
   "ostirusmpc": "baseline",
   "overcast": "baseline",
@@ -184,6 +209,7 @@
   "plugin-manager-g2": "2026-11-19",
   "potential1200": "baseline",
   "potentialbleed": "baseline",
+  "potentialbreakfast-potentialbreaks": "2026-11-19",
   "potentialbreaks": "baseline",
   "potentialcrates": "2026-11-19",
   "potentialgrit": "baseline",
@@ -225,6 +251,7 @@
   "xxl-pro": "2026-11-19",
   "xxl-strip": "2026-11-19",
   "xxl-strip-bus": "2026-11-19",
-  "xxl-strip-master": "2026-11-19"
+  "xxl-strip-master": "2026-11-19",
+  "z950": "2026-11-19"
  }
 }

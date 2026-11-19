@@ -1,1 +1,56 @@
-{}
+{
+ "3dthc/Nova-Editor": {
+  "found": "2026-11-19"
+ },
+ "asearan/Wavelight": {
+  "found": "2026-11-19"
+ },
+ "Devko/AmbientWerk": {
+  "found": "2026-11-19"
+ },
+ "Devko/GrooveWerk": {
+  "found": "2026-11-19"
+ },
+ "Devko/MasterWerk": {
+  "found": "2026-11-19"
+ },
+ "eldontyrellcorp/mpc-plugin-xp08": {
+  "found": "2026-11-19"
+ },
+ "gmorb/mpc-vst-dragonfly": {
+  "found": "2026-11-19"
+ },
+ "Luminous-Works/mpc-vst-sunflower": {
+  "found": "2026-11-19"
+ },
+ "Luminous-Works/mpc-vst-vulcan-rotary": {
+  "found": "2026-11-19"
+ },
+ "MagicStino/force-openplugin": {
+  "found": "2026-11-19"
+ },
+ "molgino/noxend-mpc-plugins": {
+  "found": "2026-11-19"
+ },
+ "open-mpc/mpc-vst-plugins": {
+  "found": "2026-11-19"
+ },
+ "poloq-instruments/mpc-vst-manager": {
+  "found": "2026-11-19"
+ },
+ "PotentialBreakfast/potential-plugins": {
+  "found": "2026-11-19"
+ },
+ "sunskiefer/DINXXL": {
+  "found": "2026-11-19"
+ },
+ "sunskiefer/EMU": {
+  "found": "2026-11-19"
+ },
+ "sunskiefer/Tone3000MPC": {
+  "found": "2026-11-19"
+ },
+ "timomacquis/piClideaN-MPC": {
+  "found": "2026-11-19"
+ }
+}

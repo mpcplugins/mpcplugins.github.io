@@ -299,7 +299,7 @@
   "owner": "lichthaus",
   "description": "ESQUE80: an 8-voice cross-wave synthesizer plugin for Akai MPC standalone hardware",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "sd88me/mpc-vst-euclid": {
@@ -583,7 +583,7 @@
   "owner": "drj-io",
   "description": "Looper for MPC",
   "topics": [],
-  "stars": 4,
+  "stars": 5,
   "license": "MIT"
  },
  "sd88me/mpc-vst-luckydip": {
@@ -606,6 +606,14 @@
   "repo": "drj-io/SlowOps.MPC.LufsVu",
   "owner": "drj-io",
   "description": "Analog VU meters, EBU R 128 loudness and a true-peak limiter: an insert effect for Akai MPC standalone (MPC OS 3.10.1+). Version 1.0.1. Called \"VU Meter\" before 1.0.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "lightlikemusic/lx-800": {
+  "repo": "lightlikemusic/lx-800",
+  "owner": "lightlikemusic",
+  "description": "LX-800: an 8-voice paraphonic synth for Akai MPC standalones, with one shared resonant filter, six-stage envelopes, chorus and a chord step sequencer.",
   "topics": [],
   "stars": 0,
   "license": "MIT"
@@ -828,6 +836,14 @@
   "stars": 0,
   "license": "NOASSERTION"
  },
+ "Forge-Audio/mpc-radio": {
+  "repo": "Forge-Audio/mpc-radio",
+  "owner": "Forge-Audio",
+  "description": "MPC Radio is a radio dial that plays live internet stations, with hiss, crackle, sliding whistles and half-heard ghosts between them and a perfectly clean signal once a station locks in.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
  "jacob-sabella/mpc-addin-remote": {
   "repo": "jacob-sabella/mpc-addin-remote",
   "owner": "jacob-sabella",
@@ -980,7 +996,7 @@
   "owner": "B0ss-M",
   "description": "multi-format player for the mpc",
   "topics": [],
-  "stars": 7,
+  "stars": 8,
   "license": null
  },
  "sd88me/mpc-vst-osirus": {
@@ -1939,5 +1955,116 @@
   "topics": [],
   "stars": 1,
   "license": "GPL-3.0"
+ },
+ "keebz/Z950": {
+  "repo": "keebz/Z950",
+  "owner": "keebz",
+  "description": "Live Akai S-series style time stretch and pitch shift with an S950 filter, a CD-deck cue/scrub and a looper with adjustable sample rate. Insert effect for Akai MPC.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "sunskiefer/EMU": {
+  "repo": "sunskiefer/EMU",
+  "owner": "sunskiefer",
+  "description": "Multiple emulation plugins. Bring your own ROMS",
+  "topics": [],
+  "stars": 1,
+  "license": "AGPL-3.0"
+ },
+ "Devko/AmbientWerk": {
+  "repo": "Devko/AmbientWerk",
+  "owner": "Devko",
+  "description": "AmbientWerk is a VST2 instrument for MPC OS's built-in plugin host, with its own touchscreen pages and Q-Link sets, built for slow music that keeps breathing after you stop playing. One gesture drives several layers of sound, the strata, through a shared harmony brain: press one pad and a drone moves under a chord, both in key and in just intonatio",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "open-mpc/mpc-vst-plugins": {
+  "repo": "open-mpc/mpc-vst-plugins",
+  "owner": "open-mpc",
+  "description": "STUDIO424: an early-90s cassette four-track mixer channel in a pedal. Trim into a saturating preamp, two-band shelving EQ, channel fader and a driveable mix bus with master fader.",
+  "topics": [],
+  "stars": 210,
+  "license": "NOASSERTION"
+ },
+ "Devko/GrooveWerk": {
+  "repo": "Devko/GrooveWerk",
+  "owner": "Devko",
+  "description": "A VST2 insert effect for MPC OS's built-in plugin host, a sibling of EffectWerk and MasterWerk on the same groundwork. It pumps, shapes, echoes and bends time: a shortcut to a groove that works, not a showpiece. Four parts, Pump, Shape, Echo and Time, and 16 one-tap Moves.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "Devko/MasterWerk": {
+  "repo": "Devko/MasterWerk",
+  "owner": "Devko",
+  "description": "A VST2 insert effect for MPC OS's built-in plugin host, a sibling of EffectWerk, PolyWerk and SubWerk on the same groundwork. Without setup it never lets the master clip and changes nothing below its ceiling. Press LEARN, play the loudest 8 bars, and it sets a broad tone, a little glue and the gain for a loudness target (YouTube −14 LUFS, Loud −10)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "molgino/noxend-mpc-plugins": {
+  "repo": "molgino/noxend-mpc-plugins",
+  "owner": "molgino",
+  "description": "Some plugins for Akai MPC standalone",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "PotentialBreakfast/potential-plugins": {
+  "repo": "PotentialBreakfast/potential-plugins",
+  "owner": "PotentialBreakfast",
+  "description": "Free plugins for Akai MPC standalone: PotentialBreaks, PotentialWax, PotentialPatina, PotentialPunch, PotentialHeat, PotentialNoise",
+  "topics": [],
+  "stars": 2,
+  "license": "MIT"
+ },
+ "Luminous-Works/mpc-vst-sunflower": {
+  "repo": "Luminous-Works/mpc-vst-sunflower",
+  "owner": "Luminous-Works",
+  "description": "Sunflower: a Fibonacci sequencer for the Akai MPC. Two arms play a sunflower lattice at the golden angle; self-sounding, 14 modes, live playhead. Free, MIT. (Lumina Aerospace)",
+  "topics": [
+   "akai-mpc",
+   "fibonacci",
+   "generative",
+   "mpc",
+   "sequencer",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "sunskiefer/Tone3000MPC": {
+  "repo": "sunskiefer/Tone3000MPC",
+  "owner": "sunskiefer",
+  "description": "TONE3000 NAM A2 amps, pedals and IR cabs with online library browsing, as an effect plugin.",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
+ "Luminous-Works/mpc-vst-vulcan-rotary": {
+  "repo": "Luminous-Works/mpc-vst-vulcan-rotary",
+  "owner": "Luminous-Works",
+  "description": "Vulcan Rotary: a six-barrel rotary gate and stutter effect for Akai MPC (Lumina Aerospace)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "asearan/Wavelight": {
+  "repo": "asearan/Wavelight",
+  "owner": "asearan",
+  "description": "Stereo master tuning insert. Shifts a finished mix from A4 440 Hz to 444 Hz and keeps the tempo.",
+  "topics": [],
+  "stars": 0,
+  "license": null
+ },
+ "eldontyrellcorp/mpc-plugin-xp08": {
+  "repo": "eldontyrellcorp/mpc-plugin-xp08",
+  "owner": "eldontyrellcorp",
+  "description": "The repository contains the code for my freely available XP-80 emulator for the MPC",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  }
 }

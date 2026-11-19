@@ -1,0 +1,752 @@
+{
+ "sd88me/sd88me.github.io": {
+  "pushed": "2026-11-19T04:46:49Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "open-mpc/open-mpc.github.io": {
+  "pushed": "2026-11-19T04:46:48Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "open-mpc/mpc-vst-plugins": {
+  "pushed": "2026-11-19T04:21:30Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "mpcplugins/mpcplugins.github.io": {
+  "pushed": "2026-11-19T03:01:23Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "PotentialBreakfast/mpc-tools": {
+  "pushed": "2026-11-19T00:37:58Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "leonardoMirabal/textura": {
+  "pushed": "2026-11-19T00:36:20Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "PotentialBreakfast/potentialbox": {
+  "pushed": "2026-11-19T00:13:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "PotentialBreakfast/potential-plugins": {
+  "pushed": "2026-11-18T23:57:27Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Forge-Audio/mp-forge": {
+  "pushed": "2026-11-18T22:23:11Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/sd88me": {
+  "pushed": "2026-11-18T21:18:25Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "MagicStino/force-openplugin": {
+  "pushed": "2026-11-18T20:39:49Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/mpc-Corn-Rows": {
+  "pushed": "2026-11-18T20:05:52Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/HexaSlot-Studio": {
+  "pushed": "2026-11-18T16:57:09Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "eldontyrellcorp/mpc-plugin-xp08": {
+  "pushed": "2026-11-18T12:07:29Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Devko/CyberMon": {
+  "pushed": "2026-11-18T11:23:13Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "open-mpc/skin-studio-2": {
+  "pushed": "2026-11-18T11:20:36Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/SecCheatSheet": {
+  "pushed": "2026-11-18T10:50:59Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/security-strategy-radar": {
+  "pushed": "2026-11-18T10:50:56Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/AISIM": {
+  "pushed": "2026-11-18T10:50:54Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "timomacquis/piClideaN-MPC": {
+  "pushed": "2026-11-18T08:14:59Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/mpc-vst-sunflower": {
+  "pushed": "2026-11-18T00:17:25Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/mpc-vst-vulcan-rotary": {
+  "pushed": "2026-11-17T23:56:07Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "saustin2010/vst_instruments": {
+  "pushed": "2026-11-17T22:56:07Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/sockbowl-docker": {
+  "pushed": "2026-11-17T22:14:42Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "3dthc/Nova-Editor": {
+  "pushed": "2026-11-17T19:50:23Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/EMU": {
+  "pushed": "2026-11-17T19:42:56Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/Tone3000MPC": {
+  "pushed": "2026-11-17T19:29:13Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "molgino/noxend-mpc-plugins": {
+  "pushed": "2026-11-17T19:22:03Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "sd88me/schwung-machinemodule": {
+  "pushed": "2026-11-17T06:53:25Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/mpc-installer-android": {
+  "pushed": "2026-11-17T04:06:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/juballer": {
+  "pushed": "2026-11-16T23:45:00Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/flat-bridge-play": {
+  "pushed": "2026-11-16T19:59:25Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "eldontyrellcorp/Mini-Ju08": {
+  "pushed": "2026-11-16T15:58:52Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "eldontyrellcorp/Mini-Grain": {
+  "pushed": "2026-11-16T15:56:11Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/lazygradle": {
+  "pushed": "2026-11-16T10:35:36Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/gd-dawkit": {
+  "pushed": "2026-11-16T08:16:51Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "open-mpc/mpc-controllers": {
+  "pushed": "2026-11-16T01:32:08Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/gd-dawlings": {
+  "pushed": "2026-11-16T00:17:49Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "molgino/synth-city": {
+  "pushed": "2026-11-15T23:22:17Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "molgino/pc44-mod": {
+  "pushed": "2026-11-15T23:15:50Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/sockbowl-game": {
+  "pushed": "2026-11-15T23:13:26Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/dotfiles": {
+  "pushed": "2026-11-15T16:34:47Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "eldontyrellcorp/ats-mini-extended-edition": {
+  "pushed": "2026-11-15T15:13:01Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/AmbientWerk": {
+  "pushed": "2026-11-15T09:36:10Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Devko/MasterWerk": {
+  "pushed": "2026-11-15T09:36:08Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Devko/GrooveWerk": {
+  "pushed": "2026-11-15T09:36:05Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/sockbowl-questions": {
+  "pushed": "2026-11-15T07:22:58Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/fretscope": {
+  "pushed": "2026-11-15T03:02:44Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/sockbowl-ng": {
+  "pushed": "2026-11-15T02:33:07Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/nor-studio": {
+  "pushed": "2026-11-15T02:28:41Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "dreamstaticsounds/XPL-Convert": {
+  "pushed": "2026-11-14T23:09:56Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "no3z/ScratchTJ": {
+  "pushed": "2026-11-14T21:41:44Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "keebz/Scratch": {
+  "pushed": "2026-11-14T18:40:38Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Eurikon/plugin-manager-usb-for-open-mpc": {
+  "pushed": "2026-11-14T17:35:12Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "padbangers/mpc-x-hacks": {
+  "pushed": "2026-11-14T16:14:30Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "asearan/Wavelight": {
+  "pushed": "2026-11-14T15:46:07Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "padbangers/mpc-link": {
+  "pushed": "2026-11-14T11:07:01Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "303inmyheart/Lowfin": {
+  "pushed": "2026-11-13T11:55:06Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "asearan/Retrolooper": {
+  "pushed": "2026-11-12T15:42:53Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/sunskiefer.github.io": {
+  "pushed": "2026-11-12T00:23:11Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/air-drummer-play": {
+  "pushed": "2026-11-10T06:58:54Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Eurikon/RhizomeController": {
+  "pushed": "2026-11-09T22:51:51Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "303inmyheart/Lowfin-Companion": {
+  "pushed": "2026-11-09T19:23:43Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "burgerbarn/opencode-intel-arc": {
+  "pushed": "2026-11-09T16:57:05Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "anthonytheinventor/canon-scan-to-pc": {
+  "pushed": "2026-11-08T13:25:03Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "open-mpc/mpc-vst-desktop": {
+  "pushed": "2026-11-08T11:34:51Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/MPC-ForceLink": {
+  "pushed": "2026-11-08T11:33:33Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "dreamstaticsounds/Qlink-Layout-Converter": {
+  "pushed": "2026-11-06T11:14:05Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/Pseudo-X-Y-pad": {
+  "pushed": "2026-11-05T21:42:27Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/TrackerXXL": {
+  "pushed": "2026-11-05T20:37:26Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/.github": {
+  "pushed": "2026-11-05T02:45:41Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "dreamstaticsounds/koala-mpc-gen2": {
+  "pushed": "2026-11-03T17:56:19Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "lichthaus/bl-location-map": {
+  "pushed": "2026-11-03T15:27:14Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "stampman3000-jpg/seq1": {
+  "pushed": "2026-11-03T11:36:04Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/source-port-ps5": {
+  "pushed": "2026-11-03T06:01:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "mitchoster/mpc-vst-dev-guide": {
+  "pushed": "2026-11-02T21:42:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "anthonytheinventor/Retrograde": {
+  "pushed": "2026-11-02T17:08:40Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "mitchoster/mitchoster": {
+  "pushed": "2026-11-02T15:12:49Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Bombest-Audio/kick-firmware-course": {
+  "pushed": "2026-11-01T20:32:07Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/jacob-sabella.github.io": {
+  "pushed": "2026-11-01T13:47:49Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "dreamstaticsounds/MPC-Synthdrums": {
+  "pushed": "2026-10-31T10:42:22Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "saustin2010/denon_sc5000_algoriddim_midi_mapping": {
+  "pushed": "2026-10-31T07:55:37Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "burgerbarn/dell-xps14-ubuntu": {
+  "pushed": "2026-10-30T22:58:48Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/RM8XXL": {
+  "pushed": "2026-10-30T22:25:50Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/Virga": {
+  "pushed": "2026-10-30T15:42:29Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sunskiefer/DINXXL": {
+  "pushed": "2026-10-29T16:50:20Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "burgerbarn/buddy": {
+  "pushed": "2026-10-29T15:22:32Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "burgerbarn/burgerbarn": {
+  "pushed": "2026-10-29T08:26:00Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "burgerbarn/PublicRobot": {
+  "pushed": "2026-10-29T08:20:34Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/mpc-vst-dragonfly": {
+  "pushed": "2026-10-29T01:03:56Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "MagicStino/Clif-Loss": {
+  "pushed": "2026-10-29T00:08:30Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/agentic-lab-vision": {
+  "pushed": "2026-10-26T16:25:50Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "eldontyrellcorp/Mini-Tone": {
+  "pushed": "2026-10-26T10:13:19Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "eldontyrellcorp/Mini-Vision": {
+  "pushed": "2026-10-26T09:03:14Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "nachtaktiv303/dub-station-vst3": {
+  "pushed": "2026-10-25T13:39:28Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/msn-messenger-android-public": {
+  "pushed": "2026-10-20T22:53:08Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/schwung-model72": {
+  "pushed": "2026-10-15T11:58:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/schwung-acid": {
+  "pushed": "2026-10-14T10:09:33Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "stampman3000-jpg/soundboyassets": {
+  "pushed": "2026-10-14T06:50:34Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "stampman3000-jpg/rytm-builder": {
+  "pushed": "2026-10-14T06:44:46Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "quirkey/max-gear-sale": {
+  "pushed": "2026-10-13T14:57:52Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/schwung-clementineXT": {
+  "pushed": "2026-10-12T10:46:38Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "poloq-instruments/mpc-vst-manager": {
+  "pushed": "2026-10-11T17:26:36Z",
+  "plugin": true,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/aime": {
+  "pushed": "2026-10-10T14:20:47Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Lewinator56/mpc-vst-helm-x": {
+  "pushed": "2026-10-09T22:43:21Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "mmiroshnikov/akai_standalone_remap": {
+  "pushed": "2026-10-05T22:26:49Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "no3z/force-mouse": {
+  "pushed": "2026-10-05T16:52:57Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "quirkey/quirkey.github.com": {
+  "pushed": "2026-10-02T17:35:46Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "B0ss-M/XPM-version-2": {
+  "pushed": "2026-10-01T09:26:42Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Eurikon/C1-ChannelStrip": {
+  "pushed": "2026-09-24T20:34:34Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/JUICY-ACADEMY-STEM": {
+  "pushed": "2026-09-23T22:51:14Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Eurikon/Twin-Slide": {
+  "pushed": "2026-09-20T21:51:26Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/schwung-maze": {
+  "pushed": "2026-09-20T06:44:23Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "sd88me/schwung-kit-builder": {
+  "pushed": "2026-09-12T12:51:02Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/vitastremio": {
+  "pushed": "2026-08-29T13:09:45Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "gmorb/ollamabot": {
+  "pushed": "2026-08-21T11:08:32Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "macdigi/pylinkaudio": {
+  "pushed": "2026-08-11T14:52:33Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "macdigi/compa": {
+  "pushed": "2026-08-11T14:52:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "no3z/thedubbook": {
+  "pushed": "2026-08-09T16:22:38Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/cyber-trendscout": {
+  "pushed": "2026-08-05T19:06:50Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "padbangers/auto-mute": {
+  "pushed": "2026-07-30T22:12:55Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/reachability-advisor": {
+  "pushed": "2026-07-28T11:54:10Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/GEOMETRY": {
+  "pushed": "2026-07-26T04:03:04Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "padbangers/mpc-sample-converter-site": {
+  "pushed": "2026-07-16T16:34:36Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "tonyalonsotech/CTRLTP4Overlay": {
+  "pushed": "2026-07-12T11:41:12Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/pipeThreat": {
+  "pushed": "2026-07-01T12:02:15Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "stampman3000-jpg/labnotes": {
+  "pushed": "2026-06-26T07:05:52Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "leonardoMirabal/303util": {
+  "pushed": "2026-06-13T09:57:57Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Eurikon/TC-Wurl": {
+  "pushed": "2026-06-02T16:05:01Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Devko/AgentGuard-Graph": {
+  "pushed": "2026-05-29T13:08:59Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/lumina-lume-gnome-screener": {
+  "pushed": "2026-05-27T03:48:32Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Shrekage2024/Cooked": {
+  "pushed": "2026-05-27T00:10:06Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/JUICY-Metallurgy-Academy": {
+  "pushed": "2026-05-25T13:27:39Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/JUICY-Composites-Analysis": {
+  "pushed": "2026-05-25T13:27:38Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/JUICY-Botanical-Science": {
+  "pushed": "2026-05-25T13:27:06Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/JUICY-Earth-Science": {
+  "pushed": "2026-05-25T13:27:05Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/JUICY-Ecological-Sciences": {
+  "pushed": "2026-05-25T13:27:04Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/EKG-EQ-VST3": {
+  "pushed": "2026-05-25T13:26:26Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/arch-config": {
+  "pushed": "2026-05-09T01:35:53Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "MagicStino/harpichord-midi": {
+  "pushed": "2026-05-04T13:44:23Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Bombest-Audio/the-bombest-band": {
+  "pushed": "2026-04-22T17:01:26Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "tonyalonsotech/NMLtoCSV": {
+  "pushed": "2026-04-22T09:42:54Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "tonyalonsotech/Serato-Z2-Launcher": {
+  "pushed": "2026-04-22T09:19:30Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "tonyalonsotech/AIFtoAIFF": {
+  "pushed": "2026-04-21T01:31:46Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "quirkey/chronogram-voter": {
+  "pushed": "2026-04-20T15:42:17Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/bbastro": {
+  "pushed": "2026-04-18T18:31:24Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "jacob-sabella/gridwatch": {
+  "pushed": "2026-04-14T00:01:20Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Shrekage2024/hallmonitor": {
+  "pushed": "2026-04-12T05:00:47Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/everything_claude": {
+  "pushed": "2026-04-11T14:54:58Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ },
+ "Luminous-Works/blackbox-geodata": {
+  "pushed": "2026-04-04T12:56:31Z",
+  "plugin": false,
+  "checked": "2026-11-19"
+ }
+}
