@@ -157,7 +157,15 @@
         c.appendChild(el('p', 'text-white/50 text-[10px] font-bold uppercase tracking-widest mb-3',
             'by ' + (p.maker || '') + (p.latest ? '  ·  v' + p.latest.version : '') +
             (p.downloads ? '  ·  ' + fmt(p.downloads) + ' downloads' : '')));
-        var shot = safeImg(p.screenshot);
+        var shot = p.screenshot_shared ? null : safeImg(p.screenshot);   // a shared picture would make cards look alike
+        if (!shot) {                                                       // a name tile instead
+            var tile = el('div', 'mb-3 rounded-xl border-2 border-[#ea861a] flex flex-col items-center justify-center text-center px-3');
+            tile.style.aspectRatio = '2 / 1';
+            tile.style.background = 'linear-gradient(#26201c,#3a312a)';
+            tile.appendChild(el('span', 'text-[#f5f5dc] font-black text-lg leading-tight', p.name));
+            tile.appendChild(el('span', 'text-[#ea861a] text-[10px] font-bold mt-1', 'by ' + (p.maker || '')));
+            c.appendChild(tile);
+        }
         if (shot) {
             var box = el('div', 'mb-3 rounded-xl overflow-hidden bg-black border border-white/10');
             box.style.aspectRatio = '2 / 1';
