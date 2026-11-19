@@ -73,11 +73,29 @@ def is_prerelease(tag, title=""):
     return any(w in ver for w in PRERELEASE_WORDS) or bool(re.search(r"(?:^|[-_.])(alpha|beta|rc\d*|pre|preview|nightly)(?:[-_.\d]|$)", low))
 
 
+STANDARD_NAMES = ("mpc-armv7", "mpc-aarch64", "mpc-arm64", "mpc-sdk", "akai-vst2")
+
+
+def _key(n):
+    return re.sub(r"[^a-z0-9]", "", n.lower())
+
+
+def _common(a, b):
+    """Length of the longest run of letters two names share."""
+    best = 0
+    for i in range(len(a)):
+        for j in range(i + best + 1, len(a) + 1):
+            if a[i:j] in b:
+                best = j - i
+            else:
+                break
+    return best
+
+
 def merge_renames(products):
     """A plugin renamed between releases ('Euclidier' -> 'Euclid', 'Early-Refl' -> 'Early-Reflections') shows up as
-    two names whose releases never overlap in time. Fold the old name into the new one, keeping all versions."""
-    def key(n):
-        return re.sub(r"[^a-z0-9]", "", n.lower())
+    two names whose releases never overlap in time. Fold the old name into the new one, keeping all versions.
+    Two names released together in the same release are different plugins (XXL-STRIP and XXL-STRIP-BUS), never a rename."""
     names = sorted(products, key=lambda n: max(v["updated"] for v in products[n]), reverse=True)   # newest first
     merged = dict(products)
     for new in names:
@@ -87,10 +105,84 @@ def merge_renames(products):
         for old in names:
             if old == new or old not in merged:
                 continue
-            a, b = key(old), key(new)
+            a, b = _key(old), _key(new)
             similar = len(a) >= 4 and len(b) >= 4 and (a.startswith(b[:4]) or b.startswith(a[:4]))
-            if similar and max(v["updated"] for v in merged[old]) <= first_new:
+            together = {v["tag"] for v in merged[old]} & {v["tag"] for v in merged[new]}
+            if similar and not together and max(v["updated"] for v in merged[old]) <= first_new:
                 merged[new] = sorted(merged[new] + merged.pop(old), key=lambda v: v["updated"], reverse=True)
+    return merge_packagings(merged)
+
+
+def one_per_version(products):
+    """A plugin left unchanged in a newer release ('0.5.1' in both v0.2.2 and v0.2.3) is one version, not two:
+    keep the newest release's entry and add the older one's downloads to it."""
+    out = {}
+    for name, vers in products.items():
+        kept, by_v = [], {}
+        for v in sorted(vers, key=lambda x: x["updated"], reverse=True):
+            first = by_v.get(v["version"])
+            if first is None:
+                by_v[v["version"]] = v
+                kept.append(v)
+                continue
+            if "downloads" in v:
+                first["downloads"] = first.get("downloads", 0) + v.get("downloads", 0)
+                for kind, b in v["builds"].items():
+                    if kind in first["builds"] and "downloads" in b:
+                        first["builds"][kind]["downloads"] = first["builds"][kind].get("downloads", 0) + b.get("downloads", 0)
+            for kind, b in v["builds"].items():
+                first["builds"].setdefault(kind, b)
+        out[name] = kept
+    return out
+
+
+def drop_bundles(products, repo):
+    """'NOXED-MPC-Plugins-0.2.3.zip' in repo noxed-mpc-plugins is every plugin zipped together, not a plugin of its own."""
+    if len(products) < 2:
+        return products
+    rk = _key(repo.split("/")[-1])
+    return {n: v for n, v in products.items() if _key(n) != rk}
+
+
+def merge_packagings(products):
+    """The same plugin shipped twice in each release: properly named builds ('noxed-acidline-0.3.0-mpc-armv7.zip')
+    plus an extra zip with a looser name ('acidline-0.3.0-mpc.zip'). Fold the loose one into the proper one when
+    have the same version in every release they share, and the names clearly match. Releases from before the
+    proper names existed come along as older versions."""
+    def standard(name):
+        return all(any(m in b["name"].lower() for m in STANDARD_NAMES)
+                   for v in products[name] for b in v["builds"].values())
+
+    def history(name):
+        return {v["tag"]: v["version"] for v in products[name]}
+
+    def fits(loose_name, proper):
+        a, b = history(loose_name), history(proper)
+        shared = set(a) & set(b)
+        if not shared or any(a[t] != b[t] for t in shared):
+            return False
+        if not (set(b) <= set(a) or set(a) <= set(b)):
+            return False
+        ka, kb = _key(loose_name), _key(proper)
+        return ka in kb or kb in ka or _common(ka, kb) >= 8
+    merged = dict(products)
+    loose = [n for n in products if not standard(n)]
+    for old in loose:
+        matches = [n for n in merged if n != old and n not in loose and fits(old, n)]
+        if len(matches) > 1:             # 'mpc-overwitch' fits 'noxed-mpc-overwitch' and '...-send': take the one it ends
+            ends = [n for n in matches if _key(n).endswith(_key(old))]
+            matches = ends if len(ends) == 1 else matches
+        if len(matches) != 1:
+            continue                     # none, or ambiguous: leave both alone
+        into = matches[0]
+        by_tag = {v["tag"]: v for v in merged[into]}
+        for v in merged.pop(old):
+            if v["tag"] in by_tag:
+                for kind, b in v["builds"].items():
+                    by_tag[v["tag"]]["builds"].setdefault(kind, b)    # only fills a build the proper one lacks
+            else:
+                merged[into].append(v)                                 # an older release, before the proper names
+        merged[into].sort(key=lambda v: v["updated"], reverse=True)
     return merged
 
 
@@ -101,9 +193,9 @@ def build_of(name):
         return None
     if not any(m in low for m in MPC_MARKERS):
         return None
-    if "aarch64" in low or "arm64" in low:
+    if "aarch64" in low or "arm64" in low or re.search(r"[-_]gen2\.zip$", low):
         return "gen2"
-    if "armv7" in low or "armhf" in low:
+    if "armv7" in low or "armhf" in low or re.search(r"[-_]gen1\.zip$", low):
         return "gen1"
     if "sdk" in low or "akai-vst2" in low:
         return "sdk"
@@ -129,6 +221,26 @@ PRE_LABEL_RE = re.compile(r"Label--(?:warning|attention)[^>]*>\s*Pre-release\s*<
 
 
 PRODUCT_RE = re.compile(r"^(.*?)[-_ .]v?\d+(?:[._]\d+)+")
+
+
+ASSET_VERSION_RE = re.compile(r"^.*?[-_ .]v?(\d+(?:[._]\d+)+)")
+
+
+def asset_version(builds, tag):
+    """A plugin's version: from its download names when they all say the same one ('noxed-acidline-0.3.0-mpc-armv7.zip'
+    in release 'v0.2.3' is version 0.3.0), otherwise from the release tag."""
+    found = set()
+    for b in builds.values():
+        stem = b["name"][:-4] if b["name"].lower().endswith(".zip") else b["name"]
+        m = ASSET_VERSION_RE.match(stem)
+        found.add(m.group(1).replace("_", ".") if m else None)
+    tag_v = version_of(tag)
+    if len(found) == 1 and None not in found:
+        v = found.pop()
+        if tag_v.startswith(v + "-"):       # keep the tag's beta marker: '1.2.0' in tag 'v1.2.0-beta1'
+            return tag_v
+        return v
+    return tag_v
 
 
 def product_of(filename):
@@ -174,7 +286,7 @@ def _api_releases(repo, max_releases):
         tag = rel.get("tag_name", "")
         for product, builds in per_product.items():
             products.setdefault(product, []).append({
-                "version": version_of(tag),
+                "version": asset_version(builds, tag),
                 "tag": tag,
                 "title": rel.get("name") or tag,
                 "updated": rel.get("published_at") or rel.get("created_at") or "",
@@ -183,7 +295,7 @@ def _api_releases(repo, max_releases):
                 "downloads": sum(b.get("downloads", 0) for b in builds.values()),
                 "builds": builds,
             })
-    return merge_renames(products)
+    return one_per_version(merge_renames(drop_bundles(products, repo)))
 
 
 def mpc_releases(repo, max_releases=10, pause=0.4):
@@ -208,11 +320,11 @@ def mpc_releases(repo, max_releases=10, pause=0.4):
         pre = is_prerelease(rel["tag"]) or marked_prerelease(repo, rel["tag"])
         for product, builds in per_product.items():
             products.setdefault(product, []).append({
-                "version": version_of(rel["tag"]),
+                "version": asset_version(builds, rel["tag"]),
                 "tag": rel["tag"],
                 "title": rel["title"],
                 "updated": rel["updated"],
                 "prerelease": pre,
                 "builds": builds,
             })
-    return merge_renames(products)
+    return one_per_version(merge_renames(drop_bundles(products, repo)))
