@@ -119,6 +119,14 @@
   "stars": 15,
   "license": "NOASSERTION"
  },
+ "Sunghyun23/kimswork": {
+  "repo": "Sunghyun23/kimswork",
+  "owner": "Sunghyun23",
+  "description": "Neo-soul drum instrument with original procedural sounds, modular expansions, groove generation and fill recording.",
+  "topics": [],
+  "stars": 0,
+  "license": null
+ },
  "vulnerablecodes/music-production": {
   "repo": "vulnerablecodes/music-production",
   "owner": "vulnerablecodes",
@@ -431,7 +439,7 @@
   "owner": "lightlikemusic",
   "description": "A granular micro-loop and texture effect for Akai MPC standalone hardware, by Lightlike.",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "eldontyrellcorp/mpc-plugin-grainology": {
@@ -607,7 +615,7 @@
   "owner": "drj-io",
   "description": "Analog VU meters, EBU R 128 loudness and a true-peak limiter: an insert effect for Akai MPC standalone (MPC OS 3.10.1+). Version 1.0.1. Called \"VU Meter\" before 1.0.",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "lightlikemusic/lx-800": {
@@ -841,7 +849,7 @@
   "owner": "Forge-Audio",
   "description": "MPC Radio is a radio dial that plays live internet stations, with hiss, crackle, sliding whistles and half-heard ghosts between them and a perfectly clean signal once a station locks in.",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "jacob-sabella/mpc-addin-remote": {
@@ -1308,6 +1316,14 @@
   "topics": [],
   "stars": 0,
   "license": "GPL-3.0"
+ },
+ "shhQuiet/ScatterloomMPC": {
+  "repo": "shhQuiet/ScatterloomMPC",
+  "owner": "shhQuiet",
+  "description": "A sample-driven euclidean sequencer that uses a Markov chain to choose samples. ",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "drj-io/SlowOps.Scratchivision": {
   "repo": "drj-io/SlowOps.Scratchivision",
@@ -1916,12 +1932,20 @@
   "stars": 0,
   "license": "NOASSERTION"
  },
+ "Luminous-Works/mpc-vst-vulcan-rotary": {
+  "repo": "Luminous-Works/mpc-vst-vulcan-rotary",
+  "owner": "Luminous-Works",
+  "description": "Vulcan Rotary: a six-barrel rotary gate and stutter effect for Akai MPC (Lumina Aerospace)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "CLVRK3/warpline-mpc": {
   "repo": "CLVRK3/warpline-mpc",
   "owner": "CLVRK3",
   "description": "The Vital spectral-warping wavetable synth engine, running as a plugin on MPC standalone, built with the MPC Plugin SDK. It runs Vital's real engine, not a copy of it: the same oscillators, warps, filters, envelopes, LFOs, modulation matrix and effects. It plays .vital patches. Vital's GUI is not included because the MPC has no plugin windows. Inst",
   "topics": [],
-  "stars": 2,
+  "stars": 4,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-welle": {
@@ -2042,14 +2066,6 @@
   "topics": [],
   "stars": 1,
   "license": "NOASSERTION"
- },
- "Luminous-Works/mpc-vst-vulcan-rotary": {
-  "repo": "Luminous-Works/mpc-vst-vulcan-rotary",
-  "owner": "Luminous-Works",
-  "description": "Vulcan Rotary: a six-barrel rotary gate and stutter effect for Akai MPC (Lumina Aerospace)",
-  "topics": [],
-  "stars": 0,
-  "license": "MIT"
  },
  "asearan/Wavelight": {
   "repo": "asearan/Wavelight",
