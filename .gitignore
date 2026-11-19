@@ -22,3 +22,4 @@ test_safety.py
 site/install/
 site/badge/
 site/badge.svg
+site/catalog.tsv

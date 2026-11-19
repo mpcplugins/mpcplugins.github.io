@@ -500,6 +500,34 @@ def _write(path, text):
         f.write(text)
 
 
+TSV_COLUMNS = ["id", "name", "maker", "kind", "tier", "version", "tested_on", "downloads", "user_files", "summary"]
+for _k in ("sdk", "gen1", "gen2"):
+    TSV_COLUMNS += [_k + "_url", _k + "_sha256", _k + "_size", _k + "_folder", _k + "_inside", _k + "_copy_ok"]
+
+
+def catalog_tsv(cat):
+    """The plugin list for MPC Plugins Manager on the MPC: one plain line per plugin, Tested & Working first.
+    A tab-separated file is quick to read with very little code on the device. Line 1 says the format version."""
+    def clean(v):
+        return " ".join(str(v if v is not None else "").split())[:300]
+    rows = ["#mpcplugins-tsv\t1\t%s" % cat.get("generated", ""), "\t".join(TSV_COLUMNS)]
+    order = sorted(cat["plugins"], key=lambda p: (p.get("tier") != "verified", -(p.get("downloads") or 0), p["name"].lower()))
+    for p in order:
+        if p.get("blocked"):
+            continue
+        b = (p.get("latest") or {}).get("builds") or {}
+        copy = (p.get("safety") or {}).get("copy") or {}
+        cells = [p["id"], p["name"], p.get("maker", ""), p.get("kind", ""), p.get("tier", ""),
+                 (p.get("latest") or {}).get("version", ""), ",".join(p.get("verified_on") or []), p.get("downloads") or 0,
+                 ";".join(p.get("user_files") or []), p.get("description") or p.get("about") or ""]
+        for k in ("sdk", "gen1", "gen2"):
+            x, c = b.get(k) or {}, copy.get(k) or {}
+            cells += [x.get("url", ""), x.get("sha256") or "", x.get("size") or "", c.get("folder") or "",
+                      c.get("inside") or "", 1 if c.get("ok") else 0]
+        rows.append("\t".join(clean(v) for v in cells))
+    return "\n".join(rows) + "\n"
+
+
 def write(cat, out, log=print):
     plugins = cat["plugins"]
     collections = {c["id"]: c for c in cat.get("collections", [])}
@@ -530,6 +558,7 @@ def write(cat, out, log=print):
         _write(os.path.join(out, "install", "index.html"), guide)
     recent = sorted(((p, v) for p in plugins for v in p.get("versions", [])),
                     key=lambda pv: pv[1].get("updated") or "", reverse=True)[:50]
+    _write(os.path.join(out, "catalog.tsv"), catalog_tsv(cat))
     _write(os.path.join(out, "feed.xml"), atom("MPC Plugins by The Disk King: new releases", BASE + "feed.xml", recent, now))
     urls = [BASE]      # plugin pages are canonical on thediskking.com, whose own sitemap lists them
     _write(os.path.join(out, "sitemap.xml"),
