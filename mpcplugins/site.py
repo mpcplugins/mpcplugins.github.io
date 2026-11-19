@@ -501,7 +501,7 @@ def _write(path, text):
 
 
 TSV_COLUMNS = ["id", "name", "maker", "kind", "tier", "version", "tested_on", "downloads", "user_files", "summary",
-               "style", "screenshot", "updated"]
+               "style", "screenshot", "updated", "featured"]
 for _k in ("sdk", "gen1", "gen2"):
     TSV_COLUMNS += [_k + "_url", _k + "_sha256", _k + "_size", _k + "_folder", _k + "_inside", _k + "_copy_ok"]
 
@@ -512,7 +512,7 @@ def catalog_tsv(cat):
     def clean(v):
         return " ".join(str(v if v is not None else "").split())[:300]
     rows = ["#mpcplugins-tsv\t1\t%s" % cat.get("generated", ""), "\t".join(TSV_COLUMNS)]
-    order = sorted(cat["plugins"], key=lambda p: (p.get("tier") != "verified", -(p.get("downloads") or 0), p["name"].lower()))
+    order = sorted(cat["plugins"], key=lambda p: (p.get("featured") or 999, p.get("tier") != "verified", -(p.get("downloads") or 0), p["name"].lower()))
     for p in order:
         if p.get("blocked"):
             continue
@@ -521,7 +521,8 @@ def catalog_tsv(cat):
         cells = [p["id"], p["name"], p.get("maker", ""), p.get("kind", ""), p.get("tier", ""),
                  (p.get("latest") or {}).get("version", ""), ",".join(p.get("verified_on") or []), p.get("downloads") or 0,
                  ";".join(p.get("user_files") or []), p.get("description") or p.get("about") or "",
-                 p.get("style") or "", https(p.get("screenshot")) or "", ((p.get("latest") or {}).get("updated") or "")[:10]]
+                 p.get("style") or "", https(p.get("screenshot")) or "", ((p.get("latest") or {}).get("updated") or "")[:10],
+                 p.get("featured") or 0]
         for k in ("sdk", "gen1", "gen2"):
             x, c = b.get(k) or {}, copy.get(k) or {}
             cells += [x.get("url", ""), x.get("sha256") or "", x.get("size") or "", c.get("folder") or "",

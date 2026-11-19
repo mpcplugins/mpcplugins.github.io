@@ -396,6 +396,11 @@ def main(argv=None):
         for p in final:
             if p["id"] == new and old not in p.get("old_ids", []):
                 p.setdefault("old_ids", []).append(old)
+    # Featured: Jason's hand-picked plugins, in his order. Lists show them first, marked FEATURED (not ranked).
+    picks = {pid: n + 1 for n, pid in enumerate(overrides.get("featured", []))}
+    for p in final:
+        if p["id"] in picks:
+            p["featured"] = picks[p["id"]]
     for p in final:
         p["bar_missing"] = quality(p, p["latest"], now)
         if p.get("safety", {}).get("risky") or p.get("safety", {}).get("installer_flags"):

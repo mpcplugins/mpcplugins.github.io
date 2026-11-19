@@ -139,6 +139,7 @@
     function card(p) {
         var c = el('a', 'bg-[#111] rounded-2xl border border-white/10 flex flex-col shadow-lg p-4 hover:border-[#ea861a] transition-colors');
         if (idOk(p.id)) c.href = 'p/' + p.id + '/';
+        if (p.featured) c.appendChild(el('div', 'rounded-lg px-3 py-1 mb-2 text-[10px] font-black uppercase tracking-widest text-center bg-[#ea861a] text-white', '★ Featured · from The Disk King'));
         var st = p.tier === 'verified' ? ['✓ Tested & working', 'bg-green-700 text-white']
             : p.tier === 'experimental' ? ['⚠ Beta / unfinished', 'bg-red-600 text-white']
             : ['Not yet tested', 'bg-amber-400 text-[#4b3621]'];
@@ -235,7 +236,10 @@
             newest: function (a, b) { return String((b.latest || {}).updated || b.updated || '').localeCompare(String((a.latest || {}).updated || a.updated || '')); },
             untested: dl
         };
-        list.sort(sorters[state.view]);
+        list.sort(function (a, b) {          // hand-picked Featured plugins always come first, in their own order
+            var fa = a.featured || 1e9, fb = b.featured || 1e9;
+            return fa !== fb ? fa - fb : sorters[state.view](a, b);
+        });
         var keepY = window.scrollY;
         grid.replaceChildren.apply(grid, list.map(card));
         window.scrollTo(0, keepY);
