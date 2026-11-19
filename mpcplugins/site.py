@@ -339,6 +339,7 @@ def plugin_page(p, cat, collections):
   <h1 class="text-5xl md:text-7xl font-black tracking-tighter leading-none italic mb-3">{name}</h1>
   <p class="text-sm font-black uppercase tracking-[0.3em] text-[#ea861a] mb-8">by {maker} &middot; v{version} &middot; {date}{dl}</p>
   {formerly}
+  {stats}
   {shot}
   <p class="text-lg font-medium leading-relaxed opacity-80 mb-4">{desc}</p>
   {about}
@@ -374,6 +375,11 @@ def plugin_page(p, cat, collections):
                 else build_rows(latest) or '<p class="opacity-60">No download in this release.</p>'),
         status=status_box(p) + needs_box(p) + safety_box(p), disclaimer=DISCLAIMER, copy=copy_box(p),
         pid=e(p["id"]), snippet=e(badge_snippet(p)),
+        stats='<div class="grid grid-cols-2 md:grid-cols-4 gap-3 -mt-4 mb-8">%s</div>' % "".join(
+            '<div class="bg-white/60 border border-[#4b3621]/10 rounded-2xl p-4 text-center"><p class="text-2xl md:text-3xl font-black text-[#ea861a] leading-none">%s</p>'
+            '<p class="text-[10px] font-black uppercase tracking-widest opacity-60 mt-2">%s</p></div>' % (e(v), e(l)) for v, l in (
+                (format(p.get("downloads") or 0, ","), "Downloads"), (format(p.get("stars") or 0, ","), "GitHub stars"),
+                ("v" + latest["version"], "Latest version"), (date_text(latest.get("updated")), "Updated"))),
         formerly=('<p class="text-sm font-bold opacity-70 -mt-6 mb-8">Formerly called %s. Same plugin, new name.</p>'
                   % e(", ".join(p["renamed_from"]))) if p.get("renamed_from") else "",
         beta_note=('<div class="bg-red-600 text-white rounded-2xl p-5 border-4 border-red-800"><p class="font-black uppercase tracking-tighter text-lg">'
