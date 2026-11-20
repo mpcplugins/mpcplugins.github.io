@@ -4,7 +4,7 @@
   "owner": "Tinythingz",
   "description": "Complex drone synth - based on COSM Chips: 2x NAND gates, 1x 4093 Ocillator, 1x twin-555 timer, 2x 4017 shiftregisters",
   "topics": [],
-  "stars": 3,
+  "stars": 4,
   "license": "MIT"
  },
  "sd88me/mpc-vst-TR-MPC": {
@@ -60,7 +60,7 @@
   "owner": "sd88me",
   "description": "A real-time granular insert effect for Akai MPC OS",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "GPL-3.0"
  },
  "quirkey/mpc-plugins": {
@@ -84,7 +84,7 @@
   "owner": "jacob-sabella",
   "description": "Chord tool for Akai MPC OS standalone devices: a native VST2 plugin with its own screen skin",
   "topics": [],
-  "stars": 3,
+  "stars": 4,
   "license": "NOASSERTION"
  },
  "sd88me/mpc-vst-clementineXT": {
@@ -156,7 +156,7 @@
   "owner": "sd88me",
   "description": "AI generative assistant for the Akai MPC and Force. Say or type what you hear in your head, and Daemon writes it, plays it and puts it in your project: chord progressions, basslines, melodies and beats, then the tracks, sounds, effects and presets around them.",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-dx7": {
@@ -331,7 +331,7 @@
   "owner": "Luminous-Works",
   "description": "F4 Phantom: an 8-voice subtractive synth for Akai MPC with stereo chorus and a rotary gate (Lumina Aerospace)",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "macdigi/force-link-audio": {
@@ -575,7 +575,7 @@
   "owner": "gmorb",
   "description": "Liminal Hz for MPC OS - Convolution reverb plugin",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "MIT"
  },
  "sunskiefer/Loop-SaboteurXXL": {
@@ -714,6 +714,21 @@
   "stars": 1,
   "license": "GPL-3.0"
  },
+ "3dthc/MPC-MIDI-Converter": {
+  "repo": "3dthc/MPC-MIDI-Converter",
+  "owner": "3dthc",
+  "description": "Converts MIDI files to MPC patterns on the MPC.",
+  "topics": [
+   "akai-mpc",
+   "midi",
+   "midi-converter",
+   "mpc",
+   "mpcpattern",
+   "vst2"
+  ],
+  "stars": 0,
+  "license": "MIT"
+ },
  "sd88me/mpc-vst-model72": {
   "repo": "sd88me/mpc-vst-model72",
   "owner": "sd88me",
@@ -795,21 +810,6 @@
   "stars": 0,
   "license": "MIT"
  },
- "3dthc/MPC-MIDI-Converter": {
-  "repo": "3dthc/MPC-MIDI-Converter",
-  "owner": "3dthc",
-  "description": "Free MIDI to MPC pattern converter that runs on the MPC: browse your drives, convert one .mid file or a whole pack to .mpcpattern, with track splitting, GM drum mapping and quantize.",
-  "topics": [
-   "akai-mpc",
-   "midi",
-   "midi-converter",
-   "mpc",
-   "mpcpattern",
-   "vst2"
-  ],
-  "stars": 1,
-  "license": "MIT"
- },
  "mitchoster/mpc-vst-multihead-echo": {
   "repo": "mitchoster/mpc-vst-multihead-echo",
   "owner": "mitchoster",
@@ -849,7 +849,7 @@
   "owner": "Forge-Audio",
   "description": "MPC Radio is a radio dial that plays live internet stations, with hiss, crackle, sliding whistles and half-heard ghosts between them and a perfectly clean signal once a station locks in.",
   "topics": [],
-  "stars": 2,
+  "stars": 4,
   "license": "MIT"
  },
  "jacob-sabella/mpc-addin-remote": {
@@ -1033,7 +1033,7 @@
   "owner": "sd88me",
   "description": "Vital's OTT multiband compressor as an insert effect for MPC and Force.",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "GPL-3.0"
  },
  "padbangers/overcast": {
@@ -1057,7 +1057,7 @@
   "owner": "frere12",
   "description": "A step sequencer VST 2 plugin for Akai MPC One G2",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "NOASSERTION"
  },
  "sunskiefer/PhyXXL": {
@@ -1137,7 +1137,7 @@
   "owner": "PotentialBreakfast",
   "description": "12-bit SP-1200-style drum sampler plugin for standalone MPCs (MPC OS 3.x)",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialbleed": {
@@ -1145,7 +1145,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialBleed: ghost-note bleed and residue around every hit, for MPC",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialbreaks": {
@@ -1153,7 +1153,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialBreaks - drum-break slicer plugin for Akai MPC standalone (MPC One, Live, X)",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialcrates": {
@@ -1161,7 +1161,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialCrates: a fork of Crate Digger for MPC, with ROLL dice and one-tap crates",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "NOASSERTION"
  },
  "PotentialBreakfast/mpc-vst-potentialgrit": {
@@ -1169,7 +1169,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialGrit: seven lo-fi effects in one box for MPC",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialheat": {
@@ -1185,7 +1185,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialKits: a random drum-kit builder for Akai MPC, a PotentialSuite fork of sd88me's Lucky Dip",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialnoise": {
@@ -1193,7 +1193,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialNoise: a calibrated pink noise mixing reference plugin for Akai MPC standalone",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialpatina": {
@@ -1201,7 +1201,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialPatina - retro-colour insert effect plugin for Akai MPC standalone (MPC One, Live, X)",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialpunch": {
@@ -1209,7 +1209,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialPunch: a transient shaper plugin for Akai MPC standalone",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialwarp": {
@@ -1421,7 +1421,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "saustin2010/mpc-vst-stevequencer16": {
@@ -1434,7 +1434,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "saustin2010/mpc-vst-superarp": {
@@ -1539,7 +1539,7 @@
    "vst",
    "vst2"
   ],
-  "stars": 3,
+  "stars": 4,
   "license": "GPL-3.0"
  },
  "stampman3000-jpg/mpc-stream": {
@@ -1664,7 +1664,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "GPL-3.0"
  },
  "saustin2010/mpc-vst-macro-osc": {
@@ -1690,7 +1690,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "NOASSERTION"
  },
  "saustin2010/mpc-vst-monksynth": {
@@ -1703,7 +1703,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "saustin2010/mpc-vst-monovoice": {
@@ -1820,7 +1820,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "NOASSERTION"
  },
  "saustin2010/mpc-vst-wurl": {
@@ -2004,12 +2004,20 @@
   "stars": 0,
   "license": "MIT"
  },
+ "lightlikemusic/binaural-echo": {
+  "repo": "lightlikemusic/binaural-echo",
+  "owner": "lightlikemusic",
+  "description": "Binaural Echo: a 3D headphone panner with echoes that travel around the head. Azimuth, elevation and distance on the Q-Links; built-in motion; head-model, first-order ambisonic and lightweight render modes; air absorption and a small room.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "open-mpc/mpc-vst-plugins": {
   "repo": "open-mpc/mpc-vst-plugins",
   "owner": "open-mpc",
   "description": "STUDIO424: an early-90s cassette four-track mixer channel in a pedal. Trim into a saturating preamp, two-band shelving EQ, channel fader and a driveable mix bus with master fader.",
   "topics": [],
-  "stars": 210,
+  "stars": 212,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {
@@ -2027,6 +2035,14 @@
   "topics": [],
   "stars": 0,
   "license": "MIT"
+ },
+ "sd88me/mpc-vst-mono101": {
+  "repo": "sd88me/mpc-vst-mono101",
+  "owner": "sd88me",
+  "description": "Mono-101: a circuit-modelled SH-101 (Lemus voice) for the Akai MPC standalone, with the original's 40 sample sounds, user presets and a Circuit Bent page",
+  "topics": [],
+  "stars": 1,
+  "license": "AGPL-3.0"
  },
  "molgino/noxend-mpc-plugins": {
   "repo": "molgino/noxend-mpc-plugins",
@@ -2056,7 +2072,7 @@
    "sequencer",
    "vst2"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "sunskiefer/Tone3000MPC": {

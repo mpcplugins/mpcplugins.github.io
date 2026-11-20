@@ -8,10 +8,18 @@
    ],
    "repo": "Devko/EffectWerk",
    "url": "https://github.com/Devko/EffectWerk/issues/2"
+  },
+  "Forge-Audio": {
+   "date": "2026-11-20",
+   "plugins": [
+    "mpc-radio"
+   ],
+   "repo": "Forge-Audio/mpc-radio",
+   "url": "https://github.com/Forge-Audio/mpc-radio/issues/1"
   }
  },
  "key_check": {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -19,7 +27,7 @@
    "public_repo"
   ]
  },
- "last_sent": "2026-11-19",
+ "last_sent": "2026-11-20",
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
@@ -131,7 +139,8 @@
   },
   "lightlikemusic": {
    "plugins": [
-    "lx-800"
+    "lx-800",
+    "binaural-echo"
    ],
    "since": "2026-11-19"
   },
@@ -191,7 +200,8 @@
     "machinemodule",
     "machinemodule-tap",
     "monomodule-fx",
-    "monomodule-one"
+    "monomodule-one",
+    "mono-101"
    ],
    "since": "2026-11-19"
   },
@@ -218,6 +228,7 @@
   "acid": "baseline",
   "air3": "2026-11-19",
   "alpha": "baseline",
+  "binaural-echo": "2026-11-20",
   "boris-granular": "baseline",
   "buttercomp2": "2026-11-19",
   "cadenza": "baseline",
@@ -280,6 +291,7 @@
   "matrixverb": "2026-11-19",
   "meowsynth": "baseline",
   "model-72": "baseline",
+  "mono-101": "2026-11-20",
   "monomodule-fx": "2026-11-19",
   "monomodule-one": "2026-11-19",
   "monoslide": "baseline",
