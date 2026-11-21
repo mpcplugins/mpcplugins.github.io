@@ -55,6 +55,14 @@
   "stars": 2,
   "license": "MIT"
  },
+ "lightlikemusic/binaural-echo": {
+  "repo": "lightlikemusic/binaural-echo",
+  "owner": "lightlikemusic",
+  "description": "Binaural Echo: a 3D headphone panner with echoes that travel around the head. Azimuth, elevation and distance on the Q-Links; built-in motion; head-model, first-order ambisonic and lightweight render modes; air absorption and a small room.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "sd88me/mpc-vst-boris": {
   "repo": "sd88me/mpc-vst-boris",
   "owner": "sd88me",
@@ -92,7 +100,7 @@
   "owner": "sd88me",
   "description": "MPC OS Wavetable Synth plugin modelled on the Waldorf Microwave II/XT: stepped 8-bit wavetables and loads original .syx sound banks.",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "GPL-3.0"
  },
  "MagicStino/Clif-Tape": {
@@ -334,6 +342,14 @@
   "stars": 1,
   "license": "MIT"
  },
+ "fastgbeats-cmd/FASTG-BITCRUSHER": {
+  "repo": "fastgbeats-cmd/FASTG-BITCRUSHER",
+  "owner": "fastgbeats-cmd",
+  "description": "FAST G BITCRUSHER Free audio plugin for Akai MPC 3.10.1 Created by FAST G STUDIOS",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "macdigi/force-link-audio": {
   "repo": "macdigi/force-link-audio",
   "owner": "macdigi",
@@ -474,6 +490,14 @@
   "stars": 1,
   "license": null
  },
+ "mpcplugins/community-plugins": {
+  "repo": "mpcplugins/community-plugins",
+  "owner": "The Disk King",
+  "description": "Community MPC plugins hosted by The Disk King: uploaded at thediskking.com/plugins/upload, checked, approved and listed for every Akai MPC and Force.",
+  "topics": [],
+  "stars": 0,
+  "license": null
+ },
  "sunskiefer/InterzoneXXL": {
   "repo": "sunskiefer/InterzoneXXL",
   "owner": "sunskiefer",
@@ -512,7 +536,7 @@
   "owner": "sd88me",
   "description": "A Roland JP-8000 emulation that runs as a plugin instrument on Akai MPC Gen2 standalone devices. It runs the JP-8000's original firmware on gearmulator's emulation of the synth's chips.",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-jn106": {
@@ -536,7 +560,7 @@
   "owner": "sd88me",
   "description": "JV-880 Emulator VST Plugin for MPC OS",
   "topics": [],
-  "stars": 19,
+  "stars": 20,
   "license": "NOASSERTION"
  },
  "jacob-sabella/mpc-vst-keyscope": {
@@ -567,7 +591,7 @@
    "tone3000",
    "vst"
   ],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "gmorb/mpc-vst-liminal-hz": {
@@ -575,7 +599,7 @@
   "owner": "gmorb",
   "description": "Liminal Hz for MPC OS - Convolution reverb plugin",
   "topics": [],
-  "stars": 3,
+  "stars": 4,
   "license": "MIT"
  },
  "sunskiefer/Loop-SaboteurXXL": {
@@ -655,7 +679,7 @@
   "owner": "fullbann",
   "description": "A Korg M1-style ROM workstation for MPC OS standalone devices (Akai Force, MPC One/Live/X/Key on Gen1; MPC XL, Live III on Gen2): 100 programs, 100 combinations, the M1's 33 effects, quick-edit knobs, a Library of SysEx banks.",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-machinedrum": {
@@ -729,6 +753,14 @@
   "stars": 0,
   "license": "MIT"
  },
+ "mjasikowski/mjx-mpc-twister": {
+  "repo": "mjasikowski/mjx-mpc-twister",
+  "owner": "mjasikowski",
+  "description": "Standalone MIDI Fighter Twister integration for the Akai MPC Live III",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "sd88me/mpc-vst-model72": {
   "repo": "sd88me/mpc-vst-model72",
   "owner": "sd88me",
@@ -736,6 +768,14 @@
   "topics": [],
   "stars": 0,
   "license": "GPL-3.0"
+ },
+ "sd88me/mpc-vst-mono101": {
+  "repo": "sd88me/mpc-vst-mono101",
+  "owner": "sd88me",
+  "description": "Mono-101: a circuit-modelled SH-101 (Lemus voice) for the Akai MPC standalone, with the original's 40 sample sounds, user presets and a Circuit Bent page",
+  "topics": [],
+  "stars": 1,
+  "license": "AGPL-3.0"
  },
  "sd88me/mpc-vst-monomodule": {
   "repo": "sd88me/mpc-vst-monomodule",
@@ -909,6 +949,22 @@
   "stars": 15,
   "license": "MIT"
  },
+ "sttm/mpcairlink": {
+  "repo": "sttm/mpcairlink",
+  "owner": "sttm",
+  "description": "VBAN and AirPlay audio receiver for MPC Standalone — native VST2, ARMv7 / AArch64",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "noahsoconnor/mpseejay": {
+  "repo": "noahsoconnor/mpseejay",
+  "owner": "noahsoconnor",
+  "description": "Two DJ decks for MPC standalone (Open MPC plugin): play into an external DJ mixer, one deck per output, with sync, cues, loops and lit pads.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "sunskiefer/MS20XXL": {
   "repo": "sunskiefer/MS20XXL",
   "owner": "sunskiefer",
@@ -1006,6 +1062,14 @@
   "topics": [],
   "stars": 8,
   "license": null
+ },
+ "stampman3000-jpg/op3000": {
+  "repo": "stampman3000-jpg/op3000",
+  "owner": "stampman3000-jpg",
+  "description": "OP3000, an MPC FM arcade instrument.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "sd88me/mpc-vst-osirus": {
   "repo": "sd88me/mpc-vst-osirus",
@@ -1581,12 +1645,27 @@
   "stars": 2,
   "license": "MIT"
  },
+ "Luminous-Works/mpc-vst-sunflower": {
+  "repo": "Luminous-Works/mpc-vst-sunflower",
+  "owner": "Luminous-Works",
+  "description": "Sunflower: a Fibonacci sequencer for the Akai MPC. Two arms play a sunflower lattice at the golden angle; self-sounding, 14 modes, live playhead. Free, MIT. (Lumina Aerospace)",
+  "topics": [
+   "akai-mpc",
+   "fibonacci",
+   "generative",
+   "mpc",
+   "sequencer",
+   "vst2"
+  ],
+  "stars": 1,
+  "license": "MIT"
+ },
  "sunskiefer/SurgeXXL": {
   "repo": "sunskiefer/SurgeXXL",
   "owner": "sunskiefer",
   "description": "Surge ported to MPC os full open source. Slight change to the code to be able to run on the mpc system. All the effects. Load surge patches and wavetables including your ones. Full wave table synth on MPC os.",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "GPL-3.0"
  },
  "saustin2010/mpc-vst-aphex": {
@@ -1860,6 +1939,14 @@
   "stars": 1,
   "license": "MIT"
  },
+ "GreasySavage/TouchEQ-8": {
+  "repo": "GreasySavage/TouchEQ-8",
+  "owner": "GreasySavage",
+  "description": "TouchEQ 8: 8-band touch EQ for standalone Akai MPCs",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "stampman3000-jpg/mpc-tributary": {
   "repo": "stampman3000-jpg/mpc-tributary",
   "owner": "stampman3000-jpg",
@@ -1891,6 +1978,14 @@
   "topics": [],
   "stars": 0,
   "license": "MIT"
+ },
+ "stampman3000-jpg/twenty": {
+  "repo": "stampman3000-jpg/twenty",
+  "owner": "stampman3000-jpg",
+  "description": "Ported to MPC by Stampman3000. All synthesis DSP is Audio Tools' AT20V (github.com/palmereta/audio_tools), unchanged; I only did the MPC port.",
+  "topics": [],
+  "stars": 0,
+  "license": "AGPL-3.0"
  },
  "fullbann/undertow": {
   "repo": "fullbann/undertow",
@@ -1932,6 +2027,14 @@
   "stars": 0,
   "license": "NOASSERTION"
  },
+ "stampman3000-jpg/voxman": {
+  "repo": "stampman3000-jpg/voxman",
+  "owner": "stampman3000-jpg",
+  "description": "Voxman — 8/12/16/20-band 4-pole TPT vocoder with lock-free Voxboy carrier sidechain, sibilance clarity, formant shift, internal string/chord carrier, and BBD ensemble chorus.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "Luminous-Works/mpc-vst-vulcan-rotary": {
   "repo": "Luminous-Works/mpc-vst-vulcan-rotary",
   "owner": "Luminous-Works",
@@ -1972,6 +2075,14 @@
   "stars": 0,
   "license": "GPL-3.0"
  },
+ "eldontyrellcorp/mpc-plugin-xp08": {
+  "repo": "eldontyrellcorp/mpc-plugin-xp08",
+  "owner": "eldontyrellcorp",
+  "description": "The repository contains the code for my freely available XP-80 emulator for the MPC",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "sunskiefer/XXL-Strips": {
   "repo": "sunskiefer/XXL-Strips",
   "owner": "sunskiefer",
@@ -1985,7 +2096,7 @@
   "owner": "keebz",
   "description": "Live Akai S-series style time stretch and pitch shift with an S950 filter, a CD-deck cue/scrub and a looper with adjustable sample rate. Insert effect for Akai MPC.",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "NOASSERTION"
  },
  "sunskiefer/EMU": {
@@ -2004,20 +2115,12 @@
   "stars": 0,
   "license": "MIT"
  },
- "lightlikemusic/binaural-echo": {
-  "repo": "lightlikemusic/binaural-echo",
-  "owner": "lightlikemusic",
-  "description": "Binaural Echo: a 3D headphone panner with echoes that travel around the head. Azimuth, elevation and distance on the Q-Links; built-in motion; head-model, first-order ambisonic and lightweight render modes; air absorption and a small room.",
-  "topics": [],
-  "stars": 0,
-  "license": "MIT"
- },
  "open-mpc/mpc-vst-plugins": {
   "repo": "open-mpc/mpc-vst-plugins",
   "owner": "open-mpc",
-  "description": "STUDIO424: an early-90s cassette four-track mixer channel in a pedal. Trim into a saturating preamp, two-band shelving EQ, channel fader and a driveable mix bus with master fader.",
+  "description": "Sunflower Fibonacci Sequencer: two arms step through a Vogel sunflower lattice (3:5 to 34:55 Fibonacci pairs, golden angle) over a Latin/Caribbean percussion bed. Self-sounding, follows the MPC clock. Lumina Aerospace LLC.",
   "topics": [],
-  "stars": 212,
+  "stars": 216,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {
@@ -2036,14 +2139,6 @@
   "stars": 0,
   "license": "MIT"
  },
- "sd88me/mpc-vst-mono101": {
-  "repo": "sd88me/mpc-vst-mono101",
-  "owner": "sd88me",
-  "description": "Mono-101: a circuit-modelled SH-101 (Lemus voice) for the Akai MPC standalone, with the original's 40 sample sounds, user presets and a Circuit Bent page",
-  "topics": [],
-  "stars": 1,
-  "license": "AGPL-3.0"
- },
  "molgino/noxend-mpc-plugins": {
   "repo": "molgino/noxend-mpc-plugins",
   "owner": "molgino",
@@ -2058,21 +2153,6 @@
   "description": "Free plugins for Akai MPC standalone: PotentialBreaks, PotentialWax, PotentialPatina, PotentialPunch, PotentialHeat, PotentialNoise",
   "topics": [],
   "stars": 2,
-  "license": "MIT"
- },
- "Luminous-Works/mpc-vst-sunflower": {
-  "repo": "Luminous-Works/mpc-vst-sunflower",
-  "owner": "Luminous-Works",
-  "description": "Sunflower: a Fibonacci sequencer for the Akai MPC. Two arms play a sunflower lattice at the golden angle; self-sounding, 14 modes, live playhead. Free, MIT. (Lumina Aerospace)",
-  "topics": [
-   "akai-mpc",
-   "fibonacci",
-   "generative",
-   "mpc",
-   "sequencer",
-   "vst2"
-  ],
-  "stars": 1,
   "license": "MIT"
  },
  "sunskiefer/Tone3000MPC": {
@@ -2090,13 +2170,5 @@
   "topics": [],
   "stars": 0,
   "license": null
- },
- "eldontyrellcorp/mpc-plugin-xp08": {
-  "repo": "eldontyrellcorp/mpc-plugin-xp08",
-  "owner": "eldontyrellcorp",
-  "description": "The repository contains the code for my freely available XP-80 emulator for the MPC",
-  "topics": [],
-  "stars": 0,
-  "license": "MIT"
  }
 }

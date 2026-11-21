@@ -16,10 +16,18 @@
    ],
    "repo": "Forge-Audio/mpc-radio",
    "url": "https://github.com/Forge-Audio/mpc-radio/issues/1"
+  },
+  "keebz": {
+   "date": "2026-11-21",
+   "plugins": [
+    "z950"
+   ],
+   "repo": "keebz/Z950",
+   "url": "https://github.com/keebz/Z950/issues/1"
   }
  },
  "key_check": {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -27,7 +35,7 @@
    "public_repo"
   ]
  },
- "last_sent": "2026-11-20",
+ "last_sent": "2026-11-21",
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
@@ -37,6 +45,7 @@
   "Devko": "baseline",
   "Eurikon": "baseline",
   "Forge-Audio": "2026-11-19",
+  "GreasySavage": "2026-11-21",
   "Lewinator56": "baseline",
   "Luminous-Works": "baseline",
   "MagicStino": "baseline",
@@ -55,6 +64,7 @@
   "drj-io": "baseline",
   "eldontyrellcorp": "baseline",
   "elizmita": "baseline",
+  "fastgbeats-cmd": "2026-11-21",
   "frere12": "baseline",
   "fullbann": "baseline",
   "gmorb": "baseline",
@@ -66,11 +76,13 @@
   "macdigi": "baseline",
   "mcardonaserrano": "baseline",
   "mitchoster": "baseline",
+  "mjasikowski": "2026-11-21",
   "mmiroshnikov": "baseline",
   "molgino": "baseline",
   "mpcplugins": "2026-11-19",
   "nachtaktiv303": "baseline",
   "no3z": "baseline",
+  "noahsoconnor": "2026-11-21",
   "open-mpc": "baseline",
   "padbangers": "baseline",
   "poloq-instruments": "baseline",
@@ -79,6 +91,7 @@
   "sd88me": "baseline",
   "shhQuiet": "2026-11-19",
   "stampman3000-jpg": "baseline",
+  "sttm": "2026-11-21",
   "sunskiefer": "baseline",
   "timomacquis": "baseline",
   "tonyalonsotech": "baseline",
@@ -124,12 +137,24 @@
    ],
    "since": "2026-11-19"
   },
+  "GreasySavage": {
+   "plugins": [
+    "toucheq-8"
+   ],
+   "since": "2026-11-21"
+  },
   "PotentialBreakfast": {
    "plugins": [
     "potentialcrates",
     "potentialbreakfast-potentialbreaks"
    ],
    "since": "2026-11-19"
+  },
+  "fastgbeats-cmd": {
+   "plugins": [
+    "fast-g-bitcrusher"
+   ],
+   "since": "2026-11-21"
   },
   "keebz": {
    "plugins": [
@@ -143,6 +168,12 @@
     "binaural-echo"
    ],
    "since": "2026-11-19"
+  },
+  "mjasikowski": {
+   "plugins": [
+    "mjx-mpc-twister"
+   ],
+   "since": "2026-11-21"
   },
   "mmiroshnikov": {
    "plugins": [
@@ -182,9 +213,16 @@
   },
   "mpcplugins": {
    "plugins": [
-    "mpc-plugins-manager"
+    "mpc-plugins-manager",
+    "hybrid-phatt"
    ],
    "since": "2026-11-19"
+  },
+  "noahsoconnor": {
+   "plugins": [
+    "mpseejay"
+   ],
+   "since": "2026-11-21"
   },
   "open-mpc": {
    "plugins": [
@@ -260,6 +298,7 @@
   "esque80": "baseline",
   "euclid": "baseline",
   "evil-tuner-xxl": "baseline",
+  "fast-g-bitcrusher": "2026-11-21",
   "fm": "2026-11-19",
   "force-link-audio": "baseline",
   "galactic": "2026-11-19",
@@ -271,6 +310,7 @@
   "grainbloom": "baseline",
   "grid": "2026-11-19",
   "hall": "baseline",
+  "hybrid-phatt": "2026-11-21",
   "infinity2": "2026-11-19",
   "jc303-mpc": "baseline",
   "jn-106": "baseline",
@@ -290,6 +330,7 @@
   "machinemodule-tap": "2026-11-19",
   "matrixverb": "2026-11-19",
   "meowsynth": "baseline",
+  "mjx-mpc-twister": "2026-11-21",
   "model-72": "baseline",
   "mono-101": "2026-11-20",
   "monomodule-fx": "2026-11-19",
@@ -307,6 +348,7 @@
   "mpc-remote-addin": "baseline",
   "mpc-sample-draw-handler-addin": "baseline",
   "mpc-usb-audio-addin": "baseline",
+  "mpseejay": "2026-11-21",
   "ms2kr": "baseline",
   "nam": "baseline",
   "nitro": "2026-11-19",
@@ -365,6 +407,7 @@
   "syn-303": "baseline",
   "tapedelay2": "2026-11-19",
   "tidal-verb": "baseline",
+  "toucheq-8": "2026-11-21",
   "tovinyl4": "2026-11-19",
   "tributary": "baseline",
   "undertow": "baseline",

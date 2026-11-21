@@ -52,7 +52,7 @@
   {
    "repo": "molgino/noxend-mpc-plugins",
    "name": "noxed mpc overwitch",
-   "version": "0.5.1",
+   "version": "0.6.0",
    "why": [
     "same plugin ID as noxed-mpc-overwitch (maybe a copy)"
    ]
@@ -60,7 +60,7 @@
   {
    "repo": "molgino/noxend-mpc-plugins",
    "name": "noxed mpc overwitch send",
-   "version": "0.5.1",
+   "version": "0.6.0",
    "why": [
     "same plugin ID as noxed-mpc-overwitch-send (maybe a copy)"
    ]
@@ -68,7 +68,7 @@
   {
    "repo": "molgino/noxend-mpc-plugins",
    "name": "noxed mpc usb bridge",
-   "version": "0.2.2",
+   "version": "0.2.3",
    "why": [
     "same plugin ID as noxed-mpc-usb-bridge (maybe a copy)"
    ]
