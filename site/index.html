@@ -237,8 +237,10 @@
         var list = all.filter(function (p) {
             var tested = p.tier === 'verified';
             if (untested ? tested : !tested) return false;
-            if (state.type && p.kind !== state.type) return false;
-            if (state.sound && p.style !== state.sound) return false;
+            // hand-picked Featured plugins (MPC Plugins Manager first) stay at the top of every type and sound filter
+            var pinned = p.featured && !q;
+            if (state.type && p.kind !== state.type && !pinned) return false;
+            if (state.sound && p.style !== state.sound && !pinned) return false;
             if (!q) return true;
             return [p.name, p.maker, p.description, p.about, (p.tags || []).join(' '), (p.topics || []).join(' '), (p.renamed_from || []).join(' ')]
                 .join(' ').toLowerCase().indexOf(q) >= 0;
