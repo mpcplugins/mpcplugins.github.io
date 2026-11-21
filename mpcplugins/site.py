@@ -311,6 +311,7 @@ def plugin_page(p, cat, collections):
     shot = https(p.get("screenshot"))
     latest = p["latest"]
     repo_url = "https://github.com/%s" % p["repo"]
+    source_url = p.get("source_url") if https(p.get("source_url")) else repo_url   # one plugin inside a shared repo
     head = HEAD.format(
         title=e(title), desc=e(desc[:300]), url=e(url), canon=e(CANON + p["id"] + "/"),
         og_image='<meta property="og:image" content="%s">' % e(shot) if shot else "",
@@ -330,7 +331,7 @@ def plugin_page(p, cat, collections):
         for t in (p.get("tested") or {}).get(g, []):
             tested_lines.append("<li>%s, MPC OS %s%s</li>" % (e(t.get("device", "")), e(t.get("os", "")),
                                                                " (%s)" % e(date_text(t.get("date"))) if t.get("date") else ""))
-    links = ['<a href="%s" rel="noopener" class="underline font-bold hover:text-[#ea861a]">Source on GitHub</a>' % e(repo_url)]
+    links = ['<a href="%s" rel="noopener" class="underline font-bold hover:text-[#ea861a]">Source on GitHub</a>' % e(source_url)]
     if https(p.get("youtube")):
         links.append('<a href="%s" rel="noopener nofollow" class="underline font-bold hover:text-[#ea861a]">Video</a>' % e(p["youtube"]))
     if https(p.get("tip")):

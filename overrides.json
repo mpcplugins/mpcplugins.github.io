@@ -22,7 +22,10 @@
         },
         "hybrid-phatt": {
             "maker": "The Disk King",
-            "kind": "instrument"
+            "kind": "instrument",
+            "description": "Hybrid Phatt by The Disk King: a 90s-style ROM sound module for the MPC, styled as a cross between an MPC 60 and the E-mu Phatt. Layered presets (4 layers), filter, envelopes, LFOs, arpeggiator, grooves, FX and a KEYS page that lights up as you play the pads. Load your own E-mu .exb sound set (no sound bank included).",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/hybrid-phatt"
         }
     },
     "featured": [
