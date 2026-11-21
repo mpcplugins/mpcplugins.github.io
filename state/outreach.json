@@ -228,7 +228,8 @@
   "mpcplugins": {
    "plugins": [
     "mpc-plugins-manager",
-    "hybrid-phatt"
+    "hybrid-phatt",
+    "mpc-plugin-scanner"
    ],
    "since": "2026-11-19"
   },
@@ -368,6 +369,7 @@
   "mpc-midi-converter": "baseline",
   "mpc-multihead-echo": "baseline",
   "mpc-plaits": "baseline",
+  "mpc-plugin-scanner": "2026-11-21",
   "mpc-plugins-manager": "2026-11-19",
   "mpc-radio": "2026-11-19",
   "mpc-remote-addin": "baseline",

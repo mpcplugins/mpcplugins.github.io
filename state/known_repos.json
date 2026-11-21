@@ -501,7 +501,7 @@
  "mpcplugins/community-plugins": {
   "repo": "mpcplugins/community-plugins",
   "owner": "The Disk King",
-  "description": "Hybrid Phatt by The Disk King: a 90s-style ROM sound module for the MPC, styled as a cross between an MPC 60 and the E-mu Phatt. Layered presets (4 layers), filter, envelopes, LFOs, arpeggiator, grooves, FX and a KEYS page that lights up as you play the pads. Load your own E-mu .exb sound set (no sound bank included).",
+  "description": "MPC Plugin Scanner by The Disk King: a safety check that runs on your MPC. It looks inside every installed plugin (internal, SSD, USB) and gives each a green CLEAN, yellow CHECK or red RISKY light with the reasons: running programs or shell commands, wipe/erase commands, hidden scripts, back doors, system changes, internet use. Changes nothing, sends nothing.",
   "topics": [],
   "stars": 0,
   "license": null
