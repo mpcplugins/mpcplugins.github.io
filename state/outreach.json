@@ -229,7 +229,8 @@
    "plugins": [
     "mpc-plugins-manager",
     "hybrid-phatt",
-    "mpc-plugin-scanner"
+    "mpc-plugin-scanner",
+    "trifecta-workstation"
    ],
    "since": "2026-11-19"
   },
@@ -439,6 +440,7 @@
   "toucheq-8": "2026-11-21",
   "tovinyl4": "2026-11-19",
   "tributary": "baseline",
+  "trifecta-workstation": "2026-11-21",
   "twenty": "2026-11-21",
   "twenty-fx": "2026-11-21",
   "undertow": "baseline",
