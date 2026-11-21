@@ -244,9 +244,12 @@
                 .join(' ').toLowerCase().indexOf(q) >= 0;
         });
         var dl = function (a, b) { return (b.downloads || 0) - (a.downloads || 0); };
+        var score = function (p) { var r = p.rating || {}, n = r.count || 0; return n ? ((r.avg || 0) * n + 3 * 3) / (n + 3) : 0; };
         var sorters = {
             downloads: dl,
-            rated: function (a, b) { return (b.stars || 0) - (a.stars || 0) || dl(a, b); },
+            // Only star ratings given on our own pages count (thediskking.com / this site / the Manager), never GitHub stars.
+            // A few votes are pulled toward 3 stars, so one 5-star vote can't beat many good ones.
+            rated: function (a, b) { return score(b) - score(a) || dl(a, b); },
             newest: function (a, b) { return String((b.latest || {}).updated || b.updated || '').localeCompare(String((a.latest || {}).updated || a.updated || '')); },
             untested: dl
         };
