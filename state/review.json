@@ -136,7 +136,8 @@
    "name": "Plugin Manager G2",
    "version": "1.1.0",
    "why": [
-    "risky functions: loads code, runs programs, web server"
+    "risky functions: loads code, runs programs, web server",
+    "same plugin ID as plugin-manager-g2 (maybe a copy)"
    ]
   },
   {
