@@ -34,6 +34,14 @@
             "description": "MPC Plugin Scanner by The Disk King: a safety check that runs on your MPC. It looks inside every installed plugin, from any maker, and gives each a light with the reasons: red RISKY (shell commands, wipe commands, hidden scripts, back doors, system changes), yellow CHECK (internet use), green CLEAN, and blue VERIFIED CREATOR for The Disk King's own official tools. Changes nothing, sends nothing.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/mpc-plugin-scanner"
+        },
+        "trifecta-workstation": {
+            "maker": "The Disk King",
+            "kind": "instrument",
+            "style": "synth",
+            "description": "Trifecta Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/trifecta-workstation"
         }
     },
     "featured": [
