@@ -3,9 +3,7 @@
         "mpcplugins/mpc-plugins-manager",
         "mpcplugins/community-plugins"
     ],
-    "hide": [
-        "open-mpc/plugin-manager"
-    ],
+    "hide": [],
     "yank": [],
     "no_contact": [],
     "aliases": {
@@ -46,5 +44,8 @@
     },
     "featured": [
         "mpc-plugins-manager"
+    ],
+    "no_rank": [
+        "open-mpc/plugin-manager"
     ]
 }

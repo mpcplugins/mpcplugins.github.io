@@ -451,6 +451,12 @@ def main(argv=None):
     save_json(ADDED, added)
     trending(final, today)
     add_ratings(final, log)
+    # Listed normally, but never ranked in Most Downloaded / Top Rated (Jason's call: overrides.json "no_rank")
+    no_rank = set(overrides.get("no_rank", []))
+    for p in final:
+        if p["id"] in no_rank or p["repo"] in no_rank:
+            p["no_rank"] = True
+            p["trending"] = 0
 
     collections = {}
     for p in final:

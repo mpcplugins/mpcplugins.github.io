@@ -525,7 +525,7 @@ def _write(path, text):
 
 
 TSV_COLUMNS = ["id", "name", "maker", "kind", "tier", "version", "tested_on", "downloads", "user_files", "summary",
-               "style", "screenshot", "updated", "featured", "notes", "history", "needs", "rating", "rating_count"]
+               "style", "screenshot", "updated", "featured", "notes", "history", "needs", "rating", "rating_count", "no_rank"]
 for _k in ("sdk", "gen1", "gen2"):
     TSV_COLUMNS += [_k + "_url", _k + "_sha256", _k + "_size", _k + "_folder", _k + "_inside", _k + "_copy_ok"]
 
@@ -558,7 +558,7 @@ def catalog_tsv(cat):
                  ";".join(p.get("user_files") or []), p.get("description") or p.get("about") or "",
                  p.get("style") or "", https(p.get("screenshot")) or "", ((p.get("latest") or {}).get("updated") or "")[:10],
                  p.get("featured") or 0, notes(p), history(p), p.get("needs") or "",
-                 (p.get("rating") or {}).get("avg") or "", (p.get("rating") or {}).get("count") or 0]
+                 (p.get("rating") or {}).get("avg") or "", (p.get("rating") or {}).get("count") or 0, 1 if p.get("no_rank") else 0]
         for k in ("sdk", "gen1", "gen2"):
             x, c = b.get(k) or {}, copy.get(k) or {}
             cells += [x.get("url", ""), x.get("sha256") or "", x.get("size") or "", c.get("folder") or "",
