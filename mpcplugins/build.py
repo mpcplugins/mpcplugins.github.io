@@ -20,6 +20,8 @@ from . import discover, outreach, releases, repoinfo, safety, seeds, site, teste
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OVERRIDES = os.path.join(HERE, "overrides.json")
+# repos that hold plugins from many makers: each plugin uses only its own pictures
+PICTURE_REPOS = {"mpcplugins/community-plugins"}
 STATE_DIR = os.path.join(HERE, "state")
 STATE = os.path.join(STATE_DIR, "known_repos.json")
 ADDED = os.path.join(STATE_DIR, "added.json")
@@ -177,7 +179,8 @@ def check_repo(info, log):
     facts.update({k: v for k, v in repoinfo.gather(repo).items() if v not in (None, "", [], {})})
     entries = []
     shared_pics = len(products) > 1
-    files = repoinfo.repo_images(repo) if shared_pics else []
+    own_pics = shared_pics or repo in PICTURE_REPOS    # repos that hold many makers' plugins: never share a picture
+    files = repoinfo.repo_images(repo) if own_pics else []
     newest = {}
     for product, versions in products.items():
         stable = [v for v in versions if not v["prerelease"]]
@@ -206,9 +209,10 @@ def check_repo(info, log):
             "about": facts.get("readme_summary", "")[:350],
             # several plugins in one project: each gets the picture named after it; the project's first
             # picture is only a stand-in, marked shared so lists can show a name tile instead
-            "screenshot": (repoinfo.picture_for(product, facts.get("readme_images", []), files) if shared_pics else None)
-                          or facts.get("screenshot"),
+            "screenshot": (repoinfo.picture_for(product, facts.get("readme_images", []), files) if own_pics else None)
+                          or (None if repo in PICTURE_REPOS else facts.get("screenshot")),
             "screenshot_shared": shared_pics and not repoinfo.picture_for(product, facts.get("readme_images", []), files),
+            "gallery": repoinfo.gallery_for(product, files),
             "youtube": facts.get("youtube"),
             "tip": facts.get("tip"),
             "homepage": facts.get("homepage") if str(facts.get("homepage", "")).startswith("https://") else None,

@@ -292,6 +292,18 @@ def build_rows(version):
     return "\n".join(rows)
 
 
+def gallery_html(p):
+    """Every screen of the plugin as tappable thumbnails (each opens full size)."""
+    pics = [https(u) for u in (p.get("gallery") or []) if https(u)]
+    if len(pics) < 2:
+        return ""
+    cells = "".join('<a href="%s" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden bg-black border border-[#ea861a]/30 hover:border-[#ea861a]">'
+                    '<img src="%s" alt="%s screen %d" class="w-full aspect-[16/10] object-cover" loading="lazy"></a>'
+                    % (e(u), e(u), e(p["name"]), i + 1) for i, u in enumerate(pics))
+    return ('<p class="text-xs font-black uppercase tracking-widest opacity-60 mb-2">All screens &middot; tap to see full size</p>'
+            '<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">%s</div>' % cells)
+
+
 def plugin_page(p, cat, collections):
     url = BASE + "p/%s/" % p["id"]
     desc = p.get("description") or p.get("about") or "%s for Akai MPC and Force." % p["name"]
@@ -371,8 +383,8 @@ def plugin_page(p, cat, collections):
         badges=badges(p), name=e(p["name"]), maker=e(p["maker"]), version=e(latest["version"]),
         date=e(date_text(latest.get("updated"))),
         dl=(" &middot; %s downloads" % format(p["downloads"], ",")) if p.get("downloads") else "",
-        shot=('<div class="rounded-[2rem] overflow-hidden bg-black mb-8 border border-[#ea861a]/30 shadow-2xl"><img src="%s" alt="%s plugin screen on an Akai MPC" class="w-full max-h-[520px] object-contain" loading="lazy"></div>'
-              % (e(shot), e(p["name"]))) if shot else "",
+        shot=(('<div class="rounded-[2rem] overflow-hidden bg-black mb-4 border border-[#ea861a]/30 shadow-2xl"><img src="%s" alt="%s plugin screen on an Akai MPC" class="w-full max-h-[520px] object-contain" loading="lazy"></div>'
+               % (e(shot), e(p["name"]))) if shot else "") + gallery_html(p),
         desc=e(desc),
         about=('<p class="font-medium leading-relaxed opacity-70 mb-6">%s</p>' % e(p["about"])) if p.get("about") and p.get("about") != desc else "",
         links=" ".join(links),

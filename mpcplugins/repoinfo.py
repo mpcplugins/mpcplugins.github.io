@@ -64,6 +64,18 @@ def _key(s):
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+def gallery_for(product, files):
+    """All screen pictures of one plugin: files in a folder "<plugin>/screens/" of its repo, in file-name order
+    (01-main.png, 02-layers.png, ...). [] when there are none."""
+    k = _key(product)
+    out = []
+    for path, url in files:
+        parts = path.split("/")
+        if len(parts) >= 3 and parts[-2].lower() == "screens" and _key(parts[-3]) == k:
+            out.append((path, url))
+    return [url for _, url in sorted(out)][:12]
+
+
 def picture_for(product, readme_images, files):
     """The picture that names this plugin: README picture whose alt text or file name says it, else a repo file
     named after it. None if nothing names it (the caller then uses the project's first picture, shared)."""
