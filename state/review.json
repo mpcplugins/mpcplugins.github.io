@@ -91,6 +91,14 @@
    ]
   },
   {
+   "repo": "open-mpc/mpc-vst-plugins",
+   "name": "osc to midi",
+   "version": "2.5.0",
+   "why": [
+    "risky functions: web server"
+   ]
+  },
+  {
    "repo": "timomacquis/piClideaN-MPC",
    "name": "piClideaN",
    "version": "1.3.8",

@@ -191,6 +191,14 @@
   "stars": 1,
   "license": "Apache-2.0"
  },
+ "jamiefaye/mpc-deluge": {
+  "repo": "jamiefaye/mpc-deluge",
+  "owner": "jamiefaye",
+  "description": "Synthstrom Deluge DSP as plugins for Akai MPC/Force standalone hardware (MPC Plugin SDK)",
+  "topics": [],
+  "stars": 2,
+  "license": "GPL-3.0"
+ },
  "padbangers/drips": {
   "repo": "padbangers/drips",
   "owner": "padbangers",
@@ -493,7 +501,7 @@
  "mpcplugins/community-plugins": {
   "repo": "mpcplugins/community-plugins",
   "owner": "The Disk King",
-  "description": "Community MPC plugins hosted by The Disk King: uploaded at thediskking.com/plugins/upload, checked, approved and listed for every Akai MPC and Force.",
+  "description": "Hybrid Phatt by The Disk King: a 90s-style ROM sound module for the MPC, styled as a cross between an MPC 60 and the E-mu Phatt. Layered presets (4 layers), filter, envelopes, LFOs, arpeggiator, grooves, FX and a KEYS page that lights up as you play the pads. Load your own E-mu .exb sound set (no sound bank included).",
   "topics": [],
   "stars": 0,
   "license": null
@@ -850,6 +858,14 @@
   "stars": 0,
   "license": "MIT"
  },
+ "sttm/mpc-looper": {
+  "repo": "sttm/mpc-looper",
+  "owner": "sttm",
+  "description": "Experimental four-loop disk-backed stereo VST2 looper for MPC Standalone OS 3.10.1+, ARMv7 and AArch64",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "mitchoster/mpc-vst-multihead-echo": {
   "repo": "mitchoster/mpc-vst-multihead-echo",
   "owner": "mitchoster",
@@ -1067,6 +1083,14 @@
   "repo": "stampman3000-jpg/op3000",
   "owner": "stampman3000-jpg",
   "description": "OP3000, an MPC FM arcade instrument.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "RAS-G/OSC-to-MIDI-for-MPC": {
+  "repo": "RAS-G/OSC-to-MIDI-for-MPC",
+  "owner": "RAS-G",
+  "description": "Reçoit des messages OSC par le Wi-Fi (TouchOSC, Lemur, Open Stage Control, un capteur, un logiciel…) et les transforme en notes et CC MIDI qui pilotent les autres pistes de la MPC. Le plugin ne fait aucun son.",
   "topics": [],
   "stars": 0,
   "license": "MIT"
@@ -2120,7 +2144,7 @@
   "owner": "open-mpc",
   "description": "Sunflower Fibonacci Sequencer: two arms step through a Vogel sunflower lattice (3:5 to 34:55 Fibonacci pairs, golden angle) over a Latin/Caribbean percussion bed. Self-sounding, follows the MPC clock. Lumina Aerospace LLC.",
   "topics": [],
-  "stars": 216,
+  "stars": 217,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {

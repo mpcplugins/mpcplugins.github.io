@@ -50,6 +50,7 @@
   "Luminous-Works": "baseline",
   "MagicStino": "baseline",
   "PotentialBreakfast": "baseline",
+  "RAS-G": "2026-11-21",
   "SamplingHigh": "baseline",
   "Shrekage2024": "baseline",
   "Sunghyun23": "2026-11-19",
@@ -69,6 +70,7 @@
   "fullbann": "baseline",
   "gmorb": "baseline",
   "jacob-sabella": "baseline",
+  "jamiefaye": "2026-11-21",
   "keebz": "2026-11-19",
   "leonardoMirabal": "baseline",
   "lichthaus": "baseline",
@@ -150,9 +152,21 @@
    ],
    "since": "2026-11-19"
   },
+  "RAS-G": {
+   "plugins": [
+    "osc-to-midi"
+   ],
+   "since": "2026-11-21"
+  },
   "fastgbeats-cmd": {
    "plugins": [
     "fast-g-bitcrusher"
+   ],
+   "since": "2026-11-21"
+  },
+  "jamiefaye": {
+   "plugins": [
+    "downrush"
    ],
    "since": "2026-11-21"
   },
@@ -249,6 +263,16 @@
    ],
    "since": "2026-11-19"
   },
+  "stampman3000-jpg": {
+   "plugins": [
+    "op3000",
+    "twenty",
+    "twenty-fx",
+    "voxboy",
+    "voxman"
+   ],
+   "since": "2026-11-21"
+  },
   "sunskiefer": {
    "plugins": [
     "xxl-pro",
@@ -287,6 +311,7 @@
   "digital": "2026-11-19",
   "djfx-looper-native": "baseline",
   "dna": "2026-11-19",
+  "downrush": "2026-11-21",
   "drips": "baseline",
   "drumsampler": "2026-11-19",
   "drwave": "2026-11-19",
@@ -359,7 +384,9 @@
   "noxed-mpc-usb-bridge": "2026-11-19",
   "noxed-prism-wave": "2026-11-19",
   "op1-suite": "2026-11-19",
+  "op3000": "2026-11-21",
   "open-mpc-pimorph": "2026-11-19",
+  "osc-to-midi": "2026-11-21",
   "osirus": "baseline",
   "ostirusmpc": "baseline",
   "overcast": "baseline",
@@ -410,6 +437,8 @@
   "toucheq-8": "2026-11-21",
   "tovinyl4": "2026-11-19",
   "tributary": "baseline",
+  "twenty": "2026-11-21",
+  "twenty-fx": "2026-11-21",
   "undertow": "baseline",
   "vader": "baseline",
   "vavra": "baseline",
@@ -417,6 +446,8 @@
   "vhs-vibes": "baseline",
   "vintage-military-radio": "baseline",
   "voltage": "2026-11-19",
+  "voxboy": "2026-11-21",
+  "voxman": "2026-11-21",
   "warpline": "baseline",
   "welle": "baseline",
   "wreck": "baseline",
