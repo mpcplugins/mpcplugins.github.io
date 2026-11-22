@@ -20,7 +20,7 @@
   "owner": "sd88me",
   "description": "A generative 303-style acid bassline sequencer for the Akai MPC OS",
   "topics": [],
-  "stars": 3,
+  "stars": 4,
   "license": "NOASSERTION"
  },
  "sd88me/mpc-vst-acid303": {
@@ -46,6 +46,22 @@
   "topics": [],
   "stars": 1,
   "license": "NOASSERTION"
+ },
+ "mpcplugins/community-plugins": {
+  "repo": "mpcplugins/community-plugins",
+  "owner": "The Disk King",
+  "description": "Trifecta Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
+  "topics": [],
+  "stars": 0,
+  "license": null
+ },
+ "Luminous-Works/mpc-vst-audity-78": {
+  "repo": "Luminous-Works/mpc-vst-audity-78",
+  "owner": "Luminous-Works",
+  "description": "VST2 Instrument",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "sd88me/mpc-vst-airwindows": {
   "repo": "sd88me/mpc-vst-airwindows",
@@ -124,7 +140,7 @@
   "owner": "sd88me",
   "description": "Crate Digger is a plugin instrument for Akai MPC standalone devices that digs for records and plays them into an MPC track. Pick a genre, style, decade, region and country, and it finds random releases on Discogs, then streams so you can audition and resample them. ",
   "topics": [],
-  "stars": 15,
+  "stars": 16,
   "license": "NOASSERTION"
  },
  "Sunghyun23/kimswork": {
@@ -172,7 +188,7 @@
   "owner": "sd88me",
   "description": "Dexed (DX7) native VST2 plugin port for Akai MPC OS / Force",
   "topics": [],
-  "stars": 6,
+  "stars": 7,
   "license": "GPL-3.0"
  },
  "sunskiefer/dinxxl": {
@@ -479,7 +495,7 @@
   "owner": "gmorb",
   "description": "Dragonfly Hall reverb for MPC OS Gen1 - Port of Dragonfly Reverb Hall",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "GPL-3.0"
  },
  "Lewinator56/mpc-vst-helm": {
@@ -496,14 +512,6 @@
   "description": "Monophonic acid bass instrument for MPC standalone.",
   "topics": [],
   "stars": 1,
-  "license": null
- },
- "mpcplugins/community-plugins": {
-  "repo": "mpcplugins/community-plugins",
-  "owner": "The Disk King",
-  "description": "Trifecta Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
-  "topics": [],
-  "stars": 0,
   "license": null
  },
  "sunskiefer/InterzoneXXL": {
@@ -746,6 +754,14 @@
   "stars": 1,
   "license": "GPL-3.0"
  },
+ "shhQuiet/MPCMidiTransport": {
+  "repo": "shhQuiet/MPCMidiTransport",
+  "owner": "shhQuiet",
+  "description": "MIDI Transport is a silent instrument plugin for the MPC X. It learns MIDI CC or note assignments for MPC hardware buttons and saves them in the project. It uses the Open MPC Remote add-in running on the same MPC to send the button presses.",
+  "topics": [],
+  "stars": 1,
+  "license": "MIT"
+ },
  "3dthc/MPC-MIDI-Converter": {
   "repo": "3dthc/MPC-MIDI-Converter",
   "owner": "3dthc",
@@ -913,7 +929,7 @@
   "owner": "jacob-sabella",
   "description": "The screen and touchscreen of an Akai MPC standalone in a web browser, plus an MCP server: an LD_PRELOAD addin",
   "topics": [],
-  "stars": 4,
+  "stars": 6,
   "license": "MIT"
  },
  "jacob-sabella/mpc-addin-sample-draw-handler": {
@@ -956,6 +972,14 @@
   ],
   "stars": 1,
   "license": "GPL-3.0"
+ },
+ "shhQuiet/MPCTemplateChooser": {
+  "repo": "shhQuiet/MPCTemplateChooser",
+  "owner": "shhQuiet",
+  "description": "MPC Template Chooser adds a Local templates row to the standalone MPC New Project dialog. It looks for Templates or templates directly at the root of each mounted internal, SD, USB, and SATA drive. It searches those folders and all their subfolders for .xpj projects, skips hidden files and symlinks, and lists templates with the same name separately",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "jacob-sabella/mpc-addin-usb-audio": {
   "repo": "jacob-sabella/mpc-addin-usb-audio",
@@ -1060,7 +1084,7 @@
   "owner": "3dthc",
   "description": "Unofficial OB-Xd synth for Akai MPC (standalone, ARM VST2). Touch-friendly panel, bank/patch browser, tempo-synced LFO.",
   "topics": [],
-  "stars": 5,
+  "stars": 6,
   "license": "GPL-3.0"
  },
  "3dthc/Odin2-MPC": {
@@ -1201,7 +1225,7 @@
   "owner": "gmorb",
   "description": "Dragonfly Plate reverb for MPC OS Gen1 - Port of Dragonfly Reverb Plate",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "GPL-3.0"
  },
  "sunskiefer/PlateauXXL": {
@@ -1249,7 +1273,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialBreaks - drum-break slicer plugin for Akai MPC standalone (MPC One, Live, X)",
   "topics": [],
-  "stars": 3,
+  "stars": 4,
   "license": "MIT"
  },
  "PotentialBreakfast/mpc-vst-potentialcrates": {
@@ -1321,7 +1345,7 @@
   "owner": "PotentialBreakfast",
   "description": "PotentialWax: a Serato Sample-style melodic sampler plugin for Akai MPC standalone",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "MIT"
  },
  "sunskiefer/PrLogueXXL": {
@@ -2152,7 +2176,7 @@
   "owner": "open-mpc",
   "description": "Sunflower Fibonacci Sequencer: two arms step through a Vogel sunflower lattice (3:5 to 34:55 Fibonacci pairs, golden angle) over a Latin/Caribbean percussion bed. Self-sounding, follows the MPC clock. Lumina Aerospace LLC.",
   "topics": [],
-  "stars": 217,
+  "stars": 218,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {

@@ -24,10 +24,18 @@
    ],
    "repo": "keebz/Z950",
    "url": "https://github.com/keebz/Z950/issues/1"
+  },
+  "shhQuiet": {
+   "date": "2026-11-22",
+   "plugins": [
+    "scatterloom"
+   ],
+   "repo": "shhQuiet/ScatterloomMPC",
+   "url": "https://github.com/shhQuiet/ScatterloomMPC/issues/1"
   }
  },
  "key_check": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -35,7 +43,7 @@
    "public_repo"
   ]
  },
- "last_sent": "2026-11-21",
+ "last_sent": "2026-11-22",
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
@@ -230,7 +238,8 @@
     "mpc-plugins-manager",
     "hybrid-phatt",
     "mpc-plugin-scanner",
-    "trifecta-workstation"
+    "trifecta-workstation",
+    "ashy-to-classy"
    ],
    "since": "2026-11-19"
   },
@@ -281,7 +290,8 @@
     "xxl-strip",
     "xxl-strip-bus",
     "xxl-strip-master",
-    "remixxxl"
+    "remixxxl",
+    "ms20xxl"
    ],
    "since": "2026-11-19"
   }
@@ -292,6 +302,7 @@
   "acid": "baseline",
   "air3": "2026-11-19",
   "alpha": "baseline",
+  "ashy-to-classy": "2026-11-22",
   "binaural-echo": "2026-11-20",
   "boris-granular": "baseline",
   "buttercomp2": "2026-11-19",
@@ -377,6 +388,7 @@
   "mpc-sample-draw-handler-addin": "baseline",
   "mpc-usb-audio-addin": "baseline",
   "mpseejay": "2026-11-21",
+  "ms20xxl": "2026-11-22",
   "ms2kr": "baseline",
   "nam": "baseline",
   "nitro": "2026-11-19",
