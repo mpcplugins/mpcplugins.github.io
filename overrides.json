@@ -40,6 +40,13 @@
             "description": "Trifecta Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/trifecta-workstation"
+        },
+        "ashy-to-classy": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "Ashy to Classy by The Disk King: a vintage console insert effect for the MPC. The left side cleans up old records (hiss, crackle, pops, 60 Hz hum); the right side makes clean sounds dusty (vinyl noise, surface crackle, deep scratches, loop buzz). Lo-Fi, Tape and RPM (wow and flutter) switches, level meters in real dB, an amber 20 x 2 LCD and WAV export. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/ashy-to-classy"
         }
     },
     "featured": [
