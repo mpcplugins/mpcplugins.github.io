@@ -12,7 +12,7 @@
   "owner": "sd88me",
   "description": "TR-MPC Tap FX - sends any TR-MPC slot, or its reverb or delay send, out on its own MPC track so MPC's mixer, submixes and effects can process it.",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-acid": {
@@ -50,7 +50,7 @@
  "mpcplugins/community-plugins": {
   "repo": "mpcplugins/community-plugins",
   "owner": "The Disk King",
-  "description": "Trifecta Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
+  "description": "Warm Front Compressor by The Disk King: a vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
   "topics": [],
   "stars": 0,
   "license": null
@@ -100,7 +100,7 @@
   "owner": "Shrekage2024",
   "description": "Cadenza: a chord-driven generative MIDI sequencer, a native VST2 plugin for the Akai Force",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "NOASSERTION"
  },
  "jacob-sabella/mpc-vst-chordsmith": {
@@ -134,6 +134,14 @@
   "topics": [],
   "stars": 1,
   "license": "GPL-3.0"
+ },
+ "biloo77-cell/mpc-vst-costello-reverb": {
+  "repo": "biloo77-cell/mpc-vst-costello-reverb",
+  "owner": "biloo77-cell",
+  "description": "Costello Reverb (AudioKit/Soundpipe revsc) ported to Akai MPC OS as a VST2 insert effect",
+  "topics": [],
+  "stars": 0,
+  "license": "LGPL-2.1"
  },
  "sd88me/mpc-vst-cratedigger": {
   "repo": "sd88me/mpc-vst-cratedigger",
@@ -188,7 +196,7 @@
   "owner": "sd88me",
   "description": "Dexed (DX7) native VST2 plugin port for Akai MPC OS / Force",
   "topics": [],
-  "stars": 7,
+  "stars": 8,
   "license": "GPL-3.0"
  },
  "sunskiefer/dinxxl": {
@@ -275,7 +283,7 @@
    "mpc-vst-plugins",
    "vst2"
   ],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "no3z/mpc-dubsiren": {
@@ -457,6 +465,14 @@
   "topics": [],
   "stars": 1,
   "license": "NOASSERTION"
+ },
+ "303inmyheart/OpenMPC-Geonkick": {
+  "repo": "303inmyheart/OpenMPC-Geonkick",
+  "owner": "303inmyheart",
+  "description": "Geonkick MPC — Gen2 MPC percussion synthesizer with native touch UI, pad kits, WAV preview and factory presets.",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
  },
  "padbangers/glass-spheres": {
   "repo": "padbangers/glass-spheres",
@@ -671,7 +687,7 @@
   "owner": "sunskiefer",
   "description": "The Sonic Potions + Erica Synths LXR-02 drum machine, modded, as a plugin instrument for the Akai Force / MPC: the whole panel on one page, LXR02Open’s voices, randomizers and the Hrtl DLC presets.",
   "topics": [],
-  "stars": 9,
+  "stars": 10,
   "license": "NOASSERTION"
  },
  "sunskiefer/LXRXXL-BAZZLINE": {
@@ -703,7 +719,7 @@
   "owner": "sd88me",
   "description": "Machinemodule Tap FX: puts Machinemodule tracks and its reverb/delay sends on their own MPC track (effect)",
   "topics": [],
-  "stars": 24,
+  "stars": 25,
   "license": "AGPL-3.0"
  },
  "MagicStino/Magic-Tape-Echo": {
@@ -806,7 +822,7 @@
   "owner": "sd88me",
   "description": "Monomodule One: the Monomachine's synth engine as an MPC OS instrument (Gen2; runs your own OS file)",
   "topics": [],
-  "stars": 21,
+  "stars": 22,
   "license": "AGPL-3.0"
  },
  "sunskiefer/MORI": {
@@ -879,7 +895,7 @@
   "owner": "sttm",
   "description": "Experimental four-loop disk-backed stereo VST2 looper for MPC Standalone OS 3.10.1+, ARMv7 and AArch64",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "mitchoster/mpc-vst-multihead-echo": {
@@ -1047,6 +1063,14 @@
   "stars": 7,
   "license": "NOASSERTION"
  },
+ "biloo77-cell/mpc-vst-nepenthe": {
+  "repo": "biloo77-cell/mpc-vst-nepenthe",
+  "owner": "biloo77-cell",
+  "description": "Nepenthe velvet-noise reverb (Amalgamated Signals) ported to Akai MPC OS as a VST2 insert effect",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
+ },
  "sd88me/mpc-vst-nodalred2x": {
   "repo": "sd88me/mpc-vst-nodalred2x",
   "owner": "sd88me",
@@ -1079,12 +1103,20 @@
   "stars": 1,
   "license": "NOASSERTION"
  },
+ "molgino/noxend-mpc-plugins": {
+  "repo": "molgino/noxend-mpc-plugins",
+  "owner": "molgino",
+  "description": "Eight-voice wavetable instrument with two oscillators, WAV import slots, unison, modulation matrix, chorus and delay. Original NOXED design.",
+  "topics": [],
+  "stars": 1,
+  "license": "NOASSERTION"
+ },
  "3dthc/OB-XD-MPC": {
   "repo": "3dthc/OB-XD-MPC",
   "owner": "3dthc",
   "description": "Unofficial OB-Xd synth for Akai MPC (standalone, ARM VST2). Touch-friendly panel, bank/patch browser, tempo-synced LFO.",
   "topics": [],
-  "stars": 6,
+  "stars": 7,
   "license": "GPL-3.0"
  },
  "3dthc/Odin2-MPC": {
@@ -1241,7 +1273,7 @@
   "owner": "open-mpc",
   "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "MIT"
  },
  "Devko/PolyWerk": {
@@ -1403,6 +1435,14 @@
   "topics": [],
   "stars": 1,
   "license": "GPL-3.0"
+ },
+ "biloo77-cell/mpc-vst-rev246": {
+  "repo": "biloo77-cell/mpc-vst-rev246",
+  "owner": "biloo77-cell",
+  "description": "REV-246 (tehguitarist's vintage digital reverb) ported to Akai MPC OS as a VST2 insert effect",
+  "topics": [],
+  "stars": 0,
+  "license": "AGPL-3.0"
  },
  "sd88me/mpc-vst-reverbicon224": {
   "repo": "sd88me/mpc-vst-reverbicon224",
@@ -2176,7 +2216,7 @@
   "owner": "open-mpc",
   "description": "Sunflower Fibonacci Sequencer: two arms step through a Vogel sunflower lattice (3:5 to 34:55 Fibonacci pairs, golden angle) over a Latin/Caribbean percussion bed. Self-sounding, follows the MPC clock. Lumina Aerospace LLC.",
   "topics": [],
-  "stars": 218,
+  "stars": 220,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {
@@ -2194,14 +2234,6 @@
   "topics": [],
   "stars": 0,
   "license": "MIT"
- },
- "molgino/noxend-mpc-plugins": {
-  "repo": "molgino/noxend-mpc-plugins",
-  "owner": "molgino",
-  "description": "Some plugins for Akai MPC standalone",
-  "topics": [],
-  "stars": 1,
-  "license": "NOASSERTION"
  },
  "PotentialBreakfast/potential-plugins": {
   "repo": "PotentialBreakfast/potential-plugins",

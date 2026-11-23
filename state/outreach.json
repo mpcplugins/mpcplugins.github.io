@@ -17,6 +17,14 @@
    "repo": "Forge-Audio/mpc-radio",
    "url": "https://github.com/Forge-Audio/mpc-radio/issues/1"
   },
+  "fastgbeats-cmd": {
+   "date": "2026-11-23",
+   "plugins": [
+    "fast-g-bitcrusher"
+   ],
+   "repo": "fastgbeats-cmd/FASTG-BITCRUSHER",
+   "url": "https://github.com/fastgbeats-cmd/FASTG-BITCRUSHER/issues/1"
+  },
   "keebz": {
    "date": "2026-11-21",
    "plugins": [
@@ -35,7 +43,7 @@
   }
  },
  "key_check": {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -43,7 +51,7 @@
    "public_repo"
   ]
  },
- "last_sent": "2026-11-22",
+ "last_sent": "2026-11-23",
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
@@ -66,6 +74,7 @@
   "Yan-1977": "baseline",
   "anthonytheinventor": "baseline",
   "asearan": "baseline",
+  "biloo77-cell": "2026-11-23",
   "burgerbarn": "baseline",
   "djokenzi": "baseline",
   "dnkkit": "baseline",
@@ -109,6 +118,12 @@
   "zay2001-beatsbylonza": "baseline"
  },
  "pending": {
+  "303inmyheart": {
+   "plugins": [
+    "geonkick-mpc"
+   ],
+   "since": "2026-11-23"
+  },
   "Bombest-Audio": {
    "plugins": [
     "cluster",
@@ -165,6 +180,14 @@
     "osc-to-midi"
    ],
    "since": "2026-11-21"
+  },
+  "biloo77-cell": {
+   "plugins": [
+    "costello-reverb",
+    "nepenthe",
+    "rev-246"
+   ],
+   "since": "2026-11-23"
   },
   "fastgbeats-cmd": {
    "plugins": [
@@ -229,7 +252,9 @@
     "noxed-mpc-overwitch",
     "noxed-mpc-overwitch-send",
     "noxed-mpc-usb-bridge",
-    "noxed-prism-wave"
+    "noxed-prism-wave",
+    "molgino-noxed-acidline",
+    "molgino-noxed-prism-wave"
    ],
    "since": "2026-11-19"
   },
@@ -239,7 +264,8 @@
     "hybrid-phatt",
     "mpc-plugin-scanner",
     "trifecta-workstation",
-    "ashy-to-classy"
+    "ashy-to-classy",
+    "warm-front-compressor"
    ],
    "since": "2026-11-19"
   },
@@ -312,6 +338,7 @@
   "clementine-xt": "baseline",
   "cluster": "2026-11-19",
   "console7channel": "2026-11-19",
+  "costello-reverb": "2026-11-23",
   "csxxl": "baseline",
   "ctrl-mixbus": "baseline",
   "cwo": "2026-11-19",
@@ -343,6 +370,7 @@
   "galactic2": "2026-11-19",
   "galactic3": "2026-11-19",
   "galacticvibe": "2026-11-19",
+  "geonkick-mpc": "2026-11-23",
   "glass-spheres": "baseline",
   "gpp-link": "baseline",
   "grainbloom": "baseline",
@@ -370,6 +398,8 @@
   "meowsynth": "baseline",
   "mjx-mpc-twister": "2026-11-21",
   "model-72": "baseline",
+  "molgino-noxed-acidline": "2026-11-23",
+  "molgino-noxed-prism-wave": "2026-11-23",
   "mono-101": "2026-11-20",
   "monomodule-fx": "2026-11-19",
   "monomodule-one": "2026-11-19",
@@ -391,6 +421,7 @@
   "ms20xxl": "2026-11-22",
   "ms2kr": "baseline",
   "nam": "baseline",
+  "nepenthe": "2026-11-23",
   "nitro": "2026-11-19",
   "nodalred2x": "baseline",
   "noxed-acidline": "2026-11-19",
@@ -431,6 +462,7 @@
   "pulse": "2026-11-19",
   "punch": "2026-11-19",
   "remixxxl": "2026-11-19",
+  "rev-246": "2026-11-23",
   "rmxxxl": "baseline",
   "room": "baseline",
   "sampler": "2026-11-19",
@@ -464,6 +496,7 @@
   "voltage": "2026-11-19",
   "voxboy": "2026-11-21",
   "voxman": "2026-11-21",
+  "warm-front-compressor": "2026-11-23",
   "warpline": "baseline",
   "welle": "baseline",
   "wreck": "baseline",

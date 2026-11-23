@@ -42,46 +42,6 @@
    ]
   },
   {
-   "repo": "molgino/noxend-mpc-plugins",
-   "name": "noxed acidline",
-   "version": "0.3.0",
-   "why": [
-    "same plugin ID as noxed-acidline (maybe a copy)"
-   ]
-  },
-  {
-   "repo": "molgino/noxend-mpc-plugins",
-   "name": "noxed mpc overwitch",
-   "version": "0.6.0",
-   "why": [
-    "same plugin ID as noxed-mpc-overwitch (maybe a copy)"
-   ]
-  },
-  {
-   "repo": "molgino/noxend-mpc-plugins",
-   "name": "noxed mpc overwitch send",
-   "version": "0.6.0",
-   "why": [
-    "same plugin ID as noxed-mpc-overwitch-send (maybe a copy)"
-   ]
-  },
-  {
-   "repo": "molgino/noxend-mpc-plugins",
-   "name": "noxed mpc usb bridge",
-   "version": "0.2.3",
-   "why": [
-    "same plugin ID as noxed-mpc-usb-bridge (maybe a copy)"
-   ]
-  },
-  {
-   "repo": "molgino/noxend-mpc-plugins",
-   "name": "noxed prism wave",
-   "version": "0.1.4",
-   "why": [
-    "same plugin ID as noxed-prism-wave (maybe a copy)"
-   ]
-  },
-  {
    "repo": "MagicStino/force-openplugin",
    "name": "OpenPlugin Manager",
    "version": "0.9.0",

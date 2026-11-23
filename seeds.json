@@ -1,5 +1,6 @@
 {
  "repos": [
+  "303inmyheart/OpenMPC-Geonkick",
   "303inmyheart/OpenMPC-JC303",
   "3dthc/fretty-mpc",
   "3dthc/mpc-addin-nova-audio",
@@ -15,6 +16,9 @@
   "anthonytheinventor/vhs-vibes",
   "asearan/Retrolooper-One-MPC-Force",
   "B0ss-M/MrHighMan",
+  "biloo77-cell/mpc-vst-costello-reverb",
+  "biloo77-cell/mpc-vst-nepenthe",
+  "biloo77-cell/mpc-vst-rev246",
   "Bombest-Audio/op1-fx",
   "burgerbarn/edrum-kit-mpc",
   "CLVRK3/warpline-mpc",
@@ -87,6 +91,7 @@
   "mmiroshnikov/mpc-airwindows",
   "mmiroshnikov/mpc-maschine-group",
   "molgino/noxed-mpc-plugins",
+  "molgino/noxend-mpc-plugins",
   "nachtaktiv303/mpc-vst-dub-station",
   "nachtaktiv303/mpc-vst-mutable-vibe",
   "nachtaktiv303/mpc-vst-vibe-fx",
