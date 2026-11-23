@@ -65,7 +65,7 @@
         "diskking-670-compressor": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "DISKKING 670 Compressor by The Disk King: The Disk King's variation on the Fairchild 670 two-channel variable-mu tube limiter, as an MPC insert effect. Stepped input gain (1 dB clicks), threshold, six time constants (two program-dependent), Left-Right or Lat-Vert (mid/side), balance thump, gain-reduction meters that rest on 0. 10 presets: Mix Bus Glue TC2, Lat-Vert Bus TC5, Vocal Leveler TC1, Drum Squash TC1, Mastering TC3, Program Auto TC6, Bass Smooth TC4, Hard Limit TC2, Thump (Out of Bal), Clean Line Amp. Find it in a track's Insert Effects.",
+            "description": "Diskking 670 Compressor by The Disk King: The Disk King's variation on the Fairchild 670 two-channel variable-mu tube limiter, as an MPC insert effect. Stepped input gain (1 dB clicks), threshold, six time constants (two program-dependent), Left-Right or Lat-Vert (mid/side), balance thump, gain-reduction meters that rest on 0. 10 presets: Mix Bus Glue TC2, Lat-Vert Bus TC5, Vocal Leveler TC1, Drum Squash TC1, Mastering TC3, Program Auto TC6, Bass Smooth TC4, Hard Limit TC2, Thump (Out of Bal), Clean Line Amp. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/diskking-670-compressor"
         }

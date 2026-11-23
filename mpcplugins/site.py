@@ -273,6 +273,21 @@ def copy_box(p):
             % (code % "plugin.json"))
 
 
+MANAGER_ID = "mpc-plugins-manager"
+
+
+def updates_box(p):
+    """the second download on every plugin page: MPC Plugins Manager, the only way a plugin updates itself"""
+    if p.get("id") == MANAGER_ID:
+        return ""
+    return ('<div class="bg-[#ea861a]/10 border-2 border-[#ea861a] rounded-2xl p-5 mb-4 flex flex-col md:flex-row md:items-center gap-4">'
+            '<div class="flex-1"><p class="font-black text-lg uppercase tracking-tight text-[#ea861a]">&#8635; Get updates automatically</p>'
+            '<p class="text-sm font-medium opacity-80">A zip you download by hand never updates itself. Install <strong>MPC Plugins Manager</strong> '
+            'once on your MPC: it shows when a new version of %s is out and installs it in one tap.</p></div>'
+            '<a href="/p/%s/" class="bg-[#ea861a] hover:bg-[#d97706] text-white px-5 py-3 rounded-xl font-black text-xs uppercase '
+            'tracking-widest text-center">Get MPC Plugins Manager</a></div>' % (e(p.get("name", "this plugin")), MANAGER_ID))
+
+
 def build_rows(version):
     rows = []
     labels = {"sdk": "Works on both Gen1 and Gen2: MPC OS 3.10.1 or later (Akai SDK)", "gen1": "Gen1: Live, Live II, One, X, Key, Force",
@@ -367,6 +382,7 @@ def plugin_page(p, cat, collections):
   {disclaimer}
   <div class="space-y-3 mb-4">{builds}</div>
   <p class="text-xs opacity-60 mb-4">Downloads come straight from the creator's GitHub. Check the sha256 matches before installing. New to plugins? <a href="/install/" class="underline font-bold">How to install plugins on MPC OS 3.10.1</a>.</p>
+  {updates}
   {copy}
   {beta_note}
   <div class="mb-10"></div>
@@ -392,6 +408,7 @@ def plugin_page(p, cat, collections):
         builds=('<p class="opacity-60">Download removed by our safety check.</p>' if p.get("blocked")
                 else build_rows(latest) or '<p class="opacity-60">No download in this release.</p>'),
         status=status_box(p) + needs_box(p) + safety_box(p), disclaimer=DISCLAIMER, copy=copy_box(p),
+        updates=updates_box(p),
         pid=e(p["id"]), snippet=e(badge_snippet(p)),
         stats='<div class="grid grid-cols-2 md:grid-cols-4 gap-3 -mt-4 mb-8">%s</div>' % "".join(
             '<div class="bg-white/60 border border-[#4b3621]/10 rounded-2xl p-4 text-center"><p class="text-2xl md:text-3xl font-black text-[#ea861a] leading-none">%s</p>'
