@@ -172,7 +172,8 @@ BAR_TEXT = {
 def check_repo(info, log):
     """Plugin entries for one repo (empty if it has no MPC builds)."""
     repo = info["repo"]
-    products = releases.mpc_releases(repo)
+    # a repo holding many plugins (our own) needs every release read, or its oldest plugins drop off the list
+    products = releases.mpc_releases(repo, max_releases=100 if repo in PICTURE_REPOS else 10)
     if not products:
         return []
     facts = dict(info)
