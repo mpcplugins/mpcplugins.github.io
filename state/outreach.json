@@ -265,7 +265,8 @@
     "mpc-plugin-scanner",
     "trifecta-workstation",
     "ashy-to-classy",
-    "warm-front-compressor"
+    "warm-front-compressor",
+    "reel-to-real"
    ],
    "since": "2026-11-19"
   },
@@ -461,6 +462,7 @@
   "ps3100xxl": "baseline",
   "pulse": "2026-11-19",
   "punch": "2026-11-19",
+  "reel-to-real": "2026-11-23",
   "remixxxl": "2026-11-19",
   "rev-246": "2026-11-23",
   "rmxxxl": "baseline",

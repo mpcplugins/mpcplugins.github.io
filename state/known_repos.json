@@ -52,7 +52,7 @@
   "owner": "The Disk King",
   "description": "Warm Front Compressor by The Disk King: a vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
   "topics": [],
-  "stars": 0,
+  "stars": 2,
   "license": null
  },
  "Luminous-Works/mpc-vst-audity-78": {
@@ -151,14 +151,6 @@
   "stars": 16,
   "license": "NOASSERTION"
  },
- "Sunghyun23/kimswork": {
-  "repo": "Sunghyun23/kimswork",
-  "owner": "Sunghyun23",
-  "description": "Neo-soul drum instrument with original procedural sounds, modular expansions, groove generation and fill recording.",
-  "topics": [],
-  "stars": 0,
-  "license": null
- },
  "vulnerablecodes/music-production": {
   "repo": "vulnerablecodes/music-production",
   "owner": "vulnerablecodes",
@@ -196,7 +188,7 @@
   "owner": "sd88me",
   "description": "Dexed (DX7) native VST2 plugin port for Akai MPC OS / Force",
   "topics": [],
-  "stars": 8,
+  "stars": 9,
   "license": "GPL-3.0"
  },
  "sunskiefer/dinxxl": {
@@ -214,6 +206,14 @@
   "topics": [],
   "stars": 1,
   "license": "Apache-2.0"
+ },
+ "Sunghyun23/kimswork": {
+  "repo": "Sunghyun23/kimswork",
+  "owner": "Sunghyun23",
+  "description": "Neo-soul drum instrument with original procedural sounds, modular expansions, groove generation and fill recording.",
+  "topics": [],
+  "stars": 0,
+  "license": null
  },
  "jamiefaye/mpc-deluge": {
   "repo": "jamiefaye/mpc-deluge",
@@ -416,7 +416,7 @@
    "vibraphone",
    "vst-plugin"
   ],
-  "stars": 15,
+  "stars": 16,
   "license": "GPL-3.0"
  },
  "saustin2010/mpc-vst-meta-mod": {
@@ -822,7 +822,7 @@
   "owner": "sd88me",
   "description": "Monomodule One: the Monomachine's synth engine as an MPC OS instrument (Gen2; runs your own OS file)",
   "topics": [],
-  "stars": 22,
+  "stars": 23,
   "license": "AGPL-3.0"
  },
  "sunskiefer/MORI": {
@@ -937,7 +937,7 @@
   "owner": "Forge-Audio",
   "description": "MPC Radio is a radio dial that plays live internet stations, with hiss, crackle, sliding whistles and half-heard ghosts between them and a perfectly clean signal once a station locks in.",
   "topics": [],
-  "stars": 4,
+  "stars": 5,
   "license": "MIT"
  },
  "jacob-sabella/mpc-addin-remote": {
@@ -1393,7 +1393,7 @@
   "owner": "sd88me",
   "description": "An eight-voice, two-layer analog-style synthesizer for Akai MPC OS standalone. It plays the way the Prophet '08 does including factory sounds and presets.",
   "topics": [],
-  "stars": 2,
+  "stars": 1,
   "license": "NOASSERTION"
  },
  "sd88me/mpc-vst-profit5": {
@@ -1466,7 +1466,7 @@
    "remix",
    "rmx1000"
   ],
-  "stars": 5,
+  "stars": 6,
   "license": "GPL-3.0"
  },
  "gmorb/mpc-vst-dragonfly-room": {
@@ -2216,7 +2216,7 @@
   "owner": "open-mpc",
   "description": "Sunflower Fibonacci Sequencer: two arms step through a Vogel sunflower lattice (3:5 to 34:55 Fibonacci pairs, golden angle) over a Latin/Caribbean percussion bed. Self-sounding, follows the MPC clock. Lumina Aerospace LLC.",
   "topics": [],
-  "stars": 220,
+  "stars": 221,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {
