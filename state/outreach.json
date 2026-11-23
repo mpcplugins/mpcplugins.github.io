@@ -272,7 +272,8 @@
     "trifecta-workstation",
     "ashy-to-classy",
     "warm-front-compressor",
-    "reel-to-real"
+    "reel-to-real",
+    "diskking-670-compressor"
    ],
    "since": "2026-11-19"
   },
@@ -356,6 +357,7 @@
   "density2": "2026-11-19",
   "dexed-dx7": "baseline",
   "digital": "2026-11-19",
+  "diskking-670-compressor": "2026-11-23",
   "djfx-looper-native": "baseline",
   "dna": "2026-11-19",
   "downrush": "2026-11-21",
