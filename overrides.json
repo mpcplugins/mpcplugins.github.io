@@ -54,6 +54,13 @@
             "description": "Warm Front Compressor by The Disk King: a vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/warm-front-compressor"
+        },
+        "reel-to-real": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "Reel-to-Real by The Disk King: a reel-to-reel tape machine insert effect for the MPC. Tape saturation, warmth, wow & flutter, tape speeds 3.75 to 30 ips, NAB / IEC tape EQ, hiss, tape stop and WAV recording. The reels really turn, the tape moves, the VU needles and the LED counter run. 11 presets. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/reel-to-real"
         }
     },
     "featured": [
