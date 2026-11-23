@@ -181,6 +181,12 @@
    ],
    "since": "2026-11-21"
   },
+  "Yan-1977": {
+   "plugins": [
+    "jamiro"
+   ],
+   "since": "2026-11-23"
+  },
   "biloo77-cell": {
    "plugins": [
     "costello-reverb",
@@ -379,6 +385,7 @@
   "hall": "baseline",
   "hybrid-phatt": "2026-11-21",
   "infinity2": "2026-11-19",
+  "jamiro": "2026-11-23",
   "jc303-mpc": "baseline",
   "jn-106": "baseline",
   "jv-880": "baseline",

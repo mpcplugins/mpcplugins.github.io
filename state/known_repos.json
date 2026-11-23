@@ -2216,7 +2216,7 @@
   "owner": "open-mpc",
   "description": "Sunflower Fibonacci Sequencer: two arms step through a Vogel sunflower lattice (3:5 to 34:55 Fibonacci pairs, golden angle) over a Latin/Caribbean percussion bed. Self-sounding, follows the MPC clock. Lumina Aerospace LLC.",
   "topics": [],
-  "stars": 221,
+  "stars": 222,
   "license": "NOASSERTION"
  },
  "Devko/GrooveWerk": {
