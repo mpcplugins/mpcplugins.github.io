@@ -282,7 +282,8 @@
     "reel-to-real",
     "diskking-670-compressor",
     "dkx-160-compressor",
-    "king-ex90"
+    "king-ex90",
+    "remix16"
    ],
    "since": "2026-11-19"
   },
@@ -497,6 +498,7 @@
   "pulse": "2026-11-19",
   "punch": "2026-11-19",
   "reel-to-real": "2026-11-23",
+  "remix16": "2026-11-24",
   "remixxxl": "2026-11-19",
   "rev-246": "2026-11-23",
   "rmxxxl": "baseline",
