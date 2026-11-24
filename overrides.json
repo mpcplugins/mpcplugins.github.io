@@ -44,7 +44,7 @@
         "ashy-to-classy": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "Ashy to Classy by The Disk King: a vintage console insert effect for the MPC. The left side cleans up old records (hiss, crackle, pops, 60 Hz hum); the right side makes clean sounds dusty (vinyl noise, surface crackle, deep scratches, loop buzz). Lo-Fi, Tape and RPM (wow and flutter) switches, four IN / OUT level meters in real dB, an amber 16 x 2 LCD and WAV export. Find it in a track's Insert Effects.",
+            "description": "Ashy to Classy by The Disk King: a vintage console insert effect for the MPC. The left side cleans up old records (hiss, crackle, pops, 60 Hz hum); the right side makes clean sounds dusty (vinyl noise, surface crackle, deep scratches, loop buzz). Ten keys, each with its own 4-fader mixer: eight stackable filters (Lo-Fi, Water, Dynamic, Tinny, Radio, Hollow, Sweep, Muffled) and a real analog Tape (drive, head bump, tone, wow). Four INPUT / OUTPUT meters in real dB and an amber 16 x 2 LCD. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/ashy-to-classy"
         },
