@@ -12,7 +12,7 @@
   "owner": "sd88me",
   "description": "TR-MPC Tap FX - sends any TR-MPC slot, or its reverb or delay send, out on its own MPC track so MPC's mixer, submixes and effects can process it.",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-acid": {
@@ -1490,7 +1490,7 @@
   "owner": "shhQuiet",
   "description": "A sample-driven euclidean sequencer that uses a Markov chain to choose samples. ",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "drj-io/SlowOps.Scratchivision": {
@@ -2160,7 +2160,7 @@
   "owner": "CLVRK3",
   "description": "The Vital spectral-warping wavetable synth engine, running as a plugin on MPC standalone, built with the MPC Plugin SDK. It runs Vital's real engine, not a copy of it: the same oscillators, warps, filters, envelopes, LFOs, modulation matrix and effects. It plays .vital patches. Vital's GUI is not included because the MPC has no plugin windows. Inst",
   "topics": [],
-  "stars": 4,
+  "stars": 5,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-welle": {
