@@ -307,7 +307,9 @@
     "machinemodule-tap",
     "monomodule-fx",
     "monomodule-one",
-    "mono-101"
+    "mono-101",
+    "crate-digger",
+    "mpc-skipback"
    ],
    "since": "2026-11-19"
   },
@@ -361,6 +363,7 @@
   "cluster": "2026-11-19",
   "console7channel": "2026-11-19",
   "costello-reverb": "2026-11-23",
+  "crate-digger": "2026-11-24",
   "csxxl": "baseline",
   "ctrl-mixbus": "baseline",
   "cwo": "2026-11-19",
@@ -442,6 +445,7 @@
   "mpc-radio": "2026-11-19",
   "mpc-remote-addin": "baseline",
   "mpc-sample-draw-handler-addin": "baseline",
+  "mpc-skipback": "2026-11-24",
   "mpc-template-chooser": "2026-11-24",
   "mpc-usb-audio-addin": "baseline",
   "mpseejay": "2026-11-21",

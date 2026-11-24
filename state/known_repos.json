@@ -664,7 +664,7 @@
   "description": "Your sample library is bigger than you remember. Lucky Dip reaches in, pulls out sixteen sounds, drops them on the pads and lets you play them straight away. Don't like one? Reroll it. Love one? Lock it and dip again. When the kit feels right, export it as a normal MPC drum program.",
   "topics": [],
   "stars": 1,
-  "license": "MIT"
+  "license": "NOASSERTION"
  },
  "sunskiefer/LUFest": {
   "repo": "sunskiefer/LUFest",
@@ -760,7 +760,7 @@
   "description": "Monophonic Moog Labyrinth-style thru-zero oscillator / wavefolder / state-variable filter voice, with two LFOs and a page randomiser.",
   "topics": [],
   "stars": 2,
-  "license": "MIT"
+  "license": "NOASSERTION"
  },
  "mcardonaserrano/meowsynth-mpc": {
   "repo": "mcardonaserrano/meowsynth-mpc",
@@ -978,7 +978,7 @@
   "description": "An addin for Akai MPC OS standalone devices (MPC Live, One, X, Key and Force, Gen1 or Gen2). It runs inside MPC, with no extra program to start, and uses the controller's own buttons and LEDs. Tested on a Force and a Gen2 Live III; see Status.",
   "topics": [],
   "stars": 0,
-  "license": "MIT"
+  "license": "NOASSERTION"
  },
  "mitchoster/mpc-vst-tape-echo": {
   "repo": "mitchoster/mpc-vst-tape-echo",
@@ -1002,7 +1002,7 @@
   "owner": "shhQuiet",
   "description": "MPC Template Chooser adds a Local templates row to the standalone MPC New Project dialog. It looks for Templates or templates directly at the root of each mounted internal, SD, USB, and SATA drive. It searches those folders and all their subfolders for .xpj projects, skips hidden files and symlinks, and lists templates with the same name separately",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "jacob-sabella/mpc-addin-usb-audio": {
