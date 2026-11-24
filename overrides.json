@@ -65,14 +65,14 @@
         "diskking-670-compressor": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "Diskking 670 Compressor by The Disk King: The Disk King's variation on the Fairchild 670 two-channel variable-mu tube limiter, as an MPC insert effect. Stepped input gain (1 dB clicks), threshold, six time constants (two program-dependent), Left-Right or Lat-Vert (mid/side), balance thump, gain-reduction meters that rest on 0. 10 presets: Mix Bus Glue TC2, Lat-Vert Bus TC5, Vocal Leveler TC1, Drum Squash TC1, Mastering TC3, Program Auto TC6, Bass Smooth TC4, Hard Limit TC2, Thump (Out of Bal), Clean Line Amp. Find it in a track's Insert Effects.",
+            "description": "Diskking 670 Compressor by The Disk King: Inspired by the Fairchild 670 two-channel variable-mu tube limiter. An MPC insert effect. Stepped input gain (1 dB clicks), threshold, six time constants (two program-dependent), Left-Right or Lat-Vert (mid/side), balance thump, gain-reduction meters that rest on 0. 10 presets: Mix Bus Glue TC2, Lat-Vert Bus TC5, Vocal Leveler TC1, Drum Squash TC1, Mastering TC3, Program Auto TC6, Bass Smooth TC4, Hard Limit TC2, Thump (Out of Bal), Clean Line Amp. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/diskking-670-compressor"
         },
         "dkx-160-compressor": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "The Disk King X, dkx 160 Compressor, inspired by the dbx 160. The Disk King's variation on the classic 1976 VCA compressor/limiter, as an MPC insert effect. True-RMS detection with automatic attack and release (the 160's punch), threshold 10 mV to 3 V, compression 1:1 to infinity, output gain +-20 dB, amber BELOW / red ABOVE lights, lamp-lit meter (input, output, gain change). 10 presets: Drum Bus Punch, Kick Punch, Snare Crack, Bass Leveler, Vocal Leveler, Drum Smash, Mix Bus Gentle, Peak Limiter 10:1, Hard Limit Inf, Clean Line Amp. Find it in a track's Insert Effects.",
+            "description": "The Disk King X, dkx 160 Compressor, inspired by the dbx 160. A classic 1976 VCA compressor/limiter as an MPC insert effect. True-RMS detection with automatic attack and release (the 160's punch), threshold 10 mV to 3 V, compression 1:1 to infinity, output gain +-20 dB, amber BELOW / red ABOVE lights, lamp-lit meter (input, output, gain change). 10 presets: Drum Bus Punch, Kick Punch, Snare Crack, Bass Leveler, Vocal Leveler, Drum Smash, Mix Bus Gentle, Peak Limiter 10:1, Hard Limit Inf, Clean Line Amp. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/dkx-160-compressor"
         }
