@@ -43,7 +43,7 @@
   }
  },
  "key_check": {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -117,12 +117,19 @@
   "vulnerablecodes": "baseline",
   "zay2001-beatsbylonza": "baseline"
  },
+ "paused": "GitHub answered HTTP 307 on 2026-11-24: Moved Permanently",
  "pending": {
   "303inmyheart": {
    "plugins": [
     "geonkick-mpc"
    ],
    "since": "2026-11-23"
+  },
+  "B0ss-M": {
+   "plugins": [
+    "omni-sampler"
+   ],
+   "since": "2026-11-24"
   },
   "Bombest-Audio": {
    "plugins": [
@@ -273,7 +280,8 @@
     "ashy-to-classy",
     "warm-front-compressor",
     "reel-to-real",
-    "diskking-670-compressor"
+    "diskking-670-compressor",
+    "dkx-160-compressor"
    ],
    "since": "2026-11-19"
   },
@@ -286,7 +294,8 @@
   "open-mpc": {
    "plugins": [
     "plugin-manager-g2",
-    "open-mpc-pimorph"
+    "open-mpc-pimorph",
+    "plugin-manager-app"
    ],
    "since": "2026-11-19"
   },
@@ -304,7 +313,9 @@
   },
   "shhQuiet": {
    "plugins": [
-    "scatterloom"
+    "scatterloom",
+    "midi-transport",
+    "mpc-template-chooser"
    ],
    "since": "2026-11-19"
   },
@@ -325,7 +336,9 @@
     "xxl-strip-bus",
     "xxl-strip-master",
     "remixxxl",
-    "ms20xxl"
+    "ms20xxl",
+    "amgr",
+    "variant"
    ],
    "since": "2026-11-19"
   }
@@ -336,6 +349,7 @@
   "acid": "baseline",
   "air3": "2026-11-19",
   "alpha": "baseline",
+  "amgr": "2026-11-24",
   "ashy-to-classy": "2026-11-22",
   "binaural-echo": "2026-11-20",
   "boris-granular": "baseline",
@@ -359,6 +373,7 @@
   "digital": "2026-11-19",
   "diskking-670-compressor": "2026-11-23",
   "djfx-looper-native": "baseline",
+  "dkx-160-compressor": "2026-11-24",
   "dna": "2026-11-19",
   "downrush": "2026-11-21",
   "drips": "baseline",
@@ -406,6 +421,7 @@
   "machinemodule-tap": "2026-11-19",
   "matrixverb": "2026-11-19",
   "meowsynth": "baseline",
+  "midi-transport": "2026-11-24",
   "mjx-mpc-twister": "2026-11-21",
   "model-72": "baseline",
   "molgino-noxed-acidline": "2026-11-23",
@@ -426,6 +442,7 @@
   "mpc-radio": "2026-11-19",
   "mpc-remote-addin": "baseline",
   "mpc-sample-draw-handler-addin": "baseline",
+  "mpc-template-chooser": "2026-11-24",
   "mpc-usb-audio-addin": "baseline",
   "mpseejay": "2026-11-21",
   "ms20xxl": "2026-11-22",
@@ -439,6 +456,7 @@
   "noxed-mpc-overwitch-send": "2026-11-19",
   "noxed-mpc-usb-bridge": "2026-11-19",
   "noxed-prism-wave": "2026-11-19",
+  "omni-sampler": "2026-11-24",
   "op1-suite": "2026-11-19",
   "op3000": "2026-11-21",
   "open-mpc-pimorph": "2026-11-19",
@@ -451,6 +469,7 @@
   "phone": "2026-11-19",
   "pitchdelay": "2026-11-19",
   "plate": "baseline",
+  "plugin-manager-app": "2026-11-24",
   "plugin-manager-g2": "2026-11-19",
   "potential1200": "baseline",
   "potentialbleed": "baseline",
@@ -500,6 +519,7 @@
   "twenty-fx": "2026-11-21",
   "undertow": "baseline",
   "vader": "baseline",
+  "variant": "2026-11-24",
   "vavra": "baseline",
   "verbity2": "2026-11-19",
   "vhs-vibes": "baseline",
