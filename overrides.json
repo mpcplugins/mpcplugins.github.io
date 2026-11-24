@@ -75,6 +75,13 @@
             "description": "The Disk King X, dkx 160 Compressor, inspired by the dbx 160. A classic 1976 VCA compressor/limiter as an MPC insert effect. True-RMS detection with automatic attack and release (the 160's punch), threshold 10 mV to 3 V, compression 1:1 to infinity, output gain +-20 dB, amber BELOW / red ABOVE lights, lamp-lit meter (input, output, gain change). 10 presets: Drum Bus Punch, Kick Punch, Snare Crack, Bass Leveler, Vocal Leveler, Drum Smash, Mix Bus Gentle, Peak Limiter 10:1, Hard Limit Inf, Clean Line Amp. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/dkx-160-compressor"
+        },
+        "king-ex90": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "King EX90 by The Disk King: Inspired by the Akai EX90R digital reverb (1988). An MPC insert effect: eight reverb modes (L.HALL, LOFT, L.ROOM, GATE, S.HALL, S.ROOM, PLATE, REVERSE), the 80s gated drum sound and a reverse swell, predelay 0-200 ms, decay 0.3-15 s or gate time, a steep high cut (1-16 kHz), separate DRY and REVERB levels, an OVERLOAD light, an EFFECT rocker that lets the tail ring out, and a 12-BIT rocker for the original's 12-bit 39 kHz sound. 13 presets: Big Gated Drums, Snare Plate, Vocal Plate, Drum Machine Room, Large Room Kit, Small Hall Vocal, Concert Hall, Hall Strings, Crisp Piano Loft, Reverse Swell, Ambient Wash, Send 100% Wet, Default. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex90"
         }
     },
     "featured": [
