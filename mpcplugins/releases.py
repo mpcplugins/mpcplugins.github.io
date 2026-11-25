@@ -92,10 +92,17 @@ def _common(a, b):
     return best
 
 
-def merge_renames(products):
+# repos that keep many separate plugins, each released on its own tag: a new name there is a new plugin, not a rename
+MANY_PLUGIN_REPOS = {"mpcplugins/community-plugins"}
+
+
+def merge_renames(products, repo=""):
     """A plugin renamed between releases ('Euclidier' -> 'Euclid', 'Early-Refl' -> 'Early-Reflections') shows up as
     two names whose releases never overlap in time. Fold the old name into the new one, keeping all versions.
-    Two names released together in the same release are different plugins (XXL-STRIP and XXL-STRIP-BUS), never a rename."""
+    Two names released together in the same release are different plugins (XXL-STRIP and XXL-STRIP-BUS), never a rename.
+    Never in a many-plugin repo, and never when the names carry different model numbers (King EX90 / King EX75)."""
+    if repo in MANY_PLUGIN_REPOS:
+        return merge_packagings(dict(products))
     names = sorted(products, key=lambda n: max(v["updated"] for v in products[n]), reverse=True)   # newest first
     merged = dict(products)
     for new in names:
@@ -107,6 +114,9 @@ def merge_renames(products):
                 continue
             a, b = _key(old), _key(new)
             similar = len(a) >= 4 and len(b) >= 4 and (a.startswith(b[:4]) or b.startswith(a[:4]))
+            da, db = re.findall(r"\d+", a), re.findall(r"\d+", b)
+            if da and db and da != db:
+                similar = False                     # different model numbers: different plugins
             together = {v["tag"] for v in merged[old]} & {v["tag"] for v in merged[new]}
             if similar and not together and max(v["updated"] for v in merged[old]) <= first_new:
                 merged[new] = sorted(merged[new] + merged.pop(old), key=lambda v: v["updated"], reverse=True)
@@ -305,7 +315,7 @@ def _api_releases(repo, max_releases):
                 "downloads": sum(b.get("downloads", 0) for b in builds.values()),
                 "builds": builds,
             })
-    return one_per_version(merge_renames(drop_bundles(products, repo)))
+    return one_per_version(merge_renames(drop_bundles(products, repo), repo))
 
 
 def mpc_releases(repo, max_releases=10, pause=0.4):
@@ -337,4 +347,4 @@ def mpc_releases(repo, max_releases=10, pause=0.4):
                 "prerelease": pre,
                 "builds": builds,
             })
-    return one_per_version(merge_renames(drop_bundles(products, repo)))
+    return one_per_version(merge_renames(drop_bundles(products, repo), repo))
