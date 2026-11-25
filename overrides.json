@@ -79,7 +79,7 @@
         "king-ex90": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "King EX90 by The Disk King: Inspired by the Akai EX90R digital reverb (1988). An MPC insert effect: eight reverb modes (L.HALL, LOFT, L.ROOM, GATE, S.HALL, S.ROOM, PLATE, REVERSE), the 80s gated drum sound and a reverse swell, predelay 0-200 ms, decay 0.3-15 s or gate time, a steep high cut (1-16 kHz), separate DRY and REVERB levels, an OVERLOAD light, an EFFECT rocker that lets the tail ring out, and a 12-BIT rocker for the original's 12-bit 39 kHz sound. 13 presets: Big Gated Drums, Snare Plate, Vocal Plate, Drum Machine Room, Large Room Kit, Small Hall Vocal, Concert Hall, Hall Strings, Crisp Piano Loft, Reverse Swell, Ambient Wash, Send 100% Wet, Default. Find it in a track's Insert Effects.",
+            "description": "King EX90 by The Disk King: Inspired by the Akai EX90R digital reverb (1988). Eight modes (L.HALL, LOFT, L.ROOM, GATE, S.HALL, S.ROOM, PLATE, REVERSE), predelay 0-200 ms, decay 0.3-15 s or gate time, high cut 1-16 kHz, separate DRY and REVERB levels, overload light, EFFECT switch with a natural tail, and a 12-BIT switch for the original's 12-bit 39 kHz sound. Part of The King Rack: six free 80s half-rack effects. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex90"
         },
@@ -89,6 +89,41 @@
             "description": "remix16 by The Disk King: Inspired by the AMS RMX16 digital reverb (1982). An MPC insert effect with a front panel that really works: 18 programs (AMBIENCE, ROOM A1, HALL C1, PLATE A1, HALL B3, CHORUS, ECHO, NONLIN 2, REVERSE 1, DELAY, FREEZE, HALL A1, NONLIN 1, IMAGE P1, PLATE B1, REVERSE 2, ROOM A0, ROOM B1), the famous NONLIN gated drums and REVERSE swells, a keypad where every key acts at once, NUDGE, 9 SAVE / RECALL stores, decay filters LOW / HIGH, a red LED display, a big closer-look keypad, and IN / OUT / MIX. 16 presets. Find it in a track's Insert Effects.",
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/remix16"
+        },
+        "king-ex85": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "King EX85 by The Disk King: Inspired by the Akai EX85P parametric equalizer (1987). Four bands with Akai's own figures: LOW shelf at 40 Hz (+-14 dB, Q 0.5), sweepable MID LOW (60 Hz-5 kHz) and MID HI (100 Hz-10 kHz) at +-18 dB, HI shelf at 12 kHz (+-14 dB, Q 0.5), the dual BAND WIDTH knob (its own Q for each mid, 1 to 6), EFFECT in/out switch. Part of The King Rack: six free 80s half-rack effects. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex85"
+        },
+        "king-ex80": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "King EX80 by The Disk King: Inspired by the Akai EX80E enhancer (1987). Generates new upper harmonics to brighten dull sounds: INPUT with an input light, INTENSITY (how much the harmonic generator is driven), FILTER 1 to 5 kHz (12 dB/oct, the band that feeds it), MIX (how much is added), EFFECT in/out. Part of The King Rack: six free 80s half-rack effects. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex80"
+        },
+        "king-ex75": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "King EX75 by The Disk King: Inspired by the Akai EX75N noise reduction (1987). THRESHOLD -50 to -10 dB, RATIO 1:1 to 1:8 (gentle expander to hard gate), 0.3 ms attack, DECAY 0.2 to 2 s, a 6 dB/oct FILTER (200 Hz to 5 kHz) that rolls the hiss off when the sound gets quiet, REDUCTION light, EFFECT in/out. Part of The King Rack: six free 80s half-rack effects. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex75"
+        },
+        "king-ex70": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "King EX70 by The Disk King: Inspired by the Akai EX70C comp / gate (1987). Compressor: INPUT -6 to -42 dB, RATIO 2:1 to 20:1, ATTACK 0.2 to 40 ms, RELEASE 0.04 to 1.5 s, up to 32 dB of compression, OUTPUT. Gate: THRESHOLD (OFF to MAX) and DECAY 5 ms to 1.5 s. COMP REDUCTION and GATE REDUCTION lights, EFFECT in/out. Part of The King Rack: six free 80s half-rack effects. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex70"
+        },
+        "king-ex65": {
+            "maker": "The Disk King",
+            "kind": "effect",
+            "description": "King EX65 by The Disk King: Inspired by the Akai EX65D digital delay (1987). Delay time RANGE (2, 8, 32, 128, 512 ms) x MULTI (x0.5 to x2) = 1 to 1024 ms, FEED BACK, RATE and WIDTH modulation (chorus, flanger, doubling, tape wobble), DELAY LEVEL, HOLD (loops the echoes forever), INPUT light, EFFECT in/out with the echoes ringing out. Part of The King Rack: six free 80s half-rack effects. Find it in a track's Insert Effects.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex65"
         }
     },
     "featured": [
