@@ -43,7 +43,7 @@
   }
  },
  "key_check": {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -112,6 +112,7 @@
   "stampman3000-jpg": "baseline",
   "sttm": "2026-11-21",
   "sunskiefer": "baseline",
+  "swtdr34mz-afk": "2026-11-25",
   "timomacquis": "baseline",
   "tonyalonsotech": "baseline",
   "vulnerablecodes": "baseline",
@@ -223,7 +224,8 @@
   "lightlikemusic": {
    "plugins": [
     "lx-800",
-    "binaural-echo"
+    "binaural-echo",
+    "sculpt"
    ],
    "since": "2026-11-19"
   },
@@ -283,7 +285,8 @@
     "diskking-670-compressor",
     "dkx-160-compressor",
     "king-ex90",
-    "remix16"
+    "remix16",
+    "king-ex75"
    ],
    "since": "2026-11-19"
   },
@@ -414,6 +417,7 @@
   "kalienspaceship": "2026-11-19",
   "kcathedral5": "2026-11-19",
   "kcosmos": "2026-11-19",
+  "king-ex75": "2026-11-25",
   "king-ex90": "2026-11-24",
   "liminal-amp": "baseline",
   "looper": "baseline",
@@ -506,6 +510,7 @@
   "sampler": "2026-11-19",
   "scatterloom": "2026-11-19",
   "scratchivision": "baseline",
+  "sculpt": "2026-11-25",
   "setbfree-organ": "baseline",
   "spring": "2026-11-19",
   "sq8lmpc": "baseline",

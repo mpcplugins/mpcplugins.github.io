@@ -382,14 +382,6 @@
   "stars": 0,
   "license": "MIT"
  },
- "Sunghyun23/kimswork": {
-  "repo": "Sunghyun23/kimswork",
-  "owner": "Sunghyun23",
-  "description": "Neo-soul drum instrument with original procedural sounds, modular expansions, groove generation and fill recording.",
-  "topics": [],
-  "stars": 0,
-  "license": null
- },
  "macdigi/force-link-audio": {
   "repo": "macdigi/force-link-audio",
   "owner": "macdigi",
@@ -513,6 +505,14 @@
   "topics": [],
   "stars": 0,
   "license": "MIT"
+ },
+ "Sunghyun23/kimswork": {
+  "repo": "Sunghyun23/kimswork",
+  "owner": "Sunghyun23",
+  "description": "Neo-soul drum instrument with original procedural sounds, modular expansions, groove generation and fill recording.",
+  "topics": [],
+  "stars": 0,
+  "license": null
  },
  "gmorb/mpc-vst-dragonfly-hall": {
   "repo": "gmorb/mpc-vst-dragonfly-hall",
@@ -1412,6 +1412,14 @@
   "stars": 0,
   "license": "NOASSERTION"
  },
+ "swtdr34mz-afk/PROPHET-67-VST": {
+  "repo": "swtdr34mz-afk/PROPHET-67-VST",
+  "owner": "swtdr34mz-afk",
+  "description": "P6",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
+ },
  "sunskiefer/PS3100XXL": {
   "repo": "sunskiefer/PS3100XXL",
   "owner": "sunskiefer",
@@ -1497,6 +1505,14 @@
   "repo": "drj-io/SlowOps.Scratchivision",
   "owner": "drj-io",
   "description": "Scratchivision is an MPC plugin (MPC OS 3.10.1+, built for the MPC XL) that turns a turntable with Serato-style control vinyl into a scratch controller for a sample. It is an insert effect: timecode audio goes into the track, the scratched sample comes out.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
+ "lightlikemusic/sculpt": {
+  "repo": "lightlikemusic/sculpt",
+  "owner": "lightlikemusic",
+  "description": "Sculpt: four tracks of loop shaping. Each track runs a loop through Source, Grain, Filter, Color and Space, with a screen per module and the Q-Links following it.",
   "topics": [],
   "stars": 0,
   "license": "MIT"
@@ -2210,6 +2226,14 @@
   "topics": [],
   "stars": 1,
   "license": "NOASSERTION"
+ },
+ "zay2001-beatsbylonza/Zay-o-Nator": {
+  "repo": "zay2001-beatsbylonza/Zay-o-Nator",
+  "owner": "zay2001-beatsbylonza",
+  "description": "Backlit vintage VU needles (classic cream or noir black), green/yellow/red LED peak meters and a spectrum that lights up with your beat.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "sunskiefer/EMU": {
   "repo": "sunskiefer/EMU",

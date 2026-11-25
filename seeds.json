@@ -72,6 +72,7 @@
   "lightlikemusic/binaural-echo",
   "lightlikemusic/grainbloom",
   "lightlikemusic/lx-800",
+  "lightlikemusic/sculpt",
   "lightlikemusic/studio424",
   "Luminous-Works/mpc-vst-audity-78",
   "Luminous-Works/mpc-vst-f4-phantom",
@@ -226,6 +227,7 @@
   "sunskiefer/VARIANT",
   "sunskiefer/Wreck",
   "sunskiefer/XXL-Strips",
+  "swtdr34mz-afk/PROPHET-67-VST",
   "timomacquis/piAMB-MPC",
   "timomacquis/piClideaN16-MPC",
   "timomacquis/piMorpH-MPC",
@@ -235,6 +237,7 @@
   "tonyalonsotech/CTRL-MixBus",
   "vulnerablecodes/music-production",
   "Yan-1977/jamiro-mpc",
-  "zay2001-beatsbylonza/GPP-Link"
+  "zay2001-beatsbylonza/GPP-Link",
+  "zay2001-beatsbylonza/Zay-o-Nator"
  ]
 }
