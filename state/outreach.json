@@ -286,7 +286,11 @@
     "dkx-160-compressor",
     "king-ex90",
     "remix16",
-    "king-ex75"
+    "king-ex75",
+    "king-ex65",
+    "king-ex70",
+    "king-ex80",
+    "king-ex85"
    ],
    "since": "2026-11-19"
   },
@@ -417,7 +421,11 @@
   "kalienspaceship": "2026-11-19",
   "kcathedral5": "2026-11-19",
   "kcosmos": "2026-11-19",
+  "king-ex65": "2026-11-25",
+  "king-ex70": "2026-11-25",
   "king-ex75": "2026-11-25",
+  "king-ex80": "2026-11-25",
+  "king-ex85": "2026-11-25",
   "king-ex90": "2026-11-24",
   "liminal-amp": "baseline",
   "looper": "baseline",
