@@ -83,6 +83,14 @@
             "about": "",
             "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-ex90"
         },
+        "king-sp-1200": {
+            "maker": "The Disk King",
+            "kind": "instrument",
+            "style": "drums",
+            "description": "KING SP-1200 by The Disk King: Inspired by the E-mu SP-1200 (1987), the 12-bit sampling drum machine. 12-bit sound at 26.04 kHz with the real pitch grit, 10 seconds of memory, 32 sounds in banks A-D, 8 channels with the original filters (1-2 dynamic, 3-6 fixed, 7-8 raw) and 8 separate outputs. The whole front panel on one screen: faders on the Q-Links, big pads, keypad, Set-up 11-23 and the Specials, Disk save / load to folders on the MPC drive, and a real SP-1200 LCD (green or blue). Tap a printed function list to read it large. Load your own sounds as WAVs. Sequencer and sampling coming. For Gen 1 and Gen 2.",
+            "about": "",
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/king-sp-1200"
+        },
         "remix16": {
             "maker": "The Disk King",
             "kind": "effect",
