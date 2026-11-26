@@ -28,7 +28,7 @@
   "owner": "sd88me",
   "description": "An accurate, circuit-modelled, hardware matched 303 voice for the Akai MPC and Force standalone, as a native VST2 plugin.",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "AGPL-3.0"
  },
  "mmiroshnikov/mpc-airwindows": {
@@ -44,7 +44,7 @@
   "owner": "sunskiefer",
   "description": "OWN build and code Manipulator by Polyverse & Vocal Synth Izotope had a baby. ",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "NOASSERTION"
  },
  "sunskiefer/AMGR": {
@@ -54,6 +54,22 @@
   "topics": [],
   "stars": 1,
   "license": "NOASSERTION"
+ },
+ "ymn27nhnwd-hue/argevox-geraet": {
+  "repo": "ymn27nhnwd-hue/argevox-geraet",
+  "owner": "ymn27nhnwd-hue",
+  "description": "Vocoder de 20 bandas para Akai MPC standalone, desarrollado por Argerax.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "swtdr34mz-afk/ARIA": {
+  "repo": "swtdr34mz-afk/ARIA",
+  "owner": "swtdr34mz-afk",
+  "description": "sb need a MUSE VST?",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
  },
  "mpcplugins/community-plugins": {
   "repo": "mpcplugins/community-plugins",
@@ -78,6 +94,20 @@
   "topics": [],
   "stars": 2,
   "license": "MIT"
+ },
+ "gonziWeb/beat-and-dungeon": {
+  "repo": "gonziWeb/beat-and-dungeon",
+  "owner": "gonziWeb",
+  "description": "Beat & Dungeon: a role-playing game for beatmakers on the Akai MPC. A D20 gives every track a rule to compose by.",
+  "topics": [
+   "akai",
+   "beatmaking",
+   "dungeon-crawler",
+   "mpc",
+   "mpc-plugin"
+  ],
+  "stars": 0,
+  "license": "NOASSERTION"
  },
  "lightlikemusic/binaural-echo": {
   "repo": "lightlikemusic/binaural-echo",
@@ -156,7 +186,7 @@
   "owner": "sd88me",
   "description": "Crate Digger is a plugin instrument for Akai MPC standalone devices that digs for records and plays them into an MPC track. Pick a genre, style, decade, region and country, and it finds random releases on Discogs, then streams so you can audition and resample them. ",
   "topics": [],
-  "stars": 16,
+  "stars": 17,
   "license": "NOASSERTION"
  },
  "vulnerablecodes/music-production": {
@@ -222,6 +252,14 @@
   "topics": [],
   "stars": 2,
   "license": "GPL-3.0"
+ },
+ "shhQuiet/DriftwaterMPC": {
+  "repo": "shhQuiet/DriftwaterMPC",
+  "owner": "shhQuiet",
+  "description": "Driftwater is a stereo insert effect for standalone Akai MPCs. It adds a gently drifting delay to guitar, keys, drums, and other input. Rate, Damp, and Depth shape the motion, LPG lets transients brighten the wet signal, and Mix blends it with the dry input. The Info tab explains the controls and credits the Fairfield Circuitry Shallow Water.",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "padbangers/drips": {
   "repo": "padbangers/drips",
@@ -302,6 +340,14 @@
   "stars": 2,
   "license": "NOASSERTION"
  },
+ "Luminous-Works/mpc-vst-Dust-87": {
+  "repo": "Luminous-Works/mpc-vst-Dust-87",
+  "owner": "Luminous-Works",
+  "description": "Modernized Vintage drum machine ",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
  "gmorb/mpc-vst-dragonfly-early-reflections": {
   "repo": "gmorb/mpc-vst-dragonfly-early-reflections",
   "owner": "gmorb",
@@ -374,6 +420,14 @@
   "stars": 1,
   "license": "MIT"
  },
+ "swtdr34mz-afk/FAKE5": {
+  "repo": "swtdr34mz-afk/FAKE5",
+  "owner": "swtdr34mz-afk",
+  "description": "A 5-voice (or 10-voice) polysynth in the manner of the Sequential Take 5, as a VST3 for Windows and the Mac, an AU for the Mac, a standalone app and a plugin for Akai MPC hardware. By swtdr34mz. Its sound is its own: two oscillators with the Take 5's continuous SHAPE (sine → saw → square → narrow pulse), linear FM 2>1, a 4-pole ladder low-pass with",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
+ },
  "fastgbeats-cmd/FASTG-BITCRUSHER": {
   "repo": "fastgbeats-cmd/FASTG-BITCRUSHER",
   "owner": "fastgbeats-cmd",
@@ -381,6 +435,14 @@
   "topics": [],
   "stars": 0,
   "license": "MIT"
+ },
+ "SoundBot/mpc-fet-compressor": {
+  "repo": "SoundBot/mpc-fet-compressor",
+  "owner": "SoundBot",
+  "description": "A classic FET-style peak compressor for MPC standalone. It's fast, punchy and a bit dirty when pushed, and it has a backlit analog VU meter whose needle swings with the gain reduction, like the hardware. It comes with a variety of presets for vocals, drums, bass, guitar, keys, synths and the mix bus, so you can start from a sound that already fits.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
  },
  "macdigi/force-link-audio": {
   "repo": "macdigi/force-link-audio",
@@ -395,7 +457,7 @@
   "owner": "3dthc",
   "description": "Fretty is a multi-layered instrument for standalone Akai MPC devices, built for expressive guitar-style performances. It combines playable layers, articulations, and performance controls to create natural-sounding fret-based parts.",
   "topics": [],
-  "stars": 2,
+  "stars": 4,
   "license": "MIT"
  },
  "leonardoMirabal/frodhes": {
@@ -416,7 +478,7 @@
    "vibraphone",
    "vst-plugin"
   ],
-  "stars": 17,
+  "stars": 18,
   "license": "GPL-3.0"
  },
  "saustin2010/mpc-vst-meta-mod": {
@@ -544,6 +606,14 @@
   "description": "InterzoneXXL 0.1.0, milestone 1 (the voice), is built and tested offline but hasn’t been on the Force yet. It is a separate project from PlateauXXL, with the same build, limiter, Panic and Q-Link handling. Everything shows on the device as InterzoneXXL by ANDREALPHEUS.",
   "topics": [],
   "stars": 1,
+  "license": "GPL-3.0"
+ },
+ "miathedev/mpc-vst-jamclock": {
+  "repo": "miathedev/mpc-vst-jamclock",
+  "owner": "miathedev",
+  "description": "JamClock is a listen-only insert effect for Akai MPC. Put it on an input track carrying your band's live audio (e.g. Input 3/4): it beat-tracks the signal on a background thread and emits MIDI Clock (24 ppq) plus Start/Continue/Stop on its own ALSA sequencer port, JamClock MIDI Out. Connect that port to the MPC app's MIDI input and set the MPC to e",
+  "topics": [],
+  "stars": 0,
   "license": "GPL-3.0"
  },
  "Yan-1977/jamiro-mpc": {
@@ -703,7 +773,7 @@
   "owner": "sunskiefer",
   "description": "LXRXXL BAZZLINE IS A BASSLINE 8 VOICE SYNTH",
   "topics": [],
-  "stars": 2,
+  "stars": 4,
   "license": "NOASSERTION"
  },
  "sunskiefer/LXRXXL-ZYNTH": {
@@ -953,7 +1023,7 @@
   "owner": "jacob-sabella",
   "description": "The screen and touchscreen of an Akai MPC standalone in a web browser, plus an MCP server: an LD_PRELOAD addin",
   "topics": [],
-  "stars": 6,
+  "stars": 7,
   "license": "MIT"
  },
  "jacob-sabella/mpc-addin-sample-draw-handler": {
@@ -964,12 +1034,20 @@
   "stars": 2,
   "license": "MIT"
  },
+ "jacob-sabella/mpc-addin-sample-kitload": {
+  "repo": "jacob-sabella/mpc-addin-sample-kitload",
+  "owner": "jacob-sabella",
+  "description": "MPC Sample addin: Load Kit bank by bank (the KITLOAD page): put a kit's banks onto the banks you choose, keep the rest",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
+ },
  "jacob-sabella/mpc-addin-sample-rack": {
   "repo": "jacob-sabella/mpc-addin-sample-rack",
   "owner": "jacob-sabella",
   "description": "MPC Sample addin: add, remove and turn off the plugins in a project's inserts (the RACK page)",
   "topics": [],
-  "stars": 3,
+  "stars": 4,
   "license": "MIT"
  },
  "sd88me/mpc-addin-skipback": {
@@ -1092,7 +1170,7 @@
   "owner": "3dthc",
   "description": "MPC addin: lets a plugin play the MPC's audio inputs as its own sound",
   "topics": [],
-  "stars": 0,
+  "stars": 1,
   "license": "MIT"
  },
  "3dthc/nova-editor": {
@@ -1140,7 +1218,7 @@
   "owner": "B0ss-M",
   "description": "multi-format player for the mpc",
   "topics": [],
-  "stars": 8,
+  "stars": 9,
   "license": "NOASSERTION"
  },
  "stampman3000-jpg/op3000": {
@@ -1201,7 +1279,7 @@
   "owner": "3dthc",
   "description": "  OXZYGEN: a dark, cinematic instrument for Akai MPC standalone. Choirs, sung doos, winds, brass, strings, bells, Juno-style synths and textures; 96 presets. Gen1 + Gen2.",
   "topics": [],
-  "stars": 2,
+  "stars": 3,
   "license": "NOASSERTION"
  },
  "frere12/padstep-16-mpc": {
@@ -1211,6 +1289,22 @@
   "topics": [],
   "stars": 1,
   "license": "NOASSERTION"
+ },
+ "swtdr34mz-afk/PEEK": {
+  "repo": "swtdr34mz-afk/PEEK",
+  "owner": "swtdr34mz-afk",
+  "description": "SUM 41",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
+ },
+ "stampman3000-jpg/phase": {
+  "repo": "stampman3000-jpg/phase",
+  "owner": "stampman3000-jpg",
+  "description": "Phase — CZ-derived Phase Distortion synthesizer for Akai MPC (based on CrispyZebra, GPL-3)",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
  },
  "sunskiefer/PhyXXL": {
   "repo": "sunskiefer/PhyXXL",
@@ -1281,8 +1375,16 @@
   "owner": "open-mpc",
   "description": "OpenMPC Plugin Manager: a VST that browses the Open MPC catalog and installs, updates and removes plugins on the MPC itself",
   "topics": [],
-  "stars": 4,
+  "stars": 6,
   "license": "MIT"
+ },
+ "Adison-Negron/Poli-Plugins": {
+  "repo": "Adison-Negron/Poli-Plugins",
+  "owner": "Adison-Negron",
+  "description": "Learn-the-noise spectral de-noiser (RX style): Learn, Threshold, Reduction, 6 nodes, Pass, Diff",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
  },
  "Devko/PolyWerk": {
   "repo": "Devko/PolyWerk",
@@ -1396,6 +1498,14 @@
   "stars": 1,
   "license": "GPL-3.0"
  },
+ "swtdr34mz-afk/PROPHET-67-VST": {
+  "repo": "swtdr34mz-afk/PROPHET-67-VST",
+  "owner": "swtdr34mz-afk",
+  "description": "P6",
+  "topics": [],
+  "stars": 1,
+  "license": "MPL-2.0"
+ },
  "sd88me/mpc-vst-profit8": {
   "repo": "sd88me/mpc-vst-profit8",
   "owner": "sd88me",
@@ -1412,14 +1522,6 @@
   "stars": 0,
   "license": "NOASSERTION"
  },
- "swtdr34mz-afk/PROPHET-67-VST": {
-  "repo": "swtdr34mz-afk/PROPHET-67-VST",
-  "owner": "swtdr34mz-afk",
-  "description": "P6",
-  "topics": [],
-  "stars": 0,
-  "license": "MPL-2.0"
- },
  "sunskiefer/PS3100XXL": {
   "repo": "sunskiefer/PS3100XXL",
   "owner": "sunskiefer",
@@ -1435,6 +1537,14 @@
   "topics": [],
   "stars": 2,
   "license": "GPL-3.0"
+ },
+ "swtdr34mz-afk/REEVES": {
+  "repo": "swtdr34mz-afk/REEVES",
+  "owner": "swtdr34mz-afk",
+  "description": "REV 8 & 16",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
  },
  "sunskiefer/reMixXXL": {
   "repo": "sunskiefer/reMixXXL",
@@ -1467,6 +1577,14 @@
   "topics": [],
   "stars": 1,
   "license": "AGPL-3.0"
+ },
+ "lichthaus/mpc-vst-revvy85": {
+  "repo": "lichthaus/mpc-vst-revvy85",
+  "owner": "lichthaus",
+  "description": "Revvy85: REV7-style 1985 digital reverb for Akai MPC Gen2, emulated hardware running your own V1.0 EPROM (not included)",
+  "topics": [],
+  "stars": 0,
+  "license": "MIT"
  },
  "sunskiefer/RMXXXL": {
   "repo": "sunskiefer/RMXXXL",
@@ -1673,6 +1791,14 @@
   "description": "An 8-band parametric EQ you shape by touch, with a live analyzer.",
   "topics": [],
   "stars": 1,
+  "license": "MIT"
+ },
+ "jasonnicklaus1980-coder/Silicon-": {
+  "repo": "jasonnicklaus1980-coder/Silicon-",
+  "owner": "jasonnicklaus1980-coder",
+  "description": "Shannon Instruments four-chip FM synthesizer for Akai MPC",
+  "topics": [],
+  "stars": 0,
   "license": "MIT"
  },
  "3dthc/Sonix": {
@@ -2067,6 +2193,14 @@
   "stars": 0,
   "license": "MIT"
  },
+ "swtdr34mz-afk/TREEGONE": {
+  "repo": "swtdr34mz-afk/TREEGONE",
+  "owner": "swtdr34mz-afk",
+  "description": "3",
+  "topics": [],
+  "stars": 0,
+  "license": "MPL-2.0"
+ },
  "stampman3000-jpg/mpc-tributary": {
   "repo": "stampman3000-jpg/mpc-tributary",
   "owner": "stampman3000-jpg",
@@ -2080,7 +2214,7 @@
   "owner": "3dthc",
   "description": "Tropix: island and Afro sounds ROMpler for Akai MPC standalone (ARM VST2)",
   "topics": [],
-  "stars": 1,
+  "stars": 2,
   "license": "MIT"
  },
  "jacob-sabella/mpc-vst-tuner": {
@@ -2176,7 +2310,7 @@
   "owner": "CLVRK3",
   "description": "The Vital spectral-warping wavetable synth engine, running as a plugin on MPC standalone, built with the MPC Plugin SDK. It runs Vital's real engine, not a copy of it: the same oscillators, warps, filters, envelopes, LFOs, modulation matrix and effects. It plays .vital patches. Vital's GUI is not included because the MPC has no plugin windows. Inst",
   "topics": [],
-  "stars": 5,
+  "stars": 6,
   "license": "GPL-3.0"
  },
  "sd88me/mpc-vst-welle": {

@@ -43,7 +43,7 @@
   }
  },
  "key_check": {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -55,6 +55,7 @@
  "makers_seen": {
   "303inmyheart": "baseline",
   "3dthc": "baseline",
+  "Adison-Negron": "2026-11-26",
   "B0ss-M": "baseline",
   "Bombest-Audio": "baseline",
   "CLVRK3": "baseline",
@@ -69,6 +70,7 @@
   "RAS-G": "2026-11-21",
   "SamplingHigh": "baseline",
   "Shrekage2024": "baseline",
+  "SoundBot": "2026-11-26",
   "Sunghyun23": "2026-11-19",
   "Tinythingz": "baseline",
   "Yan-1977": "baseline",
@@ -86,14 +88,17 @@
   "frere12": "baseline",
   "fullbann": "baseline",
   "gmorb": "baseline",
+  "gonziWeb": "2026-11-26",
   "jacob-sabella": "baseline",
   "jamiefaye": "2026-11-21",
+  "jasonnicklaus1980-coder": "2026-11-26",
   "keebz": "2026-11-19",
   "leonardoMirabal": "baseline",
   "lichthaus": "baseline",
   "lightlikemusic": "baseline",
   "macdigi": "baseline",
   "mcardonaserrano": "baseline",
+  "miathedev": "2026-11-26",
   "mitchoster": "baseline",
   "mjasikowski": "2026-11-21",
   "mmiroshnikov": "baseline",
@@ -116,6 +121,7 @@
   "timomacquis": "baseline",
   "tonyalonsotech": "baseline",
   "vulnerablecodes": "baseline",
+  "ymn27nhnwd-hue": "2026-11-26",
   "zay2001-beatsbylonza": "baseline"
  },
  "paused": "GitHub answered HTTP 307 on 2026-11-24: Moved Permanently",
@@ -125,6 +131,14 @@
     "geonkick-mpc"
    ],
    "since": "2026-11-23"
+  },
+  "Adison-Negron": {
+   "plugins": [
+    "poliplug",
+    "poliwow",
+    "shhhhh"
+   ],
+   "since": "2026-11-26"
   },
   "B0ss-M": {
    "plugins": [
@@ -189,6 +203,12 @@
    ],
    "since": "2026-11-21"
   },
+  "SoundBot": {
+   "plugins": [
+    "fet-compressor"
+   ],
+   "since": "2026-11-26"
+  },
   "Yan-1977": {
    "plugins": [
     "jamiro"
@@ -209,6 +229,18 @@
    ],
    "since": "2026-11-21"
   },
+  "gonziWeb": {
+   "plugins": [
+    "beat-and-dungeon"
+   ],
+   "since": "2026-11-26"
+  },
+  "jacob-sabella": {
+   "plugins": [
+    "mpc-sample-kit-load-addin"
+   ],
+   "since": "2026-11-26"
+  },
   "jamiefaye": {
    "plugins": [
     "downrush"
@@ -221,6 +253,12 @@
    ],
    "since": "2026-11-19"
   },
+  "lichthaus": {
+   "plugins": [
+    "revvy85"
+   ],
+   "since": "2026-11-26"
+  },
   "lightlikemusic": {
    "plugins": [
     "lx-800",
@@ -228,6 +266,12 @@
     "sculpt"
    ],
    "since": "2026-11-19"
+  },
+  "miathedev": {
+   "plugins": [
+    "jamclock"
+   ],
+   "since": "2026-11-26"
   },
   "mjasikowski": {
    "plugins": [
@@ -290,7 +334,8 @@
     "king-ex65",
     "king-ex70",
     "king-ex80",
-    "king-ex85"
+    "king-ex85",
+    "king-sp-1200"
    ],
    "since": "2026-11-19"
   },
@@ -352,6 +397,12 @@
     "variant"
    ],
    "since": "2026-11-19"
+  },
+  "ymn27nhnwd-hue": {
+   "plugins": [
+    "argevox-geraet"
+   ],
+   "since": "2026-11-26"
   }
  },
  "skip": {},
@@ -361,7 +412,9 @@
   "air3": "2026-11-19",
   "alpha": "baseline",
   "amgr": "2026-11-24",
+  "argevox-geraet": "2026-11-26",
   "ashy-to-classy": "2026-11-22",
+  "beat-and-dungeon": "2026-11-26",
   "binaural-echo": "2026-11-20",
   "boris-granular": "baseline",
   "buttercomp2": "2026-11-19",
@@ -400,6 +453,7 @@
   "euclid": "baseline",
   "evil-tuner-xxl": "baseline",
   "fast-g-bitcrusher": "2026-11-21",
+  "fet-compressor": "2026-11-26",
   "fm": "2026-11-19",
   "force-link-audio": "baseline",
   "galactic": "2026-11-19",
@@ -414,6 +468,7 @@
   "hall": "baseline",
   "hybrid-phatt": "2026-11-21",
   "infinity2": "2026-11-19",
+  "jamclock": "2026-11-26",
   "jamiro": "2026-11-23",
   "jc303-mpc": "baseline",
   "jn-106": "baseline",
@@ -427,6 +482,7 @@
   "king-ex80": "2026-11-25",
   "king-ex85": "2026-11-25",
   "king-ex90": "2026-11-24",
+  "king-sp-1200": "2026-11-26",
   "liminal-amp": "baseline",
   "looper": "baseline",
   "lucky-dip": "baseline",
@@ -460,6 +516,7 @@
   "mpc-radio": "2026-11-19",
   "mpc-remote-addin": "baseline",
   "mpc-sample-draw-handler-addin": "baseline",
+  "mpc-sample-kit-load-addin": "2026-11-26",
   "mpc-skipback": "2026-11-24",
   "mpc-template-chooser": "2026-11-24",
   "mpc-usb-audio-addin": "baseline",
@@ -490,6 +547,8 @@
   "plate": "baseline",
   "plugin-manager-app": "2026-11-24",
   "plugin-manager-g2": "2026-11-19",
+  "poliplug": "2026-11-26",
+  "poliwow": "2026-11-26",
   "potential1200": "baseline",
   "potentialbleed": "baseline",
   "potentialbreakfast-potentialbreaks": "2026-11-19",
@@ -513,6 +572,7 @@
   "remix16": "2026-11-24",
   "remixxxl": "2026-11-19",
   "rev-246": "2026-11-23",
+  "revvy85": "2026-11-26",
   "rmxxxl": "baseline",
   "room": "baseline",
   "sampler": "2026-11-19",
@@ -520,6 +580,7 @@
   "scratchivision": "baseline",
   "sculpt": "2026-11-25",
   "setbfree-organ": "baseline",
+  "shhhhh": "2026-11-26",
   "spring": "2026-11-19",
   "sq8lmpc": "baseline",
   "steprunner-8": "baseline",
