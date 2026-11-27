@@ -69,7 +69,13 @@ def verified_for(repo, plugin_name, version, plugins_in_repo, version_owners=1):
     version_owners: how many separate releases in the repo have this exact version as their newest. A record without an id
     only counts when that is 1, so it can't be credited to the wrong plugin."""
     result = {"gen1": [], "gen2": [], "sample": []}
-    for r in records(repo):
+    recs = records(repo)
+    # When some records name this plugin exactly, use only those: the loose last-word match would otherwise
+    # credit 'dkx-160-compressor' tests to 'Warm Front Compressor'.
+    exact = [r for r in recs if r.get("id") and _norm(r.get("id")) == _norm(plugin_name)]
+    if plugins_in_repo > 1 and exact:
+        recs = exact
+    for r in recs:
         if str(r.get("version")).lstrip("v") != str(version).lstrip("v"):
             continue
         if plugins_in_repo > 1:

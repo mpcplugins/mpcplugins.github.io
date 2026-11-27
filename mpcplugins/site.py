@@ -608,6 +608,8 @@ def write(cat, out, log=print):
                collection_page(c, [by_id[m] for m in c["members"] if m in by_id]))
     for p in plugins:
         _write(os.path.join(out, "badge", p["id"] + ".svg"), badge_svg(*BADGE_LOOK.get(p.get("tier"), BADGE_LOOK[None])))
+        # Total downloads: every zip (Gen1, Gen2, works-on-both) of every version, added up. GitHub only shows each zip's own count.
+        _write(os.path.join(out, "downloads", p["id"] + ".svg"), badge_svg(format(p.get("downloads") or 0, ","), "#ea861a", left="downloads"))
     _write(os.path.join(out, "badge.svg"), badge_svg("listed", "#ea861a"))
     guide = install_page()
     if guide:
