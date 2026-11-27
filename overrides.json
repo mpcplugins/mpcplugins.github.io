@@ -21,9 +21,10 @@
         "hybrid-phatt": {
             "maker": "The Disk King",
             "kind": "instrument",
-            "description": "Hybrid Phatt by The Disk King: a 90s-style ROM sound module for the MPC, styled as a cross between an MPC 60 and the E-mu Phatt. Layered presets (4 layers), filter, envelopes, LFOs, arpeggiator, grooves, FX and a KEYS page that lights up as you play the pads. Load your own E-mu .exb sound set (no sound bank included).",
+            "description": "King Phatt by The Disk King: a 90s-style ROM sound module for the MPC, styled as a cross between an MPC 60 and the E-mu Phatt. Layered presets (4 layers), filter, envelopes, LFOs, arpeggiator, grooves, FX and a KEYS page that lights up as you play the pads. Load your own E-mu .exb sound set (no sound bank included).",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/hybrid-phatt"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/hybrid-phatt",
+            "name": "King Phatt"
         },
         "mpc-plugin-scanner": {
             "maker": "The Disk King",
@@ -44,37 +45,42 @@
         "ashy-to-classy": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "Ashy to Classy by The Disk King: a vintage console insert effect for the MPC. The left side cleans up old records (hiss, crackle, pops, 60 Hz hum); the right side makes clean sounds dusty (vinyl noise, surface crackle, deep scratches, loop buzz). Ten keys, each with its own 4-fader mixer: eight stackable filters (Lo-Fi, Water, Dynamic, Tinny, Radio, Hollow, Sweep, Muffled) and a real analog Tape (drive, head bump, tone, wow). Four INPUT / OUTPUT meters in real dB and an amber 16 x 2 LCD. Find it in a track's Insert Effects.",
+            "description": "Ashy to Classy by King: a vintage console insert effect for the MPC. The left side cleans up old records (hiss, crackle, pops, 60 Hz hum); the right side makes clean sounds dusty (vinyl noise, surface crackle, deep scratches, loop buzz). Ten keys, each with its own 4-fader mixer: eight stackable filters (Lo-Fi, Water, Dynamic, Tinny, Radio, Hollow, Sweep, Muffled) and a real analog Tape (drive, head bump, tone, wow). Four INPUT / OUTPUT meters in real dB and an amber 16 x 2 LCD. Find it in a track's Insert Effects.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/ashy-to-classy"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/ashy-to-classy",
+            "name": "Ashy to Classy by King"
         },
         "warm-front-compressor": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "Warm Front Compressor by The Disk King: a vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
+            "description": "Warm Front Compressor by King: an original, based on the King's vision. A vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/warm-front-compressor"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/warm-front-compressor",
+            "name": "Warm Front Compressor by King"
         },
         "reel-to-real": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "Reel-to-Real by The Disk King: a reel-to-reel tape machine insert effect for the MPC. Tape saturation, warmth, wow & flutter, tape speeds 3.75 to 30 ips, NAB / IEC tape EQ, hiss, tape stop and WAV recording. The reels really turn, the tape moves, the VU needles and the LED counter run. 11 presets. Find it in a track's Insert Effects.",
+            "description": "Reel to Real King by The Disk King: a reel-to-reel tape machine insert effect for the MPC. Tape saturation, warmth, wow & flutter, tape speeds 3.75 to 30 ips, NAB / IEC tape EQ, hiss, tape stop and WAV recording. The reels really turn, the tape moves, the VU needles and the LED counter run. 11 presets. Find it in a track's Insert Effects.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/reel-to-real"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/reel-to-real",
+            "name": "Reel to Real King"
         },
         "diskking-670-compressor": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "Diskking 670 Compressor by The Disk King: Inspired by the Fairchild 670 two-channel variable-mu tube limiter. An MPC insert effect. Stepped input gain (1 dB clicks), threshold, six time constants (two program-dependent), Left-Right or Lat-Vert (mid/side), balance thump, gain-reduction meters that rest on 0. 10 presets: Mix Bus Glue TC2, Lat-Vert Bus TC5, Vocal Leveler TC1, Drum Squash TC1, Mastering TC3, Program Auto TC6, Bass Smooth TC4, Hard Limit TC2, Thump (Out of Bal), Clean Line Amp. Find it in a track's Insert Effects.",
+            "description": "King 670 Compressor by The Disk King: Inspired by the Fairchild 670 two-channel variable-mu tube limiter. An MPC insert effect. Stepped input gain (1 dB clicks), threshold, six time constants (two program-dependent), Left-Right or Lat-Vert (mid/side), balance thump, gain-reduction meters that rest on 0. 10 presets: Mix Bus Glue TC2, Lat-Vert Bus TC5, Vocal Leveler TC1, Drum Squash TC1, Mastering TC3, Program Auto TC6, Bass Smooth TC4, Hard Limit TC2, Thump (Out of Bal), Clean Line Amp. Find it in a track's Insert Effects.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/diskking-670-compressor"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/diskking-670-compressor",
+            "name": "King 670 Compressor"
         },
         "dkx-160-compressor": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "The Disk King X, dkx 160 Compressor, inspired by the dbx 160. A classic 1976 VCA compressor/limiter as an MPC insert effect. True-RMS detection with automatic attack and release (the 160's punch), threshold 10 mV to 3 V, compression 1:1 to infinity, output gain +-20 dB, amber BELOW / red ABOVE lights, lamp-lit meter (input, output, gain change). 10 presets: Drum Bus Punch, Kick Punch, Snare Crack, Bass Leveler, Vocal Leveler, Drum Smash, Mix Bus Gentle, Peak Limiter 10:1, Hard Limit Inf, Clean Line Amp. Find it in a track's Insert Effects.",
+            "description": "dkx 160 Compressor by King: Inspired by the dbx 160. A classic 1976 VCA compressor/limiter as an MPC insert effect. True-RMS detection with automatic attack and release (the 160's punch), threshold 10 mV to 3 V, compression 1:1 to infinity, output gain +-20 dB, amber BELOW / red ABOVE lights, lamp-lit meter (input, output, gain change). 10 presets: Drum Bus Punch, Kick Punch, Snare Crack, Bass Leveler, Vocal Leveler, Drum Smash, Mix Bus Gentle, Peak Limiter 10:1, Hard Limit Inf, Clean Line Amp. Find it in a track's Insert Effects.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/dkx-160-compressor"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/dkx-160-compressor",
+            "name": "dkx 160 Compressor by King"
         },
         "king-ex90": {
             "maker": "The Disk King",
@@ -94,9 +100,10 @@
         "remix16": {
             "maker": "The Disk King",
             "kind": "effect",
-            "description": "remix16 by The Disk King: Inspired by the AMS RMX16 digital reverb (1982). An MPC insert effect with a front panel that really works: 18 programs (AMBIENCE, ROOM A1, HALL C1, PLATE A1, HALL B3, CHORUS, ECHO, NONLIN 2, REVERSE 1, DELAY, FREEZE, HALL A1, NONLIN 1, IMAGE P1, PLATE B1, REVERSE 2, ROOM A0, ROOM B1), the famous NONLIN gated drums and REVERSE swells, a keypad where every key acts at once, NUDGE, 9 SAVE / RECALL stores, decay filters LOW / HIGH, a red LED display, a big closer-look keypad, and IN / OUT / MIX. 16 presets. Find it in a track's Insert Effects.",
+            "description": "remix16 by King: Inspired by the AMS RMX16 digital reverb (1982). An MPC insert effect with a front panel that really works: 18 programs (AMBIENCE, ROOM A1, HALL C1, PLATE A1, HALL B3, CHORUS, ECHO, NONLIN 2, REVERSE 1, DELAY, FREEZE, HALL A1, NONLIN 1, IMAGE P1, PLATE B1, REVERSE 2, ROOM A0, ROOM B1), the famous NONLIN gated drums and REVERSE swells, a keypad where every key acts at once, NUDGE, 9 SAVE / RECALL stores, decay filters LOW / HIGH, a red LED display, a big closer-look keypad, and IN / OUT / MIX. 16 presets. Find it in a track's Insert Effects.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/remix16"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/remix16",
+            "name": "remix16 by King"
         },
         "king-ex85": {
             "maker": "The Disk King",
