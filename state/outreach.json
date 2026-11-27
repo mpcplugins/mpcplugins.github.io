@@ -43,7 +43,7 @@
   }
  },
  "key_check": {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "login": "mpcplugins",
   "ok": true,
   "result": "OK: key for mpcplugins, can post notes",
@@ -63,6 +63,7 @@
   "Eurikon": "baseline",
   "Forge-Audio": "2026-11-19",
   "GreasySavage": "2026-11-21",
+  "HEADDRUMZ": "2026-11-27",
   "Lewinator56": "baseline",
   "Luminous-Works": "baseline",
   "MagicStino": "baseline",
@@ -93,12 +94,14 @@
   "jamiefaye": "2026-11-21",
   "jasonnicklaus1980-coder": "2026-11-26",
   "keebz": "2026-11-19",
+  "krimple": "2026-11-27",
   "leonardoMirabal": "baseline",
   "lichthaus": "baseline",
   "lightlikemusic": "baseline",
   "macdigi": "baseline",
   "mcardonaserrano": "baseline",
   "miathedev": "2026-11-26",
+  "michaelmenesescs": "2026-11-27",
   "mitchoster": "baseline",
   "mjasikowski": "2026-11-21",
   "mmiroshnikov": "baseline",
@@ -229,6 +232,12 @@
    ],
    "since": "2026-11-21"
   },
+  "gmorb": {
+   "plugins": [
+    "liminal-hz"
+   ],
+   "since": "2026-11-27"
+  },
   "gonziWeb": {
    "plugins": [
     "beat-and-dungeon"
@@ -252,6 +261,12 @@
     "z950"
    ],
    "since": "2026-11-19"
+  },
+  "krimple": {
+   "plugins": [
+    "ondes"
+   ],
+   "since": "2026-11-27"
   },
   "lichthaus": {
    "plugins": [
@@ -484,6 +499,7 @@
   "king-ex90": "2026-11-24",
   "king-sp-1200": "2026-11-26",
   "liminal-amp": "baseline",
+  "liminal-hz": "2026-11-27",
   "looper": "baseline",
   "lucky-dip": "baseline",
   "lufest": "baseline",
@@ -533,6 +549,7 @@
   "noxed-mpc-usb-bridge": "2026-11-19",
   "noxed-prism-wave": "2026-11-19",
   "omni-sampler": "2026-11-24",
+  "ondes": "2026-11-27",
   "op1-suite": "2026-11-19",
   "op3000": "2026-11-21",
   "open-mpc-pimorph": "2026-11-19",

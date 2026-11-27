@@ -1,4 +1,12 @@
 {
+ "michaelmenesescs/mpc-schwung-ports": {
+  "repo": "michaelmenesescs/mpc-schwung-ports",
+  "owner": "michaelmenesescs",
+  "description": "Tape saturation and degradation: drive, tape speed, dropout noise and tone.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
  "Tinythingz/The-8bit-Schmitter": {
   "repo": "Tinythingz/The-8bit-Schmitter",
   "owner": "Tinythingz",
@@ -226,7 +234,7 @@
   "owner": "sd88me",
   "description": "Dexed (DX7) native VST2 plugin port for Akai MPC OS / Force",
   "topics": [],
-  "stars": 9,
+  "stars": 10,
   "license": "GPL-3.0"
  },
  "sunskiefer/dinxxl": {
@@ -677,6 +685,14 @@
   "repo": "jacob-sabella/mpc-vst-keyscope",
   "owner": "jacob-sabella",
   "description": "Key and chord detection for MPC OS standalone devices: a native VST2 insert effect that names the key, chord, bass note and tuning from audio or MIDI.",
+  "topics": [],
+  "stars": 0,
+  "license": "NOASSERTION"
+ },
+ "HEADDRUMZ/HEADDRUMZ-KNOCK": {
+  "repo": "HEADDRUMZ/HEADDRUMZ-KNOCK",
+  "owner": "HEADDRUMZ",
+  "description": "Free drum impact effect for kicks and 808s on MPC XL Standalone.",
   "topics": [],
   "stars": 0,
   "license": "NOASSERTION"
@@ -1202,7 +1218,7 @@
   "owner": "3dthc",
   "description": "Unofficial OB-Xd synth for Akai MPC (standalone, ARM VST2). Touch-friendly panel, bank/patch browser, tempo-synced LFO.",
   "topics": [],
-  "stars": 7,
+  "stars": 8,
   "license": "GPL-3.0"
  },
  "3dthc/Odin2-MPC": {
@@ -1220,6 +1236,14 @@
   "topics": [],
   "stars": 9,
   "license": "NOASSERTION"
+ },
+ "krimple/mpc-vst-ondes": {
+  "repo": "krimple/mpc-vst-ondes",
+  "owner": "krimple",
+  "description": "Ondes Martenot-style instrument for Akai MPC OS (native VST2 with an MPC screen skin)",
+  "topics": [],
+  "stars": 0,
+  "license": "GPL-3.0"
  },
  "stampman3000-jpg/op3000": {
   "repo": "stampman3000-jpg/op3000",
