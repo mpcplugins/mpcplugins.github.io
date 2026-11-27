@@ -38,9 +38,10 @@
             "maker": "The Disk King",
             "kind": "instrument",
             "style": "synth",
-            "description": "Trifecta Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
+            "description": "King Triton Workstation by The Disk King: a 2000s-style workstation for the MPC with a blue touch screen, 512 programs and 512 combis, a VALUE dial, arpeggiator, chorus, delay and reverb. Plays its built-in Trifecta Voice synth. The original Korg Triton sounds cannot be included: bring your own (sound loading planned for 0.2). Early beta.",
             "about": "",
-            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/trifecta-workstation"
+            "source_url": "https://github.com/mpcplugins/community-plugins/tree/main/trifecta-workstation",
+            "name": "King Triton Workstation"
         },
         "ashy-to-classy": {
             "maker": "The Disk King",
