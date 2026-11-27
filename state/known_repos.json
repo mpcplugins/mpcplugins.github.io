@@ -82,7 +82,7 @@
  "mpcplugins/community-plugins": {
   "repo": "mpcplugins/community-plugins",
   "owner": "The Disk King",
-  "description": "Warm Front Compressor by The Disk King: a vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
+  "description": "Warm Front Compressor by King: an original, based on the King's vision. A vintage analog-style stereo compressor insert effect for the MPC. CLASSIC (console bus glue with AUTO release), VINTAGE (opto/tube warmth) and MODERN styles, sidechain filter, INPUT / OUTPUT VU meters in real dB and a gain-reduction LED strip. 27 presets, 19 built from the published settings of famous studio compressors (console bus, FET, opto, vari-mu, VCA, diode). Find it in a track's Insert Effects.",
   "topics": [],
   "stars": 2,
   "license": null
