@@ -344,7 +344,7 @@ def plugin_page(p, cat, collections):
     tested_lines = []
     for g in ("gen1", "gen2", "sample"):
         for t in (p.get("tested") or {}).get(g, []):
-            tested_lines.append("<li>%s, MPC OS %s%s</li>" % (e(t.get("device", "")), e(t.get("os", "")),
+            tested_lines.append("<li>%s, MPC OS %s%s</li>" % (e(t.get("device", "")), e(re.sub(r"(?i)^MPC OS\s*", "", str(t.get("os") or ""))),
                                                                " (%s)" % e(date_text(t.get("date"))) if t.get("date") else ""))
     links = ['<a href="%s" rel="noopener" class="underline font-bold hover:text-[#ea861a]">Source on GitHub</a>' % e(source_url)]
     if https(p.get("youtube")):
